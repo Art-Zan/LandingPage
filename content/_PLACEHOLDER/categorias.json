@@ -1,0 +1,13 @@
+{
+  "_comentario": "Taxonomia mínima para satisfazer a obrigatoriedade de 'ao menos uma categoria' em Produtos (6.7). Os dois nomes vêm direto do agrupamento funcional que já aparece no próprio PRD e em dev/CONVENCOES.md §4.4 (gestão de empresa × produtos esportivos) — não é dado de negócio inventado, é a mesma classificação lida em código em vez de repetida à mão. Ainda assim marcada como placeholder: o cliente nunca aprovou explicitamente estes dois nomes de categoria como taxonomia oficial.",
+  "categorias": [
+    {
+      "slug": "gestao-empresarial",
+      "nome": "Gestão empresarial"
+    },
+    {
+      "slug": "esporte",
+      "nome": "Esporte"
+    }
+  ]
+}

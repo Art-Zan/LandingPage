@@ -1,0 +1,52 @@
+{
+  "name": "artzan-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Site institucional ArtZan — Next.js 15 (App Router) + Payload CMS 3 embarcado + PostgreSQL. Ver PRD.md e dev/CONVENCOES.md.",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "tsx scripts/verificar-placeholder-producao.ts && npm run verificar:contraste",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "seed": "tsx scripts/seed.ts",
+    "verificar:contraste": "node src/styles/verificar-contraste.mjs",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap",
+    "payload": "payload",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3",
+    "@payloadcms/db-sqlite": "^3.88.0",
+    "@payloadcms/next": "^3",
+    "@payloadcms/richtext-lexical": "^3",
+    "@payloadcms/ui": "^3",
+    "graphql": "^16",
+    "next": "~15.4.11",
+    "payload": "^3",
+    "react": "^19",
+    "react-dom": "^19",
+    "sharp": "^0.34"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10",
+    "eslint": "^9",
+    "eslint-config-next": "~15.4.11",
+    "eslint-config-prettier": "^10",
+    "postcss": "^8",
+    "prettier": "^3",
+    "tailwindcss": "^3.4",
+    "typescript": "^5"
+  }
+}

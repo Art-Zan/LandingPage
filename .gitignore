@@ -1,0 +1,71 @@
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+
+# Build do Next
+.next/
+out/
+build/
+dist/
+next-env.d.ts
+
+# Tipos e mapa de importação gerados pelo Payload
+# (gerados por `npm run generate:types` / `generate:importmap`;
+#  descomente se a equipe decidir versioná-los)
+src/app/(payload)/admin/importMap.js
+
+# Mídia carregada em desenvolvimento
+/media/
+/public/media/
+
+# Banco SQLite de desenvolvimento local (Onda 4c, DB_ADAPTER=sqlite) e outros
+# artefatos locais em runtime — nunca versionar. `var/solicitacoes/` (Onda 3c,
+# leads recebidos pelo formulário de contato) também vive aqui e contém dado
+# pessoal: nunca deveria ter ido ao controle de versão em primeiro lugar.
+/var/
+*.sqlite
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+
+# Ambiente — NUNCA versionar (RNF-045)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Cache de ferramentas
+.eslintcache
+*.tsbuildinfo
+.turbo/
+coverage/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# OneDrive — este repositório vive dentro de uma pasta sincronizada
+*.tmp
+~$*
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# macOS (colaboradores eventuais)
+.DS_Store

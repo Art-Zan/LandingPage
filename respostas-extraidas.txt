@@ -1,0 +1,90 @@
+Q-024 | Validação da taxonomia de parceiros
+   -> Siga essa proposta, estamos avaliando a inclusão do primeiro parceiro.
+Q-025 | Parceiros confirmados no lançamento
+   -> Há um parceiro, mas ainda não confirmado.
+Q-054 | Abrangência da autorização do parceiro
+   -> Ainda não há;
+Q-012 | Canais de contato disponíveis
+   -> WhatsApp e Email.
+Q-013 | Destino e prazo de resposta dos leads
+   -> Um dos dois sócios responderá no prazo de 2 dias úteis.
+Q-014 | Encaminhamento a ferramenta de gestão comercial
+   -> De início, apenas caixa de email.
+Q-015 | Volume de oportunidades atendível por mês
+   -> A definiri
+Q-017 | Indicadores acompanhados e responsável
+   -> A definir
+Q-026 | Formato da demonstração comercial
+   -> Ambuente próprio para teste por tempo determinado.
+Q-031 | E-mail remetente das confirmações
+   -> Ainda a definir. Haverá o email institucional.
+Q-062 | Campo de qualificação no formulário
+   -> Não.
+Q-063 | E-mail próprio para receber solicitações
+   -> Ainda não, mas haverá
+Q-064 | Responsável pela triagem diária
+   -> Será um dos sócios,
+Q-028 | Responsável pelos textos legais
+   -> Haverá um setor jurídico responsável por isso.
+Q-053 | Dados institucionais publicáveis no rodapé
+   -> razão social, CNPJ, endereço, canal de contato
+Q-023 | Ajuste dos gatilhos numéricos de ativação
+   -> A definir, seguir premissa
+Q-034 | Papéis de publicação e aprovação de conteúdo
+   -> Por início, tudo é executado pelos sócios.
+Q-071 | Responsável por contratar e custear a infraestrutura
+   -> Executado pelos sócios.
+Q-035 | Restrição de orçamento de infraestrutura
+   -> Não há restrição.
+Q-036 | Exigência legal de acessibilidade acima do padrão
+   -> Não.
+Q-060 | Exigência de laudo formal de acessibilidade
+   -> Não.
+Q-065 | Base legal e prazo de retenção dos dados de formulário
+   -> A definir, seguir definições da LGPD.
+Q-066 | Aceite separado para comunicações futuras
+   -> Sim.
+Q-069 | Responsável pelo painel de métricas
+   -> Os 2 sócios.
+Q-032 | Histórico público ou interno dos textos legais
+   -> Apenas internamente.
+Q-040 | Processamento de dados fora do Brasil
+   -> Provavelmente será sim fora do Brasil. Inclua os textos como possíveis.
+Q-043 | Canal e prazo para direitos do titular de dados
+   -> A definir.
+Q-037 | Dados de audiência para calibrar navegadores suportados
+   -> Pode manter o suporte apenas aos dispositivos mais novos, mesmo que perca parte do público. Garanta apenas mobile e desktop.
+Q-038 | Meta contratual de disponibilidade
+   -> Manter premissa
+Q-039 | Ferramenta de monitoramento externo
+   -> Não necessário.
+Q-046 | Provedor de hospedagem
+   -> A definir.
+Q-044 | Procedimento de resposta a incidente de segurança
+   -> Não incluir por enquanto. ---
+Q-016 | Ciclo de venda e ticket esperado
+   -> A definir
+Q-027 | Responsável e cadência do blog
+   -> Não é pré-requisito.
+Q-055 | Manual de marca ou vocabulário já em uso
+   -> Não definido
+Q-058 | Coleta inicial de termos de busca
+   -> Sócios.
+Q-057 | Administração das ferramentas de webmaster
+   -> Sócios.
+Q-072 | Autorização para despublicar ou renomear produto
+   -> Sócios.
+Q-030 | Desafio interativo antispam
+   -> Sem no início, mas já deixe previsto a inclusão de um captcha.
+Q-061 | Auditoria externa de acessibilidade
+   -> Não.
+Q-067 | Investimento em mídia paga
+   -> Não de início, mas possível.
+Q-068 | Meta numérica do primeiro trimestre
+   -> Não definida.
+Q-041 | Monitoramento de erro como exceção à ferramenta única
+   -> A definir.
+Q-045 | Janela de publicação
+   -> Nada específico.
+Q-047 | Teste de intrusão antes do lançamento
+   -> Posteriormente. ---

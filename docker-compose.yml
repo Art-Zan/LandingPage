@@ -1,0 +1,27 @@
+# Onda 1 — apenas o PostgreSQL de desenvolvimento.
+# Objetivo: `npm run db:up` e ninguém precisa instalar banco na máquina.
+# Este arquivo NÃO descreve produção — a hospedagem depende de D-15, em aberto.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: artzan-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: artzan
+      POSTGRES_PASSWORD: artzan
+      POSTGRES_DB: artzan_dev
+    # Porta 5433 no host de propósito: evita conflito com um Postgres já
+    # instalado localmente na 5432. Bate com o DATABASE_URI de .env.example.
+    ports:
+      - '5433:5432'
+    volumes:
+      - artzan-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U artzan -d artzan_dev']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  artzan-pgdata:

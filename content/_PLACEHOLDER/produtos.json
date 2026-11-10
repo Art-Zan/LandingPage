@@ -1,0 +1,37 @@
+{
+  "_comentario": "Manifesto do conteúdo provisório dos quatro produtos do lançamento (dev/CONVENCOES.md §4.4, §7.1). Só os FATOS ESTRUTURAIS moram aqui — slug, nome (aprovado ou proposto), domínio funcional e categoria. O texto de preenchimento (parágrafos, funcionalidades, benefícios) é gerado por scripts/lib/texto-placeholder.ts a partir do campo 'dominio', nunca digitado à mão neste arquivo — evita que alguém redija, sem perceber, uma descrição plausível o bastante para passar por real. Consumido só por scripts/seed.ts.",
+  "produtos": [
+    {
+      "slug": "sistema-lara",
+      "nome": "Sistema Lara",
+      "nomeEstaAprovado": true,
+      "dominio": "gestão geral de empresa (Sistema Lara)",
+      "categoriaSlug": "gestao-empresarial",
+      "modelosDeContratacao": ["assinatura-recorrente", "projeto-sob-encomenda"]
+    },
+    {
+      "slug": "alocacao-de-quadras",
+      "nome": "Theo",
+      "nomeEstaAprovado": false,
+      "dominio": "alocação de quadras esportivas — reservas e horários",
+      "categoriaSlug": "esporte",
+      "modelosDeContratacao": ["assinatura-recorrente"]
+    },
+    {
+      "slug": "scout-esportivo",
+      "nome": "Iago",
+      "nomeEstaAprovado": false,
+      "dominio": "scout para partidas esportivas",
+      "categoriaSlug": "esporte",
+      "modelosDeContratacao": ["assinatura-recorrente"]
+    },
+    {
+      "slug": "placar-esportivo",
+      "nome": "Nina",
+      "nomeEstaAprovado": false,
+      "dominio": "placar esportivo",
+      "categoriaSlug": "esporte",
+      "modelosDeContratacao": ["projeto-sob-encomenda"]
+    }
+  ]
+}

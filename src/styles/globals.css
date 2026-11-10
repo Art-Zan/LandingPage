@@ -1,0 +1,243 @@
+/**
+ * Estilos globais do site ArtZan.
+ * Implementa: 11.14 (tipografia base), 11.15 (flat e clean),
+ *             13.2 (foco visível e não obscurecido), 13.3 (contraste do foco),
+ *             13.8 (legibilidade), 13.9 (alvo de toque), 13.10 (movimento)
+ * Visual: 11.12, 11.13 · Premissas: PR-006, PR-017
+ * Dono: Onda 2a
+ *
+ * Este arquivo é o único ponto de entrada de CSS do site. Quem escreve o
+ * layout raiz importa SÓ ele: `import '@/styles/globals.css'`. Os tokens
+ * entram pelo `@import` abaixo, que precisa ser a primeira regra do arquivo.
+ */
+
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* 13.2 regra 6 — o elemento focado ou apontado por âncora não pode ficar
+     * sob um cabeçalho fixo. */
+    scroll-padding-top: var(--az-deslocamento-rolagem);
+
+    /* 13.8 — o conteúdo permanece utilizável com texto ampliado em 200%.
+     * Nenhuma unidade absoluta é usada em tamanho de fonte: a escala de
+     * tokens.css é toda em `rem`, ancorada na preferência do navegador. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--az-superficie);
+    color: var(--az-texto-principal);
+    font-family: var(--az-fonte-corpo);
+    font-size: var(--az-tamanho-corpo);
+    font-weight: var(--az-peso-corpo);
+    line-height: var(--az-altura-linha-corpo);
+
+    /* 13.8 — sempre à esquerda, nunca justificado; hifenização forçada
+     * proibida em texto corrido. */
+    text-align: left;
+    hyphens: manual;
+
+    /* 10.1 / 13.8 — largura de referência mínima de 360 px e refluxo a 320 px
+     * sem rolagem horizontal em nenhuma página.
+     * NÃO existe `overflow-x: hidden` aqui, e a ausência é deliberada: ela
+     * esconderia o defeito em vez de corrigi-lo — 13.8 exige que o conteúdo
+     * REFLUA, não que o excesso seja recortado — e transformaria o `body` em
+     * contêiner de rolagem, quebrando qualquer cabeçalho fixo (13.2 regra 6).
+     * Estouro horizontal é bug de layout e precisa aparecer na revisão. */
+    min-width: 320px;
+  }
+
+  /* 11.14 — títulos na família de título, em caixa NORMAL. Caixa alta em
+   * frase inteira lê mais devagar na varredura de nível 1 (11.7) e é
+   * proibida em bloco de texto (13.8). O tamanho de cada nível é aplicado
+   * pelo primitivo `Titulo`, porque o nível semântico e o peso visual são
+   * decididos separadamente (hierarquia sem salto é requisito de 12.3 e
+   * 13.5, não decoração). */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--az-fonte-titulo);
+    line-height: var(--az-altura-linha-titulo);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  /* 13.9 — links em texto corrido mantêm altura de linha de 1,5 para não se
+   * colarem entre si, e são distinguíveis sem depender de cor (13.3):
+   * o sublinhado deixa de ser opcional porque PR-062 reserva o azul à ação
+   * primária, então "ser azul" não identifica um link. */
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  /* 13.2 regra 5 — FOCO SEMPRE VISÍVEL, com indicador próprio do site e não
+   * apenas o padrão do navegador. Contorno de 2 px, contraste próprio de
+   * 15,18:1 no tema claro e 16,57:1 no escuro contra a superfície (muito
+   * acima do mínimo de 3:1), envolvendo o elemento.
+   * O deslocamento de 2 px afasta o contorno do preenchimento, de modo que
+   * o par medido é sempre contorno × superfície da página — inclusive sobre
+   * a ação primária azul, que 13.3 aponta como o pior caso do sistema.
+   * REMOVER ESTA REGRA É PROIBIDO, inclusive "temporariamente". */
+  *:focus-visible {
+    outline: var(--az-foco-espessura) solid var(--az-foco);
+    outline-offset: var(--az-foco-deslocamento);
+  }
+
+  /* 13.2 regra 8 — o estado de foco é distinto do de passagem do ponteiro.
+   * Passagem NUNCA desenha contorno; ela muda superfície ou borda. Esta
+   * regra existe para que um clique de mouse não deixe o contorno de
+   * teclado aceso, o que apagaria a distinção. */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* 13.11 / RNF-011 — imagem nunca estoura o contêiner nem provoca rolagem
+   * horizontal. */
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 11.14 / 13.8 — campo de formulário herda a família e o corpo de 16 px.
+   * Texto menor provoca zoom automático em navegador móvel justamente na
+   * única conversão do site (PR-017). */
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
+    font-size: var(--az-tamanho-corpo);
+    line-height: var(--az-altura-linha-corpo);
+    color: inherit;
+  }
+
+  /* 13.10 regra 1 — preferência de movimento reduzido é respeitada:
+   * transição de deslocamento, animação de entrada por rolagem e movimento
+   * automático são desligados. Nada do site depende de animação para ser
+   * compreendido (13.10 regra 4), então desligar não remove informação. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 1ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Conteúdo disponível só para tecnologia assistiva. Usado pelo estado de
+   * processamento do botão (13.6 regra 14) e pelo link de salto antes de
+   * receber foco (13.2 regra 4). Não usa `display: none`, que removeria o
+   * conteúdo do leitor de tela. */
+  .az-apenas-leitor-de-tela {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* 13.2 regra 4 — link de salto: invisível até receber foco e, ao recebê-lo,
+   * plenamente visível. Nunca oculto de forma permanente nem removido do
+   * fluxo. A marcação do elemento pertence a quem escreve o layout; a
+   * aparência é definida aqui, com os tokens.
+   * Ao aparecer, o link não pode ficar sob cabeçalho fixo (13.2 regra 6). */
+  .az-pular-para-conteudo {
+    position: absolute;
+    left: var(--az-espaco-card-compacto);
+    top: var(--az-deslocamento-rolagem);
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--az-alvo-toque);
+    padding: 0 var(--az-espaco-card-compacto);
+    background-color: var(--az-superficie);
+    color: var(--az-texto-principal);
+    border: var(--az-borda-espessura) solid var(--az-borda);
+    border-radius: var(--az-raio-controle);
+    transform: translateY(-200%);
+  }
+
+  .az-pular-para-conteudo:focus-visible {
+    transform: translateY(var(--az-espaco-card-compacto));
+  }
+
+  /* Texto rico vindo do cadastro (Payload). Implementa 13.8 inteiro num só
+   * lugar, para que nenhum template redefina espaçamento de parágrafo,
+   * largura de linha ou tratamento de lista por conta própria (RNF-072).
+   * Nenhum texto de negócio vive aqui — só a forma. */
+  .az-texto-rico {
+    max-width: var(--az-largura-texto);
+    line-height: var(--az-altura-linha-corpo);
+  }
+
+  .az-texto-rico > * + * {
+    margin-top: var(--az-espaco-paragrafo);
+  }
+
+  .az-texto-rico ul,
+  .az-texto-rico ol {
+    padding-left: var(--az-espaco-card);
+    list-style-position: outside;
+  }
+
+  .az-texto-rico ul {
+    list-style-type: disc;
+  }
+
+  .az-texto-rico ol {
+    list-style-type: decimal;
+  }
+
+  .az-texto-rico li + li {
+    margin-top: var(--az-espaco-entre-alvos);
+  }
+
+  .az-texto-rico h2,
+  .az-texto-rico h3 {
+    margin-top: var(--az-espaco-card);
+  }
+
+  .az-texto-rico h2 {
+    font-size: var(--az-tamanho-h2);
+    font-weight: var(--az-peso-h2);
+  }
+
+  .az-texto-rico h3 {
+    font-size: var(--az-tamanho-h3);
+    font-weight: var(--az-peso-h3);
+  }
+
+  /* 13.3 — link dentro de texto corrido é distinguível sem depender só de
+   * cor: sublinhado obrigatório, mais indicador visual na passagem e no
+   * foco. A cor permanece a do texto principal por PR-062. */
+  .az-texto-rico a {
+    text-decoration: underline;
+    text-decoration-thickness: var(--az-borda-espessura);
+  }
+
+  .az-texto-rico a:hover {
+    text-decoration-thickness: var(--az-foco-espessura);
+  }
+}

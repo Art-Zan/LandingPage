@@ -1,0 +1,100 @@
+{
+  "_comentario": "Manifesto de conteúdo provisório das páginas institucionais que as rotas da etapa 1 esperam (dev/CONVENCOES.md §4.1). Cada bloco é montado por scripts/seed.ts na biblioteca finita de src/lib/blocos-institucionais.ts (blocoDeTexto | blocoDeLista | blocoDeChamada). Todo texto aqui é ostensivamente provisório: nomeia o requisito ou a decisão pendente (D-16, Q-006, Q-021 etc.) em vez de simular a redação real. As páginas 'privacidade' e 'termos' seguem literalmente o exemplo do despacho da onda: em vez de uma política de privacidade falsa, um bloco que diz que o texto jurídico depende de D-16.",
+
+  "inicio": {
+    "titulo": "Início",
+    "indexavel": true,
+    "blocos": [
+      {
+        "tipo": "chamada",
+        "titulo": "Conteúdo provisório — frase de posicionamento real ainda não redigida",
+        "texto": "Este texto existe só para a página inicial renderizar nesta máquina de desenvolvimento (Onda 4c, seed de dados). A ArtZan desenvolve softwares por encomenda para gestão de empresa e para operações esportivas; a frase de proposta de valor definitiva (RF-020) ainda não foi escrita pelo cliente.",
+        "rotuloDaAcao": "Falar com a equipe",
+        "destino": "/contato"
+      },
+      {
+        "tipo": "texto",
+        "titulo": "Sobre a empresa (texto provisório)",
+        "paragrafos": [
+          "Este bloco de apresentação institucional (RF-021) é um placeholder de desenvolvimento, não a voz oficial da empresa. Nenhuma afirmação aqui deve ser citada, reaproveitada ou considerada aprovada.",
+          "A ArtZan não tem, hoje, prova social publicável (PR-007, Q-021): nenhum número de cliente, depoimento ou caso de sucesso é inventado para preencher este espaço — e nenhum aparece nesta página, de propósito."
+        ]
+      },
+      {
+        "tipo": "lista",
+        "titulo": "Benefícios do modelo de portfólio (texto provisório)",
+        "itens": [
+          { "titulo": "Benefício 1 (a definir)", "texto": "Texto de benefício provisório; redação real pendente do cliente (5.4)." },
+          { "titulo": "Benefício 2 (a definir)", "texto": "Texto de benefício provisório; redação real pendente do cliente (5.4)." },
+          { "titulo": "Benefício 3 (a definir)", "texto": "Texto de benefício provisório; redação real pendente do cliente (5.4)." }
+        ]
+      }
+    ]
+  },
+
+  "sobre": {
+    "titulo": "Sobre a ArtZan",
+    "indexavel": true,
+    "blocos": [
+      {
+        "tipo": "texto",
+        "titulo": "Quem somos (texto provisório)",
+        "paragrafos": [
+          "Esta página (P-02) está marcada como placeholder. A ArtZan é uma empresa de desenvolvimento de software sob encomenda, com um portfólio de produtos próprios voltado a gestão de empresa e a operações esportivas — mas a formulação institucional definitiva (RF-021), incluindo qualquer menção a tempo de mercado, equipe ou cases, depende do cliente (PR-007, PR-040) e não existe ainda.",
+          "Nenhum número de equipe, ano de fundação ou nome de cliente aparece nesta página: nenhum dado desse tipo foi fornecido, e este script não inventa nenhum."
+        ]
+      },
+      {
+        "tipo": "chamada",
+        "titulo": "Desenvolvimento de integrações sob encomenda",
+        "texto": "Serviço de integrações entre sistemas (11.20): não é um produto de catálogo, não tem slug nem card próprio — só esta chamada, com ação direta de contato. A redação final desta seção ainda depende do cliente.",
+        "rotuloDaAcao": "Falar com a equipe",
+        "destino": "/contato"
+      }
+    ]
+  },
+
+  "catalogo": {
+    "titulo": "Softwares",
+    "indexavel": true,
+    "blocos": [
+      {
+        "tipo": "texto",
+        "titulo": null,
+        "paragrafos": [
+          "Texto de introdução provisório do catálogo (P-03). A grade abaixo já lista os produtos reais cadastrados nesta máquina de desenvolvimento; só este parágrafo de abertura é placeholder."
+        ]
+      }
+    ]
+  },
+
+  "privacidade": {
+    "titulo": "Política de privacidade",
+    "indexavel": true,
+    "blocos": [
+      {
+        "tipo": "texto",
+        "titulo": "Situação deste texto",
+        "paragrafos": [
+          "Este registro está marcado como conteúdo provisório (placeholder). O texto jurídico da política de privacidade não existe hoje: é uma decisão pendente do cliente e do setor jurídico responsável (D-16, Q-028), e nenhuma cláusula de privacidade é redigida por este seed de desenvolvimento — nem como exemplo.",
+          "Quando o texto real chegar, ele deve tratar a transferência internacional de dados como cenário possível (Q-040) e substituir este parágrafo inteiro. Até lá, nada neste registro deve ser lido como compromisso legal da ArtZan."
+        ]
+      }
+    ]
+  },
+
+  "termos": {
+    "titulo": "Termos de uso",
+    "indexavel": true,
+    "blocos": [
+      {
+        "tipo": "texto",
+        "titulo": "Situação deste texto",
+        "paragrafos": [
+          "Este registro está marcado como conteúdo provisório (placeholder). O texto de termos de uso não existe hoje: é uma decisão pendente do cliente e do setor jurídico responsável (D-16), e nenhuma condição de uso é redigida por este seed de desenvolvimento — nem como exemplo.",
+          "Quando o texto real chegar, ele substitui este parágrafo inteiro. Até lá, nada neste registro deve ser lido como condição de uso vigente da ArtZan."
+        ]
+      }
+    ]
+  }
+}

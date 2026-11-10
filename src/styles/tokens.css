@@ -1,0 +1,292 @@
+/**
+ * Tokens visuais do sistema ArtZan — referência única de RNF-072.
+ * Implementa: 11.11 (leitura do logotipo), 11.12 (paleta e contraste),
+ *             11.13 (tema claro e escuro), 11.14 (tipografia),
+ *             11.15 (flat e clean), 11.17 (moldura de captura),
+ *             11.7 (densidade e largura de linha), 13.3, 13.8, 13.9, 13.10
+ * Premissas: PR-062 (azul exclusivo da ação primária), PR-006, PR-017
+ * Perguntas abertas que afetam este arquivo:
+ *   Q-073 (paleta oficial?), Q-074 (confirma PR-062?),
+ *   Q-075 (famílias tipográficas), Q-076 (raio 4/8 px ou raio zero)
+ * Dono: Onda 2a
+ *
+ * REGRA DURA: este é o ÚNICO arquivo do projeto onde um valor visual pode ser
+ * escrito. Nenhum componente, template ou `tailwind.config.ts` declara
+ * hexadecimal, tamanho de fonte, raio, espessura de borda ou espaçamento
+ * literal. Um valor solto quebra o tema escuro e a tabela de contraste ao
+ * mesmo tempo (dev/CONVENCOES.md, seção 8, item 5).
+ *
+ * REGRA DURA: os valores de cor abaixo são os de 11.12, exatos. Três deles
+ * foram corrigidos por reprovarem na verificação de contraste (borda clara,
+ * borda escura, atenção clara) e o azul aprovado passa por margem estreita
+ * (5,87:1). Alterar qualquer cor obriga a refazer `verificar-contraste.mjs`
+ * ANTES de a cor entrar em texto, ícone ou rótulo.
+ *
+ * COMO O TEMA TROCA (11.13):
+ *   1. `:root`                                  → tema claro, o principal.
+ *   2. `@media (prefers-color-scheme: dark)` em `:root:not([data-tema='claro'])`
+ *                                               → escuro por preferência do sistema,
+ *                                                 salvo se o visitante declarou claro.
+ *   3. `:root[data-tema='escuro']`              → escuro declarado, vence o sistema.
+ *   4. `:root[data-tema='claro']`               → claro declarado, vence o sistema.
+ * Uma preferência declarada vence a do sistema NOS DOIS SENTIDOS.
+ *
+ * Os blocos 2 e 3 carregam valores idênticos. Isso é conferido
+ * automaticamente por `src/styles/verificar-contraste.mjs`, que falha se
+ * divergirem — a duplicação existe porque não há forma de agrupar
+ * `@media` e seletor de atributo numa regra só sem indireção obscura.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ---------------------------------------------------------------------
+   * COR — tema claro. Tabela de 11.12, coluna "Tema claro".
+   * Nomeada por FUNÇÃO, nunca por cor: trocar de tema é trocar de coluna,
+   * não redecorar (dev/CONVENCOES.md, seção 3).
+   * ------------------------------------------------------------------- */
+  --az-superficie: #ffffff; /* fundo do logotipo */
+  --az-superficie-elevada: #f3f6fa; /* neutro desenhado, inclinado ao matiz da tinta */
+  --az-texto-principal: #172738; /* tinta do monograma */
+  --az-texto-secundario: #5a6974; /* neutro desenhado na família de matiz da tinta */
+  --az-borda: #85919d; /* calibrado para contraste de interface — 3,21:1 */
+  --az-acao-primaria: #0e66b4; /* tom chapado do "Z" do wordmark */
+  --az-acao-primaria-foco: #0e4988; /* extremo escuro do gradiente do monograma */
+  --az-acao-secundaria: #172738; /* = texto principal do tema (PR-062) */
+  --az-destaque: #106ab6; /* extremo claro do gradiente do monograma */
+  --az-sucesso: #14783c;
+  --az-atencao: #b24400; /* escurecido: laranjas vivos medem 2:1–3:1 e reprovam */
+  --az-erro: #b3261e;
+
+  /* Rótulo sobre o preenchimento da ação primária. Par verificado em 11.12
+   * (5,87:1). É branco NOS DOIS TEMAS porque o preenchimento é o mesmo azul. */
+  --az-sobre-acao-primaria: #ffffff;
+
+  /* ---------------------------------------------------------------------
+   * COR — indicador de foco (13.2 regra 5, 13.3).
+   * 11.12 não define cor de foco; 13.3 registra explicitamente que essa
+   * verificação "ainda precisa ser feita, porque 11.12 não cobre".
+   * ESCOLHA DESTA ONDA: o indicador reaproveita o texto principal do tema.
+   * Motivo: é o par de maior contraste que o sistema tem contra as duas
+   * superfícies (15,18:1 e 14,00:1 no claro; 16,57:1 e 15,52:1 no escuro),
+   * muito acima do mínimo de 3:1, e não introduz cor nova no sistema.
+   * O deslocamento de 2 px (abaixo) garante que o contorno nunca encoste no
+   * preenchimento azul da ação primária — o pior caso citado por 13.3 —,
+   * porque entre o contorno e o botão sempre há a superfície da página. */
+  --az-foco: #172738;
+
+  /* ---------------------------------------------------------------------
+   * TIPOGRAFIA (11.14). Duas famílias de licença aberta (SIL OFL).
+   * ESCOLHA DESTA ONDA: adotadas exatamente as referências nomeadas em
+   * 11.14 — Space Grotesk para título (geométrica, traço anguloso, números
+   * de largura uniforme, coerente com o monograma) e Inter para texto
+   * corrido (humanista desenhada para tela, diferencia "I"/"l"/"1" e cobre
+   * a acentuação do português, PR-006). Ambas são SIL OFL.
+   * Q-075 pode substituí-las por fonte já em uso pela empresa: trocar o
+   * valor destas duas variáveis é o único trabalho necessário.
+   *
+   * A pilha de alternativa é real e não decorativa: enquanto o arquivo da
+   * fonte não carrega, o texto é renderizado numa fonte do sistema com
+   * métrica próxima (RNF-014 — texto legível antes do carregamento).
+   * PENDÊNCIA FORA DESTE TERRITÓRIO: hospedar os arquivos das duas famílias
+   * (máx. 4 arquivos, 150 KB no total, RNF-014) é tarefa de quem escreve o
+   * layout raiz. Sem isso, a pilha de alternativa é o que aparece — e o
+   * site continua legível e correto, apenas sem o desenho pretendido. */
+  --az-fonte-titulo: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue',
+    Arial, sans-serif;
+  --az-fonte-corpo: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+
+  /* Escala de 11.14. Mobile-first: os valores abaixo são os da PONTA BAIXA
+   * de cada faixa; a ponta alta entra no ponto de quebra, mais abaixo.
+   * Corpo de 16 px é piso absoluto, sem exceção — inclusive em campo de
+   * formulário, onde texto menor provoca zoom automático em navegador móvel
+   * justamente na única conversão do site (11.14, PR-017). */
+  --az-tamanho-h1: 2rem; /* 32 px — faixa 32–40 */
+  --az-tamanho-h2: 1.5rem; /* 24 px — faixa 24–28 */
+  --az-tamanho-h3: 1.25rem; /* 20 px — valor único em 11.14 */
+  --az-tamanho-corpo: 1rem; /* 16 px — piso absoluto */
+  --az-tamanho-apoio: 0.875rem; /* 14 px — rótulo de campo, legenda, erro */
+  --az-tamanho-rotulo: 1rem; /* 16 px — ESCOLHA: topo da faixa 14–16 do rótulo
+                              * de botão, porque o botão é o alvo de toque da
+                              * conversão e 14 px encolhe o alvo sem ganho. */
+
+  --az-peso-h1: 700;
+  --az-peso-h2: 600;
+  --az-peso-h3: 600;
+  --az-peso-corpo: 400;
+  --az-peso-rotulo: 500;
+
+  /* Altura de linha: mínimo 1,5 no corpo (13.8). Título usa 1,2 — valor não
+   * fixado pelo PRD; ESCOLHA desta onda, porque 1,5 em H1 de 40 px abre um
+   * vão que quebra a varredura de nível 1 (11.7). */
+  --az-altura-linha-corpo: 1.5;
+  --az-altura-linha-titulo: 1.2;
+
+  /* Espaço entre parágrafos: ao menos 2× o tamanho da fonte (13.8).
+   * 2rem = 32 px sobre corpo de 16 px, e cai na escala de 8 px. */
+  --az-espaco-paragrafo: 2rem;
+
+  /* Espaçamento de letras: SÓ em caixa alta e SÓ em elemento curto — rótulo
+   * de navegação, etiqueta, botão —, ecoando o wordmark. +4% (11.14).
+   * Caixa alta é proibida em bloco de texto (13.8). */
+  --az-espacamento-caixa-alta: 0.04em;
+
+  /* Largura da linha: 60–75 caracteres no máximo em telas largas (13.8).
+   * ESCOLHA: 68ch, meio da faixa. */
+  --az-largura-texto: 68ch;
+
+  /* Largura máxima do conteúdo. O PRD não fixa valor; ESCOLHA desta onda:
+   * 1152 px = 8 × 144, para permanecer na escala de 8 px de 11.15. */
+  --az-largura-conteudo: 72rem;
+
+  /* ---------------------------------------------------------------------
+   * FORMA (11.15). Exatamente dois raios, e nenhum outro valor.
+   * O raio pequeno decorre da origem: o logotipo é construído só com
+   * segmentos retos e vértices agudos (11.11). Arredondamento amplo
+   * contradiria a peça que dá origem ao sistema.
+   * FORMA "PÍLULA" É PROIBIDA — não existe token de raio total.
+   * Q-076 pode zerar os dois valores; é uma alteração de duas linhas. */
+  --az-raio-controle: 4px; /* controle pequeno: botão, campo, etiqueta */
+  --az-raio-bloco: 8px; /* card, container, imagem, moldura de captura */
+
+  /* Espessura única de borda, 1 px, em TODO contorno (11.15). */
+  --az-borda-espessura: 1px;
+
+  /* ---------------------------------------------------------------------
+   * ESPAÇO (11.15). Escala de 8 px: 8/16/24/32/48/64/96.
+   * A escala nativa do Tailwind já cobre esses passos; os apelidos abaixo
+   * existem para o que o PRD nomeia de forma específica. */
+  --az-espaco-card-compacto: 16px; /* preenchimento de card em tela pequena */
+  --az-espaco-card: 24px; /* preenchimento de card em tela grande */
+  --az-espaco-secao: 64px; /* entre seções */
+  --az-espaco-secao-meio: 32px; /* metade do anterior: duas seções vizinhas com
+                                 * este preenchimento vertical somam 64 px */
+
+  /* ---------------------------------------------------------------------
+   * ALVO DE TOQUE (13.9). Mínimo normativo 24 px; padrão adotado 44 px.
+   * A área acionável pode ser maior que o desenho visível. */
+  --az-alvo-toque: 44px;
+  --az-espaco-entre-alvos: 8px;
+
+  /* ---------------------------------------------------------------------
+   * FOCO (13.2 regra 5): contorno de no mínimo 2 px, envolvendo o elemento,
+   * sem ser cortado por recorte de contêiner. O deslocamento afasta o
+   * contorno do preenchimento para que o par verificado seja sempre
+   * contorno × superfície da página. */
+  --az-foco-espessura: 2px;
+  --az-foco-deslocamento: 2px;
+
+  /* 13.2 regra 6 — foco nunca obscurecido. Se houver cabeçalho fixo, o
+   * deslocamento de rolagem compensa a altura dele. O valor real depende da
+   * altura do cabeçalho, que não é decidida nesta onda: quem construir o
+   * cabeçalho fixo redefine ESTA variável e nada mais. Zero enquanto não
+   * houver elemento fixo, que é o estado correto hoje. */
+  --az-deslocamento-rolagem: 0px;
+
+  /* ---------------------------------------------------------------------
+   * MOVIMENTO (13.10). Transição curta e única. Desligada por completo sob
+   * `prefers-reduced-motion` em globals.css. */
+  --az-transicao: 150ms;
+
+  /* ---------------------------------------------------------------------
+   * MOLDURA DE CAPTURA DE TELA (11.17). Proporção IDÊNTICA para todo
+   * produto — é o mecanismo de coesão que impede o vigésimo produto de
+   * pedir identidade nova. Borda de 1 px, sem bisel e SEM SOMBRA DE
+   * DISPOSITIVO.
+   * ESCOLHA DESTA ONDA: 16/10. O PRD exige "mesma proporção" sem fixar
+   * qual; 16/10 acomoda a captura de tela de sistema em navegador sem
+   * cortar a interface, que é o que Q-005 vai produzir. Q-081 aprova o
+   * enquadramento; a proporção muda aqui, num lugar só, se necessário. */
+  --az-proporcao-captura: 16 / 10;
+
+  /* ---------------------------------------------------------------------
+   * ELEVAÇÃO (11.15). Card, cabeçalho, rodapé e seção NUNCA recebem sombra:
+   * separam-se do fundo pela borda de 1 px, porque estão no mesmo plano da
+   * página. Sombra existe SÓ em camada temporariamente sobreposta ao
+   * conteúdo — modal, menu suspenso, aviso temporário —, com uma única
+   * sombra padrão, difusa e de baixo contraste.
+   * O token existe para que quem construir a primeira sobreposição não
+   * invente um segundo valor. NENHUM primitivo desta onda o usa, e ele
+   * deliberadamente NÃO está registrado em `tailwind.config.ts`: chegar a
+   * ele exige escrever o nome da variável, o que torna o uso visível em
+   * revisão. */
+  --az-sombra-sobreposicao: 0 4px 16px rgb(23 39 56 / 12%);
+}
+
+/* -------------------------------------------------------------------------
+ * TEMA ESCURO por preferência do sistema.
+ * `:not([data-tema='claro'])` faz a preferência declarada pelo visitante
+ * vencer a do sistema também neste sentido: quem escolheu claro continua no
+ * claro mesmo com o sistema em escuro.
+ * ---------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema='claro']) {
+    color-scheme: dark;
+
+    --az-superficie: #0b121b;
+    --az-superficie-elevada: #131b26;
+    --az-texto-principal: #edf1f5;
+    --az-texto-secundario: #a9b3c0;
+    --az-borda: #78818a; /* clareado: o tom próximo da superfície elevada media 1,51:1 */
+    --az-acao-primaria: #0e66b4;
+    --az-acao-primaria-foco: #106ab6;
+    --az-acao-secundaria: #edf1f5; /* = texto principal do tema (PR-062) */
+    --az-destaque: #5aa9e6;
+    --az-sucesso: #3fcb6b;
+    --az-atencao: #f5b94d;
+    --az-erro: #ff7a70;
+
+    --az-sobre-acao-primaria: #ffffff;
+    --az-foco: #edf1f5;
+
+    --az-sombra-sobreposicao: 0 4px 16px rgb(0 0 0 / 48%);
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * TEMA ESCURO declarado. Vence a preferência do sistema.
+ * Valores IDÊNTICOS ao bloco acima — conferido por verificar-contraste.mjs.
+ * ---------------------------------------------------------------------- */
+:root[data-tema='escuro'] {
+  color-scheme: dark;
+
+  --az-superficie: #0b121b;
+  --az-superficie-elevada: #131b26;
+  --az-texto-principal: #edf1f5;
+  --az-texto-secundario: #a9b3c0;
+  --az-borda: #78818a;
+  --az-acao-primaria: #0e66b4;
+  --az-acao-primaria-foco: #106ab6;
+  --az-acao-secundaria: #edf1f5;
+  --az-destaque: #5aa9e6;
+  --az-sucesso: #3fcb6b;
+  --az-atencao: #f5b94d;
+  --az-erro: #ff7a70;
+
+  --az-sobre-acao-primaria: #ffffff;
+  --az-foco: #edf1f5;
+
+  --az-sombra-sobreposicao: 0 4px 16px rgb(0 0 0 / 48%);
+}
+
+/* -------------------------------------------------------------------------
+ * TEMA CLARO declarado. Só precisa reafirmar `color-scheme`: os valores já
+ * vêm de `:root` e o bloco de mídia se exclui sozinho.
+ * ---------------------------------------------------------------------- */
+:root[data-tema='claro'] {
+  color-scheme: light;
+}
+
+/* -------------------------------------------------------------------------
+ * PONTA ALTA DA ESCALA TIPOGRÁFICA (11.14).
+ * Mobile-first: constrói-se a partir da tela pequena e amplia-se. Só H1 e H2
+ * têm faixa; H3, corpo, apoio e rótulo têm valor único e não mudam.
+ * 48rem = 768 px, o ponto em que a linha de 68ch deixa de ser o limitante.
+ * ---------------------------------------------------------------------- */
+@media (min-width: 48rem) {
+  :root {
+    --az-tamanho-h1: 2.5rem; /* 40 px */
+    --az-tamanho-h2: 1.75rem; /* 28 px */
+  }
+}
