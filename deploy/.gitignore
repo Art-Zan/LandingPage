@@ -1,5 +1,2 @@
-# Segredos e backups do deploy — nunca versionar.
-.env.production
+# Backups gerados por deploy/backup.sh (contêm dado pessoal) — nunca versionar.
 backups/
-# Blocos opcionais do Caddy ativados na VPS (o .example é versionado).
-caddy/sites/*.caddy

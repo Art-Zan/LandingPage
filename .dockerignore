@@ -22,11 +22,11 @@ media
 *.sqlite-*
 *.log
 
-# Segredos
+# Segredos (o .env da raiz NUNCA entra na imagem; o container o recebe via env_file)
 .env
 .env.*
 !.env.example
-deploy/.env.production
+.site
 deploy/backups
 
 # Documentação, insumos e ferramentas de agente
@@ -54,7 +54,8 @@ Dockerfile
 .dockerignore
 docker-compose*.yml
 deploy/README.md
-deploy/caddy
+deploy/site.caddy
+deploy/deploy.conf
 deploy/backup.sh
 
 # Sistema

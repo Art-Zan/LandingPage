@@ -1,10 +1,19 @@
 # Dono: onda de deploy (Docker/VPS). Guia completo: deploy/README.md.
 #
-# Produção/homologação numa VPS: app (Next + Payload) + Postgres 16 + Caddy.
+# Produção/homologação numa VPS COMPARTILHADA: app (Next + Payload) + Postgres 16.
+# O HTTPS, os certificados e o proxy reverso ficam no Caddy único da VPS (o "edge",
+# /srv/edge); este projeto não tem Caddy. Contrato: CLAUDE-arquitetura-vps.md (repo da VPS).
+#
+#   Internet ──> edge (Caddy, 80/443) ──rede "edge", alias artzan-app──> app :3000
+#                                                                         │
+#                                                    rede "privada" (internal) ──> db :5432
+#
 # O docker-compose.yml da raiz continua sendo só o Postgres de DESENVOLVIMENTO.
 #
-# Sempre invocar com o arquivo de ambiente, que também alimenta a interpolação:
-#   docker compose --env-file deploy/.env.production -f docker-compose.prod.yml <comando>
+# O .env da raiz (copiado de .env.production.example) é lido sozinho pelo compose, para a
+# interpolação e para o container `app` (env_file). Ele traz COMPOSE_FILE, então basta
+#   docker compose <comando>
+# na raiz do projeto (ou `docker compose -f docker-compose.prod.yml <comando>`).
 
 name: artzan
 
@@ -12,7 +21,7 @@ x-logging: &logging
   driver: json-file
   options:
     max-size: '10m'
-    max-file: '5'
+    max-file: '3'
 
 services:
   db:
@@ -20,9 +29,11 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-artzan}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD em deploy/.env.production}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no .env}
       POSTGRES_DB: ${POSTGRES_DB:-artzan}
-    # Sem `ports`: o banco só é acessível pela rede interna do compose.
+    # Sem `ports`: o banco só é acessível pela rede privada do projeto (sem saída para a internet).
+    networks:
+      - privada
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -37,11 +48,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: artzan-site:latest
+    image: artzan/app
     restart: unless-stopped
     init: true
     env_file:
-      - deploy/.env.production
+      - .env
     environment:
       # Montado aqui para que a senha exista num lugar só (POSTGRES_PASSWORD).
       DATABASE_URI: postgres://${POSTGRES_USER:-artzan}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-artzan}
@@ -54,7 +65,13 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    # Sem `ports`: só o Caddy fala com o app, pela rede interna.
+    # Sem `ports`: só o edge fala com o app, pela rede `edge` (alias único na VPS toda).
+    # A saída para a internet (SMTP, fontes, webhook de alerta) também vem da `edge`:
+    # a `privada` é internal.
+    networks:
+      privada:
+      edge:
+        aliases: [artzan-app]
     expose:
       - '3000'
     volumes:
@@ -74,31 +91,6 @@ services:
       start_period: 15m
     logging: *logging
 
-  caddy:
-    image: caddy:2-alpine
-    restart: unless-stopped
-    environment:
-      SITE_DOMAIN: ${SITE_DOMAIN:?defina SITE_DOMAIN em deploy/.env.production}
-      ACME_EMAIL: ${ACME_EMAIL:?defina ACME_EMAIL em deploy/.env.production}
-    ports:
-      - '80:80'
-      - '443:443'
-      - '443:443/udp'
-    volumes:
-      - ./deploy/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./deploy/caddy/sites:/etc/caddy/sites:ro
-      - caddy-data:/data
-      - caddy-config:/config
-    depends_on:
-      # Só "started": o Caddy obtém o certificado enquanto o app ainda builda.
-      - app
-    healthcheck:
-      test: ['CMD', 'wget', '-q', '-O', '/dev/null', 'http://127.0.0.1:2019/config/']
-      interval: 30s
-      timeout: 5s
-      retries: 3
-    logging: *logging
-
 # Nomes fixos: o script de backup e a restauração referenciam estes volumes.
 volumes:
   pgdata:
@@ -109,7 +101,11 @@ volumes:
     name: artzan_solicitacoes
   next-cache:
     name: artzan_next_cache
-  caddy-data:
-    name: artzan_caddy_data
-  caddy-config:
-    name: artzan_caddy_config
+
+networks:
+  # Entre app e db. Sem saída para a internet: só o app fala com o banco.
+  privada:
+    internal: true
+  # Compartilhada com o edge (Caddy único da VPS). Criada uma vez: docker network create edge
+  edge:
+    external: true

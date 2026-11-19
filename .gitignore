@@ -36,6 +36,10 @@ src/app/(payload)/admin/importMap.js
 .env.test.local
 .env.production.local
 !.env.example
+!.env.production.example
+
+# Estado do script `site` da VPS (deploy/README.md)
+/.site/
 
 # Logs
 *.log

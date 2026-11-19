@@ -1,8 +1,10 @@
 #!/bin/sh
 # Dono: onda de deploy (Docker/VPS)
 #
-# Backup completo do site na VPS. Rodar a partir da raiz do projeto:
-#   sh deploy/backup.sh
+# Backup completo do site na VPS. Funciona de qualquer pasta (o script entra na raiz do
+# projeto sozinho; o .env da raiz é lido pelo compose) e é o BACKUP_CMD do deploy.conf,
+# que o script `site` agenda no cron do root:
+#   deploy/backup.sh        (ou: sh deploy/backup.sh)
 #
 # Gera, em deploy/backups/ (ou BACKUP_DIR):
 #   db-<data>.dump          pg_dump em formato custom (restaurar com pg_restore)
@@ -21,8 +23,8 @@ set -eu
 RAIZ=$(cd "$(dirname "$0")/.." && pwd)
 cd "$RAIZ"
 
-ENV_FILE=deploy/.env.production
-COMPOSE="docker compose --env-file $ENV_FILE -f docker-compose.prod.yml"
+ENV_FILE=.env
+COMPOSE="docker compose -f docker-compose.prod.yml"
 DESTINO="${BACKUP_DIR:-$RAIZ/deploy/backups}"
 RETENCAO="${BACKUP_RETENCAO_DIAS:-14}"
 CARIMBO=$(date -u +%Y%m%dT%H%M%SZ)

@@ -486,3 +486,19 @@ Decisões do maestro: Postgres 16 em container na própria VPS, o que fecha D-15
 - O `eslint.config.mjs` (onda 1) deve ignorar `src/migrations/**`.
 - Registrar em `dev/CONVENCOES.md` os donos de `deploy/`, `src/migrations/` e dos arquivos Docker.
 - VPS recomendada: 4 GB de RAM e 2 vCPU. O site fica fora do ar durante cada build, cerca de 3 a 6 min.
+
+### 2026-11-19 (tarde) — Onda 7: deploy adaptado ao edge compartilhado da VPS
+
+Pedido do usuário: a VPS passou a hospedar vários sites atrás de um Caddy único (o "edge", em `/srv/edge`, script `site`). Este site será o domínio raiz `artzan.tech`, com `www.artzan.tech` redirecionando. Delegado a um único agente. O maestro rodou `site verificar`, que deu "Contrato ok" com 1 aviso esperado (sem `import seguranca`, porque o Next já envia o HSTS).
+
+Substitui parte da Onda 6. O Caddy do projeto e `deploy/caddy/` saíram. O `.env` de produção passou para a raiz (`.env.production.example`), sem `ACME_EMAIL`, que agora fica no edge.
+
+- **Compose:** o `app` entra na rede `edge` com o alias `artzan-app` e na rede `privada` (`internal`), junto com o `db`. A imagem passa a ser `artzan/app` e o ambiente vem de `env_file: .env`. Os volumes `artzan_*` e o build na subida continuam como estavam.
+- **Novos:** `deploy/site.caddy` (os blocos de `${SITE_DOMAIN}` e `${WWW_DOMAIN}`) e `deploy/deploy.conf` (slug `artzan`, segredos gerados pelo script, saúde em `/`, backup no cron, sem ganchos porque o entrypoint já migra).
+- **`deploy/README.md`** foi reescrito para o fluxo `site novo` / `site atualizar artzan`.
+- **Não verificado:** build, subida, certificado e cron de backup, porque não há Docker Hub neste ambiente.
+
+#### Pendências
+- Rota de saúde barata (`/api/health`) em vez de `/`. Hoje o healthcheck renderiza a home a cada 30 s.
+- Registrar em `dev/CONVENCOES.md` os donos de `deploy/site.caddy` e `deploy/deploy.conf`.
+- O `deploy/README.md` não passa no Prettier. Já não passava antes da onda.
