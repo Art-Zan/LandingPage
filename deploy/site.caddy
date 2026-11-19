@@ -1,0 +1,33 @@
+# Blocos de site do Caddy deste projeto, lidos pelo edge (/srv/edge). Só blocos de site:
+# sem bloco global e sem snippets próprios (ip_real vem do edge). O script `site` troca
+# ${VAR} pelos valores do .env da raiz; o upstream é o alias da rede Docker "edge"
+# (docker-compose.prod.yml).
+#
+#   https://${SITE_DOMAIN}  → artzan-app:3000  (site Next + painel Payload em /admin)
+#   https://${WWW_DOMAIN}   → redireciona (301) para https://${SITE_DOMAIN}
+
+${SITE_DOMAIN} {
+	encode zstd gzip
+
+	# HSTS e demais cabeçalhos de segurança: NÃO se usa `import seguranca` aqui. O Next já
+	# envia `Strict-Transport-Security` (next.config.ts) e o projeto decidiu não duplicar
+	# o cabeçalho com valores diferentes. O `header -Server` abaixo cobre o que sobra.
+
+	# Uploads do painel (Payload) têm teto de 5 MB; folga para o envelope multipart.
+	# O formulário de contato é bem menor.
+	request_body {
+		max_size 8MB
+	}
+
+	header -Server
+
+	reverse_proxy artzan-app:3000 {
+		import ip_real
+	}
+
+	log
+}
+
+${WWW_DOMAIN} {
+	redir https://${SITE_DOMAIN}{uri} permanent
+}
