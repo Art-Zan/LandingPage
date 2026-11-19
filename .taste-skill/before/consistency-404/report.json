@@ -1,0 +1,982 @@
+{
+ "page": "http://localhost:3001/rota-que-nao-existe",
+ "url": "http://localhost:3001/rota-que-nao-existe",
+ "at": "2026-11-10T21:38:48.493Z",
+ "out": "C:\\Users\\user\\OneDrive\\Documents\\ArtZan\\LandingPage\\.taste-skill\\before\\consistency-404",
+ "widths": [
+  {
+   "width": 1440,
+   "height": 900,
+   "screens": 1,
+   "held": 0,
+   "errors": [
+    "effect-kind: HTTP 404"
+   ],
+   "findings": [
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the frame rota-que-nao-existe did not load (404)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "text-only",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontrada",
+     "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+     "stop": 0,
+     "crop": "1440-01-text-only.jpg",
+     "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
+    },
+    {
+     "check": "copy-headline",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie > div.mx-auto.w-full > h1.font-titulo.leading-titulo",
+     "text": "Página não encontrada",
+     "msg": "\"Página não encontrada\" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags); only the line under it does",
+     "stop": 0,
+     "crop": "1440-02-copy-headline.jpg",
+     "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words"
+    },
+    {
+     "check": "copy-actions",
+     "sev": "FAIL",
+     "sel": "section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-wrap > a.inline-flex.items-center:nth-of-type(3)",
+     "text": "Falar com a equipe",
+     "msg": "3 actions in the hero (\"Ir para a página inicial\", \"Ver softwares\", \"Falar com a equipe\"); at most 2",
+     "stop": 0,
+     "crop": "1440-03-copy-actions.jpg",
+     "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close"
+    },
+    {
+     "check": "text-contrast",
+     "sev": "FAIL",
+     "sel": "div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria",
+     "text": "Z",
+     "stop": 0,
+     "msg": "a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)",
+     "crop": "1440-04-text-contrast.jpg",
+     "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels"
+    },
+    {
+     "check": "focus-ring",
+     "sev": "FAIL",
+     "sel": ":focus:not(:focus-visible)",
+     "text": "",
+     "msg": "\":focus:not(:focus-visible)\" in 23d1c743d5ce11fd.css removes the focus outline and sets nothing in its place",
+     "stop": null,
+     "fix": "keep the kit's :focus-visible ring, or put a change of the same strength (a 2px line in --action) in the rule that removes it"
+    },
+    {
+     "check": "copy-buttons",
+     "sev": "WARN",
+     "sel": "header.sticky.top-0 > div.mx-auto.w-full > div.flex.items-center > a.inline-flex.items-center",
+     "text": "Contato",
+     "msg": "\"Contato\" does not start with a verb (book, buy, try, start, get, see...) (and 1 more like it: \"Falar com a equipe\")",
+     "stop": 0,
+     "crop": "1440-05-copy-buttons.jpg",
+     "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")"
+    },
+    {
+     "check": "copy-actions",
+     "sev": "WARN",
+     "sel": "header.sticky.top-0 > div.mx-auto.w-full > div.flex.items-center > a.inline-flex.items-center",
+     "text": "Contato",
+     "msg": "2 labels for one target /contato: \"Contato\", \"Falar com a equipe\"",
+     "stop": 0,
+     "crop": "1440-06-copy-actions.jpg",
+     "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close"
+    },
+    {
+     "check": "skip-link",
+     "sev": "WARN",
+     "sel": "a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "msg": "the first Tab stop is \"Pular para o conteúdo\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+     "stop": null,
+     "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>"
+    },
+    {
+     "check": "page-meta",
+     "sev": "WARN",
+     "sel": "head",
+     "text": "ArtZan",
+     "msg": "no <meta name=\"description\">: a search result and a shared link show a scrap of the page instead",
+     "stop": null,
+     "fix": "write a <title> \"Name: what it is for whom or where\" and a one-sentence description in other words (starter.html)"
+    },
+    {
+     "check": "share-meta",
+     "sev": "WARN",
+     "sel": "head",
+     "text": "",
+     "msg": "the head lacks og:description, theme-color: a shared link shows no picture or title of its own",
+     "stop": null,
+     "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the hero ends at 305px on a 900px screen, 595px above the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "1440-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "563px of the next section shows on the first screen (from 337px on a 900px screen): nothing below the hero shows at load (SR-1)",
+     "fix": "end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)",
+     "rule": "SR-1 T2",
+     "crop": "1440-rhythm-02-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "the section is 511px tall (0.6 screens), 389px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "1440-rhythm-03-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "the section starts at 337px, 337px below the screen grid (0 x 900px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "1440-rhythm-04-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the section starts at 61px, 61px below the screen grid (0 x 900px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "1440-rhythm-05-section-height.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie > div.mx-auto.w-full > h1.font-titulo.leading-titulo",
+     "text": "Página não encontrada",
+     "msg": "the screen at scroll 0px (stride 0) shows 244px of section 1 and the heading of section 1 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "1440-rhythm-06-one-section.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo",
+     "text": "Portfólio",
+     "msg": "the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "1440-rhythm-07-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "header.sticky.top-0",
+     "text": "ARTZANSoftwaresSobreContatoAbrir menuSof",
+     "msg": "the nav's content runs 168px from the left and 168px from the right (read from its outermost blocks: no .wrap): the page's container starts at 144px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "1440-rhythm-08-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "the content of section 2 runs 168px from the left and 168px from the right (read from its outermost blocks: no .wrap): the page's container starts at 144px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "1440-rhythm-09-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the content of section 1 runs 144px from the left and 144px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "1440-rhythm-10-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "1440-rhythm-11-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "header.sticky.top-0",
+     "text": "ARTZANSoftwaresSobreContatoAbrir menuSof",
+     "msg": "a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "1440-rhythm-12-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "a <footer> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 2 more like it: \"Página não encontradaO e\", \"EmpresaArtZanDado penden\") (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "1440-rhythm-13-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.font-titulo.leading-titulo",
+     "text": "Institucional e legal",
+     "msg": "the h2 starts 846px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "1440-rhythm-14-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo",
+     "text": "Contato",
+     "msg": "the h2 starts 564px right of the container's left: every h1 and h2 starts on it, 2px either way (and 3 more like it: \"Portfólio\", x 168, \"Página não encontrada\") (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "1440-rhythm-15-container-edges.jpg"
+    },
+    {
+     "check": "effect-kind",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "partly measured: the effect files and the WebGL and mount counts (HTTP 404)",
+     "fix": "run the check again on a quieter machine; if it keeps failing, the probe error line says what stopped it"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "screens": 2,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "text-only",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontrada",
+     "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+     "stop": 0,
+     "crop": "1024-01-text-only.jpg",
+     "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
+    },
+    {
+     "check": "copy-actions",
+     "sev": "FAIL",
+     "sel": "section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-wrap > a.inline-flex.items-center:nth-of-type(3)",
+     "text": "Falar com a equipe",
+     "msg": "3 actions in the hero (\"Ir para a página inicial\", \"Ver softwares\", \"Falar com a equipe\"); at most 2",
+     "stop": 0,
+     "crop": "1024-02-copy-actions.jpg",
+     "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close"
+    },
+    {
+     "check": "off-grid",
+     "sev": "FAIL",
+     "sel": "a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "stop": 0,
+     "msg": "left edge at 16px, 8px off the page margin at 24px (8 elements, like h1.font-titulo.leading-titulo)",
+     "crop": "1024-03-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "text-contrast",
+     "sev": "FAIL",
+     "sel": "div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria",
+     "text": "Z",
+     "stop": 0,
+     "msg": "a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)",
+     "crop": "1024-04-text-contrast.jpg",
+     "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "screens": 1,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "copy-actions",
+     "sev": "FAIL",
+     "sel": "section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-wrap > a.inline-flex.items-center:nth-of-type(3)",
+     "text": "Falar com a equipe",
+     "msg": "3 actions in the hero (\"Ir para a página inicial\", \"Ver softwares\", \"Falar com a equipe\"); at most 2",
+     "stop": 0,
+     "crop": "768-01-copy-actions.jpg",
+     "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close"
+    },
+    {
+     "check": "off-grid",
+     "sev": "FAIL",
+     "sel": "a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "stop": 0,
+     "msg": "left edge at 16px, 8px off the page margin at 24px (8 elements, like h1.font-titulo.leading-titulo)",
+     "crop": "768-02-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "text-contrast",
+     "sev": "FAIL",
+     "sel": "div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria",
+     "text": "Z",
+     "stop": 0,
+     "msg": "a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)",
+     "crop": "768-03-text-contrast.jpg",
+     "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the hero ends at 305px on a 1024px screen, 719px above the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "768-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "687px of the next section shows on the first screen (from 337px on a 1024px screen): nothing below the hero shows at load (SR-1)",
+     "fix": "end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)",
+     "rule": "SR-1 T2",
+     "crop": "768-rhythm-02-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "the section is 574px tall (0.6 screens), 450px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "768-rhythm-03-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "the section starts at 337px, 337px below the screen grid (0 x 1024px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "768-rhythm-04-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the section starts at 61px, 61px below the screen grid (0 x 1024px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "768-rhythm-05-section-height.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie > div.mx-auto.w-full > h1.font-titulo.leading-titulo",
+     "text": "Página não encontrada",
+     "msg": "the screen at scroll 0px (stride 0) shows 244px of section 1 and the heading of section 1 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "768-rhythm-06-one-section.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo",
+     "text": "Portfólio",
+     "msg": "the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "768-rhythm-07-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "header.sticky.top-0",
+     "text": "ARTZANSoftwaresSobreContatoAbrir menuSof",
+     "msg": "the nav's content runs 24px from the left and 24px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "768-rhythm-08-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the content of section 1 runs 24px from the left and 24px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "768-rhythm-09-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "the content of section 2 runs 24px from the left and 24px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "768-rhythm-10-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "768-rhythm-11-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "header.sticky.top-0",
+     "text": "ARTZANSoftwaresSobreContatoAbrir menuSof",
+     "msg": "a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "768-rhythm-12-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "a <footer> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 2 more like it: \"Página não encontradaO e\", \"EmpresaArtZanDado penden\") (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "768-rhythm-13-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.font-titulo.leading-titulo",
+     "text": "Institucional e legal",
+     "msg": "the h2 starts 558px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "768-rhythm-14-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo",
+     "text": "Contato",
+     "msg": "the h2 starts 372px right of the container's left: every h1 and h2 starts on it, 2px either way (and 1 more like it: \"Portfólio\") (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "768-rhythm-15-container-edges.jpg"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "screens": 2,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "header.sticky.top-0 > div.mx-auto.w-full > a.inline-flex.shrink-0",
+     "text": "ARTZAN",
+     "msg": "a 79x30px tap target: 0px from the next one (\"Pular para o conteúdo\"), so a thumb lands on the wrong one",
+     "stop": 0,
+     "crop": "390-01-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "text-only",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontrada",
+     "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+     "stop": 0,
+     "crop": "390-02-text-only.jpg",
+     "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
+    },
+    {
+     "check": "button-styles",
+     "sev": "FAIL",
+     "sel": "(one screen)",
+     "text": "",
+     "stop": 0,
+     "msg": "3 button styles on one screen: soft, outline #edf1f5 (\"Ir para a página inicial\"); soft, fill #0e66b4, outline #0e66b4 (\"Contato\"); soft, outline #78818a (\"Abrir menu\"); the odd one out: \"Abrir menu\"",
+     "crop": "390-03-button-styles.jpg",
+     "fix": "one primary and one secondary button: one shape, one height per size, one label size"
+    },
+    {
+     "check": "button-styles",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": 0,
+     "msg": "3 button styles on the page: soft, fill #0e66b4, outline #0e66b4 x1 (\"Contato\"); soft, outline #78818a x1 (\"Abrir menu\"); soft, outline #edf1f5 x3 (\"Ir para a página inicial\")",
+     "crop": "390-04-button-styles.jpg",
+     "fix": "one primary and one secondary button: one shape, one height per size, one label size"
+    },
+    {
+     "check": "copy-actions",
+     "sev": "FAIL",
+     "sel": "section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-wrap > a.inline-flex.items-center:nth-of-type(3)",
+     "text": "Falar com a equipe",
+     "msg": "3 actions in the hero (\"Ir para a página inicial\", \"Ver softwares\", \"Falar com a equipe\"); at most 2",
+     "stop": 0,
+     "crop": "390-05-copy-actions.jpg",
+     "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close"
+    },
+    {
+     "check": "text-contrast",
+     "sev": "FAIL",
+     "sel": "div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria",
+     "text": "Z",
+     "stop": 0,
+     "msg": "a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)",
+     "crop": "390-06-text-contrast.jpg",
+     "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the hero ends at 439px on a 844px screen, 405px above the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "390-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "373px of the next section shows on the first screen (from 471px on a 844px screen): nothing below the hero shows at load (SR-1)",
+     "fix": "end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)",
+     "rule": "SR-1 T2",
+     "crop": "390-rhythm-02-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "the section starts at 471px, 373px above the screen grid (1 x 844px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "390-rhythm-03-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the section starts at 61px, 61px below the screen grid (0 x 844px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "390-rhythm-04-section-height.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo",
+     "text": "Empresa",
+     "msg": "the screen at scroll 0px (stride 0) shows 373px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "390-rhythm-05-one-section.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontradaO endereço acessado",
+     "msg": "the screen at scroll 61px (the top of section 1) shows 317px of section 1 and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "390-rhythm-06-one-section.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo",
+     "text": "Portfólio",
+     "msg": "the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "390-rhythm-07-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "390-rhythm-08-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "header.sticky.top-0",
+     "text": "ARTZANSoftwaresSobreContatoAbrir menuSof",
+     "msg": "a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "390-rhythm-09-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "footer.mx-auto.w-full",
+     "text": "EmpresaArtZanDado pendenteRazão social, ",
+     "msg": "a <footer> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 2 more like it: \"Página não encontradaO e\", \"EmpresaArtZanDado penden\") (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "390-rhythm-10-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-card > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase",
+     "text": "Dado pendente",
+     "msg": "2 text blocks start on a left line at x 25, 9px from the container's left: text starts on the container's left, or on one split line (x 175, 207, 239) (also \"Razão social, CNPJ, Endereço (Q-\") (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "390-rhythm-11-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-wrap > a.inline-flex.items-center:nth-of-type(3)",
+     "text": "Falar com a equipe",
+     "msg": "a box over half the container wide runs 16-211px, not on the container's lines at 16-374px (SR-6)",
+     "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+     "rule": "SR-6 T6-right-edges",
+     "crop": "390-rhythm-12-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-wrap > a.inline-flex.items-center:nth-of-type(1)",
+     "text": "Ir para a página inicial",
+     "msg": "a box over half the container wide runs 16-233px, not on the container's lines at 16-374px (SR-6)",
+     "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+     "rule": "SR-6 T6-right-edges",
+     "crop": "390-rhythm-13-container-edges.jpg"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 320,
+   "height": 640,
+   "screens": 3,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "header.sticky.top-0 > div.mx-auto.w-full > a.inline-flex.shrink-0",
+     "text": "ARTZAN",
+     "msg": "a 79x30px tap target: 0px from the next one (\"Pular para o conteúdo\"), so a thumb lands on the wrong one",
+     "stop": 0,
+     "crop": "320-01-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "text-only",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-secao-meio.bg-superficie",
+     "text": "Página não encontrada",
+     "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+     "stop": 0,
+     "crop": "320-02-text-only.jpg",
+     "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground"
+    },
+    {
+     "check": "button-styles",
+     "sev": "FAIL",
+     "sel": "(one screen)",
+     "text": "",
+     "stop": 0,
+     "msg": "3 button styles on one screen: soft, outline #edf1f5 (\"Ir para a página inicial\"); soft, fill #0e66b4, outline #0e66b4 (\"Contato\"); soft, outline #78818a (\"Abrir menu\"); the odd one out: \"Abrir menu\"",
+     "crop": "320-03-button-styles.jpg",
+     "fix": "one primary and one secondary button: one shape, one height per size, one label size"
+    },
+    {
+     "check": "button-styles",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": 0,
+     "msg": "3 button styles on the page: soft, fill #0e66b4, outline #0e66b4 x1 (\"Contato\"); soft, outline #78818a x1 (\"Abrir menu\"); soft, outline #edf1f5 x3 (\"Ir para a página inicial\")",
+     "crop": "320-04-button-styles.jpg",
+     "fix": "one primary and one secondary button: one shape, one height per size, one label size"
+    },
+    {
+     "check": "copy-actions",
+     "sev": "FAIL",
+     "sel": "section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-wrap > a.inline-flex.items-center:nth-of-type(3)",
+     "text": "Falar com a equipe",
+     "msg": "3 actions in the hero (\"Ir para a página inicial\", \"Ver softwares\", \"Falar com a equipe\"); at most 2",
+     "stop": 0,
+     "crop": "320-05-copy-actions.jpg",
+     "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close"
+    },
+    {
+     "check": "text-contrast",
+     "sev": "FAIL",
+     "sel": "div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria",
+     "text": "Z",
+     "stop": 0,
+     "msg": "a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)",
+     "crop": "320-06-text-contrast.jpg",
+     "fix": "body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels"
+    }
+   ],
+   "glAsked": 0
+  }
+ ],
+ "shaders": 0,
+ "reduced": {
+  "screens": 1,
+  "notRead": 0
+ },
+ "hidden": {
+  "screens": 2
+ },
+ "slow": {
+  "stops": 2,
+  "late": 0
+ },
+ "sweep": {
+  "widths": [
+   1280,
+   1152,
+   896
+  ],
+  "errors": [],
+  "findings": []
+ },
+ "narrow": {
+  "width": 320,
+  "height": 640,
+  "errors": [],
+  "findings": [
+   {
+    "check": "tap-size",
+    "sev": "FAIL",
+    "sel": "header.sticky.top-0 > div.mx-auto.w-full > a.inline-flex.shrink-0",
+    "text": "ARTZAN",
+    "msg": "a 79x30px tap target: 0px from the next one (\"Pular para o conteúdo\"), so a thumb lands on the wrong one",
+    "crop": "narrow-320-01-tap-size.jpg",
+    "width": 320,
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+   }
+  ]
+ },
+ "counts": {
+  "FAIL": 69,
+  "WARN": 6
+ },
+ "checks": {
+  "assets": "FAIL",
+  "shader-lint": "PASS",
+  "gl-fallback": "PASS",
+  "empty-visual": "PASS",
+  "hero-fill": "PASS",
+  "flush": "PASS",
+  "placeholder": "PASS",
+  "sample-label": "PASS",
+  "caption": "PASS",
+  "credit-wall": "PASS",
+  "nav": "PASS",
+  "nav-covers": "PASS",
+  "spill": "PASS",
+  "off-viewport": "PASS",
+  "fold-card": "PASS",
+  "hover-spill": "PASS",
+  "overlap-text": "PASS",
+  "collide": "PASS",
+  "tap-size": "FAIL",
+  "row-gap": "PASS",
+  "cut-text": "PASS",
+  "fold-cut": "PASS",
+  "marquee": "PASS",
+  "scroll-linked": "PASS",
+  "scroll-reveal": "PASS",
+  "pinned": "PASS",
+  "loop-pause": "PASS",
+  "reduced-motion": "PASS",
+  "hidden-content": "PASS",
+  "webgl": "PASS",
+  "no-visual": "PASS",
+  "text-only": "FAIL",
+  "card-visual": "PASS",
+  "hidden-visual": "PASS",
+  "card-family": "PASS",
+  "card-layout": "PASS",
+  "nesting": "PASS",
+  "effect-repeat": "PASS",
+  "ui-fit": "PASS",
+  "ui-centre": "PASS",
+  "dark-ground": "PASS",
+  "button-styles": "FAIL",
+  "button-shape": "PASS",
+  "same-action": "PASS",
+  "button-picture": "PASS",
+  "cta": "PASS",
+  "pricing-tiers": "PASS",
+  "copy-headline": "FAIL",
+  "copy-fact": "PASS",
+  "copy-headings": "PASS",
+  "copy-buttons": "WARN",
+  "copy-actions": "FAIL",
+  "heading-scale": "PASS",
+  "stagger": "PASS",
+  "top-stagger": "PASS",
+  "off-grid": "FAIL",
+  "col-edge": "PASS",
+  "right-edge": "PASS",
+  "centre-axis": "PASS",
+  "tilt": "PASS",
+  "contrast": "PASS",
+  "text-contrast": "FAIL",
+  "body-size": "PASS",
+  "busy-ground": "PASS",
+  "section-gaps": "PASS",
+  "proximity": "PASS",
+  "hole": "PASS",
+  "links": "PASS",
+  "forms": "PASS",
+  "photo-upscale": "PASS",
+  "photo-set": "PASS",
+  "photo-credit": "PASS",
+  "nav-family": "PASS",
+  "nav-labels": "PASS",
+  "link-styles": "PASS",
+  "heading-align": "PASS",
+  "label-centre": "PASS",
+  "fake-button": "PASS",
+  "stranded-action": "PASS",
+  "orphan": "PASS",
+  "unit-break": "PASS",
+  "tab-wrap": "PASS",
+  "effects-fit": "PASS",
+  "fade-cut": "PASS",
+  "photo-weight": "PASS",
+  "copy-length": "PASS",
+  "nav-current": "PASS",
+  "progress-bar": "PASS",
+  "photo-repeat": "PASS",
+  "button-contrast": "PASS",
+  "photo-print": "PASS",
+  "grounds": "PASS",
+  "split-align": "PASS",
+  "fact-agree": "PASS",
+  "fold-action": "PASS",
+  "action-count": "PASS",
+  "one-screen": "PASS",
+  "hover": "PASS",
+  "hover-move": "PASS",
+  "product-shown": "PASS",
+  "same-object": "PASS",
+  "font-load": "PASS",
+  "visual-caption": "PASS",
+  "visual-empty": "PASS",
+  "effect-kind": "WARN",
+  "hero-enter": "PASS",
+  "moment-none": "PASS",
+  "street-number": "PASS",
+  "postcode": "PASS",
+  "coordinates": "PASS",
+  "company-number": "PASS",
+  "phone-number": "PASS",
+  "hero-screen": "FAIL",
+  "section-height": "FAIL",
+  "section-air": "PASS",
+  "one-section": "FAIL",
+  "one-heading": "FAIL",
+  "container-edges": "FAIL",
+  "row-lines": "PASS",
+  "split-pair": "PASS",
+  "motion-layer": "PASS",
+  "count-text": "PASS",
+  "loop-cycle": "PASS",
+  "section-tile": "PASS",
+  "empty-area": "PASS",
+  "a11y-name": "PASS",
+  "img-alt": "PASS",
+  "field-label": "PASS",
+  "heading-order": "PASS",
+  "tabindex": "PASS",
+  "focus-ring": "FAIL",
+  "focus-visible": "PASS",
+  "focus-hidden": "PASS",
+  "skip-link": "WARN",
+  "menu-toggle": "PASS",
+  "lang": "PASS",
+  "page-meta": "WARN",
+  "share-meta": "WARN",
+  "action-repeat": "PASS",
+  "map-link": "PASS",
+  "open-now": "PASS",
+  "assumed": "PASS",
+  "run-on": "PASS",
+  "form-fields": "PASS",
+  "form-send": "PASS"
+ }
+}

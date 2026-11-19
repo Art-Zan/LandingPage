@@ -1,14 +1,17 @@
 /**
  * Primitivo de seção — ritmo vertical e região identificada.
  * Visual: 11.15 (64 px entre seções), 11.7 (uma ideia por seção)
- * Acessibilidade: 13.5 (regiões declaradas e rotuladas)
+ * Acessibilidade: 13.5 (regiões declaradas e rotuladas), 13.10 (revelação ao
+ *   rolar só com script e sem movimento reduzido — Onda 5)
  * Dono: Onda 2a
  *
- * O RITMO É 64 px ENTRE SEÇÕES (11.15), e é assim que ele é obtido: cada
- * seção leva 32 px de preenchimento acima e abaixo, de modo que duas seções
- * vizinhas somam exatamente 64 px. Usar 64 px em cada uma daria 128 px, que
- * não é o valor do PRD — é o erro que este primitivo existe para não deixar
- * acontecer em cada template.
+ * RITMO — RESTYLE (2026-11-10). A Onda 2a lia "64 px entre seções" (11.15)
+ * como valor exato, com 32 px de cada lado. Com seções alternando superfície
+ * (base, elevada, escura), a separação entre seções é a troca de fundo, e o
+ * espaço de 64 px passou a ser tratado como PISO do respiro interno: cada
+ * seção leva `--az-respiro-secao` (64 px em tela pequena, 96 px a partir de
+ * 1024 px — os dois da escala de 8 px de 11.15) acima e abaixo. O aperto de
+ * 32 px era a principal causa da leitura "modelo pronto" da página.
  *
  * `rotuladaPor` recebe o `id` do título da seção. Uma seção sem nome
  * acessível não é uma região útil para quem navega por marcos (13.5 regra 3):
@@ -20,11 +23,13 @@ import type { ReactNode } from 'react'
 
 import { juntarClasses } from './juntarClasses'
 
-export type SuperficieDaSecao = 'base' | 'elevada'
+export type SuperficieDaSecao = 'base' | 'elevada' | 'escura'
 
 const POR_SUPERFICIE: Record<SuperficieDaSecao, string> = {
   base: 'bg-superficie',
   elevada: 'bg-superficie-elevada',
+  // Restyle: coluna escura de 11.12 num trecho da página (tokens.css).
+  escura: 'az-faixa-escura',
 }
 
 export type PropsDaSecao = {
@@ -34,6 +39,11 @@ export type PropsDaSecao = {
   rotulo?: string
   superficie?: SuperficieDaSecao
   id?: string
+  /**
+   * Restyle — primeira dobra da página: recebe a entrada única na carga
+   * (`.hero[data-enter]`, globals.css). Só uma seção por página.
+   */
+  primeiraDobra?: boolean
   children: ReactNode
   className?: string
 }
@@ -43,6 +53,7 @@ export const Secao = ({
   rotulo,
   superficie = 'base',
   id,
+  primeiraDobra = false,
   children,
   className,
 }: PropsDaSecao) => (
@@ -50,7 +61,17 @@ export const Secao = ({
     id={id}
     aria-labelledby={rotuladaPor}
     aria-label={rotuladaPor ? undefined : rotulo}
-    className={juntarClasses('py-secao-meio', POR_SUPERFICIE[superficie], className)}
+    data-enter={primeiraDobra ? '' : undefined}
+    // Onda 5 — candidata à revelação ao rolar (RevelarAoRolar.tsx). Só o
+    // atributo vazio: o estado oculto nunca vem do servidor (13.10 regra 5).
+    // A primeira dobra já tem a entrada própria e fica de fora.
+    data-revelar={primeiraDobra ? undefined : ''}
+    className={juntarClasses(
+      'py-respiro',
+      primeiraDobra && 'hero',
+      POR_SUPERFICIE[superficie],
+      className,
+    )}
   >
     {children}
   </section>

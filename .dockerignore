@@ -1,0 +1,63 @@
+# Dono: onda de deploy (Docker/VPS)
+# Tudo o que não é necessário para instalar, buildar e rodar o site fica fora
+# do contexto de build — inclusive segredos e dados pessoais (leads).
+
+# Dependências e saídas locais (reinstaladas/geradas no container)
+node_modules
+.next
+out
+build
+dist
+next-env.d.ts
+*.tsbuildinfo
+.eslintcache
+coverage
+.turbo
+
+# Dados de runtime: NUNCA na imagem (vivem em volumes)
+var
+midia
+media
+*.sqlite
+*.sqlite-*
+*.log
+
+# Segredos
+.env
+.env.*
+!.env.example
+deploy/.env.production
+deploy/backups
+
+# Documentação, insumos e ferramentas de agente
+.git
+.gitattributes
+.agents
+.claude
+.taste-skill
+.vscode
+.idea
+assets-fonte
+prd-parts
+rev
+dev
+PRD*.md
+PERGUNTAS-PENDENTES.md
+Claude.md
+CLAUDE.md
+respostas-extraidas.txt
+skills-lock.json
+Logo.png
+
+# Arquivos de orquestração que não entram na imagem
+Dockerfile
+.dockerignore
+docker-compose*.yml
+deploy/README.md
+deploy/caddy
+deploy/backup.sh
+
+# Sistema
+Thumbs.db
+Desktop.ini
+.DS_Store

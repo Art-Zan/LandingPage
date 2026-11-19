@@ -1,0 +1,33 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 585 tall; h1 40px/1.2, 1 lines, 267x48 at 80,169; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Termos de u y    73  h   585  content 393
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: 585px tall; one screen under the nav is 827px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: framed, 242px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: ends at y 658, above the fold (900)
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 585 tall; h1 40px/1.2, 1 lines, 267x48 at 48,169; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Termos de u y    73  h   585  content 393
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: 585px tall; one screen under the nav is 695px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: framed, 110px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: ends at y 658, above the fold (768)
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 521 tall; h1 40px/1.2, 1 lines, 267x48 at 48,137; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Termos de u y    73  h   521  content 393
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: 521px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: framed, 430px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: ends at y 594, above the fold (1024)
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 655 tall; h1 32px/1.2, 1 lines, 214x38 at 24,121; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Termos de u y    57  h   655  content 527
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: 655px tall; one screen under the nav is 787px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: framed, 132px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: ends at y 712, above the fold (844)
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 796 tall; h1 32px/1.2, 1 lines, 214x38 at 24,121; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Termos de u y    57  h   796  content 668
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Termos de usoAtualiza: ends at y 853, past the fold (640): 1.37 screens tall

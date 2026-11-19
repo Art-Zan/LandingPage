@@ -26,8 +26,9 @@ export type PesoVisualDeTitulo = 'h1' | 'h2' | 'h3'
 
 /** 11.14 — três degraus de tamanho e peso. H4 a H6 herdam a aparência de H3. */
 const POR_PESO_VISUAL: Record<PesoVisualDeTitulo, string> = {
-  h1: 'text-h1 font-h1',
-  h2: 'text-h2 font-h2',
+  // Restyle: entrelinha fechada e aperto óptico (tokens.css) no H1 e no H2.
+  h1: 'text-h1 font-h1 leading-h1 tracking-titulo',
+  h2: 'text-h2 font-h2 tracking-titulo',
   h3: 'text-h3 font-h3',
 }
 
@@ -58,7 +59,7 @@ export const Titulo = ({ nivel, visual, id, children, className }: PropsDoTitulo
     <Elemento
       id={id}
       className={juntarClasses(
-        'font-titulo leading-titulo text-texto-principal text-balance',
+        'font-titulo leading-titulo text-texto-principal text-balance [overflow-wrap:anywhere]',
         POR_PESO_VISUAL[visual ?? PADRAO_POR_NIVEL[nivel]],
         className,
       )}

@@ -1,0 +1,75 @@
+gate: checking http://localhost:3001/ (software); this takes a few minutes on a CPU Chrome
+gate: 22 FAIL open
+  FAIL no-visual        section#apresentacao-da-empresa "Sobre a empresa (texto provisório)"  [1440, 390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual        section#beneficios "Benefícios do modelo de portfólio (texto"  [1440, 390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL section-height (screen-short, screen-height) section#chamada-final "Próximo passoFalar com a equipeVer softw"  [1440, 390]
+       the scene's section is 237px tall (0.3 screens), 663px short of one screen (900px): every section after the hero is one screen or two, 2px either way; a pinned scene is (hold + 1) screens tall, so write data-big-scene-op
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height (screen-short, screen-height) section#apresentacao-da-empresa "ArtZanSobre a empresa (texto provisório)"  [1440, 390]
+       the section is 412px tall (0.5 screens), 488px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height (screen-short, screen-height) section#beneficios "Benefícios do modelo de portfólio (texto"  [1440, 390]
+       the section is 449px tall (0.5 screens), 451px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 1 more like it: "ARTZANEmpresaArtZanDado ") (SR-2)
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height   footer.closing.az-faixa-escura "ARTZANEmpresaArtZanDado pendenteRazão so"  [1440]
+       the section starts at 1999px, 199px below the screen grid (2 x 900px): sections start on whole screens (SR-2)
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height   section#proposta-de-valor "Conteúdo provisório — frase de posiciona"  [1440]
+       the section starts at 73px, 73px below the screen grid (0 x 900px): sections start on whole screens (and 1 more like it: "Próximo passoFalar com a") (SR-2)
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL one-section      h2#titulo-apresentacao-da-empresa "Sobre a empresa (texto provisório)"  [1440]
+       the screen at scroll 900px (stride 1) shows 340px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WAR
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section (neighbour) section#apresentacao-da-empresa "ArtZanSobre a empresa (texto provisório)"  [1440, 390]
+       the screen at scroll 73px (the top of section 1) shows 72px of section 2 beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (and 3 more like it: scroll 1313px, scroll 1800px, scroll 1857px) (S
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading      div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rot  [1440]
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading      h2#titulo-beneficios "Benefícios do modelo de portfólio (texto"  [1440]
+       headings of two sections show whole on one screen at 23 of 38 scroll positions (60.5%; at scroll 600, 650, 700, 750px), here with "Sobre a empresa (texto provisóri": at most 3% on a desktop (SR-5)
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges  section#chamada-final > div.az-momento-linha__palco.pointer-events-none  [1440]
+       a child of section 4 beside its .wrap is no valid background layer: not img, picture, video or canvas; does not span the screen from 0 to 1440px; z-index 20, not 0; covers 86% of the section height, needs 90% (SR-6)
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges  section#chamada-final > div.az-moldura.wrap "Próximo passoFalar com a equipeVer softw"  [1440]
+       the .wrap has z-index auto beside a layer: 1 or more (SR-6)
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges  footer.closing.az-faixa-escura > div.az-moldura.wrap "ARTZANEmpresaArtZanDado pendenteRazã  [1440]
+       footer.closing > .wrap holds 3 children: exactly two (the call, then the legal row) (SR-6)
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges  div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rot  [1440]
+       the h2 starts 978px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges  div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.text-apoio.font-rot  [1440]
+       the h2 starts 652px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges  div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rot  [1440]
+       the h2 starts 326px right of the container's left: every h1 and h2 starts on it, 2px either way (and 1 more like it: x 100) (SR-6)
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL no-visual        section#proposta-de-valor "Conteúdo provisório — frase de posiciona"  [390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL text-only        section#chamada-final "Próximo passo"  [390]
+       the closing section is only text: no picture, icon, mock or effect in it
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL neighbour        #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de portfóli"  [1440]
+       framed, 34px of #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipeV" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL sparse           #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipeV"  [1440]
+       its content fills 14% of its screen; merge it or give it its visual (0.55 is the aim)
+       fix: fill the section or make it a screen shorter
+  FAIL neighbour        #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipeV"  [1440, 390]
+       framed, 590px of the footer shows
+       fix: keep the next section's heading and picture out of this screen
+  WAIVED placeholder div.az-moldura.wrap > div.flex.flex-col:nth-of-type(2) > div > p.leading-corpo.t: Texto provisório do seed (content/_PLACEHOLDER), marcado de propósito em homologação por exigência do PRD 7.3 / dev/CONVENCOES.md §7; o restyle não pode reescrever conteúdo nem inventar a frase real (RF-020 depende do cliente).
+  WAIVED copy-headline h1#titulo-proposta-de-valor "Conteúdo provisório — frase de posiciona": O H1 é o registro provisório do Payload ('Conteúdo provisório — frase de posicionamento real ainda não redigida'); a frase real é insumo do cliente (RF-020, 16.6). Inventar categoria e comprador no H1 violaria dev/CONVENCOES.md §8.1.
+  WAIVED copy-headings h2#titulo-beneficios "Benefícios do modelo de portfólio (texto": Título vindo do bloco de lista provisório do seed (5.4, redação pendente do cliente); conteúdo de cadastro, fora do território de apresentação.
+  WAIVED effect-kind section#chamada-final: O momento line-carries-colour foi portado para React/tokens em SecaoComLinhaDeTransicao.tsx porque a ordem do maestro proíbe carregar system.css/moments.js do kit no projeto; o checador só reconhece o moment.js do kit, então acusa 'nunca carregado' embora o momento rode (data-moment-mounted).
+  16 WARN (not blocking), first: copy-headline h1#titulo-proposta-de-valor "Conteúdo pr; copy-buttons header.nav.sticky > div.az-moldura.wrap ; copy-actions header.nav.sticky > div.az-moldura.wrap ; section-gaps section#proposta-de-valor / section#apre; photo-credit (the page text)
+A FAIL you judge false: add {"check": "<id>", "target": "<its where, enough to name that one finding>", "reason": "<why, 12+ characters>"} to .taste-skill/waivers.json (one finding each, 5 at most, never for kit-edited or checker-gaming); it goes in your report. Never edit the kit's files or hide the page from the checker.
+GATE: FAIL 22 (round 2 of 3)

@@ -1,0 +1,52 @@
+
+perf /localhost:3001/contato @ 1440px
+  PASS  host CPU load (before/after)               13/13 %        
+  PASS  total transfer                             455.1 KiB      html 39.9K  css 7.3K  js 322.9K  font 70.3K  other 14.8K
+  PASS  requests                                   19             16 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  574.4 KiB      8 files, 322.9K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        328 ms         
+  PASS  LCP (CPU, relative)                        328 ms         span.font-titulo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                2.6 screens    DOM 200 nodes
+
+perf /localhost:3001/contato @ 390px
+  PASS  host CPU load (before/after)               13/13 %        
+  PASS  total transfer                             454.3 KiB      html 39.9K  css 7.3K  js 322.9K  font 70.3K  other 13.9K
+  PASS  requests                                   19             15 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  574.4 KiB      8 files, 322.9K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        104 ms         
+  PASS  LCP (CPU, relative)                        104 ms         span.font-titulo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                3.6 screens    DOM 200 nodes
+
+SUMMARY /localhost:3001/contato: 2 FAIL, 2 WARN  -> FAIL

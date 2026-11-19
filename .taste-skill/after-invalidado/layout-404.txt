@@ -1,0 +1,25 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 828 tall; h1 40px/1.2, 1 lines, 430x48 at 80,405; lead -; buttons 3 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "404Página n y    73  h   828  content 422
+  no findings
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 696 tall; h1 40px/1.2, 1 lines, 430x48 at 48,295; lead -; buttons 3 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "404Página n y    73  h   696  content 343
+  no findings
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 952 tall; h1 40px/1.2, 1 lines, 430x48 at 48,471; lead -; buttons 3 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "404Página n y    73  h   952  content 247
+  no findings
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 788 tall; h1 32px/1.2, 2 lines, 342x77 at 24,285; lead -; buttons 3 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "404Página n y    57  h   788  content 423
+  no findings
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 584 tall; h1 32px/1.2, 2 lines, 272x77 at 24,169; lead -; buttons 3 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "404Página n y    57  h   584  content 450
+  no findings

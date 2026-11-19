@@ -23,7 +23,15 @@
 
 import type { Metadata } from 'next'
 
-import { Botao, Container, Secao, Texto, Titulo } from '@/components/ui'
+import {
+  Botao,
+  ComposicaoAngular,
+  Container,
+  Secao,
+  Texto,
+  TextoDeEntrada,
+  Titulo,
+} from '@/components/ui'
 import { ACOES } from '@/lib/rotulos'
 import { IDIOMA_PADRAO, ROTAS } from '@/lib/rotas'
 
@@ -34,26 +42,38 @@ export const metadata: Metadata = {
 }
 
 export default function NaoEncontrada() {
+  // Restyle: primeira dobra com entrada única, caminhos de retorno em botões
+  // largos no celular e a figura angular à direita a partir de 1024 px.
   return (
-    <Secao>
-      <Container>
-        <Titulo nivel={1} className="mb-card-compacto">
-          Página não encontrada
-        </Titulo>
-        <Texto tom="secundario" className="mb-card">
-          O endereço acessado não existe ou não está mais disponível. Veja alguns caminhos para
-          continuar:
-        </Texto>
-        <div className="flex flex-wrap gap-card-compacto">
-          <Botao href={ROTAS.inicial(IDIOMA_PADRAO)} variante="secundaria">
-            Ir para a página inicial
-          </Botao>
-          <Botao href={ROTAS.catalogo(IDIOMA_PADRAO)} variante="secundaria">
-            {ACOES.verSoftwares}
-          </Botao>
-          <Botao href={ROTAS.contato(IDIOMA_PADRAO)} variante="secundaria">
-            {ACOES.falarComEquipe}
-          </Botao>
+    <Secao
+      primeiraDobra
+      rotulo="Página não encontrada"
+      className="flex min-h-[calc(100svh-var(--az-altura-cabecalho))] items-center"
+    >
+      <Container className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start lg:gap-6">
+        <div className="flex flex-col items-start gap-6 lg:col-span-6">
+          <p className="az-sobretitulo">404</p>
+          <Titulo nivel={1} className="max-w-titulo">
+            <TextoDeEntrada>Página não encontrada</TextoDeEntrada>
+          </Titulo>
+          <Texto variante="destaque" tom="secundario" className="az-entrada-apoio [--az-ordem:1]">
+            O endereço acessado não existe ou não está mais disponível. Veja alguns caminhos para
+            continuar:
+          </Texto>
+          <div className="az-entrada-apoio flex w-full flex-col gap-4 pt-2 [--az-ordem:2] sm:w-auto sm:flex-row sm:flex-wrap">
+            <Botao href={ROTAS.inicial(IDIOMA_PADRAO)} variante="secundaria">
+              Ir para a página inicial
+            </Botao>
+            <Botao href={ROTAS.catalogo(IDIOMA_PADRAO)} variante="secundaria">
+              {ACOES.verSoftwares}
+            </Botao>
+            <Botao href={ROTAS.contato(IDIOMA_PADRAO)} variante="secundaria">
+              {ACOES.falarComEquipe}
+            </Botao>
+          </div>
+        </div>
+        <div className="az-entrada-figura hidden lg:col-span-6 lg:col-start-7 lg:block">
+          <ComposicaoAngular />
         </div>
       </Container>
     </Secao>

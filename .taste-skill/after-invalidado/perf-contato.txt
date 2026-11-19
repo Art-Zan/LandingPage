@@ -1,0 +1,50 @@
+
+perf /localhost:3001/contato @ 1440px
+  PASS  host CPU load (before/after)               29/25 %        
+  PASS  total transfer                             261.7 KiB      html 39.9K  css 0K  js 207.3K  other 14.5K
+  PASS  requests                                   16             14 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      8 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        332 ms         
+  PASS  LCP (CPU, relative)                        332 ms         div.flex
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            8              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                1.6 screens    DOM 202 nodes
+
+perf /localhost:3001/contato @ 390px
+  PASS  host CPU load (before/after)               29/25 %        
+  PASS  total transfer                             260.9 KiB      html 39.9K  css 0K  js 207.3K  other 13.7K
+  PASS  requests                                   16             13 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      8 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        108 ms         
+  PASS  LCP (CPU, relative)                        108 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            8              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                2 screens      DOM 202 nodes
+
+SUMMARY /localhost:3001/contato: 2 FAIL, 0 WARN  -> FAIL

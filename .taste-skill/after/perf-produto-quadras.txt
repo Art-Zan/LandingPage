@@ -1,0 +1,54 @@
+
+perf localhost:3001/produtos/alocacao-de-quadras @ 1440px
+  PASS  host CPU load (before/after)               12/11 %        
+  PASS  total transfer                             574.1 KiB      html 72.2K  css 7.3K  js 333.3K  font 70.3K  img 55.3K  other 35.7K
+  PASS  requests                                   28             23 by load
+  PASS  images bytes                               55.3 KiB       1 files
+  PASS  largest image                              55.3 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=1280&q=75
+  WARN  JS parsed                                  590.3 KiB      12 files, 333.3K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  WARN  below-fold images not lazy                 1              age?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=1280&q=75
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        416 ms         
+  PASS  LCP (CPU, relative)                        416 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                5.8 screens    DOM 268 nodes
+
+perf localhost:3001/produtos/alocacao-de-quadras @ 390px
+  PASS  host CPU load (before/after)               12/11 %        
+  PASS  total transfer                             538.7 KiB      html 72.2K  css 7.3K  js 333.3K  font 70.3K  img 20.7K  other 34.9K
+  PASS  requests                                   28             22 by load
+  PASS  images bytes                               20.7 KiB       1 files
+  PASS  largest image                              20.7 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=480&q=75
+  WARN  JS parsed                                  590.3 KiB      12 files, 333.3K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  WARN  below-fold images not lazy                 1              mage?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=480&q=75
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        112 ms         
+  PASS  LCP (CPU, relative)                        112 ms         h2.font-titulo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                6.5 screens    DOM 265 nodes
+
+SUMMARY localhost:3001/produtos/alocacao-de-quadras: 2 FAIL, 4 WARN  -> FAIL

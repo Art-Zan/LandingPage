@@ -1,0 +1,5 @@
+
+== .taste-skill/after/produto-quadras.html  (402 words)  0 FAIL, 1 WARN
+  WARN copy-em-dash         18 em dashes in the body (budget 2)
+       fix: use a comma, a colon, parentheses or a full stop where each is natural
+  INFO copy-rhythm          15 sentences, mean 21.5 words, spread 13.3, 0% of 4 words or fewer

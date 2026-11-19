@@ -24,7 +24,8 @@
  *   Q-031 / Q-063 — e-mail institucional no domínio próprio ainda não
  *     existe; o canal fica omitido enquanto `LEAD_INBOX_ADDRESS` não for
  *     preenchido.
- * Dono: Onda 3a
+ * Visual (Onda 5): 11.13, 11.16 — logotipo na placa clara da coluna Empresa.
+ * Dono: Onda 3a (logotipo: Onda 5)
  *
  * POR QUE ESTE ARQUIVO LÊ `src/lib/configuracao-contato.ts` (Onda 3c) E
  * `src/lib/consultas.ts` (Onda 3b). RF-220 e 14.10 exigem que WhatsApp e
@@ -48,18 +49,25 @@
  * condicional de "Parceiros".
  */
 
-import { Container, Titulo, Texto, MarcaDePlaceholder } from '@/components/ui'
+import Image from 'next/image'
+
+import { Container, Texto, MarcaDePlaceholder } from '@/components/ui'
+import { MARCA } from '@/lib/ativos-visuais'
 import { emailPublicado, whatsappPublicado } from '@/lib/configuracao-contato'
 import { obterConfiguracaoDoSite } from '@/lib/consultas'
 import { NOME_DA_MARCA } from '@/lib/rotulos'
+import { partirWordmark } from '@/lib/wordmark'
 
+import { ControleDeTema } from './ControleDeTema'
 import { montarColunasDoRodape, type ContextoDeNavegacao } from './navegacao'
 
 export type PropsDoRodape = ContextoDeNavegacao
 
+// Restyle — palavra do rodapé repousa sem traço, clareia e desenha 1 px
+// abaixo na passagem (globals.css, .az-link-nav). Alvo de 44 px (13.9).
 const LINK_DE_RODAPE =
-  'inline-flex min-h-toque items-center text-apoio leading-corpo text-texto-secundario ' +
-  'transition-colors duration-padrao hover:text-texto-principal'
+  'az-link-nav az-link-nav--rente inline-flex min-h-toque items-center text-corpo leading-corpo ' +
+  'text-texto-secundario transition-colors duration-padrao hover:text-texto-principal'
 
 /**
  * Os três campos de `identificacaoDaEmpresa` (src/globals/ConfiguracaoDoSite.ts),
@@ -74,12 +82,24 @@ const CAMPOS_DE_IDENTIFICACAO_DA_EMPRESA = [
   { chave: 'endereco', rotulo: 'Endereço' },
 ] as const
 
+/** Restyle — título de coluna do rodapé: rótulo curto em caixa alta (11.14). */
+const TITULO_DE_COLUNA =
+  'az-rotulo-coluna'
+
+/** Restyle — opções do controle de tema exibido no rodapé (11.13). */
+const OPCOES_DE_TEMA = [
+  { valor: 'sistema', rotulo: 'Automático' },
+  { valor: 'claro', rotulo: 'Claro' },
+  { valor: 'escuro', rotulo: 'Escuro' },
+] as const
+
 export const Rodape = async ({ haParceirosPublicados, idioma }: PropsDoRodape) => {
   const colunas = montarColunasDoRodape({ haParceirosPublicados, idioma })
   const email = emailPublicado()
   const whatsapp = whatsappPublicado()
   const configuracao = await obterConfiguracaoDoSite()
   const identificacao = configuracao.identificacaoDaEmpresa
+  const wordmark = partirWordmark(NOME_DA_MARCA)
 
   const camposDaIdentificacao = CAMPOS_DE_IDENTIFICACAO_DA_EMPRESA.map((campo) => ({
     ...campo,
@@ -88,99 +108,131 @@ export const Rodape = async ({ haParceirosPublicados, idioma }: PropsDoRodape) =
   const camposAusentes = camposDaIdentificacao.filter((campo) => !campo.valor)
 
   return (
-    <Container
-      como="footer"
-      className="mt-secao-meio border-t border-borda bg-superficie-elevada py-secao"
-    >
-      <div className="grid gap-card sm:grid-cols-2 md:grid-cols-4">
-        {/* RF-004 — coluna Empresa: identificação, não navegação. */}
-        <div className="flex flex-col gap-2">
-          <Titulo nivel={2} visual="h3">
-            Empresa
-          </Titulo>
-          <Texto variante="apoio" tom="secundario" limitarLargura={false}>
-            {NOME_DA_MARCA}
-          </Texto>
+    // Restyle — o rodapé veste a faixa escura (coluna escura de 11.12) e, nas
+    // páginas com chamada final, continua a faixa aberta por ela.
+    <footer className="closing az-faixa-escura pb-12 pt-respiro">
+      <Container className="flex flex-col gap-12 md:gap-16">
+        {/* Linha 1: marca e diretório. Linha 2: controle de tema. */}
+        <div className="flex flex-col gap-12 md:gap-16">
+          {/* Wordmark grande em texto (11.11, 11.16): decorativo — o nome da
+            empresa já é lido na coluna "Empresa" logo abaixo. */}
+          <p
+            aria-hidden="true"
+            className="font-titulo text-marca-rodape font-h1 uppercase leading-none tracking-caixa-alta text-texto-principal"
+          >
+            {wordmark.antes}
+            <span className="text-marca-z">{wordmark.z}</span>
+            {wordmark.depois}
+          </p>
 
-          {/* RF-028, Q-053/Q-086 — cada campo preenchido é exibido; nenhum
-              valor de exemplo. Campo vazio nunca renderiza texto vazio: some
-              da lista e só entra na etiqueta de placeholder abaixo. */}
-          {camposDaIdentificacao
-            .filter((campo) => campo.valor)
-            .map((campo) => (
-              <Texto key={campo.chave} variante="apoio" tom="secundario" limitarLargura={false}>
-                {campo.chave === 'cnpj' ? `CNPJ: ${campo.valor}` : campo.valor}
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            {/* RF-004 — coluna Empresa: identificação, não navegação. */}
+            <div className="flex flex-col items-start gap-3">
+              <h2 className={TITULO_DE_COLUNA}>Empresa</h2>
+              {/* Onda 5 — peça completa do logotipo (11.16: ≥ 120 px de
+                largura). O rodapé veste a faixa escura nos dois temas, e o
+                arquivo não vai sobre fundo escuro (11.13): fica na placa
+                clara com a área de proteção de 15% da altura da peça.
+                Alternativo vazio: o nome da empresa é lido logo abaixo. */}
+              <span className="az-placa-da-marca az-placa-da-marca--logo">
+                <Image
+                  src={MARCA.logo.src}
+                  width={MARCA.logo.largura}
+                  height={MARCA.logo.altura}
+                  alt=""
+                  unoptimized
+                  className="block"
+                />
+              </span>
+              <Texto variante="corpo" tom="principal" limitarLargura={false}>
+                {NOME_DA_MARCA}
               </Texto>
-            ))}
 
-          {/* Campo(s) ainda sem valor (Q-053/Q-086): etiqueta visível só em
-              homologação; em produção este bloco não renderiza nada
-              (dev/CONVENCOES.md §7.3/§7.4). */}
-          {camposAusentes.length > 0 ? (
-            <MarcaDePlaceholder
-              rotulo="Dado pendente"
-              detalhe={`${camposAusentes.map((campo) => campo.rotulo).join(', ')} (Q-086)`}
-            />
-          ) : null}
+              {/* RF-028, Q-053/Q-086 — cada campo preenchido é exibido; nenhum
+                valor de exemplo. Campo vazio nunca renderiza texto vazio: some
+                da lista e só entra na etiqueta de placeholder abaixo. */}
+              {camposDaIdentificacao
+                .filter((campo) => campo.valor)
+                .map((campo) => (
+                  <Texto key={campo.chave} variante="apoio" tom="secundario" limitarLargura={false}>
+                    {campo.chave === 'cnpj' ? `CNPJ: ${campo.valor}` : campo.valor}
+                  </Texto>
+                ))}
 
-          <ul className="flex flex-col gap-1">
-            {email.configurado ? (
-              <li>
-                <a href={`mailto:${email.valor}`} className={LINK_DE_RODAPE}>
-                  {email.valor}
-                </a>
-              </li>
-            ) : (
-              <li>
-                <MarcaDePlaceholder rotulo="Canal pendente" detalhe={email.perguntaAberta} />
-              </li>
-            )}
-
-            {whatsapp.configurado ? (
-              <li className="flex flex-wrap items-center gap-entre-alvos">
-                <a
-                  href={`https://wa.me/${whatsapp.valor}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={LINK_DE_RODAPE}
-                >
-                  WhatsApp
-                </a>
+              {/* Campo(s) ainda sem valor (Q-053/Q-086): etiqueta visível só em
+                homologação; em produção este bloco não renderiza nada
+                (dev/CONVENCOES.md §7.3/§7.4). */}
+              {camposAusentes.length > 0 ? (
                 <MarcaDePlaceholder
                   rotulo="Dado pendente"
-                  detalhe="Horário de atendimento (Q-091)"
+                  detalhe={`${camposAusentes.map((campo) => campo.rotulo).join(', ')} (Q-086)`}
                 />
-              </li>
-            ) : (
-              <li>
-                <MarcaDePlaceholder rotulo="Canal pendente" detalhe={whatsapp.perguntaAberta} />
-              </li>
-            )}
-          </ul>
-        </div>
+              ) : null}
 
-        {/* RF-004 — Portfólio, Contato, Institucional e legal. Um `nav` só,
-            com `display: contents`, para manter as três como participantes
-            diretos da mesma grade sem abrir uma segunda região de rodapé. */}
-        <nav aria-label="Navegação do rodapé" className="contents">
-          {colunas.map((coluna) => (
-            <div key={coluna.titulo} className="flex flex-col gap-2">
-              <Titulo nivel={2} visual="h3">
-                {coluna.titulo}
-              </Titulo>
-              <ul className="flex flex-col gap-1">
-                {coluna.itens.map((item) => (
-                  <li key={item.href}>
-                    <a href={item.href} className={LINK_DE_RODAPE}>
-                      {item.rotulo}
+              <ul className="flex flex-col gap-2">
+                {email.configurado ? (
+                  <li>
+                    <a href={`mailto:${email.valor}`} className={LINK_DE_RODAPE}>
+                      {email.valor}
                     </a>
                   </li>
-                ))}
+                ) : (
+                  <li>
+                    <MarcaDePlaceholder rotulo="Canal pendente" detalhe={email.perguntaAberta} />
+                  </li>
+                )}
+
+                {whatsapp.configurado ? (
+                  <li className="flex flex-wrap items-center gap-entre-alvos">
+                    <a
+                      href={`https://wa.me/${whatsapp.valor}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={LINK_DE_RODAPE}
+                    >
+                      WhatsApp
+                    </a>
+                    <MarcaDePlaceholder
+                      rotulo="Dado pendente"
+                      detalhe="Horário de atendimento (Q-091)"
+                    />
+                  </li>
+                ) : (
+                  <li>
+                    <MarcaDePlaceholder rotulo="Canal pendente" detalhe={whatsapp.perguntaAberta} />
+                  </li>
+                )}
               </ul>
             </div>
-          ))}
-        </nav>
-      </div>
-    </Container>
+
+            {/* RF-004 — Portfólio, Contato, Institucional e legal. Um `nav` só,
+              com `display: contents`, para manter as três como participantes
+              diretos da mesma grade sem abrir uma segunda região de rodapé. */}
+            <nav aria-label="Navegação do rodapé" className="contents">
+              {colunas.map((coluna) => (
+                <div key={coluna.titulo} className="flex flex-col gap-3">
+                  <h2 className={TITULO_DE_COLUNA}>{coluna.titulo}</h2>
+                  <ul className="flex flex-col">
+                    {coluna.itens.map((item) => (
+                      <li key={item.href}>
+                        <a href={item.href} className={LINK_DE_RODAPE}>
+                          {item.rotulo}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Restyle — linha de base: a troca de tema (11.13), que existia como
+            componente da Onda 3a mas não estava em nenhuma página. */}
+        <div className="flex">
+          <ControleDeTema rotulo="Tema de cores" opcoes={OPCOES_DE_TEMA} />
+        </div>
+      </Container>
+    </footer>
   )
 }

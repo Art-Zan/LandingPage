@@ -105,6 +105,19 @@ const caminhoDoArquivoSqlite = (): string => {
   return configurado && configurado !== '' ? configurado : 'var/dev/artzan-dev.sqlite'
 }
 
+// -----------------------------------------------------------------------------
+// MIGRATIONS — onda de deploy (Docker/VPS). Único acréscimo deste bloco.
+//
+// Com NODE_ENV=production o Payload NÃO faz `push` do esquema: o banco de
+// produção/homologação só ganha tabelas por migration. Os arquivos vivem em
+// `src/migrations/` (gerados por `npm run db:migrate:create`, aplicados por
+// `npm run db:migrate` — o entrypoint do container faz isso a cada subida).
+// O caminho é explícito para não depender da busca automática do Payload, que
+// varia com o diretório de trabalho. Ver deploy/README.md.
+// -----------------------------------------------------------------------------
+const DIRETORIO_DE_MIGRATIONS = path.resolve(dirname, 'migrations')
+const DIRETORIO_DE_MIGRATIONS_SQLITE = path.resolve(dirname, 'migrations-sqlite')
+
 const construirAdaptadorDeBanco = () => {
   if (DB_ADAPTER === 'sqlite') {
     if (ehProducao()) {
@@ -115,7 +128,13 @@ const construirAdaptadorDeBanco = () => {
       )
     }
     const arquivo = caminhoDoArquivoSqlite()
-    return sqliteAdapter({ client: { url: `file:${arquivo}` } })
+    return sqliteAdapter({
+      client: { url: `file:${arquivo}` },
+      // Diretório SEPARADO do de Postgres (ver "MIGRATIONS" abaixo): sem isto o
+      // adaptador SQLite encontraria `src/migrations/` e tentaria aplicar SQL de
+      // Postgres. SQLite é só desenvolvimento local e segue usando `push`.
+      migrationDir: DIRETORIO_DE_MIGRATIONS_SQLITE,
+    })
   }
 
   if (DB_ADAPTER !== DB_ADAPTER_PADRAO) {
@@ -129,6 +148,7 @@ const construirAdaptadorDeBanco = () => {
     pool: {
       connectionString: requireEnv('DATABASE_URI'),
     },
+    migrationDir: DIRETORIO_DE_MIGRATIONS,
   })
 }
 
@@ -183,7 +203,14 @@ export default buildConfig({
   // RNF-045: o segredo nunca é literal no código nem chega ao navegador.
   secret: requireEnv('PAYLOAD_SECRET'),
 
-  serverURL: process.env.NEXT_PUBLIC_SITE_URL,
+  // `serverURL` NÃO é definido na etapa 1. Com ele, o Payload grava a URL de
+  // toda mídia como absoluta (`http://<host>/api/midia/file/...`), e o
+  // `next/image` recusa a origem porque `next.config.ts` não libera nenhuma
+  // origem remota (`remotePatterns: []`, "mídia servida pelo próprio Payload,
+  // mesma origem"). Sem ele, a URL sai relativa e mesma origem, como o
+  // `next.config.ts` pressupõe; Open Graph a resolve contra `metadataBase`.
+  // A etapa 2 (painel, e-mail de redefinição de senha) é quem precisa de URL
+  // absoluta — reavaliar ali. Corrigido na verificação pós-Onda 4.
 
   // RNF-083 — reserva estrutural de idioma, desligada no MVP.
   localization: {

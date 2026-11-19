@@ -1,0 +1,77 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 828 tall; h1 40px/1.2, 3 lines, 622x144 at 80,216; lead 20/30, 5 lines, 628 wide; buttons 1 x 44; visual 628x510 at 732,216
+  section #proposta-de-valor section.hero.flex "Conteúdo provisório —  y    73  h   828  content 510
+  section #apresentacao-da-empresa section.py-respiro.bg-superficie-el y   901  h   412  content 220
+  section #beneficios section.py-respiro.bg-superficie "Benefícios do  y  1313  h   449  content 257
+  section #chamada-final section.az-momento-linha.az-faixa-escura "Pró y  1762  h   237  content 34
+  screen-short     #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: 412px tall; one screen under the nav is 827px
+  screen-height    #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: 412px, 0.50 screens; a section is exactly one or two (--h)
+  neighbour        #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: framed, 142px of #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de portfóli" shows
+  screen-short     #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : 449px tall; one screen under the nav is 827px
+  screen-height    #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : 449px, 0.54 screens; a section is exactly one or two (--h)
+  neighbour        #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : framed, 34px of #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipeV" shows
+  neighbour        #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : framed, 141px of the footer shows
+  screen-short     #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 237px tall; one screen under the nav is 827px
+  screen-height    #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 237px, 0.29 screens; a section is exactly one or two (--h)
+  sparse           #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: its content fills 14% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: framed, 590px of the footer shows
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 784 tall; h1 40px/1.2, 4 lines, 452x192 at 48,137; lead 20/30, 8 lines, 452 wide; buttons 1 x 44; visual 452x367 at 524,265
+  section #proposta-de-valor section.hero.flex "Conteúdo provisório —  y    73  h   784  content 624
+  section #apresentacao-da-empresa section.py-respiro.bg-superficie-el y   857  h   460  content 268
+  section #beneficios section.py-respiro.bg-superficie "Benefícios do  y  1317  h   449  content 257
+  section #chamada-final section.az-momento-linha.az-faixa-escura "Pró y  1766  h   237  content 34
+  screen-short     #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: 460px tall; one screen under the nav is 695px
+  neighbour        #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: framed, 67px of #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de portfóli" shows
+  screen-short     #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : 449px tall; one screen under the nav is 695px
+  neighbour        #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : framed, 34px of #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipeV" shows
+  neighbour        #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : framed, 9px of the footer shows
+  screen-short     #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 237px tall; one screen under the nav is 695px
+  sparse           #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: its content fills 14% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: framed, 458px of the footer shows
+  hero-fold        #proposta-de-valor section.hero.flex "Conteúdo provisório — frase de p: ends at y 857, past the fold (768): 1.13 screens tall
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 955 tall; h1 40px/1.2, 3 lines, 622x144 at 48,137; lead 18/27, 4 lines, 672 wide; buttons 1 x 44; visual 448x364 at 48,600
+  section #proposta-de-valor section.hero.flex "Conteúdo provisório —  y    73  h   955  content 827
+  section #apresentacao-da-empresa section.py-respiro.bg-superficie-el y  1028  h   451  content 323
+  section #beneficios section.py-respiro.bg-superficie "Benefícios do  y  1479  h   559  content 431
+  section #chamada-final section.az-momento-linha.az-faixa-escura "Pró y  2038  h   239  content 34
+  edge-right       #proposta-de-valor div.hero__art.az-entrada-figura: ends at x 496; the right line is 720
+  screen-short     #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: 451px tall; one screen under the nav is 951px
+  neighbour        #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: framed, 142px of #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de portfóli" shows
+  screen-short     #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : 559px tall; one screen under the nav is 951px
+  neighbour        #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : framed, 34px of #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipeV" shows
+  neighbour        #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : framed, 153px of the footer shows
+  screen-short     #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 239px tall; one screen under the nav is 951px
+  sparse           #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: its content fills 14% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: framed, 712px of the footer shows
+  hero-fold        #proposta-de-valor section.hero.flex "Conteúdo provisório — frase de p: ends at y 1028, past the fold (1024): 1.00 screens tall
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 788 tall; h1 32px/1.2, 4 lines, 342x154 at 24,105; lead 18/27, 9 lines, 342 wide; buttons 1 x 44; visual 0x0 at 0,0
+  section #proposta-de-valor section.hero.flex "Conteúdo provisório —  y    57  h   788  content 610
+  section #apresentacao-da-empresa section.py-respiro.bg-superficie-el y   845  h   595  content 467
+  section #beneficios section.py-respiro.bg-superficie "Benefícios do  y  1440  h   732  content 604
+  section #chamada-final section.az-momento-linha.az-faixa-escura "Pró y  2171  h   294  content 167
+  screen-short     #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: 595px tall; one screen under the nav is 787px
+  screen-height    #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: 595px, 0.76 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        #apresentacao-da-empresa section.py-respiro.bg-superficie-elevada "Art: framed, 58px of #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de portfóli" shows
+  screen-short     #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : 732px tall; one screen under the nav is 787px
+  screen-height    #beneficios section.py-respiro.bg-superficie "Benefícios do modelo de : 732px, 0.93 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  screen-short     #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 294px tall; one screen under the nav is 787px
+  screen-height    #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 294px, 0.37 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: framed, 493px of the footer shows
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 852 tall; h1 32px/1.2, 6 lines, 272x230 at 24,105; lead 18/27, 11 lines, 272 wide; buttons 1 x 44; visual 0x0 at 0,0
+  section #proposta-de-valor section.hero.flex "Conteúdo provisório —  y    57  h   852  content 740
+  section #apresentacao-da-empresa section.py-respiro.bg-superficie-el y   909  h   667  content 539
+  section #beneficios section.py-respiro.bg-superficie "Benefícios do  y  1576  h   832  content 704
+  section #chamada-final section.az-momento-linha.az-faixa-escura "Pró y  2408  h   294  content 167
+  screen-short     #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 294px tall; one screen under the nav is 583px
+  screen-height    #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: 294px, 0.50 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        #chamada-final section.az-momento-linha.az-faixa-escura "Próximo passo: framed, 289px of the footer shows
+  hero-fold        #proposta-de-valor section.hero.flex "Conteúdo provisório — frase de p: ends at y 909, past the fold (640): 1.46 screens tall

@@ -1,0 +1,314 @@
+consistency  http://localhost:3001/sobre
+
+1440x900  2 screens  24 FAIL  10 WARN
+  FAIL placeholder     div.flex.flex-col > div.flex.flex-col:nth-of-type(1) > div > p.leading-corpo.text-corpo:nth-of-type(1)  "Esta página (P-02) está marcada como pla"
+       "placeholder" is a placeholder left on the page  [1440-01-placeholder.jpg]
+       fix: write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships
+  FAIL text-only       main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZan"
+       the closing section is only text: no picture, icon, mock or effect in it  [1440-02-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL copy-headline   h1#titulo-sobre  "Sobre a ArtZan"
+       "Sobre a ArtZan" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags); only the line under it does  [1440-03-copy-headline.jpg]
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  FAIL text-contrast   div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria  "Z"
+       a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)  [1440-04-text-contrast.jpg]
+       fix: body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels
+  FAIL focus-ring      :focus:not(:focus-visible)
+       ":focus:not(:focus-visible)" in 23d1c743d5ce11fd.css removes the focus outline and sets nothing in its place
+       fix: keep the kit's :focus-visible ring, or put a change of the same strength (a 2px line in --action) in the rule that removes it
+  WARN copy-headings   div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo  "Quem somos (texto provisório)"
+       "Quem somos (texto provisório)" names no product, part, place or section (the one brand line a page may have)  [1440-05-copy-headings.jpg]
+       fix: name the thing in every heading: the product, a part, the place or a section noun
+  WARN copy-buttons    nav.hidden > ul.flex.items-center > li:nth-of-type(2) > a.inline-flex.min-h-toque  "Sobre"
+       "Sobre" does not start with a verb (book, buy, try, start, get, see...) (and 2 more like it: "Contato", "Falar com a equipe")  [1440-06-copy-buttons.jpg]
+       fix: label buttons with a verb and what the visitor gets ("Book a room", "Start free trial")
+  WARN copy-actions    header.sticky.top-0 > div.mx-auto.w-full > div.flex.items-center > a.inline-flex.items-center  "Contato"
+       2 labels for one target /contato: "Contato", "Falar com a equipe"  [1440-07-copy-actions.jpg]
+       fix: few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close
+  WARN photo-credit    (the page text)
+       1 library source (placehold): the page credits placehold; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN copy-length     main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZan"
+       1 section over 90 words a screen outside the UI mocks ("Sobre a ArtZan" 145); 145 words a screen across the page (145 words in 1 screens): a tech page says it in about 80 or fewer  [1440-08-copy-length.jpg]
+       fix: cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences
+  WARN hover           nav.hidden > ul.flex.items-center > li:nth-of-type(2) > a.inline-flex.min-h-toque  "Sobre"
+       the filled button ("Sobre") looks the same hovered as at rest, while the outlined button, nav link answer  [1440-09-hover.jpg]
+       fix: give buttons and links a small answer to the pointer (the motion layer: a fill change, a drawn underline, an arrow that moves)
+  WARN moment-none     (the page)
+       a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)
+       fix: deal one (moments.mjs pick --page software) and mount it in its own section
+  WARN skip-link       a.az-pular-para-conteudo  "Pular para o conteúdo"
+       the first Tab stop is "Pular para o conteúdo", not a skip link: a keyboard user tabs through the whole nav on every visit
+       fix: add the starter's skip link as the header's first child: <a class="skip-link" href="#top">Skip to content</a>
+  WARN page-meta       head  "Sobre a ArtZan | ArtZan"
+       no <meta name="description">: a search result and a shared link show a scrap of the page instead
+       fix: write a <title> "Name: what it is for whom or where" and a one-sentence description in other words (starter.html)
+  WARN share-meta      head
+       the head lacks og:description, og:image, theme-color: a shared link shows no picture or title of its own
+       fix: copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)
+  FAIL hero-screen     main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the hero ends at 757px on a 900px screen, 143px above the fold: it ends at the fold, 1px either way (SR-1)  [1440-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       111px of the next section shows on the first screen (from 789px on a 900px screen): nothing below the hero shows at load (SR-1)  [1440-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       the section is 511px tall (0.6 screens), 389px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)  [1440-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       the section starts at 789px, 111px above the screen grid (1 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-04-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the section starts at 61px, 61px below the screen grid (0 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-05-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL one-section     div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo  "Desenvolvimento de integrações sob encom"
+       the screen at scroll 400px (the top of section 2) shows 296px of section 1 and the heading of section 1 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-06-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo  "Empresa"
+       the screen at scroll 61px (the top of section 1) shows 172px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-07-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo  "Empresa"
+       the screen at scroll 0px (stride 0) shows 111px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-08-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo  "Quem somos (texto provisório)"
+       the hero holds an h2 (2): its heading is the h1, and an h2 opens the next section (SR-5)  [1440-rhythm-09-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [1440-rhythm-10-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo  "Empresa"
+       headings of two sections show whole on one screen at 9 of 9 scroll positions (100%; at scroll 0, 50, 100, 150px), here with "Quem somos (texto provisório)": at most 3% on a desktop (SR-5)  [1440-rhythm-11-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges header.sticky.top-0  "ARTZANSoftwaresSobreContatoAbrir menuSof"
+       the nav's content runs 168px from the left and 168px from the right (read from its outermost blocks: no .wrap): the page's container starts at 144px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)  [1440-rhythm-12-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       the content of section 2 runs 168px from the left and 168px from the right (read from its outermost blocks: no .wrap): the page's container starts at 144px; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (and 1 more like it: "Sobre a ArtZanConteúdo p") (SR-6)  [1440-rhythm-13-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges a.az-pular-para-conteudo  "Pular para o conteúdo"
+       a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)  [1440-rhythm-14-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges header.sticky.top-0  "ARTZANSoftwaresSobreContatoAbrir menuSof"
+       a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 3 more like it: "EmpresaArtZanDado penden", "Sobre a ArtZanConteúdo p", "EmpresaArtZanDado penden") (SR-6)  [1440-rhythm-15-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.font-titulo.leading-titulo  "Institucional e legal"
+       the h2 starts 846px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [1440-rhythm-16-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo  "Contato"
+       the h2 starts 564px right of the container's left: every h1 and h2 starts on it, 2px either way (and 7 more like it: "Portfólio", x 193, "Desenvolvimento de integ") (SR-6)  [1440-rhythm-17-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-col > span.inline-flex.flex-wrap  "Conteúdo provisórioRegistro provisório —"
+       a box over half the container wide runs 168-763px, not on the container's lines at 144-1296px (SR-6)  [1440-rhythm-18-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+  FAIL container-edges div.mx-auto.w-full > div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(2)  "Desenvolvimento de integrações sob encom"
+       a box over half the container wide runs 168-1272px, not on the container's lines at 144-1296px (SR-6)  [1440-rhythm-19-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+
+1024x768  2 screens  3 FAIL  0 WARN
+  FAIL no-visual       main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZan"
+       no picture, effect or mock in this section; a feature section needs a visual  [1024-01-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL off-grid        a.az-pular-para-conteudo  "Pular para o conteúdo"
+       left edge at 16px, 8px off the page margin at 24px (11 elements, like h1#titulo-sobre)  [1024-02-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL text-contrast   div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria  "Z"
+       a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)  [1024-03-text-contrast.jpg]
+       fix: body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels
+
+768x1024  2 screens  23 FAIL  0 WARN
+  FAIL text-only       main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZan"
+       the closing section is only text: no picture, icon, mock or effect in it  [768-01-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL off-grid        a.az-pular-para-conteudo  "Pular para o conteúdo"
+       left edge at 16px, 8px off the page margin at 24px (11 elements, like h1#titulo-sobre)  [768-02-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL text-contrast   div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria  "Z"
+       a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)  [768-03-text-contrast.jpg]
+       fix: body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels
+  FAIL hero-screen     main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the hero ends at 757px on a 1024px screen, 267px above the fold: it ends at the fold, 1px either way (SR-1)  [768-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       235px of the next section shows on the first screen (from 789px on a 1024px screen): nothing below the hero shows at load (SR-1)  [768-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       the section is 574px tall (0.6 screens), 450px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)  [768-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       the section starts at 789px, 235px above the screen grid (1 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-04-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the section starts at 61px, 61px below the screen grid (0 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-05-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL one-section     div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo  "Desenvolvimento de integrações sob encom"
+       the screen at scroll 339px (the top of section 2) shows 357px of section 1 and the heading of section 1 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-06-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo  "Empresa"
+       the screen at scroll 61px (the top of section 1) shows 296px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-07-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo  "Empresa"
+       the screen at scroll 0px (stride 0) shows 235px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-08-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     div.mx-auto.w-full > div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(2)  "Desenvolvimento de integrações sob encom"
+       a band: a box 94% of the section wide on a ground of its own that holds only text: the section's own ground is the band (SR-4)  [768-rhythm-09-one-section.jpg]
+       fix: put every block of <main> in a <section>, and give a band its own section instead of a ground inside one
+  FAIL one-heading     div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo  "Quem somos (texto provisório)"
+       the hero holds an h2 (2): its heading is the h1, and an h2 opens the next section (SR-5)  [768-rhythm-10-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [768-rhythm-11-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo  "Empresa"
+       headings of two sections show whole on one screen at 7 of 7 scroll positions (100%; at scroll 0, 50, 100, 150px), here with "Quem somos (texto provisório)": at most 3% on a desktop (SR-5)  [768-rhythm-12-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges header.sticky.top-0  "ARTZANSoftwaresSobreContatoAbrir menuSof"
+       the nav's content runs 24px from the left and 24px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-13-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the content of section 1 runs 24px from the left and 24px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-14-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       the content of section 2 runs 24px from the left and 24px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-15-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges a.az-pular-para-conteudo  "Pular para o conteúdo"
+       a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)  [768-rhythm-16-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges header.sticky.top-0  "ARTZANSoftwaresSobreContatoAbrir menuSof"
+       a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 3 more like it: "EmpresaArtZanDado penden", "Sobre a ArtZanConteúdo p", "EmpresaArtZanDado penden") (SR-6)  [768-rhythm-17-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.font-titulo.leading-titulo  "Institucional e legal"
+       the h2 starts 558px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [768-rhythm-18-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo  "Contato"
+       the h2 starts 372px right of the container's left: every h1 and h2 starts on it, 2px either way (and 4 more like it: "Portfólio", x 49, "Desenvolvimento de integ") (SR-6)  [768-rhythm-19-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges section.py-secao-meio.bg-superficie > div.mx-auto.w-full > div.flex.flex-col > span.inline-flex.flex-wrap  "Conteúdo provisórioRegistro provisório —"
+       a box over half the container wide runs 24-619px, not on the container's lines at 24-744px (SR-6)  [768-rhythm-20-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+
+390x844  3 screens  17 FAIL  0 WARN
+  FAIL tap-size        header.sticky.top-0 > div.mx-auto.w-full > a.inline-flex.shrink-0  "ARTZAN"
+       a 79x30px tap target: 0px from the next one ("Pular para o conteúdo"), so a thumb lands on the wrong one  [390-01-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL no-visual       main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZan"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-02-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL text-contrast   div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria  "Z"
+       a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)  [390-03-text-contrast.jpg]
+       fix: body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels
+  FAIL fold-action     div.flex.flex-col > div.flex.flex-col:nth-of-type(2) > div > a.inline-flex.items-center
+       the hero's main button "Falar com a equipe" starts 109px below the first screen (844px tall): it is not seen on load  [390-04-fold-action.jpg]
+       fix: bring the hero's buttons onto the first screen: a shorter headline or line, the picture under the buttons
+  FAIL hero-screen     main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the hero ends at 1046px on a 844px screen, 202px below the fold: it ends at the fold, 1px either way (SR-1)  [390-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL section-height  footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       the section starts at 1078px, 234px below the screen grid (1 x 844px): sections start on whole screens (SR-2)  [390-rhythm-04-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the section starts at 61px, 61px below the screen grid (0 x 844px): sections start on whole screens (SR-2)  [390-rhythm-05-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL one-section     main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZanConteúdo provisórioRegistr"
+       the screen at scroll 844px (stride 1) shows 141px of section 1 and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [390-rhythm-06-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo  "Quem somos (texto provisório)"
+       the hero holds an h2 (2): its heading is the h1, and an h2 opens the next section (SR-5)  [390-rhythm-07-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     div.grid.gap-card > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.font-titulo.leading-titulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [390-rhythm-08-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     footer.mx-auto.w-full > div.grid.gap-card > div.flex.flex-col > h2.font-titulo.leading-titulo  "Empresa"
+       headings of two sections show whole on one screen at 6 of 22 scroll positions (27.3%; at scroll 350, 400, 450, 500px), here with "Desenvolvimento de integrações s": at most 5% on a phone (SR-5)  [390-rhythm-09-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges a.az-pular-para-conteudo  "Pular para o conteúdo"
+       a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)  [390-rhythm-10-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges header.sticky.top-0  "ARTZANSoftwaresSobreContatoAbrir menuSof"
+       a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)  [390-rhythm-11-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges footer.mx-auto.w-full  "EmpresaArtZanDado pendenteRazão social, "
+       a <footer> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 2 more like it: "Sobre a ArtZanConteúdo p", "EmpresaArtZanDado penden") (SR-6)  [390-rhythm-12-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo  "Desenvolvimento de integrações sob encom"
+       2 text blocks start on a left line at x 33, 17px from the container's left: text starts on the container's left, or on one split line (x 175, 207, 239) (also "Serviço de integrações entre sis") (SR-6)  [390-rhythm-13-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.flex.flex-col > div.flex.flex-col > div.flex.flex-col:nth-of-type(2) > h2.font-titulo.leading-titulo  "Desenvolvimento de integrações sob encom"
+       the h2 starts 17px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [390-rhythm-14-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.mx-auto.w-full > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "Conteúdo provisório"
+       4 text blocks start on a left line at x 25, 9px from the container's left: text starts on the container's left, or on one split line (x 175, 207, 239) (also "Registro provisório — não repres", "Dado pendente", "Razão social, CNPJ, Endereço (Q-") (SR-6)  [390-rhythm-15-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+
+320x640  4 screens  4 FAIL  0 WARN
+  FAIL tap-size        header.sticky.top-0 > div.mx-auto.w-full > a.inline-flex.shrink-0  "ARTZAN"
+       a 79x30px tap target: 0px from the next one ("Pular para o conteúdo"), so a thumb lands on the wrong one  [320-01-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL no-visual       main#conteudo-principal > section.py-secao-meio.bg-superficie  "Sobre a ArtZan"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-03-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL text-contrast   div.mx-auto.w-full > a.inline-flex.shrink-0 > span.font-titulo.text-h3 > span.text-acao-primaria  "Z"
+       a caption, label or muted line in #0e66b4 on #0b121b reads 3.2:1 (needs 4.5:1)  [320-02-text-contrast.jpg]
+       fix: body text in the ink at 7:1 or more; grey (4.5:1 or more) only for captions and labels
+  FAIL fold-action     div.flex.flex-col > div.flex.flex-col:nth-of-type(2) > div > a.inline-flex.items-center
+       the hero's main button "Falar com a equipe" starts 461px below the first screen (640px tall): it is not seen on load  [320-04-fold-action.jpg]
+       fix: bring the hero's buttons onto the first screen: a shorter headline or line, the picture under the buttons
+
+first screen at 1280, 1152, 896  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  1 FAIL
+  FAIL tap-size        [320] header.sticky.top-0 > div.mx-auto.w-full > a.inline-flex.shrink-0  "ARTZAN"
+       a 79x30px tap target: 0px from the next one ("Pular para o conteúdo"), so a thumb lands on the wrong one  [narrow-320-01-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+
+checks
+  PASS assets                 PASS shader-lint            PASS gl-fallback            
+  PASS empty-visual           PASS hero-fill              PASS flush                  
+  FAIL placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            PASS nav                    PASS nav-covers             
+  PASS spill                  PASS off-viewport           PASS fold-card              
+  PASS hover-spill            PASS overlap-text           PASS collide                
+  FAIL tap-size               PASS row-gap                PASS cut-text               
+  PASS fold-cut               PASS marquee                PASS scroll-linked          
+  PASS scroll-reveal          PASS pinned                 PASS loop-pause             
+  PASS reduced-motion         PASS hidden-content         PASS webgl                  
+  FAIL no-visual              FAIL text-only              PASS card-visual            
+  PASS hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           PASS same-action            PASS button-picture         
+  PASS cta                    PASS pricing-tiers          FAIL copy-headline          
+  PASS copy-fact              WARN copy-headings          WARN copy-buttons           
+  WARN copy-actions           PASS heading-scale          PASS stagger                
+  PASS top-stagger            FAIL off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               FAIL text-contrast          PASS body-size              
+  PASS busy-ground            PASS section-gaps           PASS proximity              
+  PASS hole                   PASS links                  PASS forms                  
+  PASS photo-upscale          PASS photo-set              WARN photo-credit           
+  PASS nav-family             PASS nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  PASS stranded-action        PASS orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           WARN copy-length            PASS nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             FAIL fold-action            PASS action-count           
+  PASS one-screen             WARN hover                  PASS hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  PASS visual-caption         PASS visual-empty           PASS effect-kind            
+  PASS hero-enter             WARN moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           FAIL hero-screen            FAIL section-height         
+  PASS section-air            FAIL one-section            FAIL one-heading            
+  FAIL container-edges        PASS row-lines              PASS split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  PASS section-tile           PASS empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               FAIL focus-ring             PASS focus-visible          
+  PASS focus-hidden           WARN skip-link              PASS menu-toggle            
+  PASS lang                   WARN page-meta              WARN share-meta             
+  PASS action-repeat          PASS map-link               PASS open-now               
+  PASS assumed                PASS run-on                 PASS form-fields            
+  PASS form-send              
+
+total  72 FAIL  10 WARN  (crops and report.json in C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.taste-skill\before\consistency-sobre)

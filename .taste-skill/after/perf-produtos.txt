@@ -1,0 +1,56 @@
+
+perf /localhost:3001/produtos @ 1440px
+  PASS  host CPU load (before/after)               13/13 %        
+  PASS  total transfer                             767.5 KiB      html 56.5K  css 7.3K  js 325.1K  font 70.3K  img 295.7K  other 12.8K
+  PASS  requests                                   25             21 by load
+  PASS  images bytes                               295.7 KiB      4 files
+  PASS  largest image                              74.8 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=1920&q=75
+  WARN  JS parsed                                  576.9 KiB      9 files, 325.1K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  WARN  above-fold image set lazy                  2              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-scout-esportivo.webp&w=1920&q=75, image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-placar-esportivo.webp&w=1920&q=75
+  FAIL  oversized images (natural > 2.2x shown)    4              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-scout-esportivo.webp&w=1920&q=75 1600px for 576; image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-placar-esportivo.webp&w=1920&q=75 1600px for 576; image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1920&q=75 1600px for 576
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        356 ms         
+  PASS  LCP (CPU, relative)                        424 ms         img
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                3.6 screens    DOM 226 nodes
+
+perf /localhost:3001/produtos @ 390px
+  PASS  host CPU load (before/after)               13/13 %        
+  PASS  total transfer                             766.7 KiB      html 56.5K  css 7.3K  js 325.1K  font 70.3K  img 295.7K  other 12K
+  PASS  requests                                   25             19 by load
+  PASS  images bytes                               295.7 KiB      4 files
+  PASS  largest image                              74.8 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=1920&q=75
+  WARN  JS parsed                                  576.9 KiB      9 files, 325.1K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  WARN  above-fold image set lazy                  1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-scout-esportivo.webp&w=1920&q=75
+  FAIL  oversized images (natural > 2.2x shown)    4              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-scout-esportivo.webp&w=1920&q=75 1600px for 306; image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-placar-esportivo.webp&w=1920&q=75 1600px for 306; image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1920&q=75 1600px for 306
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        84 ms          
+  PASS  LCP (CPU, relative)                        140 ms         img
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                5.3 screens    DOM 223 nodes
+
+SUMMARY /localhost:3001/produtos: 4 FAIL, 4 WARN  -> FAIL

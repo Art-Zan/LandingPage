@@ -1,0 +1,50 @@
+
+perf /localhost:3001/termos @ 1440px
+  PASS  host CPU load (before/after)               20/23 %        
+  PASS  total transfer                             254.9 KiB      html 33.9K  css 0K  js 207.3K  other 13.6K
+  PASS  requests                                   15             13 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      7 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        276 ms         
+  PASS  LCP (CPU, relative)                        276 ms         p
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            7              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                1.2 screens    DOM 148 nodes
+
+perf /localhost:3001/termos @ 390px
+  PASS  host CPU load (before/after)               20/23 %        
+  PASS  total transfer                             253.8 KiB      html 33.9K  css 0K  js 207.3K  other 12.5K
+  PASS  requests                                   14             12 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      7 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        92 ms          
+  PASS  LCP (CPU, relative)                        92 ms          p
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            7              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                1.4 screens    DOM 148 nodes
+
+SUMMARY /localhost:3001/termos: 2 FAIL, 0 WARN  -> FAIL

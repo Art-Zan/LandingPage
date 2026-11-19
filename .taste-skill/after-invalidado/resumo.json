@@ -1,0 +1,112 @@
+[
+ {
+  "rota": "inicial",
+  "consistency": "68 FAIL / 30 WARN",
+  "idsFail": "placeholder,no-visual,text-only,copy-headline,copy-headings,fold-action,effect-kind,hero-screen,section-height,one-section,one-heading,container-edges",
+  "layout": "1440:11 1024:8 768:9 390:8 320:3",
+  "peso": "466.1 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "sobre",
+  "consistency": "36 FAIL / 12 WARN",
+  "idsFail": "assets,no-visual,cta,copy-headline,copy-fact,hero-screen,one-heading,container-edges,lang,page-meta",
+  "layout": "1440:5 1024:2 768:4 390:2 320:3",
+  "peso": "357.5 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 3 WARN  -> FAIL",
+  "perfFails": "broken requests",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produtos",
+  "consistency": "117 FAIL / 72 WARN",
+  "idsFail": "assets,hero-fill,placeholder,nav,off-viewport,tap-size,cta,copy-headings,off-grid,effect-kind,hero-screen,section-height,section-air,one-section,one-heading,container-edges,row-lines,empty-area,menu-toggle",
+  "layout": "não roda (sem .wrap)",
+  "peso": "574.1 KiB",
+  "cls": "0.000",
+  "perf": "4 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "broken requests,horizontal overflow",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produto-lara",
+  "consistency": "112 FAIL / 100 WARN",
+  "idsFail": "assets,hero-fill,placeholder,off-viewport,tap-size,no-visual,cta,copy-headline,copy-headings,off-grid,photo-upscale,effect-kind,hero-screen,section-height,section-air,one-section,one-heading,container-edges,row-lines,empty-area,menu-toggle",
+  "layout": "não roda (sem .wrap)",
+  "peso": "358.8 KiB",
+  "cls": "0.000",
+  "perf": "4 FAIL, 3 WARN  -> FAIL",
+  "perfFails": "broken requests,horizontal overflow",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produto-quadras",
+  "consistency": "115 FAIL / 96 WARN",
+  "idsFail": "assets,empty-visual,hero-fill,placeholder,off-viewport,tap-size,no-visual,cta,copy-headline,copy-headings,off-grid,photo-upscale,effect-kind,hero-screen,section-height,section-air,one-section,one-heading,container-edges,row-lines,section-tile,empty-area,menu-toggle",
+  "layout": "não roda (sem .wrap)",
+  "peso": "359.1 KiB",
+  "cls": "0.000",
+  "perf": "4 FAIL, 3 WARN  -> FAIL",
+  "perfFails": "broken requests,horizontal overflow",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "contato",
+  "consistency": "89 FAIL / 42 WARN",
+  "idsFail": "assets,off-viewport,tap-size,no-visual,text-only,cta,copy-headline,off-grid,hero-screen,section-height,one-section,one-heading,container-edges,empty-area,menu-toggle",
+  "layout": "não roda (sem .wrap)",
+  "peso": "261.7 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 0 WARN  -> FAIL",
+  "perfFails": "broken requests",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "obrigado",
+  "consistency": "67 FAIL / 27 WARN",
+  "idsFail": "assets,tap-size,text-only,cta,copy-headline,off-grid,hero-screen,section-height,one-section,one-heading,container-edges,empty-area,menu-toggle",
+  "layout": "1440:2 1024:2 768:2 390:2 320:2",
+  "peso": "253.1 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 0 WARN  -> FAIL",
+  "perfFails": "broken requests",
+  "copylint": "0 FAIL, 0 WARN"
+ },
+ {
+  "rota": "privacidade",
+  "consistency": "81 FAIL / 31 WARN",
+  "idsFail": "assets,placeholder,tap-size,fold-cut,text-only,cta,copy-headline,off-grid,hero-screen,section-height,one-section,one-heading,container-edges,empty-area,menu-toggle",
+  "layout": "1440:2 1024:2 768:2 390:2 320:0",
+  "peso": "255.4 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 0 WARN  -> FAIL",
+  "perfFails": "broken requests",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "termos",
+  "consistency": "80 FAIL / 29 WARN",
+  "idsFail": "assets,placeholder,tap-size,text-only,cta,copy-headline,off-grid,hero-screen,section-height,one-section,one-heading,container-edges,empty-area,menu-toggle",
+  "layout": "1440:2 1024:2 768:2 390:2 320:0",
+  "peso": "254.9 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 0 WARN  -> FAIL",
+  "perfFails": "broken requests",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "404",
+  "consistency": "32 FAIL / 8 WARN",
+  "idsFail": "assets,copy-headline,copy-fact,hero-screen,section-height,section-air,one-section,one-heading,container-edges,row-lines,split-pair,lang",
+  "layout": "1440:0 1024:0 768:0 390:0 320:0",
+  "peso": "239.5 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 0 WARN  -> FAIL",
+  "perfFails": "broken requests",
+  "copylint": "0 FAIL, 0 WARN"
+ }
+]

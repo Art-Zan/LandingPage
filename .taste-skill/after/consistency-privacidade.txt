@@ -1,0 +1,284 @@
+consistency  http://localhost:3001/privacidade
+
+1440x900  2 screens  20 FAIL  8 WARN
+  FAIL placeholder     div.flex.flex-col > div.flex.flex-col > div.payload-richtext > p:nth-of-type(1)  "Este registro está marcado como conteúdo"
+       "placeholder" is a placeholder left on the page  [1440-01-placeholder.jpg]
+       fix: write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships
+  FAIL text-only       main#conteudo-principal > section.py-respiro.hero  "Política de privacidade"
+       the closing section is only text: no picture, icon, mock or effect in it  [1440-02-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [1440-03-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL copy-headline   h1#titulo-privacidade  "Política de privacidade"
+       "Política de privacidade" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags)  [1440-04-copy-headline.jpg]
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  WARN copy-headings   div.max-w-texto.pt-4 > div.flex.flex-col > div.flex.flex-col > h2.font-titulo.leading-titulo  "Situação deste texto"
+       "Situação deste texto" names no product, part, place or section (the one brand line a page may have)  [1440-05-copy-headings.jpg]
+       fix: name the thing in every heading: the product, a part, the place or a section noun
+  WARN copy-buttons    header.nav.sticky > div.az-moldura.wrap > div.flex.items-center > a.az-botao.btn  "Contato"
+       "Contato" does not start with a verb (book, buy, try, start, get, see...)  [1440-06-copy-buttons.jpg]
+       fix: label buttons with a verb and what the visitor gets ("Book a room", "Start free trial")
+  WARN photo-credit    (the page text)
+       1 library source (placehold): the page credits placehold; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN copy-length     main#conteudo-principal > section.py-respiro.hero  "Política de privacidade"
+       1 section over 90 words a screen outside the UI mocks ("Política de privacidade" 102); 102 words a screen across the page (102 words in 1 screens): a tech page says it in about 80 or fewer  [1440-07-copy-length.jpg]
+       fix: cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences
+  WARN moment-none     (the page)
+       a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)
+       fix: deal one (moments.mjs pick --page software) and mount it in its own section
+  WARN empty-area      footer.closing.az-faixa-escura  "EMPRESA"
+       39% of the section is empty: 40% beside content that covers under half the container, in its 614px of rows (WARN over 35%, FAIL over 50%)  [1440-08-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  WARN skip-link       header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       the first Tab stop is "Pular para o conteúdo", not a skip link: a keyboard user tabs through the whole nav on every visit
+       fix: add the starter's skip link as the header's first child: <a class="skip-link" href="#top">Skip to content</a>
+  WARN share-meta      head
+       the head lacks theme-color: a shared link shows no picture or title of its own
+       fix: copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the hero ends at 682px on a 900px screen, 218px above the fold: it ends at the fold, 1px either way (SR-1)  [1440-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       218px of the next section shows on the first screen (from 682px on a 900px screen): nothing below the hero shows at load (SR-1)  [1440-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section is 758px tall (0.8 screens), 142px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)  [1440-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section starts at 682px, 218px above the screen grid (1 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-04-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the section starts at 73px, 73px below the screen grid (0 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-05-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section's content does not fit it: its lowest content ends 692px below its top, past 686px (the section less 72px of bottom padding) (SR-2)  [1440-rhythm-06-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL one-section     footer.closing.az-faixa-escura > div.az-moldura.wrap > div.flex.flex-col > p.font-titulo.text-marca-rodape  "ARTZAN"
+       the screen at scroll 73px (the top of section 1) shows 291px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-07-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     footer.closing.az-faixa-escura > div.az-moldura.wrap > div.flex.flex-col > p.font-titulo.text-marca-rodape  "ARTZAN"
+       the screen at scroll 0px (stride 0) shows 218px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-08-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the screen at scroll 540px (the top of section 2) shows 69px of section 1 beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-09-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.max-w-texto.pt-4 > div.flex.flex-col > div.flex.flex-col > h2.font-titulo.leading-titulo  "Situação deste texto"
+       the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)  [1440-rhythm-10-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [1440-rhythm-11-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     footer.closing.az-faixa-escura > div.az-moldura.wrap > div.flex.flex-col > p.font-titulo.text-marca-rodape  "ARTZAN"
+       headings of two sections show whole on one screen at 6 of 11 scroll positions (54.5%; at scroll 0, 50, 100, 150px), here with "Situação deste texto": at most 3% on a desktop (SR-5)  [1440-rhythm-12-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Política de privacidadeAtualizado em 10 "
+       the hero's .wrap holds 4 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [1440-rhythm-13-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo  "Institucional e legal"
+       the h2 starts 978px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [1440-rhythm-14-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.text-apoio.font-rotulo  "Contato"
+       the h2 starts 652px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [1440-rhythm-15-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the h2 starts 326px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [1440-rhythm-16-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+
+1024x768  3 screens  2 FAIL  1 WARN
+  FAIL text-only       main#conteudo-principal > section.py-respiro.hero  "Política de privacidade"
+       the closing section is only text: no picture, icon, mock or effect in it  [1024-01-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [1024-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  WARN empty-area      footer.closing.az-faixa-escura  "EMPRESA"
+       39% of the section is empty: 16px of empty rows between its content, 36% beside content that covers under half the container, in its 702px of rows (WARN over 35%, FAIL over 50%)  [1024-03-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+
+768x1024  2 screens  22 FAIL  0 WARN
+  FAIL text-only       main#conteudo-principal > section.py-respiro.hero  "Política de privacidade"
+       the closing section is only text: no picture, icon, mock or effect in it  [768-01-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [768-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the hero ends at 618px on a 1024px screen, 406px above the fold: it ends at the fold, 1px either way (SR-1)  [768-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       406px of the next section shows on the first screen (from 618px on a 1024px screen): nothing below the hero shows at load (SR-1)  [768-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section is 907px tall (0.9 screens), 117px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)  [768-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section starts at 618px, 406px above the screen grid (1 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-04-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the section starts at 73px, 73px below the screen grid (0 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-05-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section's content does not fit it: its lowest content ends 841px below its top, past 835px (the section less 72px of bottom padding) (SR-2)  [768-rhythm-06-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL one-section     div.max-w-texto.pt-4 > div.flex.flex-col > div.flex.flex-col > h2.font-titulo.leading-titulo  "Situação deste texto"
+       the screen at scroll 73px (the top of section 1) shows 472px of section 1 and the heading of section 1 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-07-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     footer.closing.az-faixa-escura > div.az-moldura.wrap > div.flex.flex-col > p.font-titulo.text-marca-rodape  "ARTZAN"
+       the screen at scroll 0px (stride 0) shows 406px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-08-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the screen at scroll 501px (the top of section 2) shows 44px of section 1 beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-09-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.max-w-texto.pt-4 > div.flex.flex-col > div.flex.flex-col > h2.font-titulo.leading-titulo  "Situação deste texto"
+       the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)  [768-rhythm-10-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [768-rhythm-11-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     footer.closing.az-faixa-escura > div.az-moldura.wrap > div.flex.flex-col > p.font-titulo.text-marca-rodape  "ARTZAN"
+       headings of two sections show whole on one screen at 6 of 11 scroll positions (54.5%; at scroll 0, 50, 100, 150px), here with "Situação deste texto": at most 3% on a desktop (SR-5)  [768-rhythm-12-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges header.nav.sticky  "Pular para o conteúdoARTZANSoftwaresSobr"
+       the nav's content runs 48px from the left and 48px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-13-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the content of section 1 runs 48px from the left and 48px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-14-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the content of section 2 runs 48px from the left and 48px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-15-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Política de privacidadeAtualizado em 10 "
+       the hero's .wrap holds 4 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [768-rhythm-16-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the h2 starts 356px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [768-rhythm-17-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo  "Institucional e legal"
+       the h2 starts 356px right of the container's left: every h1 and h2 starts on it, 2px either way (and 2 more like it: x 70, x 57) (SR-6)  [768-rhythm-18-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       a box over half the container wide runs 48-398px, not on the container's lines at 48-720px (SR-6)  [768-rhythm-19-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap > span.inline-flex.flex-wrap  "Conteúdo provisórioD-16 — texto ainda nã"
+       a box over half the container wide runs 48-566px, not on the container's lines at 48-720px (SR-6)  [768-rhythm-20-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+
+390x844  3 screens  15 FAIL  0 WARN
+  FAIL text-only       main#conteudo-principal > section.py-respiro.hero  "Política de privacidade"
+       the closing section is only text: no picture, icon, mock or effect in it  [390-01-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [390-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the hero ends at 784px on a 844px screen, 60px above the fold: it ends at the fold, 1px either way (SR-1)  [390-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       60px of the next section shows on the first screen (from 784px on a 844px screen): nothing below the hero shows at load (SR-1)  [390-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section is 1133px tall (1.3 screens), 289px over one screen (844px): every section after the hero is one screen or two, 2px either way (SR-2)  [390-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section starts at 784px, 60px above the screen grid (1 x 844px): sections start on whole screens (SR-2)  [390-rhythm-04-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.hero  "Política de privacidadeAtualizado em 10 "
+       the section starts at 57px, 57px below the screen grid (0 x 844px): sections start on whole screens (SR-2)  [390-rhythm-05-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL one-section     footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the screen at scroll 57px (the top of section 1) shows 117px of section 2 and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [390-rhythm-06-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the screen at scroll 0px (stride 0) shows 60px of section 2 beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [390-rhythm-07-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.max-w-texto.pt-4 > div.flex.flex-col > div.flex.flex-col > h2.font-titulo.leading-titulo  "Situação deste texto"
+       the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)  [390-rhythm-08-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [390-rhythm-09-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     footer.closing.az-faixa-escura > div.az-moldura.wrap > div.flex.flex-col > p.font-titulo.text-marca-rodape  "ARTZAN"
+       headings of two sections show whole on one screen at 4 of 22 scroll positions (18.2%; at scroll 100, 150, 200, 250px), here with "Situação deste texto": at most 5% on a phone (SR-5)  [390-rhythm-10-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Política de privacidadeAtualizado em 10 "
+       the hero's .wrap holds 4 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [390-rhythm-11-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap > label.inline-flex.min-h-toque:nth-of-type(1)  "Automático"
+       2 text blocks start on a left line at x 46, 22px from the container's left: text starts on the container's left, or on one split line (x 177, 207, 238) (also "Escuro") (SR-6)  [390-rhythm-12-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges section.py-respiro.hero > div.az-moldura.wrap > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "Conteúdo provisório"
+       4 text blocks start on a left line at x 33, 9px from the container's left: text starts on the container's left, or on one split line (x 177, 207, 238) (also "D-16 — texto ainda não validado ", "Dado pendente", "Razão social, CNPJ, Endereço (Q-") (SR-6)  [390-rhythm-13-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+
+320x640  4 screens  2 FAIL  1 WARN
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.hero  "Política de privacidade"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-01-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [320-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  WARN fold-cut        div.flex.flex-col > div.flex.flex-col > div.payload-richtext > p:nth-of-type(1)  "Este registro está marcado como conteúdo"
+       a line of the hero text is sliced by the bottom of the first screen  [320-03-fold-cut.jpg]
+       fix: size the hero so the heading ends above the fold, or starts below it
+
+first screen at 1280, 1152, 896  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  0 FAIL
+  WARN fold-cut        [320] div.flex.flex-col > div.flex.flex-col > div.payload-richtext > p:nth-of-type(1)  "Este registro está marcado como conteúdo"
+       a line of the hero text is sliced by the bottom of the first screen  [narrow-320-01-fold-cut.jpg]
+       fix: size the hero so the heading ends above the fold, or starts below it
+
+checks
+  PASS assets                 PASS shader-lint            PASS gl-fallback            
+  PASS empty-visual           PASS hero-fill              PASS flush                  
+  FAIL placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            PASS nav                    PASS nav-covers             
+  PASS spill                  PASS off-viewport           PASS fold-card              
+  PASS hover-spill            PASS overlap-text           PASS collide                
+  PASS tap-size               PASS row-gap                PASS cut-text               
+  WARN fold-cut               PASS marquee                PASS scroll-linked          
+  PASS scroll-reveal          PASS pinned                 PASS loop-pause             
+  PASS reduced-motion         PASS hidden-content         PASS webgl                  
+  FAIL no-visual              FAIL text-only              PASS card-visual            
+  PASS hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           PASS same-action            PASS button-picture         
+  FAIL cta                    PASS pricing-tiers          FAIL copy-headline          
+  PASS copy-fact              WARN copy-headings          WARN copy-buttons           
+  PASS copy-actions           PASS heading-scale          PASS stagger                
+  PASS top-stagger            PASS off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               PASS text-contrast          PASS body-size              
+  PASS busy-ground            PASS section-gaps           PASS proximity              
+  PASS hole                   PASS links                  PASS forms                  
+  PASS photo-upscale          PASS photo-set              WARN photo-credit           
+  PASS nav-family             PASS nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  PASS stranded-action        PASS orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           WARN copy-length            PASS nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             PASS fold-action            PASS action-count           
+  PASS one-screen             PASS hover                  PASS hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  PASS visual-caption         PASS visual-empty           PASS effect-kind            
+  PASS hero-enter             WARN moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           FAIL hero-screen            FAIL section-height         
+  PASS section-air            FAIL one-section            FAIL one-heading            
+  FAIL container-edges        PASS row-lines              PASS split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  PASS section-tile           WARN empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               PASS focus-ring             PASS focus-visible          
+  PASS focus-hidden           WARN skip-link              PASS menu-toggle            
+  PASS lang                   PASS page-meta              WARN share-meta             
+  PASS action-repeat          PASS map-link               PASS open-now               
+  PASS assumed                PASS run-on                 PASS form-fields            
+  PASS form-send              
+
+total  61 FAIL  11 WARN  (crops and report.json in C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.taste-skill\after\consistency-privacidade)

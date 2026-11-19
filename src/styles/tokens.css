@@ -45,15 +45,18 @@
    * Nomeada por FUNÇÃO, nunca por cor: trocar de tema é trocar de coluna,
    * não redecorar (dev/CONVENCOES.md, seção 3).
    * ------------------------------------------------------------------- */
-  --az-superficie: #ffffff; /* fundo do logotipo */
-  --az-superficie-elevada: #f3f6fa; /* neutro desenhado, inclinado ao matiz da tinta */
-  --az-texto-principal: #172738; /* tinta do monograma */
-  --az-texto-secundario: #5a6974; /* neutro desenhado na família de matiz da tinta */
-  --az-borda: #85919d; /* calibrado para contraste de interface — 3,21:1 */
+  /* REBRAND (2026-11-13) — linguagem do material comercial do MarQGol:
+   * papel quente, tinta quase preta, cartões brancos com contorno de tinta,
+   * faixas escuras de placar. O azul do "Z" segue como cor da marca. */
+  --az-superficie: #f4f3ef; /* papel */
+  --az-superficie-elevada: #ffffff; /* cartão sobre o papel */
+  --az-texto-principal: #12151c; /* tinta */
+  --az-texto-secundario: #50555f;
+  --az-borda: #7d838c; /* contorno funcional — 3,44:1 sobre o papel */
   --az-acao-primaria: #0e66b4; /* tom chapado do "Z" do wordmark */
   --az-acao-primaria-foco: #0e4988; /* extremo escuro do gradiente do monograma */
-  --az-acao-secundaria: #172738; /* = texto principal do tema (PR-062) */
-  --az-destaque: #106ab6; /* extremo claro do gradiente do monograma */
+  --az-acao-secundaria: #12151c; /* = texto principal do tema */
+  --az-destaque: #0e66b4; /* palavra realçada em título */
   --az-sucesso: #14783c;
   --az-atencao: #b24400; /* escurecido: laranjas vivos medem 2:1–3:1 e reprovam */
   --az-erro: #b3261e;
@@ -61,6 +64,19 @@
   /* Rótulo sobre o preenchimento da ação primária. Par verificado em 11.12
    * (5,87:1). É branco NOS DOIS TEMAS porque o preenchimento é o mesmo azul. */
   --az-sobre-acao-primaria: #ffffff;
+
+  /* RESTYLE — letra Z do wordmark em texto (11.11). No claro é o tom chapado
+   * do Z (= ação primária, 5,87:1). No escuro o mesmo tom mede 3,20:1 contra
+   * a superfície — passa como forma, reprova como texto de 20 px —, então o
+   * Z usa o Destaque do escuro (7,39:1, par já verificado em 11.12). */
+  --az-marca-z: var(--az-acao-primaria);
+
+  /* REBRAND — sinal: sobretítulo e numeral de ordem. No papel é o azul da
+   * marca; na faixa escura vira âmbar, como nos rótulos do MarQGol. */
+  --az-sinal: #0e66b4;
+  /* REBRAND — traço forte: régua de 2 px acima de item numerado e contorno
+   * de cartão. É a tinta do tema. */
+  --az-traco: #12151c;
 
   /* ---------------------------------------------------------------------
    * COR — indicador de foco (13.2 regra 5, 13.3).
@@ -73,7 +89,7 @@
    * O deslocamento de 2 px (abaixo) garante que o contorno nunca encoste no
    * preenchimento azul da ação primária — o pior caso citado por 13.3 —,
    * porque entre o contorno e o botão sempre há a superfície da página. */
-  --az-foco: #172738;
+  --az-foco: #12151c;
 
   /* ---------------------------------------------------------------------
    * TIPOGRAFIA (11.14). Duas famílias de licença aberta (SIL OFL).
@@ -92,9 +108,9 @@
    * (máx. 4 arquivos, 150 KB no total, RNF-014) é tarefa de quem escreve o
    * layout raiz. Sem isso, a pilha de alternativa é o que aparece — e o
    * site continua legível e correto, apenas sem o desenho pretendido. */
-  --az-fonte-titulo: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue',
-    Arial, sans-serif;
-  --az-fonte-corpo: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+  /* REBRAND — Barlow Condensed (título) e Barlow (corpo). fontes.ts. */
+  --az-fonte-titulo: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif;
+  --az-fonte-corpo: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, sans-serif;
 
   /* Escala de 11.14. Mobile-first: os valores abaixo são os da PONTA BAIXA
@@ -102,26 +118,28 @@
    * Corpo de 16 px é piso absoluto, sem exceção — inclusive em campo de
    * formulário, onde texto menor provoca zoom automático em navegador móvel
    * justamente na única conversão do site (11.14, PR-017). */
-  --az-tamanho-h1: 2rem; /* 32 px — faixa 32–40 */
-  --az-tamanho-h2: 1.5rem; /* 24 px — faixa 24–28 */
-  --az-tamanho-h3: 1.25rem; /* 20 px — valor único em 11.14 */
-  --az-tamanho-corpo: 1rem; /* 16 px — piso absoluto */
+  /* REBRAND — escala de placar: título condensado em caixa alta pede corpo
+   * bem maior que o de uma grotesca larga para ter o mesmo peso de leitura. */
+  --az-tamanho-h1: 2.75rem; /* 44 px → 64 → 84 */
+  --az-tamanho-h2: 2.25rem; /* 36 px → 48 → 56 */
+  --az-tamanho-h3: 1.375rem; /* 22 px → 26 */
+  --az-tamanho-corpo: 1.0625rem; /* 17 px — Barlow tem olho menor que Inter */
   --az-tamanho-apoio: 0.875rem; /* 14 px — rótulo de campo, legenda, erro */
   --az-tamanho-rotulo: 1rem; /* 16 px — ESCOLHA: topo da faixa 14–16 do rótulo
                               * de botão, porque o botão é o alvo de toque da
                               * conversão e 14 px encolhe o alvo sem ganho. */
 
   --az-peso-h1: 700;
-  --az-peso-h2: 600;
-  --az-peso-h3: 600;
+  --az-peso-h2: 700;
+  --az-peso-h3: 700;
   --az-peso-corpo: 400;
-  --az-peso-rotulo: 500;
+  --az-peso-rotulo: 600;
 
   /* Altura de linha: mínimo 1,5 no corpo (13.8). Título usa 1,2 — valor não
    * fixado pelo PRD; ESCOLHA desta onda, porque 1,5 em H1 de 40 px abre um
    * vão que quebra a varredura de nível 1 (11.7). */
   --az-altura-linha-corpo: 1.5;
-  --az-altura-linha-titulo: 1.2;
+  --az-altura-linha-titulo: 1;
 
   /* Espaço entre parágrafos: ao menos 2× o tamanho da fonte (13.8).
    * 2rem = 32 px sobre corpo de 16 px, e cai na escala de 8 px. */
@@ -130,15 +148,52 @@
   /* Espaçamento de letras: SÓ em caixa alta e SÓ em elemento curto — rótulo
    * de navegação, etiqueta, botão —, ecoando o wordmark. +4% (11.14).
    * Caixa alta é proibida em bloco de texto (13.8). */
-  --az-espacamento-caixa-alta: 0.04em;
+  --az-espacamento-caixa-alta: 0.06em;
+  /* REBRAND — sobretítulo espaçado ("02 — COMO FUNCIONA"). */
+  --az-espacamento-sobretitulo: 0.16em;
 
   /* Largura da linha: 60–75 caracteres no máximo em telas largas (13.8).
    * ESCOLHA: 68ch, meio da faixa. */
   --az-largura-texto: 68ch;
 
-  /* Largura máxima do conteúdo. O PRD não fixa valor; ESCOLHA desta onda:
-   * 1152 px = 8 × 144, para permanecer na escala de 8 px de 11.15. */
-  --az-largura-conteudo: 72rem;
+  /* RESTYLE — medida de título de seção e de página: quebra a frase em
+   * duas ou três linhas largas em vez de uma linha que atravessa a tela. */
+  --az-largura-titulo: 22ch;
+
+  /* Largura máxima do conteúdo. O PRD não fixa valor.
+   * RESTYLE (2026-11-10): 1280 px = 8 × 160, ainda na escala de 8 px de
+   * 11.15. A largura anterior (1152 px) deixava a 1440 px uma margem de
+   * 144 px por lado e um miolo estreito que lia como modelo pronto. */
+  --az-largura-conteudo: 80rem;
+
+  /* RESTYLE — margem lateral da página, a mesma em cabeçalho, seções e
+   * rodapé (bordas esquerda e direita iguais em toda a altura). Escala de
+   * 8 px: 24 em tela pequena, 48 a partir de 768 px. */
+  --az-margem-pagina: 24px;
+
+  /* RESTYLE — respiro vertical de seção. 11.15 fixa "64 px entre seções";
+   * tratado como PISO: 64 px em tela pequena, 96 px (também da escala de
+   * 11.15) a partir de 1024 px. */
+  --az-respiro-secao: 64px;
+
+  /* RESTYLE — altura do cabeçalho fixo. 56 px em tela pequena, 72 px a
+   * partir de 768 px. Ambos acima do alvo de toque de 44 px (13.9). */
+  --az-altura-cabecalho: 56px;
+
+  /* RESTYLE — linha de apoio da primeira dobra (o "apoio" de 11.7).
+   * 11.14 define o corpo como PISO de 16 px; o apoio da primeira tela fica
+   * acima do piso (18 px, 20 px em tela grande), sem criar peso novo. */
+  --az-tamanho-destaque: 1.125rem;
+
+  /* RESTYLE — título de página: entrelinha mais fechada e espaço de letra
+   * levemente negativo. 11.14 proíbe espaçamento ADICIONAL em título; o
+   * ajuste aqui é de aperto óptico, nunca de abertura. */
+  --az-altura-linha-h1: 0.94;
+  --az-espacamento-titulo: 0;
+
+  /* RESTYLE — wordmark grande do rodapé. Não é título (não entra na escala
+   * de 11.14): é a marca em texto tratada pelos tokens, como no cabeçalho. */
+  --az-tamanho-marca-rodape: 3rem;
 
   /* ---------------------------------------------------------------------
    * FORMA (11.15). Exatamente dois raios, e nenhum outro valor.
@@ -147,8 +202,15 @@
    * contradiria a peça que dá origem ao sistema.
    * FORMA "PÍLULA" É PROIBIDA — não existe token de raio total.
    * Q-076 pode zerar os dois valores; é uma alteração de duas linhas. */
-  --az-raio-controle: 4px; /* controle pequeno: botão, campo, etiqueta */
-  --az-raio-bloco: 8px; /* card, container, imagem, moldura de captura */
+  /* REBRAND — cantos do MarQGol: controle 10 px, bloco 16 px e pílula para
+   * etiqueta com ponto de cor. */
+  --az-raio-controle: 10px;
+  --az-raio-bloco: 16px;
+  --az-raio-pilula: 999px;
+  /* Traço forte: 2 px, régua de item numerado. */
+  --az-traco-espessura: 2px;
+  /* Faixa de cor no topo do cartão escuro (como os cartões de esporte). */
+  --az-faixa-cartao: 4px;
 
   /* Espessura única de borda, 1 px, em TODO contorno (11.15). */
   --az-borda-espessura: 1px;
@@ -189,6 +251,37 @@
    * `prefers-reduced-motion` em globals.css. */
   --az-transicao: 150ms;
 
+  /* RESTYLE — camada de micro-interação (13.10). Uma curva de interface,
+   * uma curva de entrada, sem ultrapassar a marca (nenhum quique).
+   * Movem só transform e opacity; nada anima largura, altura ou margem. */
+  --az-curva: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --az-curva-entrada: cubic-bezier(0.22, 1, 0.36, 1);
+  --az-tempo-saida: 120ms;
+  --az-tempo-pressao: 90ms;
+  --az-tempo-painel: 200ms;
+  --az-tempo-entrada: 700ms;
+  --az-tempo-entrada-apoio: 520ms;
+  --az-tempo-figura: 900ms;
+  /* Distâncias: botão sobe 1 px, card sobe 2 px, seta anda 3 px. */
+  --az-passo-botao: 1px;
+  --az-passo-card: 2px;
+  --az-passo-seta: 3px;
+  --az-escala-pressao: 0.985;
+  /* Imagem dentro de card acionável: zoom de 1,03 no próprio quadro. */
+  --az-escala-imagem: 1.03;
+  --az-tempo-imagem: 600ms;
+  --az-tempo-imagem-saida: 400ms;
+  /* Entrada da primeira dobra: apoio e ação sobem 12 px, começando quando o
+   * título está a meio caminho, 60 ms entre si. Folha de menu desce 6 px. */
+  --az-passo-entrada: 12px;
+  --az-atraso-apoio: 350ms;
+  --az-intervalo-apoio: 60ms;
+  --az-passo-painel: 6px;
+  /* Traço de passagem da navegação, 8 px acima do pé do alvo de 44 px. */
+  --az-distancia-traco-nav: 8px;
+  /* Vértice angular do sobretítulo (ecoa o ápice do monograma, 11.11). */
+  --az-marca-sobretitulo: 0.75rem;
+
   /* ---------------------------------------------------------------------
    * MOLDURA DE CAPTURA DE TELA (11.17). Proporção IDÊNTICA para todo
    * produto — é o mecanismo de coesão que impede o vigésimo produto de
@@ -212,6 +305,62 @@
    * ele exige escrever o nome da variável, o que torna o uso visível em
    * revisão. */
   --az-sombra-sobreposicao: 0 4px 16px rgb(23 39 56 / 12%);
+
+  /* =====================================================================
+   * ONDA 5 (2026-11-13) — marca, capa da inicial e movimento.
+   * Estes tokens existem SÓ em `:root` e não são redefinidos pelos blocos
+   * escuros: valem igual nos dois temas, por definição.
+   * =================================================================== */
+
+  /* PLACA DA MARCA (11.13, 11.16). O logotipo foi desenhado para fundo
+   * branco e não existe versão reversa aprovada (Q-077/Q-078). Em vez de
+   * inventar uma, a peça é sempre posta sobre o SEU fundo original — este
+   * branco, que é o fundo do arquivo (11.12, "Superfície" do tema claro).
+   * No tema claro a placa some na superfície; no escuro e na faixa escura
+   * ela é uma placa clara com a área de proteção da peça. */
+  --az-fundo-da-marca: #ffffff;
+  /* Área de proteção (11.16): ≈ 15% da altura da peça exibida. */
+  --az-placa-respiro-monograma: 4px;
+  --az-placa-respiro-logo: 24px;
+  /* Monograma do cabeçalho: cabe no alvo de 44 px com a placa. */
+  --az-tamanho-monograma: 28px;
+
+  /* CAPA DA INICIAL. Tons da imagem provisória gerada por
+   * scripts/gerar-ativos-visuais.ts — todos já são valores de 11.12, do mais
+   * escuro ao mais claro: superfície escura, superfície elevada escura,
+   * tinta do monograma, extremo escuro e extremo claro do gradiente do
+   * monograma. A imagem usa só eles e pontos médios entre vizinhos.
+   * O véu é a superfície escura com opacidade fixa: verificar-contraste.mjs
+   * compõe o véu sobre o máximo, canal a canal, destes tons (pior caso
+   * possível) e mede o texto da capa contra o resultado. */
+  --az-capa-tom-1: #0b121b;
+  --az-capa-tom-2: #131b26;
+  --az-capa-tom-3: #172738;
+  --az-capa-tom-4: #0e4988;
+  --az-capa-tom-5: #106ab6;
+  --az-capa-veu: #0d1017; /* REBRAND: a superfície escura nova */
+  --az-capa-veu-opacidade: 0.78;
+  /* Nome da empresa na capa (não é título: a escala de 11.14 vale para
+   * H1–H3; isto é a marca em texto, como o wordmark do rodapé). */
+  --az-tamanho-marca-capa: 4.5rem;
+  /* REBRAND — numeral vazado gigante da capa (decorativo). */
+  --az-tamanho-numeral-vazado: 16rem;
+
+  /* MOVIMENTO — Onda 5. Curvas reaproveitam --az-curva / --az-curva-entrada.
+   * Capa: a imagem assenta de 1,06 a 1 uma vez na carga; ao rolar, desce
+   * 14% da própria altura enquanto a capa sai (paralaxe só por CSS, linha
+   * do tempo de rolagem; desligada sob movimento reduzido). */
+  --az-tempo-capa: 1400ms;
+  --az-escala-capa: 1.06;
+  --az-paralaxe-capa: 14%;
+  /* Revelação ao rolar: sobe 16 px, sai do desfoque de 4 px, 640 ms;
+   * itens de uma lista entram com 70 ms entre si (no máximo 6 degraus). */
+  --az-tempo-revelar: 640ms;
+  --az-passo-revelar: 16px;
+  --az-desfoque-revelar: 4px;
+  --az-intervalo-revelar: 70ms;
+  /* Troca de tema: esmaecimento cruzado curto, só opacidade. */
+  --az-tempo-tema: 240ms;
 }
 
 /* -------------------------------------------------------------------------
@@ -224,21 +373,24 @@
   :root:not([data-tema='claro']) {
     color-scheme: dark;
 
-    --az-superficie: #0b121b;
-    --az-superficie-elevada: #131b26;
-    --az-texto-principal: #edf1f5;
-    --az-texto-secundario: #a9b3c0;
-    --az-borda: #78818a; /* clareado: o tom próximo da superfície elevada media 1,51:1 */
+    --az-superficie: #0d1017;
+    --az-superficie-elevada: #161a23;
+    --az-texto-principal: #f4f3ef;
+    --az-texto-secundario: #a4aab4;
+    --az-borda: #6b7280;
     --az-acao-primaria: #0e66b4;
     --az-acao-primaria-foco: #106ab6;
-    --az-acao-secundaria: #edf1f5; /* = texto principal do tema (PR-062) */
+    --az-acao-secundaria: #f4f3ef;
     --az-destaque: #5aa9e6;
     --az-sucesso: #3fcb6b;
     --az-atencao: #f5b94d;
     --az-erro: #ff7a70;
 
     --az-sobre-acao-primaria: #ffffff;
-    --az-foco: #edf1f5;
+    --az-foco: #f4f3ef;
+    --az-marca-z: var(--az-destaque);
+    --az-sinal: #f5b23d;
+    --az-traco: #f4f3ef;
 
     --az-sombra-sobreposicao: 0 4px 16px rgb(0 0 0 / 48%);
   }
@@ -251,21 +403,24 @@
 :root[data-tema='escuro'] {
   color-scheme: dark;
 
-  --az-superficie: #0b121b;
-  --az-superficie-elevada: #131b26;
-  --az-texto-principal: #edf1f5;
-  --az-texto-secundario: #a9b3c0;
-  --az-borda: #78818a;
+  --az-superficie: #0d1017;
+  --az-superficie-elevada: #161a23;
+  --az-texto-principal: #f4f3ef;
+  --az-texto-secundario: #a4aab4;
+  --az-borda: #6b7280;
   --az-acao-primaria: #0e66b4;
   --az-acao-primaria-foco: #106ab6;
-  --az-acao-secundaria: #edf1f5;
+  --az-acao-secundaria: #f4f3ef;
   --az-destaque: #5aa9e6;
   --az-sucesso: #3fcb6b;
   --az-atencao: #f5b94d;
   --az-erro: #ff7a70;
 
   --az-sobre-acao-primaria: #ffffff;
-  --az-foco: #edf1f5;
+  --az-foco: #f4f3ef;
+  --az-marca-z: var(--az-destaque);
+  --az-sinal: #f5b23d;
+  --az-traco: #f4f3ef;
 
   --az-sombra-sobreposicao: 0 4px 16px rgb(0 0 0 / 48%);
 }
@@ -279,6 +434,70 @@
 }
 
 /* -------------------------------------------------------------------------
+ * FAIXA ESCURA — RESTYLE (2026-11-10).
+ * Um trecho da página (chamada final e rodapé) que veste a coluna ESCURA de
+ * 11.12 mesmo com a página no tema claro. Não é cor nova: são exatamente os
+ * valores do tema escuro declarado, já verificados par a par. É assim que a
+ * página ganha ritmo de superfície sem fundo azul (11.11 proíbe o azul como
+ * fundo de seção) e sem gradiente (11.15).
+ * Valores IDÊNTICOS ao bloco `:root[data-tema='escuro']` — conferido por
+ * verificar-contraste.mjs, que falha se divergirem.
+ * No tema escuro a faixa coincide com a superfície da página; a separação
+ * passa a ser a borda de 1 px (globals.css).
+ * ---------------------------------------------------------------------- */
+.az-faixa-escura {
+  color-scheme: dark;
+
+  --az-superficie: #0d1017;
+  --az-superficie-elevada: #161a23;
+  --az-texto-principal: #f4f3ef;
+  --az-texto-secundario: #a4aab4;
+  --az-borda: #6b7280;
+  --az-acao-primaria: #0e66b4;
+  --az-acao-primaria-foco: #106ab6;
+  --az-acao-secundaria: #f4f3ef;
+  --az-destaque: #5aa9e6;
+  --az-sucesso: #3fcb6b;
+  --az-atencao: #f5b94d;
+  --az-erro: #ff7a70;
+
+  --az-sobre-acao-primaria: #ffffff;
+  --az-foco: #f4f3ef;
+  --az-marca-z: var(--az-destaque);
+  --az-sinal: #f5b23d;
+  --az-traco: #f4f3ef;
+
+  --az-sombra-sobreposicao: 0 4px 16px rgb(0 0 0 / 48%);
+}
+
+/* -------------------------------------------------------------------------
+ * RESTYLE — degraus de moldura e de escala (mobile-first).
+ * ---------------------------------------------------------------------- */
+@media (min-width: 48rem) {
+  :root {
+    --az-margem-pagina: 48px;
+    --az-altura-cabecalho: 72px;
+    --az-tamanho-marca-rodape: 4.5rem;
+    --az-tamanho-marca-capa: 7.5rem;
+    --az-tamanho-numeral-vazado: 26rem;
+    --az-tamanho-monograma: 36px;
+    --az-placa-respiro-monograma: 6px;
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --az-respiro-secao: 96px;
+    --az-tamanho-destaque: 1.25rem;
+    --az-tamanho-marca-rodape: 6rem;
+    --az-tamanho-marca-capa: 10.5rem;
+    --az-tamanho-numeral-vazado: 36rem;
+    --az-tamanho-h1: 5.25rem; /* 84 px */
+    --az-tamanho-h2: 3.5rem; /* 56 px */
+  }
+}
+
+/* -------------------------------------------------------------------------
  * PONTA ALTA DA ESCALA TIPOGRÁFICA (11.14).
  * Mobile-first: constrói-se a partir da tela pequena e amplia-se. Só H1 e H2
  * têm faixa; H3, corpo, apoio e rótulo têm valor único e não mudam.
@@ -286,7 +505,8 @@
  * ---------------------------------------------------------------------- */
 @media (min-width: 48rem) {
   :root {
-    --az-tamanho-h1: 2.5rem; /* 40 px */
-    --az-tamanho-h2: 1.75rem; /* 28 px */
+    --az-tamanho-h1: 4rem; /* 64 px */
+    --az-tamanho-h2: 3rem; /* 48 px */
+    --az-tamanho-h3: 1.625rem; /* 26 px */
   }
 }

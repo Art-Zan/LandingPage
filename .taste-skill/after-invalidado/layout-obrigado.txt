@@ -1,0 +1,35 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 388 tall; h1 40px/1.2, 1 lines, 503x48 at 80,169; lead -; buttons 2 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Recebemos s y    73  h   388  content 196
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: 388px tall; one screen under the nav is 827px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: framed, 439px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: ends at y 461, above the fold (900)
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 388 tall; h1 40px/1.2, 1 lines, 503x48 at 48,169; lead -; buttons 2 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Recebemos s y    73  h   388  content 196
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: 388px tall; one screen under the nav is 695px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: framed, 307px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: ends at y 461, above the fold (768)
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 324 tall; h1 40px/1.2, 1 lines, 503x48 at 48,137; lead -; buttons 2 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Recebemos s y    73  h   324  content 196
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: 324px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: framed, 627px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: ends at y 397, above the fold (1024)
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 437 tall; h1 32px/1.2, 2 lines, 342x77 at 24,121; lead -; buttons 2 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Recebemos s y    57  h   437  content 309
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: 437px tall; one screen under the nav is 787px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: framed, 350px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: ends at y 494, above the fold (844)
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 461 tall; h1 32px/1.2, 2 lines, 272x77 at 24,121; lead -; buttons 2 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Recebemos s y    57  h   461  content 333
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: 461px tall; one screen under the nav is 583px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: framed, 122px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Recebemos sua mensage: ends at y 518, above the fold (640)

@@ -1,0 +1,705 @@
+consistency  http://localhost:3001/produtos/alocacao-de-quadras
+
+1440x900  12 screens  48 FAIL  24 WARN
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/webpack-4abfd6a89dae30f0.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/4bd1b696-cf72ae8a39fa05aa.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/main-app-50f326052c390d09.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/964-9e7fd12428968086.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/app/(site)/layout-a7236e52ed5b46c3.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/519-89293711801e90a2.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/874-88e24f0e286df0b2.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/app/(site)/produtos/%5Bslug%5D/page-e8e39b3369a35677.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script http://localhost:3001/_next/static/chunks/63-ee5c2e64d2164209.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL placeholder     section.py-respiro.hero > div.az-moldura.wrap > div.grid.grid-cols-1 > div.flex.flex-col  "Software Alocação de quadras Conteúdo pr"
+       "Placeholder" is a placeholder left on the page (and 13 more like it: "Placeholder — resumo do ", "Texto provisório sobre a", "Texto provisório sobre a", "Placeholder — público-al", ...)  [1440-06-placeholder.jpg]
+       fix: write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships
+  FAIL off-viewport    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       runs 208px off the right side of the screen  [1440-17-off-viewport.jpg]
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport    (the page)
+       the page is 1648px wide on a 1440px screen and scrolls sideways
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [1440-10-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [1440-07-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL cta             main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passo"
+       the last section before the footer ends with no button  [1440-21-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL copy-headline   h1#titulo-produto  "Alocação de quadras"
+       "Alocação de quadras" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags); only the line under it does  [1440-01-copy-headline.jpg]
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  FAIL copy-headings   h2#titulo-problema  "Problema que resolve"
+       "Problema que resolve" names no product, part, place or section (7 headings like it; at most one brand line per page) (and 6 more like it: "Descrição completa", "Principais funcionalidad", "Benefícios", "Imagens", ...)  [1440-08-copy-headings.jpg]
+       fix: name the thing in every heading: the product, a part, the place or a section noun
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (30 elements, like h2.text-apoio.font-rotulo)  [1440-23-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL effect-kind     main#conteudo-principal > section.az-momento-linha.az-faixa-escura
+       1 [data-moment] mark that never runs: line-carries-colour on main#conteudo-principal > section.az-momento-linha.az-faixa-escura (assets/moments/line-carries-colour/moment.js was never loaded); a moment is judged as one only when it runs
+       fix: load assets/moments/moments.js (system.js does it for a page with [data-moment]) and keep the dealt id, or take the data-moment mark off the section
+  FAIL section-tile    main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       the section is 365px tall (0.41 screens at 1440x900), shorter than the screen: its tile (the screen from its top) shows 365px of it and 133px of the next section, its heading "Benefícios" on screen  [1440-33-section-tile.jpg]
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL empty-area      main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       66% of the section is empty: 66% beside content that covers under half the container, in its 365px of rows (WARN over 35%, FAIL over 50%)  [1440-11-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  FAIL empty-area      footer.closing.az-faixa-escura  "Empresa"
+       68% of the section is empty: 69% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)  [1440-24-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  WARN flush           div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto
+       section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground  [1440-09-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground  [1440-12-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground  [1440-13-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo  "Placeholder — público-alvo do produto al"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground  [1440-14-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — funcionalidade 3 de alocac"
+       section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground  [1440-15-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — benefício 3 de alocacao-de"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground  [1440-18-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "Conteúdo provisório"
+       section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground  [1440-19-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4
+       section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground  [1440-20-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4
+       section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground  [1440-22-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN copy-buttons    header.nav.sticky > div.az-moldura.wrap > div.flex.items-center > button.az-botao.inline-flex  "Abrir menu"
+       "Abrir menu" does not start with a verb (book, buy, try, start, get, see...)  [1440-02-copy-buttons.jpg]
+       fix: label buttons with a verb and what the visitor gets ("Book a room", "Start free trial")
+  WARN copy-actions    (the page)
+       the main action "Falar com a equipe" does not read word for word the same in the nav or hero and the closing section
+       fix: few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close
+  WARN heading-scale   div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo  "Funcionalidade 1"
+       the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other  [1440-16-heading-scale.jpg]
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [1440-25-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       2 library sources (placehold): the page credits placehold, image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [1440-03-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  WARN nav-labels      header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       "Pular para o conteúdo" opens a section headed "Alocação de quadras"  [1440-04-nav-labels.jpg]
+       fix: name each nav link after the heading of the section it opens
+  WARN hover           header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       the nav link ("Pular para o conteúd"), filled button ("Abrir menu") look the same hovered as at rest, while the text link answers  [1440-05-hover.jpg]
+       fix: give buttons and links a small answer to the pointer (the motion layer: a fill change, a drawn underline, an arrow that moves)
+  WARN visual-empty    div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto  "drawing (svg)"
+       the drawing (svg) is nearly empty at 1440px: 2 colours in its 1424x1157px, 68.7% one colour (77% of it on screen) (a thin line drawing or a logo can be this plain: look at it)  [1440-27-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN visual-empty    div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4  "drawing (svg)"
+       the drawing (svg) is nearly empty at 1440px: 5 colours in its 1424x1424px, 81.2% one colour (63% of it on screen) (a thin line drawing or a logo can be this plain: look at it)  [1440-28-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN visual-empty    div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4  "drawing (svg)"
+       the drawing (svg) is nearly empty at 1440px: 4 colours in its 1424x1424px, 81.4% one colour (63% of it on screen) (a thin line drawing or a logo can be this plain: look at it)  [1440-29-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN effect-kind     (the page)
+       the page has effects but no prefers-reduced-motion branch in its scripts or styles: reduced motion must show the finished still
+       fix: under prefers-reduced-motion: reduce, show each effect's finished still and stop its motion
+  WARN effect-kind     (the page)
+       the page has effects but no phone, touch or max-width branch in its scripts: a phone needs the still or a light version
+       fix: give phones (max-width or pointer: coarse) the still or a lighter version of each effect
+  WARN skip-link       header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       the first Tab stop is "Pular para o conteúdo", not a skip link: a keyboard user tabs through the whole nav on every visit
+       fix: add the starter's skip link as the header's first child: <a class="skip-link" href="#top">Skip to content</a>
+  WARN share-meta      head
+       the head lacks theme-color: a shared link shows no picture or title of its own
+       fix: copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Alocação de quadrasSoft"
+       the hero ends at 3112px on a 900px screen, 2212px below the fold: it ends at the fold, 1px either way (SR-1)  [1440-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the section is 65px tall (0.1 screens), 835px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)  [1440-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       the section is 101px tall (0.1 screens), 799px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)  [1440-rhythm-04-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completaTexto provisório sobre"
+       the section is 101px tall (0.1 screens), 799px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 6 more like it: "BenefíciosPlaceholder — ", "Principais funcionalidad", "ARTZANEmpresaArtZanDado ") (SR-2)  [1440-rhythm-05-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       the section starts at 3132px, 432px below the screen grid (3 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-06-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(7)  "ImagensConteúdo provisórioCaptura de tel"
+       the section starts at 3996px, 396px below the screen grid (4 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-07-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the section starts at 6648px, 348px below the screen grid (7 x 900px): sections start on whole screens (and 7 more like it: "Descrição completaTexto ", "Informações comerciaisAs", "BenefíciosPlaceholder — ") (SR-2)  [1440-rhythm-08-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       the section's content does not fit it: its lowest content ends 100px below its top, past 29px (the section less 72px of bottom padding) (SR-2)  [1440-rhythm-09-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completaTexto provisório sobre"
+       the section's content does not fit it: its lowest content ends 100px below its top, past 29px (the section less 72px of bottom padding) (and 7 more like it: "Para quem éPlaceholder —", "Principais funcionalidad", "BenefíciosPlaceholder — ") (SR-2)  [1440-rhythm-10-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)
+       21px of air between the content of these two sections: 128-480px (64-600px WARN) (every gap out of the band at 1440px, top to bottom: 21px after "Problema que resolve", 21px after "Descrição completaTe", 21px after "Para quem éPlacehold", 21px after "Principais funcional", 21px after "BenefíciosPlaceholde", 21px after "ImagensConteúdo prov", 21px after "Informações comercia") (SR-3)  [1440-rhythm-11-section-air.jpg]
+       fix: keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3) / main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)
+       21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)  [1440-rhythm-12-section-air.jpg]
+       fix: keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)
+       21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)  [1440-rhythm-13-section-air.jpg]
+       fix: keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)
+  FAIL one-section     h2#titulo-beneficios-produto  "Benefícios"
+       the screen at scroll 3458px (the top of section 5) shows 362px of section 7 and the heading of section 6 whole and the content of 3 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-14-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciaisAssinatura recorre"
+       the screen at scroll 6300px (stride 7) shows 328px of section 8 and the content of 2 sections, over 24px each beside section 9: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-15-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the screen at scroll 7816px (the top of section 10) shows 325px of section 9 and the content of 2 sections, over 24px each beside section 10: a screen shows one section (another may peek 8px, 24px WARN) (and 6 more like it: scroll 4500px, scroll 3374px, scroll 3600px) (SR-4)  [1440-rhythm-16-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [1440-rhythm-17-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     h2#titulo-descricao-completa  "Descrição completa"
+       headings of two sections show whole on one screen at 29 of 157 scroll positions (18.5%; at scroll 2400, 2450, 2500, 2550px), here with "Problema que resolve": at most 3% on a desktop (SR-5)  [1440-rhythm-18-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges header.nav.sticky  "Pular para o conteúdoARTZANSoftwaresSobr"
+       the nav's content runs 8px from the left and 8px from the right: the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)  [1440-rhythm-19-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Alocação de quadrasSoft"
+       the content of section 1 runs 8px from the left and 8px from the right: the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (and 10 more like it: "Problema que resolveText", "Descrição completaTexto ", "Para quem éPlaceholder —") (SR-6)  [1440-rhythm-20-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Início/Softwares/Alocação de quadrasSoft"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [1440-rhythm-21-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       "Imagem provisória do domínio alo" runs 48-1648px, outside the container lines of section 7 at 8-1432px: full width is for background layers and grounds only (SR-6)  [1440-rhythm-22-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges div.az-moldura.wrap > nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1)  "Início"
+       19 text blocks start on a left line at x 48, 40px from the container's left: text starts on the container's left, or on one split line (x 611, 732, 853) (also "/Softwares", "/Alocação de quadras", "01Funcionalidade 1Placeholder — ") (SR-6)  [1440-rhythm-23-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       2 text blocks start on a left line at x 29, 21px from the container's left: text starts on the container's left, or on one split line (x 611, 732, 853) (also "Automático") (SR-6)  [1440-rhythm-24-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       the page scrolls sideways (1648px wide on a 1440px screen): "Imagem provisória do domínio alo" ends at 1648px (SR-6)  [1440-rhythm-25-container-edges.jpg]
+       fix: take the sideways scroll away: nothing wider than the screen (overflow-x: clip on the part that spills)
+  FAIL container-edges div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       a <img> over half the container wide runs 48-1648px, not on the container's lines at 8-1432px (SR-6)  [1440-rhythm-26-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+  FAIL row-lines       div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       "Imagem provisória do domínio alo" ends at 1648px, past the container's right line at 1432px (SR-7)  [1440-rhythm-27-row-lines.jpg]
+       fix: end it at the container's right line
+  (probe error) effect-kind: could not read http://localhost:3001/_next/static/chunks/4bd1b696-cf72ae8a39fa05aa.js (HTTP 400)
+  (probe error) effect-kind: could not read http://localhost:3001/_next/static/chunks/964-9e7fd12428968086.js (HTTP 400)
+  (probe error) effect-kind: could not read http://localhost:3001/_next/static/chunks/main-app-50f326052c390d09.js (HTTP 400)
+
+1024x768  11 screens  7 FAIL  18 WARN
+  FAIL off-viewport    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       runs 624px off the right side of the screen  [1024-12-off-viewport.jpg]
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport    (the page)
+       the page is 1648px wide on a 1024px screen and scrolls sideways
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [1024-06-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [1024-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL cta             main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passo"
+       the last section before the footer ends with no button  [1024-16-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (30 elements, like h2.text-apoio.font-rotulo)  [1024-18-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL photo-upscale   div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       image: 1024x640 shown at 1600x1000, blown up 1.56x  [1024-13-photo-upscale.jpg]
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  WARN flush           div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto
+       section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground  [1024-03-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground  [1024-04-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground  [1024-05-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo  "Placeholder — público-alvo do produto al"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground  [1024-07-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — funcionalidade 3 de alocac"
+       section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground  [1024-08-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — benefício 3 de alocacao-de"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground  [1024-09-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "Conteúdo provisório"
+       section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground  [1024-14-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4
+       section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground  [1024-15-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4
+       section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground  [1024-17-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN heading-scale   div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo  "Funcionalidade 1"
+       the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other  [1024-10-heading-scale.jpg]
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [1024-19-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [1024-01-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  WARN one-screen      main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       1 section is shorter than the screen, so the next one's heading or picture shows with it: "Principais funcionalidades" is 365px of the 768px under the nav, and "Benefícios" shows below it  [1024-11-one-screen.jpg]
+       fix: give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one
+  WARN visual-empty    div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto  "drawing (svg)"
+       the drawing (svg) is nearly empty at 1024px: 2 colours in its 1008x819px, 61.6% one colour (93% of it on screen) (a thin line drawing or a logo can be this plain: look at it)  [1024-22-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN visual-empty    div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4  "drawing (svg)"
+       the drawing (svg) is nearly empty at 1024px: 5 colours in its 1008x1008px, 82.1% one colour (75% of it on screen) (a thin line drawing or a logo can be this plain: look at it)  [1024-23-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN visual-empty    div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4  "drawing (svg)"
+       the drawing (svg) is nearly empty at 1024px: 5 colours in its 1008x1008px, 82% one colour (75% of it on screen) (a thin line drawing or a logo can be this plain: look at it)  [1024-24-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN empty-area      footer.closing.az-faixa-escura  "Empresa"
+       38% of the section is empty: 39% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)  [1024-20-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+
+768x1024  7 screens  34 FAIL  16 WARN
+  FAIL off-viewport    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       runs 880px off the right side of the screen  [768-11-off-viewport.jpg]
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport    (the page)
+       the page is 1648px wide on a 768px screen and scrolls sideways
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [768-04-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [768-03-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL cta             main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passo"
+       the last section before the footer ends with no button  [768-15-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (30 elements, like h2.text-apoio.font-rotulo)  [768-17-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL photo-upscale   div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       image: 768x480 shown at 1600x1000, blown up 2.08x  [768-12-photo-upscale.jpg]
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  FAIL menu-toggle     header.nav.sticky > div.az-moldura.wrap:nth-of-type(1) > div.flex.items-center > button.az-botao.inline-flex  "Abrir menu"
+       the menu button keeps aria-expanded="false" after a click: its state never changes (system.js flips it on .nav__toggle)  [768-01-menu-toggle.jpg]
+       fix: use the starter's button: <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">; system.js flips it
+  WARN flush           div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto
+       section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground  [768-05-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground  [768-06-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground  [768-07-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo  "Placeholder — público-alvo do produto al"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground  [768-08-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — funcionalidade 3 de alocac"
+       section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground  [768-09-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — benefício 3 de alocacao-de"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground  [768-13-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "Conteúdo provisório"
+       section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground  [768-14-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4
+       section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground  [768-16-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4
+       section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground  [768-18-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN heading-scale   div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo  "Funcionalidade 1"
+       the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other  [768-10-heading-scale.jpg]
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [768-19-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [768-02-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  WARN visual-empty    div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto  "drawing (svg)"
+       the drawing (svg) is nearly empty at 768px: 2 colours in its 752x611px, 61.5% one colour (a thin line drawing or a logo can be this plain: look at it)  [768-22-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN visual-empty    div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4  "drawing (svg)"
+       the drawing (svg) is nearly empty at 768px: 5 colours in its 752x752px, 86% one colour (a thin line drawing or a logo can be this plain: look at it)  [768-23-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN empty-area      footer.closing.az-faixa-escura  "Empresa"
+       36% of the section is empty: 37% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)  [768-20-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Alocação de quadrasSoft"
+       the hero ends at 1894px on a 1024px screen, 870px below the fold: it ends at the fold, 1px either way (SR-1)  [768-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the section is 65px tall (0.1 screens), 959px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)  [768-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "BenefíciosPlaceholder — benefício 1 de a"
+       the section is 133px tall (0.1 screens), 891px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)  [768-rhythm-04-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       the section is 137px tall (0.1 screens), 887px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (and 6 more like it: "Descrição completaTexto ", "Principais funcionalidad", "ARTZANEmpresaArtZanDado ") (SR-2)  [768-rhythm-05-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section starts at 5667px, 477px above the screen grid (6 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-06-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "BenefíciosPlaceholder — benefício 1 de a"
+       the section starts at 2698px, 374px above the screen grid (3 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-07-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the section starts at 4830px, 290px above the screen grid (5 x 1024px): sections start on whole screens (and 7 more like it: "Principais funcionalidad", "ImagensConteúdo provisór", "Início/Softwares/Alocaçã") (SR-2)  [768-rhythm-08-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       the section's content does not fit it: its lowest content ends 136px below its top, past 65px (the section less 72px of bottom padding) (SR-2)  [768-rhythm-09-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completaTexto provisório sobre"
+       the section's content does not fit it: its lowest content ends 136px below its top, past 65px (the section less 72px of bottom padding) (and 7 more like it: "Para quem éPlaceholder —", "Principais funcionalidad", "BenefíciosPlaceholder — ") (SR-2)  [768-rhythm-10-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)
+       21px of air between the content of these two sections: 128-480px (64-600px WARN) (every gap out of the band at 768px, top to bottom: 21px after "Problema que resolve", 21px after "Descrição completaTe", 21px after "Para quem éPlacehold", 21px after "Principais funcional", 21px after "BenefíciosPlaceholde", 21px after "ImagensConteúdo prov", 21px after "Informações comercia") (SR-3)  [768-rhythm-11-section-air.jpg]
+       fix: keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3) / main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)
+       21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)  [768-rhythm-12-section-air.jpg]
+       fix: keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)
+       21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)  [768-rhythm-13-section-air.jpg]
+       fix: keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)
+  FAIL one-section     div.flex.flex-col > div.grid.gap-10 > div.flex.flex-col > h2.text-apoio.font-rotulo  "Empresa"
+       the screen at scroll 5120px (stride 5) shows 477px of section 10 and the heading of section 10 whole and the content of 2 sections, over 24px each beside section 9: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-14-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the screen at scroll 5202px (the top of section 10) shows 449px of section 9 and the content of 2 sections, over 24px each beside section 10: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-15-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     h2#titulo-publico-alvo  "Para quem é"
+       the screen at scroll 2228px (the top of section 4) shows 365px of section 5 and the heading of section 4 whole and the content of 4 sections, over 24px each beside section 7: a screen shows one section (another may peek 8px, 24px WARN) (and 10 more like it: scroll 2312px, scroll 4096px, scroll 2071px) (SR-4)  [768-rhythm-16-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [768-rhythm-17-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     h2#titulo-descricao-completa  "Descrição completa"
+       headings of two sections show whole on one screen at 37 of 105 scroll positions (35.2%; at scroll 1100, 1150, 1200, 1250px), here with "Problema que resolve": at most 3% on a desktop (SR-5)  [768-rhythm-18-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges header.nav.sticky  "Pular para o conteúdoARTZANSoftwaresSobr"
+       the nav's content runs 8px from the left and 8px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-19-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Alocação de quadrasSoft"
+       the content of section 1 runs 8px from the left and 8px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (and 10 more like it: "Problema que resolveText", "Descrição completaTexto ", "Para quem éPlaceholder —") (SR-6)  [768-rhythm-20-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Início/Softwares/Alocação de quadrasSoft"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [768-rhythm-21-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       "Imagem provisória do domínio alo" runs 48-1648px, outside the container lines of section 7 at 8-760px: full width is for background layers and grounds only (SR-6)  [768-rhythm-22-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges div.az-moldura.wrap > nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1)  "Início"
+       19 text blocks start on a left line at x 48, 40px from the container's left: text starts on the container's left, or on one split line (x 331, 396, 461) (also "/Softwares", "/Alocação de quadras", "01Funcionalidade 1Placeholder — ") (SR-6)  [768-rhythm-23-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       2 text blocks start on a left line at x 29, 21px from the container's left: text starts on the container's left, or on one split line (x 331, 396, 461) (also "Automático") (SR-6)  [768-rhythm-24-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       the page scrolls sideways (1648px wide on a 768px screen): "Imagem provisória do domínio alo" ends at 1648px (SR-6)  [768-rhythm-25-container-edges.jpg]
+       fix: take the sideways scroll away: nothing wider than the screen (overflow-x: clip on the part that spills)
+  FAIL container-edges div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       a <img> over half the container wide runs 48-1648px, not on the container's lines at 8-760px (SR-6)  [768-rhythm-26-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+  FAIL row-lines       div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       "Imagem provisória do domínio alo" ends at 1648px, past the container's right line at 760px (SR-7)  [768-rhythm-27-row-lines.jpg]
+       fix: end it at the container's right line
+
+390x844  2 screens  11 FAIL  23 WARN
+  FAIL hero-fill       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       the next section shows on the first screen: it starts at 1265px on a 3376px screen (the hero ends at 1245px)  [390-01-hero-fill.jpg]
+       fix: let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load
+  FAIL off-viewport    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       runs 1258px off the right side of the screen  [390-13-off-viewport.jpg]
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport    (the page)
+       the page is 1648px wide on a 390px screen and scrolls sideways
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL tap-size        nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): 1px from the next one ("Sobre"), so a thumb lands on the wrong one  [390-02-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Início"
+       a 37x17px tap target (and 1 more like it on this screen): 1px from the next one ("Softwares"), so a thumb lands on the wrong one  [390-03-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Sobre"
+       a 37x17px tap target (and 2 more like it on this screen): 1px from the next one ("Política de privacidade"), so a thumb lands on the wrong one  [390-14-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [390-04-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL cta             main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passo"
+       the last section before the footer ends with no button  [390-15-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (30 elements, like h2.text-apoio.font-rotulo)  [390-16-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL photo-upscale   div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       image: 389x243 shown at 1600x1000, blown up 4.12x  [390-17-photo-upscale.jpg]
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  FAIL section-tile    main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       the section is 419px tall (0.12 screens at 390x844), shorter than the screen: its tile, held at the page's end (scroll 1841px) shows 419px of it and 187px of the next section, its heading "Benefícios" on screen  [390-28-section-tile.jpg]
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  WARN flush           div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto
+       section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground  [390-05-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground  [390-06-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground  [390-07-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo  "Placeholder — público-alvo do produto al"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground  [390-08-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — funcionalidade 3 de alocac"
+       section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground  [390-09-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — benefício 3 de alocacao-de"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground  [390-10-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.normal-case  "Captura de tela real ainda não existe (Q"
+       section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground  [390-18-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4
+       section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground  [390-19-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4
+       section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground  [390-20-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN tap-size        div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs  [390-21-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN heading-scale   div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo  "Funcionalidade 1"
+       the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other  [390-11-heading-scale.jpg]
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [390-22-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [390-12-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  WARN visual-empty    div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto  "drawing (svg)"
+       the drawing (svg) is nearly empty at 390px: 5 colours in its 374x304px, 61.1% one colour (a thin line drawing or a logo can be this plain: look at it)  [390-23-visual-empty.jpg]
+       fix: make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame
+  WARN hero-screen     body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  WARN section-height  body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  WARN section-air     body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  WARN one-section     body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  WARN one-heading     body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  WARN container-edges body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  WARN row-lines       body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  WARN split-pair      body
+       not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+       fix: make the page load and lay out at this width (the probe error says what stopped it), then run the check again
+  (probe error) rhythm: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)
+
+320x640  3 screens  11 FAIL  14 WARN
+  FAIL empty-visual    div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn > svg.az-seta.h-4
+       the picture shows nothing here: 99% of it is one colour (#ffffff)  [320-01-empty-visual.jpg]
+       fix: make the visual draw at every width: a picture that loads, an effect that renders, or its still fallback; never an empty frame
+  FAIL hero-fill       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       the next section shows on the first screen: it starts at 1156px on a 2560px screen (the hero ends at 1136px)  [320-02-hero-fill.jpg]
+       fix: let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load
+  FAIL off-viewport    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       runs 1328px off the right side of the screen  [320-13-off-viewport.jpg]
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport    (the page)
+       the page is 1648px wide on a 320px screen and scrolls sideways
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL tap-size        nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): 1px from the next one ("Sobre"), so a thumb lands on the wrong one  [320-03-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Início"
+       a 37x17px tap target (and 1 more like it on this screen): 1px from the next one ("Softwares"), so a thumb lands on the wrong one  [320-04-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Sobre"
+       a 37x17px tap target (and 2 more like it on this screen): 1px from the next one ("Política de privacidade"), so a thumb lands on the wrong one  [320-20-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [320-05-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL cta             main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passo"
+       the last section before the footer ends with no button  [320-14-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (30 elements, like h2.text-apoio.font-rotulo)  [320-21-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL photo-upscale   div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "img: Imagem provisória do domínio alocaç"
+       image: 320x200 shown at 1600x1000, blown up 5.00x  [320-15-photo-upscale.jpg]
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  WARN flush           div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto
+       section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground  [320-06-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground  [320-07-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo  "Texto provisório sobre alocação de quadr"
+       section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground  [320-08-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo  "Placeholder — público-alvo do produto al"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground  [320-09-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — funcionalidade 3 de alocac"
+       section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground  [320-10-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo  "Placeholder — benefício 3 de alocacao-de"
+       section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground  [320-16-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.normal-case  "Captura de tela real ainda não existe (Q"
+       section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground  [320-17-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4
+       section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground  [320-18-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4
+       section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground  [320-19-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN tap-size        div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs  [320-22-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN heading-scale   div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo  "Funcionalidade 1"
+       the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other  [320-11-heading-scale.jpg]
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [320-23-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [320-12-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+
+first screen at 1280, 1152, 896  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  4 FAIL
+  FAIL tap-size        [320] nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): 1px from the next one ("Sobre"), so a thumb lands on the wrong one  [narrow-320-01-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        [320] nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Início"
+       a 37x17px tap target (and 1 more like it on this screen): 1px from the next one ("Softwares"), so a thumb lands on the wrong one  [narrow-320-02-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        [320] div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        [320] div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Sobre"
+       a 37x17px tap target (and 2 more like it on this screen): 1px from the next one ("Política de privacidade"), so a thumb lands on the wrong one
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL off-viewport    [320] figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img  "Imagem provisória do domínio alocação de"
+       at 320px wide it runs 1328px past the screen's right edge (the page is 1648px wide and scrolls sideways)  [narrow-320-05-off-viewport.jpg]
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+
+checks
+  FAIL assets                 PASS shader-lint            PASS gl-fallback            
+  FAIL empty-visual           FAIL hero-fill              WARN flush                  
+  FAIL placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            PASS nav                    PASS nav-covers             
+  PASS spill                  FAIL off-viewport           PASS fold-card              
+  PASS hover-spill            PASS overlap-text           PASS collide                
+  FAIL tap-size               PASS row-gap                PASS cut-text               
+  PASS fold-cut               PASS marquee                PASS scroll-linked          
+  PASS scroll-reveal          PASS pinned                 PASS loop-pause             
+  PASS reduced-motion         PASS hidden-content         PASS webgl                  
+  FAIL no-visual              PASS text-only              PASS card-visual            
+  PASS hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           PASS same-action            PASS button-picture         
+  FAIL cta                    PASS pricing-tiers          FAIL copy-headline          
+  PASS copy-fact              FAIL copy-headings          WARN copy-buttons           
+  WARN copy-actions           WARN heading-scale          PASS stagger                
+  PASS top-stagger            FAIL off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               PASS text-contrast          PASS body-size              
+  PASS busy-ground            PASS section-gaps           PASS proximity              
+  PASS hole                   PASS links                  PASS forms                  
+  FAIL photo-upscale          PASS photo-set              WARN photo-credit           
+  WARN nav-family             WARN nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  PASS stranded-action        PASS orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           PASS copy-length            PASS nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             PASS fold-action            PASS action-count           
+  WARN one-screen             WARN hover                  PASS hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  PASS visual-caption         WARN visual-empty           FAIL effect-kind            
+  PASS hero-enter             PASS moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           FAIL hero-screen            FAIL section-height         
+  FAIL section-air            FAIL one-section            FAIL one-heading            
+  FAIL container-edges        FAIL row-lines              WARN split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  FAIL section-tile           FAIL empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               PASS focus-ring             PASS focus-visible          
+  PASS focus-hidden           WARN skip-link              FAIL menu-toggle            
+  PASS lang                   PASS page-meta              WARN share-meta             
+  PASS action-repeat          PASS map-link               PASS open-now               
+  PASS assumed                PASS run-on                 PASS form-fields            
+  PASS form-send              
+
+total  115 FAIL  96 WARN  (crops and report.json in C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.taste-skill\after\consistency-produto-quadras)

@@ -16,8 +16,9 @@
  */
 
 import Image from 'next/image'
+import type { CSSProperties } from 'react'
 
-import { Card, MolduraCaptura, Texto, Titulo } from '@/components/ui'
+import { Card, MolduraCaptura, Seta, Texto, Titulo } from '@/components/ui'
 import type { NivelDeTitulo } from '@/components/ui'
 import { identificacaoPublicaDoProduto } from '@/lib/identificacao-de-produto'
 import { ROTAS } from '@/lib/rotas'
@@ -28,6 +29,8 @@ import {
 } from '@/lib/rotulos'
 import type { Categoria, Midia, Produto } from '@/payload-types'
 
+import { MarcaDeRegistroProvisorio } from './MarcaDeRegistroProvisorio'
+
 export type PropsDoCartaoDeProduto = {
   produto: Produto
   /**
@@ -37,9 +40,8 @@ export type PropsDoCartaoDeProduto = {
   nivelDeTitulo: NivelDeTitulo
 }
 
-const ehCategoriaPopulada = (
-  categoria: number | Categoria,
-): categoria is Categoria => typeof categoria === 'object'
+const ehCategoriaPopulada = (categoria: number | Categoria): categoria is Categoria =>
+  typeof categoria === 'object'
 
 const ehMidiaPopulada = (midia: number | Midia): midia is Midia => typeof midia === 'object'
 
@@ -50,12 +52,28 @@ export const CartaoDeProduto = ({ produto, nivelDeTitulo }: PropsDoCartaoDeProdu
     .filter(ehCategoriaPopulada)
     .filter((categoria) => categoria.visivelPublicamente)
   const participaDeSolucao = Boolean(produto.solucoesQueParticipa?.docs?.length)
+  // Rebrand — a cor da faixa segue a família do produto: âmbar para esporte,
+  // azul da marca para gestão. Lida da categoria, nunca do nome.
+  const ehEsporte = produto.categorias
+    .filter(ehCategoriaPopulada)
+    .some((categoria) => categoria.slug === 'esporte')
 
   return (
     <Card
       href={ROTAS.produto(produto.slug)}
+      // Rebrand (2026-11-13): cartão escuro de placar com faixa de cor no
+      // topo, como os cartões FUTSAL / BASQUETE / VÔLEI do MarQGol. Escuro em
+      // qualquer página (az-faixa-escura no próprio cartão).
+      superficie="elevada"
       rotuloAcessivel={`${ACOES.verDetalhes}: ${identificacao.titulo}`}
-      className="flex flex-col gap-4"
+      // Restyle: o card ocupa a altura da linha da grade; o rodapé do card
+      // (Ver detalhes + seta) fica sempre no pé, alinhado entre vizinhos.
+      className="az-faixa-escura az-cartao-faixa flex h-full w-full flex-col gap-6"
+      estilo={
+        {
+          '--az-cor-faixa': ehEsporte ? 'var(--az-sinal)' : 'var(--az-destaque)',
+        } as CSSProperties
+      }
     >
       {ehMidiaPopulada(imagem) && imagem.url ? (
         <MolduraCaptura>
@@ -69,10 +87,12 @@ export const CartaoDeProduto = ({ produto, nivelDeTitulo }: PropsDoCartaoDeProdu
         </MolduraCaptura>
       ) : null}
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-1 flex-col gap-3">
         <Titulo nivel={nivelDeTitulo} visual="h3">
           {identificacao.titulo}
         </Titulo>
+
+        <MarcaDeRegistroProvisorio registro={produto} className="self-start" />
 
         {identificacao.nomePropostoAAprovar ? (
           <Texto variante="apoio" tom="secundario" limitarLargura={false}>
@@ -93,7 +113,7 @@ export const CartaoDeProduto = ({ produto, nivelDeTitulo }: PropsDoCartaoDeProdu
                 variante="apoio"
                 tom="secundario"
                 limitarLargura={false}
-                className="rounded-controle border border-borda px-2 py-1"
+                className="rounded-pilula border border-borda px-3 py-1 font-titulo font-rotulo uppercase tracking-caixa-alta"
               >
                 {categoria.nome}
               </Texto>
@@ -104,7 +124,7 @@ export const CartaoDeProduto = ({ produto, nivelDeTitulo }: PropsDoCartaoDeProdu
                 variante="apoio"
                 tom="secundario"
                 limitarLargura={false}
-                className="rounded-controle border border-borda px-2 py-1"
+                className="rounded-pilula border border-borda px-3 py-1 font-titulo font-rotulo uppercase tracking-caixa-alta"
               >
                 {ROTULO_SELO_PARTICIPA_DE_SOLUCOES}
               </Texto>
@@ -112,6 +132,16 @@ export const CartaoDeProduto = ({ produto, nivelDeTitulo }: PropsDoCartaoDeProdu
           </div>
         ) : null}
       </div>
+
+      {/* Restyle — afordância visível do card inteiro acionável (13.9). O
+          rótulo acessível do link já diz o mesmo; isto é para quem vê. */}
+      <span
+        aria-hidden="true"
+        className="inline-flex items-center gap-2 border-t border-borda pt-4 font-titulo text-rotulo font-h1 uppercase tracking-caixa-alta text-texto-principal"
+      >
+        {ACOES.verDetalhes}
+        <Seta />
+      </span>
     </Card>
   )
 }

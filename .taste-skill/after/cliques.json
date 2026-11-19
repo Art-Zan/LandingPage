@@ -1,0 +1,1090 @@
+{
+  "base": "http://localhost:3001",
+  "quando": "2026-11-10T21:51:37.939Z",
+  "links": [
+    {
+      "pagina": "/",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/contato",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/sobre",
+      "texto": "Sobre a ArtZan",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/contato",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/produtos",
+      "texto": "Ver softwares",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/contato",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/sobre",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/produtos/scout-esportivo",
+      "texto": "Scout para partidas esportivasConteúdo provisórioRegistro pr",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/produtos/placar-esportivo",
+      "texto": "Placar esportivoConteúdo provisórioRegistro provisório — não",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/produtos/sistema-lara",
+      "texto": "Sistema LaraConteúdo provisórioRegistro provisório — não rep",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/produtos/alocacao-de-quadras",
+      "texto": "Alocação de quadrasConteúdo provisórioRegistro provisório — ",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/contato",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/",
+      "texto": "Início",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/contato?produto=sistema-lara",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/contato?produto=sistema-lara",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/contato?produto=sistema-lara",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/sistema-lara",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/",
+      "texto": "Início",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/contato?produto=alocacao-de-quadras",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/contato?produto=alocacao-de-quadras",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/contato?produto=alocacao-de-quadras",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/produtos/alocacao-de-quadras",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/contato",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/produtos",
+      "texto": "Ver softwares",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/",
+      "texto": "Ir para a página inicial",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/obrigado",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/privacidade",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/termos",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/",
+      "texto": "ARTZAN",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "cabecalho",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/",
+      "texto": "Ir para a página inicial",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/produtos",
+      "texto": "Ver softwares",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/contato",
+      "texto": "Falar com a equipe",
+      "regiao": "conteudo",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/produtos",
+      "texto": "Softwares",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/contato",
+      "texto": "Contato",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/sobre",
+      "texto": "Sobre",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/privacidade",
+      "texto": "Política de privacidade",
+      "regiao": "rodape",
+      "status": 200
+    },
+    {
+      "pagina": "/rota-que-nao-existe",
+      "href": "/termos",
+      "texto": "Termos de uso",
+      "regiao": "rodape",
+      "status": 200
+    }
+  ],
+  "cliques": [
+    {
+      "nome": "links (status HTTP de todos os destinos)",
+      "ok": true,
+      "detalhe": "136 links, 12 destinos únicos, 0 com erro"
+    },
+    {
+      "nome": "cabeçalho: header nav a[href=\"/produtos\"]",
+      "ok": true,
+      "detalhe": "chegou em /produtos"
+    },
+    {
+      "nome": "cabeçalho: header nav a[href=\"/sobre\"]",
+      "ok": true,
+      "detalhe": "chegou em /sobre"
+    },
+    {
+      "nome": "cabeçalho: header a[href=\"/contato\"]",
+      "ok": true,
+      "detalhe": "chegou em /contato"
+    },
+    {
+      "nome": "cabeçalho: header a[href=\"/\"]",
+      "ok": true,
+      "detalhe": "chegou em /"
+    },
+    {
+      "nome": "rodapé: /produtos",
+      "ok": true,
+      "detalhe": "chegou em /produtos"
+    },
+    {
+      "nome": "rodapé: /contato",
+      "ok": true,
+      "detalhe": "chegou em /contato"
+    },
+    {
+      "nome": "rodapé: /sobre",
+      "ok": true,
+      "detalhe": "chegou em /sobre"
+    },
+    {
+      "nome": "rodapé: /privacidade",
+      "ok": true,
+      "detalhe": "chegou em /privacidade"
+    },
+    {
+      "nome": "rodapé: /termos",
+      "ok": true,
+      "detalhe": "chegou em /termos"
+    },
+    {
+      "nome": "cartão: /produtos/scout-esportivo",
+      "ok": true,
+      "detalhe": "chegou em /produtos/scout-esportivo"
+    },
+    {
+      "nome": "cartão: /produtos/placar-esportivo",
+      "ok": true,
+      "detalhe": "chegou em /produtos/placar-esportivo"
+    },
+    {
+      "nome": "cartão: /produtos/sistema-lara",
+      "ok": true,
+      "detalhe": "chegou em /produtos/sistema-lara"
+    },
+    {
+      "nome": "cartão: /produtos/alocacao-de-quadras",
+      "ok": true,
+      "detalhe": "chegou em /produtos/alocacao-de-quadras"
+    },
+    {
+      "nome": "trilha: nav[aria-label=\"Trilha\"] a[href=\"/\"]",
+      "ok": true,
+      "detalhe": "chegou em /"
+    },
+    {
+      "nome": "trilha: nav[aria-label=\"Trilha\"] a[href=\"/produtos\"]",
+      "ok": true,
+      "detalhe": "chegou em /produtos"
+    },
+    {
+      "nome": "tema: escuro",
+      "ok": true,
+      "detalhe": "data-tema=escuro"
+    },
+    {
+      "nome": "tema: claro",
+      "ok": true,
+      "detalhe": "data-tema=claro"
+    },
+    {
+      "nome": "tema: sistema",
+      "ok": true,
+      "detalhe": "data-tema=null"
+    },
+    {
+      "nome": "menu móvel: abre",
+      "ok": true,
+      "detalhe": "aria-expanded=true, altura do painel 788 px, foco em \"Softwares\""
+    },
+    {
+      "nome": "menu móvel: Esc fecha e devolve o foco",
+      "ok": true,
+      "detalhe": "{\"exp\":\"false\",\"visivel\":false,\"focoNoBotao\":true}"
+    },
+    {
+      "nome": "menu móvel: link navega",
+      "ok": true,
+      "detalhe": "chegou em /sobre"
+    },
+    {
+      "nome": "menu móvel: botão fecha",
+      "ok": true,
+      "detalhe": "hidden=true"
+    },
+    {
+      "nome": "formulário: erros por campo no envio vazio",
+      "ok": true,
+      "detalhe": "resumo=\"Faltam 5 informações para enviar. Os campos com problema estão indicados abaixo.\", inválidos=nome,email,assunto,mensagem,consentimentoDeTratamento, foco em nome"
+    },
+    {
+      "nome": "formulário: falha de envio preserva os dados (RNF-092)",
+      "ok": true,
+      "detalhe": "{\"caminho\":\"/contato\",\"nome\":\"Teste de restyle\",\"email\":\"teste.restyle@exemplo.dev\",\"msg\":\"Mensagem de teste au\",\"alerta\":\"Não foi possível enviar agora: a conexão falhou. Seus dados continuam preenchidos. Tente novamente em alguns instantes, ou fale com a gente pelo WhatsApp ou por e-mail.\"}"
+    },
+    {
+      "nome": "formulário: envio válido chega a /obrigado",
+      "ok": false,
+      "detalhe": "chegou em /contato — alerta: Tivemos um problema ao registrar sua solicitação. Nada do que você escreveu foi perdido. Tente enviar novamente, ou fale com a gente pelo WhatsApp ou por e-mail."
+    }
+  ]
+}

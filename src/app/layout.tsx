@@ -43,30 +43,43 @@ import { permiteIndexacao, SITE_URL } from '@/lib/env'
 import { IDIOMA_PADRAO } from '@/lib/rotas'
 import { NOME_DA_MARCA } from '@/lib/rotulos'
 
+const SCRIPT_DE_ENTRADA =
+  "document.documentElement.classList.add('m-enter');" +
+  "setTimeout(function(){document.documentElement.classList.add('m-enter-done')},1100)"
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: NOME_DA_MARCA,
-    // RF-160 — padrão automático: nome da entidade + nome da ArtZan.
-    template: `%s — ${NOME_DA_MARCA}`,
+    // RF-160 / 12.2 — o sufixo `| ArtZan` é aplicado UMA vez, pela própria
+    // página (`tituloDePagina` em src/lib/seo.ts, ou o título literal das
+    // páginas de 3c). Um template com a marca aqui a empilhava duas vezes
+    // ("Softwares | ArtZan — ArtZan"), o que 12.2 proíbe ("nunca repetir o
+    // nome da marca duas vezes"). Corrigido na verificação pós-Onda 4.
+    template: '%s',
   },
   // RF-164 — bloqueio íntegro de indexação em homologação, sem depender de
   // que cada página lembre de declará-lo. Em produção, o padrão é indexável;
   // páginas utilitárias (`/obrigado`, `/busca`, a rota de revisão) sobrescrevem
   // este campo com o próprio `metadata`, o que o Next mescla por página.
-  robots: permiteIndexacao()
-    ? { index: true, follow: true }
-    : { index: false, follow: false },
+  robots: permiteIndexacao() ? { index: true, follow: true } : { index: false, follow: false },
 }
 
 export default function LayoutRaiz({ children }: { children: ReactNode }) {
   return (
-    <html lang={IDIOMA_PADRAO} className={CLASSES_DE_FONTE}>
+    // suppressHydrationWarning: os dois scripts síncronos abaixo alteram
+    // atributos e classes do <html> antes da hidratação, de propósito.
+    <html lang={IDIOMA_PADRAO} className={CLASSES_DE_FONTE} suppressHydrationWarning>
       <head>
         {/* 11.13 — script síncrono, executado antes do primeiro pintar
             (src/components/layout/tema.ts, Onda 3a). Sem ele há lampejo do
             tema errado entre a pintura inicial e a hidratação do React. */}
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_DE_TEMA }} />
+        {/* Restyle — entrada da primeira dobra (13.10). Marca o documento
+            com `m-enter` antes do primeiro pintar; o CSS só anima a dobra
+            com essa classe, então sem script nada fica escondido. Sob
+            movimento reduzido o CSS não anima (globals.css). */}
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_DE_ENTRADA }} />
       </head>
       <body>{children}</body>
     </html>

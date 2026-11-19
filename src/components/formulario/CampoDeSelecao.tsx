@@ -36,8 +36,11 @@ export type PropsDoCampoDeSelecao = Omit<
 }
 
 const CONTROLE = juntarClasses(
-  'w-full min-h-toque',
-  'px-card-compacto py-2',
+  // Restyle: campo de 48 px (acima do alvo de 44 px), borda que escurece
+  // na passagem; o foco segue o contorno global (13.2).
+  'w-full min-h-12',
+  'px-card-compacto py-3',
+  'hover:border-texto-secundario',
   'text-corpo leading-corpo text-texto-principal',
   'bg-superficie border rounded-controle',
   'transition-colors duration-padrao',

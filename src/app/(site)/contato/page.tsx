@@ -18,7 +18,7 @@
 
 import type { Metadata } from 'next'
 
-import { Container, Secao, Texto, Titulo } from '@/components/ui'
+import { Container, Secao, Texto, TextoDeEntrada, Titulo } from '@/components/ui'
 import { FormularioDeContato } from '@/components/formulario/FormularioDeContato'
 import type { OpcaoDeSelecao } from '@/components/formulario/CampoDeSelecao'
 import { emailPublicado, whatsappPublicado } from '@/lib/configuracao-contato'
@@ -30,7 +30,7 @@ import { emitirToken } from '@/lib/token-de-formulario'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: `Contato — ${NOME_DA_MARCA}`,
+  title: `Contato comercial | ${NOME_DA_MARCA}`, // fórmula de 12.2 (P-08)
   description: 'Fale com a equipe da ArtZan por formulário, WhatsApp ou e-mail.',
   alternates: { canonical: ROTAS.contato() },
 }
@@ -88,21 +88,24 @@ export default async function PaginaDeContato({ searchParams }: PropsDaPagina) {
 
   const token = emitirToken()
 
+  // Restyle — duas colunas a partir de 1024 px: o título e a promessa de
+  // prazo à esquerda, o formulário num painel elevado à direita. Nenhum
+  // campo, rótulo, validação ou destino do envio foi alterado.
   return (
-    // Sem `<main>` próprio: a região principal é fornecida por
-    // `(site)/layout.tsx` (Onda 3a), único lugar que deve declará-la (13.5
-    // regra 2). Esta página só contribui o CONTEÚDO daquela região.
-    <Container>
-      <Secao rotuladaPor="titulo-contato">
-        <Titulo nivel={1} id="titulo-contato">
-          Contato
-        </Titulo>
-        <Texto>
-          Preencha o formulário abaixo ou fale diretamente com a gente. Respondemos em até 2
-          dias úteis.
-        </Texto>
+    <Secao rotuladaPor="titulo-contato" primeiraDobra>
+      <Container className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-6">
+        <div className="flex flex-col items-start gap-6 lg:col-span-5">
+          <p className="az-sobretitulo">{NOME_DA_MARCA}</p>
+          <Titulo nivel={1} id="titulo-contato">
+            <TextoDeEntrada>Contato</TextoDeEntrada>
+          </Titulo>
+          <Texto variante="destaque" className="az-entrada-apoio [--az-ordem:1]">
+            Preencha o formulário abaixo ou fale diretamente com a gente. Respondemos em até 2 dias
+            úteis.
+          </Texto>
+        </div>
 
-        <div className="mt-6 max-w-texto">
+        <div className="az-entrada-apoio rounded-bloco border border-borda bg-superficie-elevada p-card-compacto [--az-ordem:2] md:p-card lg:col-span-7 lg:p-12">
           <FormularioDeContato
             token={token}
             contexto={contexto}
@@ -113,7 +116,7 @@ export default async function PaginaDeContato({ searchParams }: PropsDaPagina) {
             estadoDoEmail={emailPublicado()}
           />
         </div>
-      </Secao>
-    </Container>
+      </Container>
+    </Secao>
   )
 }

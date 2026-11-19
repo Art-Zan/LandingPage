@@ -1,0 +1,112 @@
+[
+ {
+  "rota": "inicial",
+  "consistency": "68 FAIL / 30 WARN",
+  "idsFail": "placeholder,no-visual,text-only,copy-headline,copy-headings,fold-action,effect-kind,hero-screen,section-height,one-section,one-heading,container-edges",
+  "layout": "1440:11 1024:8 768:9 390:8 320:3",
+  "peso": "466.5 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "sobre",
+  "consistency": "82 FAIL / 12 WARN",
+  "idsFail": "hero-fill,placeholder,no-visual,text-only,cta,copy-headline,hole,hero-screen,section-height,one-section,one-heading,container-edges",
+  "layout": "1440:5 1024:2 768:4 390:2 320:3",
+  "peso": "443.7 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produtos",
+  "consistency": "81 FAIL / 49 WARN",
+  "idsFail": "hero-fill,placeholder,no-visual,text-only,cta,copy-headings,effect-kind,hero-screen,section-height,section-air,one-section,one-heading,container-edges",
+  "layout": "1440:7 1024:6 768:5 390:7 320:7",
+  "peso": "767.5 KiB",
+  "cls": "0.000",
+  "perf": "4 FAIL, 4 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produto-lara",
+  "consistency": "102 FAIL / 42 WARN",
+  "idsFail": "hero-fill,placeholder,no-visual,text-only,same-action,copy-headline,copy-headings,effect-kind,hero-screen,section-height,section-air,one-section,one-heading,container-edges",
+  "layout": "1440:29 1024:18 768:24 390:27 320:16",
+  "peso": "573.8 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 4 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produto-quadras",
+  "consistency": "103 FAIL / 42 WARN",
+  "idsFail": "hero-fill,placeholder,no-visual,text-only,same-action,copy-headline,copy-headings,off-grid,fold-action,effect-kind,hero-screen,section-height,section-air,one-section,one-heading,container-edges",
+  "layout": "1440:28 1024:17 768:24 390:27 320:14",
+  "peso": "574.1 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 4 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "contato",
+  "consistency": "49 FAIL / 20 WARN",
+  "idsFail": "no-visual,copy-headline,forms,fold-action,hero-screen,section-height,one-section,one-heading,container-edges",
+  "layout": "1440:0 1024:0 768:0 390:0 320:0",
+  "peso": "455.1 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "obrigado",
+  "consistency": "49 FAIL / 7 WARN",
+  "idsFail": "text-only,copy-headline,hero-screen,section-height,one-section,one-heading,container-edges",
+  "layout": "1440:2 1024:2 768:2 390:2 320:2",
+  "peso": "440.2 KiB",
+  "cls": "0.004",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 0 WARN"
+ },
+ {
+  "rota": "privacidade",
+  "consistency": "61 FAIL / 11 WARN",
+  "idsFail": "placeholder,no-visual,text-only,cta,copy-headline,hero-screen,section-height,one-section,one-heading,container-edges",
+  "layout": "1440:2 1024:2 768:2 390:2 320:0",
+  "peso": "442.5 KiB",
+  "cls": "0.004",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "termos",
+  "consistency": "61 FAIL / 9 WARN",
+  "idsFail": "placeholder,no-visual,text-only,cta,copy-headline,hero-screen,section-height,one-section,one-heading,container-edges",
+  "layout": "1440:2 1024:2 768:2 390:2 320:0",
+  "peso": "442 KiB",
+  "cls": "0.004",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "404",
+  "consistency": "44 FAIL / 8 WARN",
+  "idsFail": "assets,no-visual,copy-headline,copy-actions,stagger,section-height,one-section,one-heading,container-edges,empty-area",
+  "layout": "1440:0 1024:0 768:0 390:0 320:0",
+  "peso": "428 KiB",
+  "cls": "0.000",
+  "perf": "4 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families,broken requests",
+  "copylint": "0 FAIL, 0 WARN"
+ }
+]

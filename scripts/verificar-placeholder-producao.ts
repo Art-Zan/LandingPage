@@ -23,6 +23,8 @@
 // barrar o build nesses modos seria confundir a rede de segurança de produção
 // com uma trava geral.
 
+/* eslint-disable no-console -- script de linha de comando: o console É a saída (relato de progresso e de ofensores). */
+
 import './lib/carregar-env' // precisa ser o primeiro import — ver o arquivo
 
 import { getPayload } from 'payload'

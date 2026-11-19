@@ -26,6 +26,8 @@
 // Em ESM, imports estáticos irmãos são avaliados na ordem em que aparecem.
 // Ver nota completa em `scripts/lib/carregar-env.ts`.
 
+/* eslint-disable no-console -- script de linha de comando: o console É a saída (relato de progresso e de ofensores). */
+
 import './lib/carregar-env' // precisa ser o primeiro import — ver o arquivo
 
 import { readFileSync } from 'node:fs'
@@ -302,16 +304,13 @@ const criarCategorias = async (
 
       const criada = await payload.create({
         collection: SLUG_CATEGORIAS,
-        // TypeScript estrito do Payload 3 exige `slug` em `data` mesmo quando o
-        // hook `campoSlug('nome')` o deriva. Passamos o slug derivado do `nome`
-        // aqui para satisfazer o tipo; o hook sobrescreve esse valor durante
-        // `beforeValidate` e `validarSlug` continua aplicando as regras.
+        // O slug vem do MANIFESTO, não do nome: o hook `campoSlug('nome')`
+        // (Onda 2b) só deriva do nome quando o slug chega vazio — valor
+        // explícito é apenas normalizado por `gerarSlug` e validado por
+        // `validarSlug`. Derivar do nome aqui divergiria do slug declarado.
         data: {
           nome: categoria.nome,
-          slug: gerarSlug(categoria.nome),
-          // slug é derivado do `nome` pelo hook `campoSlug` (Onda 2b).
-          // Não passamos slug explícito; se a derivação falhar por algum motivo
-          // o Payload recusaria com mensagem do `validarSlug`.
+          slug: gerarSlug(categoria.slug),
           visivelPublicamente: true,
           // descricaoCurta vazia por construção: 6.7 a torna obrigatória só
           // quando a categoria ganha URL própria (Fase 2, P-18).
@@ -425,13 +424,14 @@ const criarProdutos = async (
 
       const criado = await payload.create({
         collection: SLUG_PRODUTOS,
-        // TypeScript estrito do Payload 3 exige `slug` em `data` mesmo quando o
-        // hook `campoSlug('nome')` o deriva. Passamos o slug derivado do `nome`
-        // aqui para satisfazer o tipo; o hook sobrescreve esse valor durante
-        // `beforeValidate` e `validarSlug` continua aplicando as regras.
+        // O slug vem do MANIFESTO (dev/CONVENCOES.md §4.4), NUNCA do nome.
+        // Derivar de `nome` produzia `theo`/`iago`/`nina`: endereço público com
+        // o nome não aprovado (§8 item 3, PR-063) e slug fora da tabela de
+        // `identificacao-de-produto.ts`, que então caía no nome proposto como
+        // identificação principal — H1 e título de SEO vazavam juntos.
         data: {
           nome: produto.nome,
-          slug: gerarSlug(produto.nome),
+          slug: produto.slug,
           resumoUmaLinha: resumo,
           problemaQueResolve: richTextDeParagrafos([problemaLongo]),
           descricaoCompleta: richTextDeParagrafos([descricaoLonga]),

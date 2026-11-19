@@ -1,0 +1,51 @@
+
+perf /localhost:3001/sobre @ 1440px
+  PASS  host CPU load (before/after)               24/34 %        
+  PASS  total transfer                             357.5 KiB      html 37.9K  css 0K  js 308.6K  other 11K
+  PASS  requests                                   15             14 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  542.2 KiB      7 files, 308.6K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        1380 ms        
+  PASS  LCP (CPU, relative)                        1380 ms        p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            3              css/c6b961c947b4464b.css, chunks/519-89293711801e90a2.js, (site)/layout-a7236e52ed5b46c3.js
+  WARN  script errors                              1              ChunkLoadError: Loading chunk 750 failed.
+  PASS  page height                                1 screens      DOM 29 nodes
+
+perf /localhost:3001/sobre @ 390px
+  PASS  host CPU load (before/after)               24/34 %        
+  PASS  total transfer                             357.8 KiB      html 37.9K  css 0K  js 308.6K  other 11.3K
+  PASS  requests                                   16             13 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  542.2 KiB      7 files, 308.6K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        84 ms          
+  PASS  LCP (CPU, relative)                        84 ms          p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            3              css/c6b961c947b4464b.css, chunks/519-89293711801e90a2.js, (site)/layout-a7236e52ed5b46c3.js
+  PASS  page height                                2.2 screens    DOM 157 nodes
+
+SUMMARY /localhost:3001/sobre: 2 FAIL, 3 WARN  -> FAIL

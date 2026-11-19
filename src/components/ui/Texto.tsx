@@ -15,12 +15,14 @@ import type { ReactNode } from 'react'
 
 import { juntarClasses } from './juntarClasses'
 
-export type VarianteDeTexto = 'corpo' | 'apoio'
+export type VarianteDeTexto = 'corpo' | 'apoio' | 'destaque'
 export type TomDeTexto = 'principal' | 'secundario'
 
 const POR_VARIANTE: Record<VarianteDeTexto, string> = {
   corpo: 'text-corpo font-corpo',
   apoio: 'text-apoio font-corpo',
+  // Restyle: linha de apoio da primeira dobra, acima do piso de 16 px.
+  destaque: 'text-lead font-corpo',
 }
 
 const POR_TOM: Record<TomDeTexto, string> = {

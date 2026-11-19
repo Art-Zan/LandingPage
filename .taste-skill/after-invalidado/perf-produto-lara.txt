@@ -1,0 +1,55 @@
+
+perf localhost:3001/produtos/sistema-lara @ 1440px
+  PASS  host CPU load (before/after)               30/24 %        
+  PASS  total transfer                             358.8 KiB      html 71.9K  css 0K  js 207.3K  img 55.2K  other 24.3K
+  PASS  requests                                   25             17 by load
+  PASS  images bytes                               55.2 KiB       1 files
+  PASS  largest image                              55.2 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1280&q=75
+  PASS  JS parsed                                  207.1 KiB      10 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  WARN  below-fold images not lazy                 1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1280&q=75
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        388 ms         
+  PASS  LCP (CPU, relative)                        388 ms         div.flex
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            10             css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  FAIL  horizontal overflow                        yes            scrollWidth > 1440
+  PASS  page height                                9.7 screens    DOM 265 nodes
+
+perf localhost:3001/produtos/sistema-lara @ 390px
+  PASS  host CPU load (before/after)               30/24 %        
+  PASS  total transfer                             322.8 KiB      html 71.9K  css 0K  js 207.3K  img 20.9K  other 22.7K
+  PASS  requests                                   22             16 by load
+  PASS  images bytes                               20.9 KiB       1 files
+  PASS  largest image                              20.9 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=480&q=75
+  PASS  JS parsed                                  207.1 KiB      10 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  WARN  below-fold images not lazy                 1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=480&q=75
+  PASS  oversized images (natural > 2.2x shown)    0              
+  WARN  upscaled images (natural < 0.75x shown)    1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=480&q=75 389px for 1600
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        136 ms         
+  PASS  LCP (CPU, relative)                        136 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            10             css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  FAIL  horizontal overflow                        yes            scrollWidth > 390
+  PASS  page height                                6.2 screens    DOM 265 nodes
+
+SUMMARY localhost:3001/produtos/sistema-lara: 4 FAIL, 3 WARN  -> FAIL

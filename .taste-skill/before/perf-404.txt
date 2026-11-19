@@ -1,0 +1,52 @@
+
+perf /localhost:3001/rota-que-nao-existe @ 1440px
+  PASS  host CPU load (before/after)               23/19 %        
+  PASS  total transfer                             418 KiB        html 17.1K  css 5.2K  js 314.7K  font 70.3K  other 10.7K
+  PASS  requests                                   19             16 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  554.9 KiB      7 files, 314.7K gz
+  PASS  CSS                                        5.2 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        432 ms         
+  PASS  LCP (CPU, relative)                        432 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            2              localhost:3001/rota-que-nao-existe, localhost:3001/rota-que-nao-existe
+  PASS  page height                                1 screens      DOM 114 nodes
+
+perf /localhost:3001/rota-que-nao-existe @ 390px
+  PASS  host CPU load (before/after)               23/19 %        
+  PASS  total transfer                             415.5 KiB      html 17.1K  css 5.2K  js 314.7K  font 70.3K  other 8.2K
+  PASS  requests                                   16             14 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  554.9 KiB      7 files, 314.7K gz
+  PASS  CSS                                        5.2 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        180 ms         
+  PASS  LCP (CPU, relative)                        180 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            2              localhost:3001/rota-que-nao-existe, localhost:3001/rota-que-nao-existe
+  PASS  page height                                1.6 screens    DOM 114 nodes
+
+SUMMARY /localhost:3001/rota-que-nao-existe: 4 FAIL, 2 WARN  -> FAIL

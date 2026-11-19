@@ -328,3 +328,161 @@ A onda 4c (registrada em `dev/CONVENCOES.md` §2 mas não no log) já tinha prep
 4. Receber os cinco insumos de 16.6 (prints, imagens, jurídico, dados cadastrais, contatos)
 
 Estado no início da onda 4: build compila e tipa, mas `/sobre` falha em prerenderização por `ECONNREFUSED` na 5433. Com SQLite local, a onda 4 fecha a primeira verificação ponta a ponta de verdade.
+
+### 2026-11-10 — Verificação pós-onda 4: projeto executável em homologação
+
+Auditoria e correção delegadas a um único agente, em sequência, porque o build não admite paralelismo. As ondas 4a, 4b e 4c estavam íntegras no disco. Cinco defeitos foram corrigidos:
+
+1. **O seed derivava o slug do nome**, gerando `/produtos/theo`. Isso anulava a correção de SEO da 4a, e o nome vazava no H1 e no título de busca. Agora o slug vem do manifesto, e o SQLite contaminado foi recriado do zero.
+2. **Nenhuma imagem carregava.** O REST do Payload não está montado até a etapa 2, e o `serverURL` gerava URL absoluta, bloqueada por `remotePatterns: []`. Foi criada a rota estreita `src/app/api/midia/file/[arquivo]/route.ts`, só GET e só arquivo de `midia`, e o `serverURL` foi removido. O `seo.ts` ganhou `absoluta()` para o JSON-LD.
+3. **A marca saía duplicada no título**, o que viola 12.2. O template foi trocado para `'%s'` e o sufixo `| ArtZan` passou a ser explícito.
+4. **Rota inexistente caía no 404 cru do Next.** Criado `src/app/(site)/[...caminhoInexistente]/page.tsx`, que leva à P-15.
+5. **A marcação de placeholder de 7.3 era parcial.** Criado `src/components/catalogo/MarcaDeRegistroProvisorio.tsx`, aplicado à inicial, a `/sobre`, a `/produtos`, à P-04 e ao cartão.
+
+Resultado real: `typecheck`, `lint`, `seed` e `build` (homologação) saem com 0. O typecheck foi reexecutado pelo maestro. Todas as rotas da etapa 1 respondem 200. `/parceiros`, `/en/*` e `/admin` respondem 404, como esperado. Zero ocorrência de Theo, Iago e Nina em `<title>`, meta e JSON-LD.
+
+Donos dos três arquivos novos: a rota de mídia fica com a onda 3c (`src/app/api/**`), o catch-all com a 3a e `MarcaDeRegistroProvisorio` com a 3b (`src/components/catalogo/`). **`dev/CONVENCOES.md` ainda não registra essas atribuições.**
+
+#### Pendências abertas
+
+- A listagem de ofensores da trava em produção nunca rodou de ponta a ponta, porque SQLite é recusado em produção. Depende de D-15.
+- `midia/` está fora do `.gitignore`. Território da onda 1.
+- A etapa 2 precisa restaurar o `serverURL`, para o painel e os e-mails, e liberar a própria origem em `remotePatterns`.
+- O OneDrive corrompe `.next` (`EINVAL readlink`). Recomendado tirar o projeto da pasta sincronizada.
+- O título da inicial é só "Início". A fórmula de 12.2 depende de dado de negócio que ainda não existe.
+
+#### Contradições do PRD levantadas na verificação
+
+| # | Contradição | Encaminhamento |
+|---|---|---|
+| 14 | 10.1 diz que nada do painel é endereçável na etapa 1, mas 6.7 exige mídia servida publicamente | Resolvido com a rota estreita de mídia |
+| 15 | CONVENCOES §4.1 diz que `/parceiros` é consultada em execução, mas todo o site é estático no build, sem `revalidate` | Decidir entre revalidação e rebuild por publicação antes do painel |
+
+### 2026-11-10 — Bateria de testes prioritários
+
+Executada por um único agente, sem alterar código. O banco foi restaurado com SHA-256 idêntico ao original e o ambiente ficou limpo.
+
+| Teste | Escopo | Resultado |
+|---|---|---|
+| T1 | typecheck, lint, build | Passou |
+| T2 | Trava de produção 7.4 | Passou parcialmente. A consulta de ofensores acha os 9 registros, mas o caminho de ponta a ponta exige Postgres (D-15) |
+| T3 | Travas do modelo: PR-057, RF-193, PR-014, slug duplicado, parceiro sem autorização, PR-003 | Passou nos 5 casos |
+| T4 | Contato: RNF-092, RF-120, RF-221, limites | Passou, com os defeitos D1 e D3 |
+| T5 | Rotas, vazamento de nomes, hreflang, cabeçalhos, noindex | Passou, com os defeitos D2 e D4 |
+
+#### Defeitos encontrados, ainda não corrigidos
+
+| # | Defeito | Onde |
+|---|---|---|
+| D1 | Quando a entrega falha, a resposta pede para reenviar. No reenvio, a trava de duplicidade cita um e-mail de confirmação que nunca foi enviado | `src/app/api/contato/route.ts:176,185,223` |
+| D2 | A 404 não tem conteúdo renderizado no servidor. Sem JavaScript fica em branco, o título vira "ArtZan" e há duas meta robots | `src/app/(site)/[...caminhoInexistente]/page.tsx` e `notFound()` |
+| D3 | Campo acima do limite recebe a mensagem de campo vazio, por exemplo "Conte um pouco mais" para mensagem longa demais | `src/lib/contato-contrato.ts:218,233` |
+| D4 | Mídia inexistente responde 500 em vez de 404 | `src/app/api/midia/file/[arquivo]/route.ts:38` |
+| D5 | A mensagem de erro afirma que homologação usa Postgres, mas o código aceita SQLite | `src/payload.config.ts:111` |
+
+Observação: `/revisao/primitivos` responde 200 em homologação. A regra de que a rota não existe em produção não foi testada.
+
+### 2026-11-10 (noite) — Restyle visual da etapa 1 com a skill design-taste-frontend
+
+Pedido do usuário: restyle, não redesign, de todo o site da etapa 1. Problemas apontados: falta de vida visual, celular fraco e cara de template. Sem imagens próprias e sem fotos de banco. Feito por um único agente, sem commit.
+
+Resultado: **GATE OPEN 20**, nas três rodadas permitidas. Os 20 FAILs restantes são estruturais: a skill exige uma seção por tela (100svh) e imagem em toda seção, o que contraria o layout do PRD e a ausência de imagens. Foram usados 4 waivers, registrados em `.taste-skill/waivers.json`.
+
+Somando todas as rotas e larguras, antes → depois:
+
+| Achado | Antes | Depois |
+|---|---|---|
+| tap-size | 40 | 0 |
+| text-contrast | 50 | 0 |
+| focus-ring | 10 | 0 |
+| off-grid | 20 | 1 |
+
+Typecheck, lint de `src`, `verificar:contraste` e build de homologação passam. O maestro reexecutou typecheck e contraste. `/sobre` e `/produtos` pioraram no total do consistency, porque a primeira dobra virou seção própria.
+
+Novos componentes de UI: `ComposicaoAngular`, `SecaoComLinhaDeTransicao` e `TextoDeEntrada`. Token novo `--az-marca-z`, que leva o "Z" de 3,2:1 para 7,39:1 no tema escuro. Nova `.az-faixa-escura`, vigiada pelo script de contraste. O controle de tema, que não aparecia em lugar nenhum, foi para o rodapé. A trilha de navegação tinha `<li>` aninhado inválido e foi corrigida.
+
+#### Interpretações do PRD que aguardam aval do usuário
+
+- 64 px de 11.15 tratado como piso, não como valor exato.
+- Aperto óptico negativo no H1, lendo 11.14 como proibição de abrir o espaçamento, não de fechar.
+- Wordmark grande no rodapé.
+- Remoção de `*:focus:not(:focus-visible){outline:none}`.
+
+#### Achados colaterais
+
+- `npm run lint` completo falha porque varre `.agents/` e `.taste-skill/`. O `eslint.config` pertence à onda 1 e precisa ignorar esses diretórios.
+- Envio válido do formulário não chega a `/obrigado` sem SMTP, igual antes e depois. É o mesmo comportamento do D1.
+- O banco SQLite mudou de hash durante a sessão, por dev servers concorrentes. O backup está em `.taste-skill/artzan-dev.sqlite.bak`.
+- Capturas só no tema escuro, porque o Chrome headless segue o tema do sistema.
+
+### 2026-11-13 — Onda 5: logo, capa com imagem e animações
+
+Pedido do usuário: mais animações seguindo o skill `design-motion-principles` (instalado em `~/.agents/skills/`, fora do projeto), uma capa de tela cheia com imagem ao fundo e o nome da empresa na frente, e o logo no site. Executada por um único agente, sem commit. O maestro reexecutou o typecheck e o contraste, e conferiu as capturas.
+
+Resultado: typecheck, `eslint src`, `verificar:contraste` e build de homologação (14/14 páginas) saem com 0.
+
+- **Logo:** o anexo do usuário (`assets-fonte/logo-anexo-2026-11-13.png`) **difere do `Logo.png`**: A em gradiente, Z em grafite e wordmark em caixa mista. A paleta de 11.12 não foi alterada. Ativos em `public/marca/`, gerados por `npm run gerar:ativos` (`scripts/gerar-ativos-visuais.ts`). O logo aparece sempre sobre uma placa clara (`--az-fundo-da-marca`); não foi criada versão reversa. Monograma no cabeçalho, peça completa no rodapé, e ícones e imagem de compartilhamento regenerados.
+- **Capa:** imagem abstrata **provisória**, com facetas sólidas na geometria do AZ, sem gradiente nem textura (11.15). O caminho está centralizado em `src/lib/ativos-visuais.ts` (`CAPA_PROVISORIA`). Arquivos de 9 a 24 KB.
+- **Motion:** revelação ao rolar por IntersectionObserver (`RevelarAoRolar.tsx`), sem biblioteca. Paralaxe por CSS `view-timeline`. Transição de tema por View Transitions, só com ponteiro. Respeita movimento reduzido, e nada fica oculto sem JavaScript.
+
+Pendências:
+- O contorno do botão primário sobre a capa mede 1,87:1. CONVENCOES §9 pede 3:1 e a WCAG 1.4.11 não exige. Aguarda aval.
+- Facetas azuis ao fundo da capa, contra 11.11 ("azul nunca é fundo de seção"). Foi interpretado como imagem.
+- **Decidir se a marca mudou** (anexo × `Logo.png`). Se mudou, 11.11 e 11.12 precisam ser revisadas.
+- A revelação ao rolar cobre só a inicial e o catálogo. As demais páginas e as listas de P-04 ainda não estão marcadas.
+- Registrar os donos em `dev/CONVENCOES.md`: `src/lib/ativos-visuais.ts`, `src/lib/wordmark.ts`, `FundoDeCapa.tsx`, `RevelarAoRolar.tsx`, `public/marca/`, `public/capa/` e `scripts/gerar-ativos-visuais.ts`.
+- O movimento reduzido e a transição de tema não foram testados no navegador.
+
+### 2026-11-13 (noite) — Rebrand visual a partir do material comercial do MarQGol
+
+Pedido do usuário: adaptar ao site a linguagem visual da apresentação do MarQGol. **Por instrução explícita do usuário, o código foi escrito diretamente pelo Opus**, sem subagentes, como exceção à regra de maestro deste arquivo. O segundo anexo mencionado (outra plataforma) não chegou; aguarda reenvio.
+
+- **Tipografia:** Barlow Condensed 600/700 em título (caixa alta) e Barlow 400/600 no corpo. São 4 arquivos e 87,6 KB, dentro de RNF-014. Space Grotesk e Inter foram removidas de `public/fonts/`.
+- **Paleta:** papel `#f4f3ef`, tinta `#12151c` e faixa escura `#0d1017`. O azul do Z continua sendo a cor da marca. Tokens novos: `--az-sinal` (azul no papel, âmbar na faixa escura), `--az-traco`, `--az-raio-pilula` e `--az-faixa-cartao`. Raios passaram para 10 e 16 px.
+- **Componentes:** cabeçalho na faixa escura; capa com o AZ vazado gigante; pílulas com ponto de cor; benefícios numerados sob régua de 2 px; cartão de produto escuro com faixa de cor no topo (âmbar para esporte, azul para gestão); chamada final em cartão claro com seta; botões em condensada caixa alta.
+- `verificar-contraste.mjs` teve a tabela de referência refeita para a paleta nova, e todos os pares passam. **O PRD 11.12, 11.14 e 11.15 precisa ser revisado**, porque agora diverge do código: caixa alta em título, raios, pílula e paleta.
+- Typecheck, `eslint src` e contraste passam. O build não foi rodado, porque havia um dev server ativo na porta 3000.
+
+### 2026-11-13 (noite) — Navegação refeita com a skill ux-navigation
+
+Código escrito diretamente pelo Opus, por instrução do usuário.
+
+- **Desktop:** barra superior escura e fixa, porque a IA é rasa (3–4 seções) e a skill descarta sidebar. Softwares e Sobre ficam sempre visíveis. Softwares abre por clique um painel com os produtos agrupados por categoria, numerados, com resumo de uma linha, mais os atalhos "Todos os softwares" e "Falar com a equipe". O painel fecha com Esc (o foco volta ao botão), com clique fora, quando o foco sai do cabeçalho e na troca de rota.
+- **Onde estou:** barra de 2 px na seção atual, inclusive em subpáginas (`/produtos/[slug]` marca Softwares). O cabeçalho fica um tom acima ao rolar. Há uma barra de progresso de leitura em CSS puro (`animation-timeline: scroll()`), que some onde não houver suporte.
+- **Celular:** botão "Menu" com ícone e texto. A folha expõe os produtos agrupados sem segundo toque, e Contato fica sempre fora dela. Abaixo de 380 px o nome sai da tela e o monograma segura a marca.
+- **Dados:** `montarGruposDeSoftwares` em `navegacao.ts`, alimentado por `listarProdutosPublicados` no layout. O título vem de `identificacaoPublicaDoProduto`, então não há vazamento de nome não aprovado.
+- **Divergência do PRD 6.2**, que proíbe submenu de Softwares abaixo do gatilho de 6.6. Foi aceita por pedido explícito do usuário e precisa ser revisada no PRD.
+- **Verificado:** typecheck, eslint e contraste passam. Teste CDP: o painel abre, `aria-expanded` muda, Esc fecha e devolve o foco, e não há estouro horizontal a 320 px. As auditorias de heurística e microcopy recomendadas pela skill não rodaram, porque essas skills não estão instaladas.
+
+### 2026-11-13 (noite) — "Z" fragmentado na capa
+
+Pedido do usuário: o "Z" de ArtZan na capa da inicial se fragmenta aos poucos, se desfaz e volta. Implementado em `src/components/ui/ZFragmentado.tsx`, com o CSS ao fim de `globals.css`.
+
+- São 12 estilhaços triangulares (`clip-path`) que cobrem a letra sem deixar vão. Eles saem em cascata de 90 ms, derivam para fora do centro, giram, encolhem, desfocam e somem, e depois remontam a letra. O ciclo dura cerca de 4,2 s.
+- A animação roda uma vez, 1,4 s após a carga, e de novo na passagem do ponteiro ou no toque sobre o nome. Nunca roda em laço (13.10). Com movimento reduzido não roda. A letra real permanece no texto.
+- Verificado por quadros CDP: inteiro aos 1,0 s, fragmentando aos 2,6 s, desfeito aos 3,2 s e remontado aos 6,2 s. Typecheck e lint passam.
+
+### 2026-11-13 (noite) — Volta ao logo antigo
+
+Pedido do usuário: voltar ao logo antigo. A fonte de `scripts/gerar-ativos-visuais.ts` passou a ser `Logo.png`, o logotipo oficial e origem da paleta 11.12. O anexo da Onda 5 (`assets-fonte/logo-anexo-2026-11-13.png`) foi mantido no disco, mas deixou de ser usado.
+
+- `Logo.png` vem sobre branco opaco. O gerador transforma o branco do fundo em transparência antes do recorte: o canal mínimo ≥ 250 some, ≤ 215 fica opaco, com rampa entre os dois.
+- `npm run gerar:ativos` regerou o monograma do cabeçalho, a peça completa do rodapé, `icon.png`, `apple-icon.png` e `opengraph-image.png`. A capa saiu idêntica, porque os tokens não mudaram.
+- Com isso fecha a pendência da Onda 5 "decidir se a marca mudou": **não mudou**, vale `Logo.png`.
+
+### 2026-11-19 — Onda 6: deploy em VPS com Docker
+
+Pedido do usuário: adaptar o site para subir em Docker numa VPS. Delegado a um único agente. Não há Docker nesta máquina, então nada foi executado em container. O maestro reexecutou o typecheck e conferiu os arquivos.
+
+Decisões do maestro: Postgres 16 em container na própria VPS, o que fecha D-15 neste cenário. Caddy com TLS automático. Volumes persistentes para `midia/` e `var/solicitacoes/`, o que resolve a dívida crítica da 3c. `SITE_MODE=homolog` como padrão.
+
+- **Entregáveis:** `Dockerfile` (node 22 bookworm-slim, usuário não-root), `.dockerignore`, `.gitattributes`, `docker-compose.prod.yml` (app, db, caddy) e `deploy/` (entrypoint, `migrar.ts`, Caddyfile, `.env.production.example`, `backup.sh`, README).
+- **Build na subida:** o entrypoint espera o banco, aplica as migrations, roda `npm run build` (com o `prebuild`, ou seja, a guarda 7.4 e o contraste) e só então `next start`. `BUILD_ON_START=if-missing` reaproveita o build num restart.
+- **Migrations:** `migrationDir` acrescentado em `payload.config.ts`, com diretório separado para SQLite. A migration inicial foi gerada sem banco e **nunca foi aplicada em Postgres**. Migrations geradas precisam do ajuste manual de `payload, req` sem uso, por causa do lint.
+- **Não verificado:** `docker build`, migration em Postgres, build no container, certificado, backup e restauração.
+
+#### Pendências
+- `scripts/verificar-placeholder-producao.ts` (onda 4) não chama `process.exit`. Com `SITE_MODE=producao`, o pool do `pg` pode travar o build. Corrigir antes de virar produção.
+- O `eslint.config.mjs` (onda 1) deve ignorar `src/migrations/**`.
+- Registrar em `dev/CONVENCOES.md` os donos de `deploy/`, `src/migrations/` e dos arquivos Docker.
+- VPS recomendada: 4 GB de RAM e 2 vCPU. O site fica fora do ar durante cada build, cerca de 3 a 6 min.

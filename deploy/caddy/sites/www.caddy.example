@@ -1,0 +1,12 @@
+# Redirecionamento opcional de www.<domínio> para o domínio principal.
+#
+# Para ativar: crie o registro DNS de www apontando para a VPS e copie este
+# arquivo para `www.caddy` (mesma pasta). Depois:
+#   docker compose --env-file deploy/.env.production -f docker-compose.prod.yml restart caddy
+#
+# Sem o registro DNS, NÃO ative: o Caddy ficaria tentando emitir um
+# certificado impossível para www.
+
+www.{$SITE_DOMAIN} {
+	redir https://{$SITE_DOMAIN}{uri} permanent
+}

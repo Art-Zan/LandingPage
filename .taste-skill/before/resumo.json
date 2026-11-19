@@ -1,0 +1,112 @@
+[
+ {
+  "rota": "inicial",
+  "consistency": "110 FAIL / 17 WARN",
+  "idsFail": "hero-fill,placeholder,tap-size,no-visual,text-only,button-styles,copy-headline,off-grid,text-contrast,section-gaps,fold-action,hero-screen,section-height,section-air,one-section,one-heading,container-edges,row-lines,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "435.2 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "sobre",
+  "consistency": "72 FAIL / 10 WARN",
+  "idsFail": "placeholder,tap-size,no-visual,text-only,copy-headline,off-grid,text-contrast,fold-action,hero-screen,section-height,one-section,one-heading,container-edges,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "427.9 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produtos",
+  "consistency": "69 FAIL / 25 WARN",
+  "idsFail": "placeholder,tap-size,no-visual,off-grid,text-contrast,fold-action,hero-screen,section-height,one-section,one-heading,container-edges,row-lines,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "745.4 KiB",
+  "cls": "0.000",
+  "perf": "4 FAIL, 4 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produto-lara",
+  "consistency": "132 FAIL / 39 WARN",
+  "idsFail": "hero-fill,placeholder,tap-size,fold-cut,no-visual,button-styles,same-action,copy-headline,copy-headings,off-grid,text-contrast,section-gaps,hero-screen,section-height,section-air,one-section,one-heading,container-edges,row-lines,section-tile,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "556.5 KiB",
+  "cls": "0.010",
+  "perf": "2 FAIL, 7 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "produto-quadras",
+  "consistency": "131 FAIL / 37 WARN",
+  "idsFail": "hero-fill,placeholder,tap-size,no-visual,button-styles,same-action,copy-headline,copy-headings,off-grid,text-contrast,section-gaps,hero-screen,section-height,section-air,one-section,one-heading,container-edges,row-lines,section-tile,empty-area,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "557.8 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 9 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "contato",
+  "consistency": "63 FAIL / 15 WARN",
+  "idsFail": "tap-size,no-visual,copy-headline,off-grid,text-contrast,fold-action,hero-screen,section-height,one-section,one-heading,container-edges,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "439.6 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 4 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "obrigado",
+  "consistency": "65 FAIL / 5 WARN",
+  "idsFail": "tap-size,fold-cut,text-only,button-styles,copy-headline,off-grid,text-contrast,hero-screen,section-height,one-section,one-heading,container-edges,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "426.3 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 0 WARN"
+ },
+ {
+  "rota": "privacidade",
+  "consistency": "75 FAIL / 7 WARN",
+  "idsFail": "placeholder,tap-size,no-visual,text-only,cta,copy-headline,off-grid,text-contrast,hero-screen,section-height,one-section,one-heading,container-edges,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "428.7 KiB",
+  "cls": "0.000",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "termos",
+  "consistency": "75 FAIL / 9 WARN",
+  "idsFail": "placeholder,tap-size,no-visual,text-only,cta,copy-headline,off-grid,text-contrast,hero-screen,section-height,one-section,one-heading,container-edges,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "428.1 KiB",
+  "cls": "0.008",
+  "perf": "2 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families",
+  "copylint": "0 FAIL, 1 WARN"
+ },
+ {
+  "rota": "404",
+  "consistency": "69 FAIL / 6 WARN",
+  "idsFail": "assets,tap-size,text-only,button-styles,copy-headline,copy-actions,off-grid,text-contrast,hero-screen,section-height,one-section,one-heading,container-edges,focus-ring",
+  "layout": "não roda (sem .wrap)",
+  "peso": "418 KiB",
+  "cls": "0.000",
+  "perf": "4 FAIL, 2 WARN  -> FAIL",
+  "perfFails": "font families,broken requests",
+  "copylint": "0 FAIL, 0 WARN"
+ }
+]

@@ -1,0 +1,50 @@
+
+perf /localhost:3001/rota-que-nao-existe @ 1440px
+  PASS  host CPU load (before/after)               22/22 %        
+  PASS  total transfer                             239.5 KiB      html 21.5K  js 207.3K  other 10.6K
+  PASS  requests                                   12             10 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      5 files, 207.3K gz
+  PASS  CSS                                        0 KiB          0 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        0 ms           
+  PASS  LCP (CPU, relative)                        0 ms           
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            6              localhost:3001/rota-que-nao-existe, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                1 screens      DOM 41 nodes
+
+perf /localhost:3001/rota-que-nao-existe @ 390px
+  PASS  host CPU load (before/after)               22/22 %        
+  PASS  total transfer                             238.4 KiB      html 21.5K  js 207.3K  other 9.5K
+  PASS  requests                                   11             9 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      5 files, 207.3K gz
+  PASS  CSS                                        0 KiB          0 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        0 ms           
+  PASS  LCP (CPU, relative)                        0 ms           
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            6              localhost:3001/rota-que-nao-existe, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                1 screens      DOM 41 nodes
+
+SUMMARY /localhost:3001/rota-que-nao-existe: 2 FAIL, 0 WARN  -> FAIL

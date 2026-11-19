@@ -1,0 +1,22 @@
+[
+  {
+    "check": "placeholder",
+    "target": "p.leading-corpo.text-corpo",
+    "reason": "Texto provisório do seed (content/_PLACEHOLDER), marcado de propósito em homologação por exigência do PRD 7.3 / dev/CONVENCOES.md §7; o restyle não pode reescrever conteúdo nem inventar a frase real (RF-020 depende do cliente)."
+  },
+  {
+    "check": "copy-headline",
+    "target": "h1#titulo-proposta-de-valor",
+    "reason": "O H1 é o registro provisório do Payload ('Conteúdo provisório — frase de posicionamento real ainda não redigida'); a frase real é insumo do cliente (RF-020, 16.6). Inventar categoria e comprador no H1 violaria dev/CONVENCOES.md §8.1."
+  },
+  {
+    "check": "copy-headings",
+    "target": "h2#titulo-beneficios",
+    "reason": "Título vindo do bloco de lista provisório do seed (5.4, redação pendente do cliente); conteúdo de cadastro, fora do território de apresentação."
+  },
+  {
+    "check": "effect-kind",
+    "target": "section#chamada-final",
+    "reason": "O momento line-carries-colour foi portado para React/tokens em SecaoComLinhaDeTransicao.tsx porque a ordem do maestro proíbe carregar system.css/moments.js do kit no projeto; o checador só reconhece o moment.js do kit, então acusa 'nunca carregado' embora o momento rode (data-moment-mounted)."
+  }
+]

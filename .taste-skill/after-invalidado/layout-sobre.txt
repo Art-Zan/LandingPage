@@ -1,0 +1,51 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 348 tall; h1 40px/1.2, 1 lines, 274x48 at 80,214; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "SobreSobre  y    73  h   348  content 147
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y   421  h   681  content 487
+  screen-short     section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: 348px tall; one screen under the nav is 827px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: framed, 192px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Quem somos (texto provisório)Est" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: 681px tall; one screen under the nav is 827px
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: 681px, 0.82 screens; a section is exactly one or two (--h)
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: framed, 146px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: ends at y 421, above the fold (900)
+  hero-fold        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: shows on the first screen from y 470
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 348 tall; h1 40px/1.2, 1 lines, 274x48 at 48,214; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "SobreSobre  y    73  h   348  content 147
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y   421  h   786  content 592
+  screen-short     section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: 348px tall; one screen under the nav is 695px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: framed, 240px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Quem somos (texto provisório)Est" shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: ends at y 421, above the fold (768)
+  hero-fold        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: shows on the first screen from y 470
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 284 tall; h1 40px/1.2, 1 lines, 274x48 at 48,182; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "SobreSobre  y    73  h   284  content 147
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y   357  h   696  content 566
+  screen-short     section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: 284px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: framed, 120px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Quem somos (texto provisório)Est" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: 696px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: framed, 255px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: ends at y 357, above the fold (1024)
+  hero-fold        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: shows on the first screen from y 398
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 324 tall; h1 32px/1.2, 1 lines, 220x38 at 24,166; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "SobreSobre  y    57  h   324  content 187
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y   381  h   934  content 812
+  screen-short     section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: 324px tall; one screen under the nav is 787px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: framed, 240px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Quem somos (texto provisório)Est" shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: ends at y 381, above the fold (844)
+  hero-fold        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: shows on the first screen from y 422
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 324 tall; h1 32px/1.2, 1 lines, 220x38 at 24,166; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "SobreSobre  y    57  h   324  content 187
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y   381  h  1107  content 985
+  screen-short     section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: 324px tall; one screen under the nav is 583px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: framed, 136px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Quem somos (texto provisório)Est" shows
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: framed, 59px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "SobreSobre a ArtZanCo: ends at y 381, above the fold (640)
+  hero-fold        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Que: shows on the first screen from y 422

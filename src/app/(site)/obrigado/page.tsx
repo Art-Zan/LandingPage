@@ -14,7 +14,7 @@
 
 import type { Metadata } from 'next'
 
-import { Botao, Container, Secao, Texto, Titulo } from '@/components/ui'
+import { Botao, Container, Secao, Texto, TextoDeEntrada, Titulo } from '@/components/ui'
 import { PRAZO_DE_RESPOSTA } from '@/lib/contato-contrato'
 import { ROTAS } from '@/lib/rotas'
 import { ACOES, NOME_DA_MARCA, PARAMETRO_DE_PRODUTO_DE_ORIGEM } from '@/lib/rotulos'
@@ -22,7 +22,7 @@ import { ACOES, NOME_DA_MARCA, PARAMETRO_DE_PRODUTO_DE_ORIGEM } from '@/lib/rotu
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: `Recebemos sua mensagem — ${NOME_DA_MARCA}`,
+  title: `Recebemos sua mensagem | ${NOME_DA_MARCA}`,
   robots: { index: false, follow: false },
 }
 
@@ -48,19 +48,21 @@ export default async function PaginaDeObrigado({ searchParams }: PropsDaPagina) 
   const nomeDoProduto = await carregarNomeDoProduto(slugDeProduto)
 
   return (
-    <Container>
-      <Secao rotuladaPor="titulo-obrigado">
+    // Restyle: primeira dobra com entrada única; a coluna de leitura fica
+    // na medida de 68 caracteres (13.8).
+    <Secao rotuladaPor="titulo-obrigado" primeiraDobra>
+      <Container className="flex max-w-none flex-col items-start gap-6">
         {/* RF-125/13.6 regra 8: sem troca de página após o envio, este título
             é o primeiro conteúdo lido — aqui ele É a própria página de destino. */}
-        <Titulo nivel={1} id="titulo-obrigado">
-          Recebemos sua mensagem
+        <Titulo nivel={1} id="titulo-obrigado" className="max-w-titulo">
+          <TextoDeEntrada>Recebemos sua mensagem</TextoDeEntrada>
         </Titulo>
         <Texto>
           Um de nós responde em {PRAZO_DE_RESPOSTA} por e-mail. Enviamos uma confirmação para o
           endereço informado.
         </Texto>
 
-        <div className="mt-6 flex flex-wrap gap-4">
+        <div className="az-entrada-apoio flex w-full flex-col gap-4 pt-2 [--az-ordem:2] sm:w-auto sm:flex-row sm:flex-wrap">
           {slugDeProduto ? (
             <Botao href={ROTAS.produto(slugDeProduto)} variante="secundaria">
               {ACOES.verDetalhes}
@@ -74,7 +76,7 @@ export default async function PaginaDeObrigado({ searchParams }: PropsDaPagina) 
             Ir para a página inicial
           </Botao>
         </div>
-      </Secao>
-    </Container>
+      </Container>
+    </Secao>
   )
 }

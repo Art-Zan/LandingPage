@@ -1,0 +1,50 @@
+
+perf /localhost:3001/obrigado @ 1440px
+  PASS  host CPU load (before/after)               20/34 %        
+  PASS  total transfer                             253.1 KiB      html 32.7K  css 0K  js 207.3K  other 13.1K
+  PASS  requests                                   15             13 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      7 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        256 ms         
+  PASS  LCP (CPU, relative)                        256 ms         h1.font-titulo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            7              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                1 screens      DOM 137 nodes
+
+perf /localhost:3001/obrigado @ 390px
+  PASS  host CPU load (before/after)               20/34 %        
+  PASS  total transfer                             252 KiB        html 32.7K  css 0K  js 207.3K  other 12K
+  PASS  requests                                   14             12 by load
+  PASS  images bytes                               0 KiB          0 files
+  PASS  JS parsed                                  207.1 KiB      7 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        92 ms          
+  PASS  LCP (CPU, relative)                        92 ms          h1.font-titulo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            7              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  PASS  page height                                1.1 screens    DOM 137 nodes
+
+SUMMARY /localhost:3001/obrigado: 2 FAIL, 0 WARN  -> FAIL

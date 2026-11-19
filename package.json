@@ -20,7 +20,11 @@
     "generate:importmap": "payload generate:importmap",
     "payload": "payload",
     "db:up": "docker compose up -d",
-    "db:down": "docker compose down"
+    "db:down": "docker compose down",
+    "gerar:ativos": "tsx scripts/gerar-ativos-visuais.ts",
+    "db:migrate": "tsx deploy/migrar.ts",
+    "db:migrate:status": "payload migrate:status",
+    "db:migrate:create": "payload migrate:create"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3",

@@ -1,0 +1,500 @@
+consistency  http://localhost:3001/produtos/sistema-lara
+
+1440x900  7 screens  31 FAIL  17 WARN
+  FAIL hero-fill       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       the next section shows on the first screen: it starts at 811px on a 900px screen (the hero ends at 811px)  [1440-01-hero-fill.jpg]
+       fix: let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load
+  FAIL placeholder     div.az-moldura.wrap > div.grid.grid-cols-1 > div.flex.flex-col > p.leading-corpo.text-lead  "Placeholder — resumo do produto sistema-"
+       "Placeholder" is a placeholder left on the page (and 9 more like it: "Texto provisório sobre g", "Texto provisório sobre g", "Placeholder — público-al", "Placeholder — funcionali", ...)  [1440-02-placeholder.jpg]
+       fix: write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       no picture, effect or mock in this section; a feature section needs a visual  [1440-06-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completa"
+       no picture, effect or mock in this section; a feature section needs a visual  [1440-07-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [1440-11-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "Benefícios"
+       no picture, effect or mock in this section; a feature section needs a visual  [1440-12-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL same-action     div.grid.grid-cols-1 > div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn  "Falar com a equipe"
+       "Falar com a equipe" appears 3 times in different looks: soft, fill #0e66b4, outline #0e66b4 and soft, outline #edf1f5  [1440-03-same-action.jpg]
+       fix: draw one action the same way everywhere (only the nav copy may be one size smaller)
+  FAIL copy-headline   h1#titulo-produto  "Sistema Lara"
+       "Sistema Lara" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags); only the line under it does  [1440-04-copy-headline.jpg]
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  FAIL copy-headings   h2#titulo-problema  "Problema que resolve"
+       "Problema que resolve" names no product, part, place or section (7 headings like it; at most one brand line per page) (and 6 more like it: "Descrição completa", "Principais funcionalidad", "Benefícios", "Imagens", ...)  [1440-08-copy-headings.jpg]
+       fix: name the thing in every heading: the product, a part, the place or a section noun
+  FAIL effect-kind     main#conteudo-principal > section.az-momento-linha.az-faixa-escura
+       1 [data-moment] mark that never runs: line-carries-colour on main#conteudo-principal > section.az-momento-linha.az-faixa-escura (assets/moments/line-carries-colour/moment.js was never loaded); a moment is judged as one only when it runs
+       fix: load assets/moments/moments.js (system.js does it for a page with [data-moment]) and keep the dealt id, or take the data-moment mark off the section
+  WARN flush           main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       its first line sits 17px under the top edge of section.az-momento-linha.az-faixa-escura, where the ground changes  [1440-14-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       its last line sits 16px above the rule on top of the footer  [1440-15-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN scroll-linked   main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       moves with the scroll and changes back when the scroll goes back (clip) (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)  [1440-16-scroll-linked.jpg]
+       fix: remove the scroll-driven motion; motion lives inside a visual as a small loop
+  WARN copy-buttons    header.nav.sticky > div.az-moldura.wrap > div.flex.items-center > a.az-botao.btn  "Contato"
+       "Contato" does not start with a verb (book, buy, try, start, get, see...) (and 1 more like it: "Falar com a equipe")  [1440-05-copy-buttons.jpg]
+       fix: label buttons with a verb and what the visitor gets ("Book a room", "Start free trial")
+  WARN section-gaps    main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8) / main#conteudo-principal > section.az-momento-linha.az-faixa-escura
+       113px between these sections, -41% against the median 192px  [1440-17-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN section-gaps    main#conteudo-principal > section.az-momento-linha.az-faixa-escura / footer.closing.az-faixa-escura
+       100px between these sections, -48% against the median 192px  [1440-18-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       2 library sources (placehold): the page credits placehold, image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN stranded-action div.az-moldura.wrap > div.flex.flex-col > div.w-full > a.az-botao.btn  "Falar com a equipe"
+       stands 872px across from the nearest text of its block ("Próximo passo")  [1440-19-stranded-action.jpg]
+       fix: put the button under or beside the text it belongs to
+  WARN copy-length     main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completa"
+       1 section over 90 words a screen outside the UI mocks ("Descrição completa" 115); 37 words a screen across the page (343 words in 9.2 screens): a tech page says it in about 80 or fewer  [1440-09-copy-length.jpg]
+       fix: cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences
+  WARN one-screen      main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completa"
+       3 sections are shorter than the screen, so the next one's heading or picture shows with them: "Descrição completa" is 456px of the 827px under the nav, and "Para quem é" shows below it ("Principais funcional", "Benefícios")  [1440-10-one-screen.jpg]
+       fix: give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one
+  WARN visual-caption  div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "CONTEÚDO PROVISÓRIO"
+       a muted 14px line of 1 row sits 26px under the picture image: it reads as a caption: "CONTEÚDO PROVISÓRIO"; no caption or description under any image, render or visual (house rule)  [1440-13-visual-caption.jpg]
+       fix: take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line
+  WARN empty-area      footer.closing.az-faixa-escura  "EMPRESA"
+       39% of the section is empty: 40% beside content that covers under half the container, in its 614px of rows (WARN over 35%, FAIL over 50%)  [1440-20-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  WARN skip-link       header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       the first Tab stop is "Pular para o conteúdo", not a skip link: a keyboard user tabs through the whole nav on every visit
+       fix: add the starter's skip link as the header's first child: <a class="skip-link" href="#top">Skip to content</a>
+  WARN share-meta      head
+       the head lacks theme-color: a shared link shows no picture or title of its own
+       fix: copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Sistema LaraSoftwareSis"
+       the hero ends at 811px on a 900px screen, 89px above the fold: it ends at the fold, 1px either way (SR-1)  [1440-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       89px of the next section shows on the first screen (from 811px on a 900px screen): nothing below the hero shows at load (SR-1)  [1440-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the scene's section is 237px tall (0.3 screens), 663px short of one screen (900px): every section after the hero is one screen or two, 2px either way; a pinned scene is (hold + 1) screens tall, so write data-big-scene-opts='{"hold": 1}' (two screens) and keep --h on the section (SR-2)  [1440-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the section is 240px tall (0.3 screens), 660px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)  [1440-rhythm-04-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciaisAssinatura recorre"
+       the section is 299px tall (0.3 screens), 601px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 6 more like it: "Problema que resolveText", "Descrição completaTexto ", "BenefíciosPlaceholder — ") (SR-2)  [1440-rhythm-05-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciaisAssinatura recorre"
+       the section starts at 4045px, 445px below the screen grid (4 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-06-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completaTexto provisório sobre"
+       the section starts at 1171px, 271px below the screen grid (1 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-07-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "BenefíciosPlaceholder — benefício 1 de s"
+       the section starts at 2465px, 235px above the screen grid (3 x 900px): sections start on whole screens (and 7 more like it: "ImagensConteúdo provisór", "Para quem éPlaceholder —", "Próximo passoFalar com a") (SR-2)  [1440-rhythm-08-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section's content does not fit it: its lowest content ends 692px below its top, past 686px (the section less 72px of bottom padding) (SR-2)  [1440-rhythm-09-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the content fills 20% of the section's height (48 of 240px): 55% or more (40% WARN) (SR-3)  [1440-rhythm-10-section-air.jpg]
+       fix: fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block
+  FAIL section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciaisAssinatura recorre"
+       the content fills 36.4% of the section's height (109 of 299px): 55% or more (40% WARN) (SR-3)  [1440-rhythm-11-section-air.jpg]
+       fix: fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block
+  WARN section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       the content fills 46.6% of the section's height (168 of 360px): 55% or more (40% WARN) (and 1 more like it: "BenefíciosPlaceholder — ") (SR-3)  [1440-rhythm-22-section-air.jpg]
+       fix: fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block
+  FAIL one-section     h2#titulo-beneficios-produto  "Benefícios"
+       the screen at scroll 2465px (the top of section 6) shows 387px of section 6 and the heading of section 6 whole and the content of 2 sections, over 24px each beside section 7: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-12-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "BenefíciosPlaceholder — benefício 1 de s"
+       the screen at scroll 1867px (the top of section 5) shows 302px of section 6 and the content of 2 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-13-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     h2#titulo-comercial  "Informações comerciais"
+       the screen at scroll 3600px (stride 4) shows 299px of section 8 and the heading of section 8 whole and the content of 3 sections, over 24px each beside section 7: a screen shows one section (another may peek 8px, 24px WARN) (and 9 more like it: scroll 811px, scroll 1171px, scroll 4045px) (SR-4)  [1440-rhythm-14-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [1440-rhythm-15-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     h2#titulo-descricao-completa  "Descrição completa"
+       headings of two sections show whole on one screen at 42 of 89 scroll positions (47.2%; at scroll 650, 700, 750, 800px), here with "Problema que resolve": at most 3% on a desktop (SR-5)  [1440-rhythm-16-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Início/Softwares/Sistema LaraSoftwareSis"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [1440-rhythm-17-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none
+       a child of section 9 beside its .wrap is no valid background layer: not img, picture, video or canvas; does not span the screen from 0 to 1440px; z-index 20, not 0; covers 86% of the section height, needs 90% (SR-6)  [1440-rhythm-18-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo  "Institucional e legal"
+       the h2 starts 978px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [1440-rhythm-19-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex.flex-col > ul.flex.flex-wrap > li.rounded-controle.border:nth-of-type(1)  "Assinatura recorrente"
+       1 text block starts on a left line at x 745, 665px from the container's left: text starts on the container's left, or on one split line (x 623, 732, 841) (SR-6)  [1440-rhythm-20-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.text-apoio.font-rotulo  "Contato"
+       the h2 starts 652px right of the container's left: every h1 and h2 starts on it, 2px either way (and 3 more like it: "Portfólio", x 100, x 89) (SR-6)  [1440-rhythm-21-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  WARN container-edges main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       a box runs 16-1424px, outside the container lines of section 9 at 80-1360px: full width is for background layers and grounds only (it is in a scroll scene: told as a WARN) (SR-6)  [1440-rhythm-23-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  WARN container-edges main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       a box over half the container wide runs 16-1424px, not on the container's lines at 80-1360px (it is in a scroll scene: told as a WARN) (SR-6)  [1440-rhythm-24-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+
+1024x768  8 screens  7 FAIL  9 WARN
+  FAIL hero-fill       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       the next section shows on the first screen: it starts at 701px on a 768px screen (the hero ends at 701px)  [1024-01-hero-fill.jpg]
+       fix: let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       no picture, effect or mock in this section; a feature section needs a visual  [1024-03-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completa"
+       no picture, effect or mock in this section; a feature section needs a visual  [1024-05-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [1024-06-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "Benefícios"
+       no picture, effect or mock in this section; a feature section needs a visual  [1024-07-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciais"
+       no picture, effect or mock in this section; a feature section needs a visual  [1024-09-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL same-action     div.grid.grid-cols-1 > div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn  "Falar com a equipe"
+       "Falar com a equipe" appears 3 times in different looks: soft, fill #0e66b4, outline #0e66b4 and soft, outline #edf1f5  [1024-02-same-action.jpg]
+       fix: draw one action the same way everywhere (only the nav copy may be one size smaller)
+  WARN flush           main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       its first line sits 17px under the top edge of section.az-momento-linha.az-faixa-escura, where the ground changes  [1024-10-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN scroll-linked   main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       moves with the scroll and changes back when the scroll goes back (clip) (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)  [1024-11-scroll-linked.jpg]
+       fix: remove the scroll-driven motion; motion lives inside a visual as a small loop
+  WARN section-gaps    main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8) / main#conteudo-principal > section.az-momento-linha.az-faixa-escura
+       113px between these sections, -41% against the median 192px  [1024-12-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN section-gaps    main#conteudo-principal > section.az-momento-linha.az-faixa-escura / footer.closing.az-faixa-escura
+       100px between these sections, -48% against the median 192px  [1024-13-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN stranded-action div.az-moldura.wrap > div.flex.flex-col > div.w-full > a.az-botao.btn  "Falar com a equipe"
+       stands 520px across from the nearest text of its block ("Próximo passo")  [1024-14-stranded-action.jpg]
+       fix: put the button under or beside the text it belongs to
+  WARN one-screen      main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       3 sections are shorter than the screen, so the next one's heading or picture shows with them: "Problema que resolve" is 432px of the 695px under the nav, and "Descrição completa" shows below it ("Descrição completa", "Benefícios")  [1024-04-one-screen.jpg]
+       fix: give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one
+  WARN visual-caption  div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "CONTEÚDO PROVISÓRIO"
+       a muted 14px line of 1 row sits 26px under the picture image: it reads as a caption: "CONTEÚDO PROVISÓRIO"; no caption or description under any image, render or visual (house rule)  [1024-08-visual-caption.jpg]
+       fix: take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line
+  WARN empty-area      footer.closing.az-faixa-escura  "EMPRESA"
+       39% of the section is empty: 16px of empty rows between its content, 36% beside content that covers under half the container, in its 702px of rows (WARN over 35%, FAIL over 50%)  [1024-15-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+
+768x1024  6 screens  29 FAIL  8 WARN
+  FAIL hero-fill       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       the next section shows on the first screen: it starts at 634px on a 1024px screen (the hero ends at 634px)  [768-01-hero-fill.jpg]
+       fix: let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.hero  "Sistema Lara"
+       no picture, effect or mock in this section; a feature section needs a visual  [768-02-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       no picture, effect or mock in this section; a feature section needs a visual  [768-03-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completa"
+       no picture, effect or mock in this section; a feature section needs a visual  [768-05-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [768-06-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "Benefícios"
+       no picture, effect or mock in this section; a feature section needs a visual  [768-07-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL same-action     div.grid.grid-cols-1 > div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn  "Falar com a equipe"
+       "Falar com a equipe" appears 3 times in different looks: soft, fill #0e66b4, outline #0e66b4 and soft, outline #edf1f5  [768-04-same-action.jpg]
+       fix: draw one action the same way everywhere (only the nav copy may be one size smaller)
+  WARN flush           main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       its first line sits 17px under the top edge of section.az-momento-linha.az-faixa-escura, where the ground changes  [768-10-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN flush           main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       its last line sits 16px above the rule on top of the footer  [768-11-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN scroll-reveal   main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       animates in when scrolled into view (is unmasked) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)  [768-12-scroll-reveal.jpg]
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  WARN section-gaps    main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8) / main#conteudo-principal > section.az-momento-linha.az-faixa-escura
+       81px between these sections, -37% against the median 128px  [768-08-section-gaps.jpg]
+       fix: use one gap between sections (all within 25% of each other)
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN visual-caption  div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "CONTEÚDO PROVISÓRIO"
+       a muted 14px line of 1 row sits 26px under the picture image: it reads as a caption: "CONTEÚDO PROVISÓRIO"; no caption or description under any image, render or visual (house rule)  [768-09-visual-caption.jpg]
+       fix: take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Sistema LaraSoftwareSis"
+       the hero ends at 634px on a 1024px screen, 390px above the fold: it ends at the fold, 1px either way (SR-1)  [768-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       390px of the next section shows on the first screen (from 634px on a 1024px screen): nothing below the hero shows at load (SR-1)  [768-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the scene's section is 239px tall (0.2 screens), 785px short of one screen (1024px): every section after the hero is one screen or two, 2px either way; a pinned scene is (hold + 1) screens tall, so write data-big-scene-opts='{"hold": 1}' (two screens) and keep --h on the section (SR-2)  [768-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the section is 242px tall (0.2 screens), 782px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)  [768-rhythm-04-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciaisAssinatura recorre"
+       the section is 301px tall (0.3 screens), 723px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (and 6 more like it: "Problema que resolveText", "BenefíciosPlaceholder — ", "Descrição completaTexto ") (SR-2)  [768-rhythm-05-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the section starts at 3611px, 485px above the screen grid (4 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-06-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(7)  "ImagensConteúdo provisórioCaptura de tel"
+       the section starts at 2634px, 438px above the screen grid (3 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-07-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the section starts at 1429px, 405px below the screen grid (1 x 1024px): sections start on whole screens (and 7 more like it: "Problema que resolveText", "Principais funcionalidad", "ARTZANEmpresaArtZanDado ") (SR-2)  [768-rhythm-08-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciaisAssinatura recorre"
+       the section's content does not fit it: its lowest content ends 237px below its top, past 229px (the section less 72px of bottom padding) (SR-2)  [768-rhythm-09-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL section-height  main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the section's content does not fit it: its lowest content ends 175px below its top, past 167px (the section less 72px of bottom padding) (and 5 more like it: "Problema que resolveText", "Descrição completaTexto ", "Para quem éPlaceholder —") (SR-2)  [768-rhythm-10-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  WARN section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the content fills 47% of the section's height (114 of 242px): 55% or more (40% WARN) (SR-3)  [768-rhythm-23-section-air.jpg]
+       fix: fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block
+  FAIL one-section     h2#titulo-beneficios-produto  "Benefícios"
+       the screen at scroll 2048px (stride 2) shows 390px of section 6 and the heading of section 6 whole and the content of 3 sections, over 24px each beside section 7: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-11-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     h2#titulo-problema  "Problema que resolve"
+       the screen at scroll 0px (stride 0) shows 362px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-12-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     h2#titulo-problema  "Problema que resolve"
+       the screen at scroll 73px (the top of section 1) shows 362px of section 2 and the heading of section 2 whole and the content of 3 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (and 9 more like it: scroll 1024px, scroll 2244px, scroll 2634px) (SR-4)  [768-rhythm-13-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [768-rhythm-14-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     h2#titulo-descricao-completa  "Descrição completa"
+       headings of two sections show whole on one screen at 66 of 75 scroll positions (88%; at scroll 100, 150, 200, 250px), here with "Problema que resolve": at most 3% on a desktop (SR-5)  [768-rhythm-15-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges header.nav.sticky  "Pular para o conteúdoARTZANSoftwaresSobr"
+       the nav's content runs 48px from the left and 48px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-16-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Sistema LaraSoftwareSis"
+       the content of section 1 runs 48px from the left and 48px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (and 9 more like it: "Problema que resolveText", "Descrição completaTexto ", "Para quem éPlaceholder —") (SR-6)  [768-rhythm-17-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Início/Softwares/Sistema LaraSoftwareSis"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [768-rhythm-18-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none
+       a child of section 9 beside its .wrap is no valid background layer: not img, picture, video or canvas; does not span the screen from 0 to 768px; z-index 20, not 0; covers 86% of the section height, needs 90% (SR-6)  [768-rhythm-19-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the h2 starts 356px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)  [768-rhythm-20-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo  "Institucional e legal"
+       the h2 starts 356px right of the container's left: every h1 and h2 starts on it, 2px either way (and 3 more like it: x 76, x 70, x 57) (SR-6)  [768-rhythm-21-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       a box over half the container wide runs 48-398px, not on the container's lines at 48-720px (and 2 more like it: "Conteúdo provisórioCaptu", main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute) (SR-6)  [768-rhythm-22-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+  WARN container-edges main#conteudo-principal > section.az-momento-linha.az-faixa-escura > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute
+       a box runs 16-752px, outside the container lines of section 9 at 48-720px: full width is for background layers and grounds only (it is in a scroll scene: told as a WARN) (SR-6)  [768-rhythm-24-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+
+390x844  8 screens  26 FAIL  5 WARN
+  FAIL hero-fill       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       the next section shows on the first screen: it starts at 669px on a 844px screen (the hero ends at 669px)  [390-01-hero-fill.jpg]
+       fix: let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.hero  "Sistema Lara"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-02-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-04-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completa"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-05-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-06-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "Benefícios"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-08-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciais"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-09-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL text-only       main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passo"
+       the closing section is only text: no picture, icon, mock or effect in it  [390-10-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL same-action     div.grid.grid-cols-1 > div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn  "Falar com a equipe"
+       "Falar com a equipe" appears 3 times in different looks: soft, fill #0e66b4, outline #0e66b4 and soft, outline #edf1f5  [390-03-same-action.jpg]
+       fix: draw one action the same way everywhere (only the nav copy may be one size smaller)
+  WARN heading-scale   div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo  "Funcionalidade 1"
+       the h3s (20px) are only 1.20x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other  [390-07-heading-scale.jpg]
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN visual-caption  div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "CONTEÚDO PROVISÓRIO"
+       a muted 14px line of 1 row sits 26px under the picture image: it reads as a caption: "CONTEÚDO PROVISÓRIO"; no caption or description under any image, render or visual (house rule)  [390-11-visual-caption.jpg]
+       fix: take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "Início/Softwares/Sistema LaraSoftwareSis"
+       the hero ends at 669px on a 844px screen, 175px above the fold: it ends at the fold, 1px either way (SR-1)  [390-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolveTexto provisório sob"
+       175px of the next section shows on the first screen (from 669px on a 844px screen): nothing below the hero shows at load (SR-1)  [390-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the section is 234px tall (0.3 screens), 610px short of one screen (844px): every section after the hero is one screen or two, 2px either way (SR-2)  [390-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the section is 261px tall (0.3 screens), 583px short of one screen (844px): every section after the hero is one screen or two, 2px either way (SR-2)  [390-rhythm-04-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciaisAssinatura recorre"
+       the section is 335px tall (0.4 screens), 509px short of one screen (844px): every section after the hero is one screen or two, 2px either way (and 6 more like it: "ImagensConteúdo provisór", "Problema que resolveText", "BenefíciosPlaceholder — ") (SR-2)  [390-rhythm-05-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades01Funcionalida"
+       the section starts at 2124px, 408px above the screen grid (3 x 844px): sections start on whole screens (SR-2)  [390-rhythm-06-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "BenefíciosPlaceholder — benefício 1 de s"
+       the section starts at 2899px, 367px below the screen grid (3 x 844px): sections start on whole screens (SR-2)  [390-rhythm-07-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completaTexto provisório sobre"
+       the section starts at 1194px, 350px below the screen grid (1 x 844px): sections start on whole screens (and 7 more like it: "Informações comerciaisAs", "ARTZANEmpresaArtZanDado ", "Para quem éPlaceholder —") (SR-2)  [390-rhythm-08-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  WARN section-air     main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passoFalar com a equipe"
+       the content fills 45.6% of the section's height (107 of 234px): 55% or more (40% WARN) (SR-3)  [390-rhythm-18-section-air.jpg]
+       fix: fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block
+  WARN section-air     main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem éPlaceholder — público-alvo do"
+       the content fills 50.9% of the section's height (133 of 261px): 55% or more (40% WARN) (SR-3)  [390-rhythm-19-section-air.jpg]
+       fix: fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block
+  FAIL one-section     h2#titulo-comercial  "Informações comerciais"
+       the screen at scroll 3427px (the top of section 7) shows 335px of section 8 and the heading of section 8 whole and the content of 2 sections, over 24px each beside section 7: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [390-rhythm-09-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     h2#titulo-descricao-completa  "Descrição completa"
+       the screen at scroll 669px (the top of section 2) shows 319px of section 3 and the heading of section 3 whole and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [390-rhythm-10-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     h2#titulo-imagens  "Imagens"
+       the screen at scroll 2899px (the top of section 6) shows 316px of section 7 and the heading of section 7 whole and the content of 2 sections, over 24px each beside section 6: a screen shows one section (another may peek 8px, 24px WARN) (and 10 more like it: scroll 2532px, scroll 3376px, scroll 844px) (SR-4)  [390-rhythm-11-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [390-rhythm-12-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading     h2#titulo-descricao-completa  "Descrição completa"
+       headings of two sections show whole on one screen at 42 of 96 scroll positions (43.8%; at scroll 450, 500, 550, 600px), here with "Problema que resolve": at most 5% on a phone (SR-5)  [390-rhythm-13-one-heading.jpg]
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "Início/Softwares/Sistema LaraSoftwareSis"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [390-rhythm-14-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(1) > p.leading-corpo.text-corpo  "Placeholder — benefício 1 de sistema-lar"
+       3 text blocks start on a left line at x 52, 28px from the container's left: text starts on the container's left, or on one split line (x 177, 207, 238) (also "Placeholder — benefício 2 de sis", "Placeholder — benefício 3 de sis") (SR-6)  [390-rhythm-15-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.grid.grid-cols-1 > div.flex.flex-col > p.az-sobretitulo  "Software"
+       3 text blocks start on a left line at x 46, 22px from the container's left: text starts on the container's left, or on one split line (x 177, 207, 238) (also "Automático", "Escuro") (SR-6)  [390-rhythm-16-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.grid.grid-cols-1 > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "Conteúdo provisório"
+       9 text blocks start on a left line at x 33, 9px from the container's left: text starts on the container's left, or on one split line (x 177, 207, 238) (also "Registro provisório — não repres", "Gestão empresarial", "Conteúdo provisório") (SR-6)  [390-rhythm-17-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+
+320x640  11 screens  9 FAIL  3 WARN
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.hero  "Sistema Lara"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-01-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)  "Problema que resolve"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-03-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)  "Descrição completa"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-04-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)  "Para quem é"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-05-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)  "Principais funcionalidades"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-06-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)  "Benefícios"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-08-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)  "Informações comerciais"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-09-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL text-only       main#conteudo-principal > section.az-momento-linha.az-faixa-escura  "Próximo passo"
+       the closing section is only text: no picture, icon, mock or effect in it  [320-11-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL same-action     div.grid.grid-cols-1 > div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn  "Falar com a equipe"
+       "Falar com a equipe" appears 3 times in different looks: soft, fill #0e66b4, outline #0e66b4 and soft, outline #edf1f5  [320-02-same-action.jpg]
+       fix: draw one action the same way everywhere (only the nav copy may be one size smaller)
+  WARN heading-scale   div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo  "Funcionalidade 1"
+       the h3s (20px) are only 1.20x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other  [320-07-heading-scale.jpg]
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN photo-credit    div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img
+       1 library source (placehold): image; confirm each shows the client's own product, place or people
+       fix: confirm the library photograph shows the client's own product, place or people; otherwise replace it
+  WARN visual-caption  div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "CONTEÚDO PROVISÓRIO"
+       a muted 14px line of 1 row sits 26px under the picture image: it reads as a caption: "CONTEÚDO PROVISÓRIO"; no caption or description under any image, render or visual (house rule)  [320-10-visual-caption.jpg]
+       fix: take the line away: no caption or description under, over or on any image, render or visual; a licence credit goes in one footer line
+
+first screen at 1280, 1152, 896  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  0 FAIL
+
+checks
+  PASS assets                 PASS shader-lint            PASS gl-fallback            
+  PASS empty-visual           FAIL hero-fill              WARN flush                  
+  FAIL placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            PASS nav                    PASS nav-covers             
+  PASS spill                  PASS off-viewport           PASS fold-card              
+  PASS hover-spill            PASS overlap-text           PASS collide                
+  PASS tap-size               PASS row-gap                PASS cut-text               
+  PASS fold-cut               PASS marquee                WARN scroll-linked          
+  WARN scroll-reveal          PASS pinned                 PASS loop-pause             
+  PASS reduced-motion         PASS hidden-content         PASS webgl                  
+  FAIL no-visual              FAIL text-only              PASS card-visual            
+  PASS hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           FAIL same-action            PASS button-picture         
+  PASS cta                    PASS pricing-tiers          FAIL copy-headline          
+  PASS copy-fact              FAIL copy-headings          WARN copy-buttons           
+  PASS copy-actions           WARN heading-scale          PASS stagger                
+  PASS top-stagger            PASS off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               PASS text-contrast          PASS body-size              
+  PASS busy-ground            WARN section-gaps           PASS proximity              
+  PASS hole                   PASS links                  PASS forms                  
+  PASS photo-upscale          PASS photo-set              WARN photo-credit           
+  PASS nav-family             PASS nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  WARN stranded-action        PASS orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           WARN copy-length            PASS nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             PASS fold-action            PASS action-count           
+  WARN one-screen             PASS hover                  PASS hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  WARN visual-caption         PASS visual-empty           FAIL effect-kind            
+  PASS hero-enter             PASS moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           FAIL hero-screen            FAIL section-height         
+  FAIL section-air            FAIL one-section            FAIL one-heading            
+  FAIL container-edges        PASS row-lines              PASS split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  PASS section-tile           WARN empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               PASS focus-ring             PASS focus-visible          
+  PASS focus-hidden           WARN skip-link              PASS menu-toggle            
+  PASS lang                   PASS page-meta              WARN share-meta             
+  PASS action-repeat          PASS map-link               PASS open-now               
+  PASS assumed                PASS run-on                 PASS form-fields            
+  PASS form-send              
+
+total  102 FAIL  42 WARN  (crops and report.json in C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.taste-skill\after\consistency-produto-lara)

@@ -17,17 +17,14 @@
  * dois alvos sobrepostos e dois anúncios no leitor de tela.
  */
 
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
 import { juntarClasses } from './juntarClasses'
 
 export type SuperficieDoCard = 'base' | 'elevada'
 
 /** Preenchimento de 16 px em tela pequena e 24 px em tela grande (11.15). */
-const BASE = juntarClasses(
-  'block rounded-bloco border border-borda',
-  'p-card-compacto md:p-card',
-)
+const BASE = juntarClasses('block rounded-bloco border border-borda', 'p-card-compacto md:p-card')
 
 const POR_SUPERFICIE: Record<SuperficieDoCard, string> = {
   base: 'bg-superficie',
@@ -36,7 +33,8 @@ const POR_SUPERFICIE: Record<SuperficieDoCard, string> = {
 
 /** Passagem do ponteiro muda a borda, nunca desenha contorno: foco e passagem são distintos (13.2 regra 8). */
 const ACIONAVEL = juntarClasses(
-  'no-underline text-texto-principal',
+  // Restyle: sobe 2 px na passagem do ponteiro fino (globals.css).
+  'az-card-link no-underline text-texto-principal',
   'transition-colors duration-padrao',
   'hover:border-texto-principal',
 )
@@ -45,6 +43,8 @@ type PropsCompartilhadas = {
   superficie?: SuperficieDoCard
   children: ReactNode
   className?: string
+  /** Rebrand — só para variáveis CSS de token (ex.: --az-cor-faixa). */
+  estilo?: CSSProperties
 }
 
 type PropsEstatico = PropsCompartilhadas & {
@@ -68,17 +68,26 @@ type PropsAcionavel = PropsCompartilhadas & {
 export type PropsDoCard = PropsEstatico | PropsAcionavel
 
 export const Card = (props: PropsDoCard) => {
-  const { superficie = 'elevada', children, className } = props
+  const { superficie = 'elevada', children, className, estilo } = props
   const classes = juntarClasses(BASE, POR_SUPERFICIE[superficie], className)
 
   if (props.href !== undefined) {
     return (
-      <a href={props.href} aria-label={props.rotuloAcessivel} className={juntarClasses(classes, ACIONAVEL)}>
+      <a
+        href={props.href}
+        aria-label={props.rotuloAcessivel}
+        className={juntarClasses(classes, ACIONAVEL)}
+        style={estilo}
+      >
         {children}
       </a>
     )
   }
 
   const Elemento = props.como ?? 'div'
-  return <Elemento className={classes}>{children}</Elemento>
+  return (
+    <Elemento className={classes} style={estilo}>
+      {children}
+    </Elemento>
+  )
 }

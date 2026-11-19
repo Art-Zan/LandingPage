@@ -1,0 +1,180 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 738 tall; h1 40px/1.2, 1 lines, 389x48 at 80,250; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Início/Soft y    73  h   738  content 602
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y   811  h   384  content 192
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1195  h   384  content 192
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  1579  h   240  content 48
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1819  h   598  content 406
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  2417  h   460  content 268
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  2877  h  1121  content 920
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  3997  h   299  content 107
+  section section.az-momento-linha.az-faixa-escura section.az-momento- y  4296  h   237  content 44
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: 738px tall; one screen under the nav is 827px
+  neighbour-ground section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: framed, 89px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Problema que resolveTexto provis"'s ground shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 384px tall; one screen under the nav is 827px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 384px, 0.46 screens; a section is exactly one or two (--h)
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 192px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Descrição completaTexto provisór" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: 384px tall; one screen under the nav is 827px
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: 384px, 0.46 screens; a section is exactly one or two (--h)
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: framed, 48px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Para quem éPlaceholder — público" shows
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: framed, 34px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Principais funcionalidades01Func" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 240px tall; one screen under the nav is 827px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 240px, 0.29 screens; a section is exactly one or two (--h)
+  sparse           section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: its content fills 20% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 142px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Principais funcionalidades01Func" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: 598px tall; one screen under the nav is 827px
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: 598px, 0.72 screens; a section is exactly one or two (--h)
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: framed, 133px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "BenefíciosPlaceholder — benefíci" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 460px tall; one screen under the nav is 827px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 460px, 0.56 screens; a section is exactly one or two (--h)
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 197px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "ImagensConteúdo provisórioCaptur" shows
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: 1121px, 1.36 screens; a section is exactly one or two (--h)
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 299px tall; one screen under the nav is 827px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 299px, 0.36 screens; a section is exactly one or two (--h)
+  sparse           section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: its content fills 36% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 44px of section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipe" shows
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 291px of the footer shows
+  screen-short     section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 237px tall; one screen under the nav is 827px
+  screen-height    section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 237px, 0.29 screens; a section is exactly one or two (--h)
+  sparse           section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: its content fills 19% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: framed, 590px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: ends at y 811, above the fold (900)
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 703 tall; h1 40px/1.2, 1 lines, 389x48 at 48,250; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Início/Soft y    73  h   703  content 567
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y   776  h   456  content 264
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1232  h   456  content 264
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  1688  h   240  content 48
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1928  h   598  content 406
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  2526  h   460  content 268
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  2986  h   901  content 700
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  3886  h   299  content 107
+  section section.az-momento-linha.az-faixa-escura section.az-momento- y  4185  h   237  content 44
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 456px tall; one screen under the nav is 695px
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 143px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Descrição completaTexto provisór" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: 456px tall; one screen under the nav is 695px
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: framed, 48px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Para quem éPlaceholder — público" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 240px tall; one screen under the nav is 695px
+  sparse           section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: its content fills 20% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 142px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Principais funcionalidades01Func" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: 598px tall; one screen under the nav is 695px
+  neighbour-ground section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: framed, 97px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "BenefíciosPlaceholder — benefíci"'s ground shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 460px tall; one screen under the nav is 695px
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 65px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "ImagensConteúdo provisórioCaptur" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 299px tall; one screen under the nav is 695px
+  sparse           section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: its content fills 36% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 44px of section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipe" shows
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 159px of the footer shows
+  screen-short     section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 237px tall; one screen under the nav is 695px
+  sparse           section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: its content fills 19% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: framed, 458px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: ends at y 776, past the fold (768): 1.01 screens tall
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 606 tall; h1 40px/1.2, 1 lines, 389x48 at 48,250; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Início/Soft y    73  h   606  content 502
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y   679  h   362  content 234
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1041  h   362  content 234
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  1402  h   242  content 114
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1644  h   574  content 446
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  2217  h   462  content 334
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  2679  h   677  content 540
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  3356  h   301  content 173
+  section section.az-momento-linha.az-faixa-escura section.az-momento- y  3656  h   239  content 112
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: 606px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: framed, 168px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Problema que resolveTexto provis" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 362px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 168px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Descrição completaTexto provisór" shows
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 48px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Para quem éPlaceholder — público" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: 362px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: framed, 48px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Para quem éPlaceholder — público" shows
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: framed, 166px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Principais funcionalidades01Func" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 242px tall; one screen under the nav is 951px
+  sparse           section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: its content fills 47% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 166px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Principais funcionalidades01Func" shows
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 34px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "BenefíciosPlaceholder — benefíci" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: 574px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: framed, 89px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "BenefíciosPlaceholder — benefíci" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 462px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 352px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "ImagensConteúdo provisórioCaptur" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: 677px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: framed, 44px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Informações comerciaisAssinatura" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 301px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 44px of section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipe" shows
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 412px of the footer shows
+  screen-short     section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 239px tall; one screen under the nav is 951px
+  sparse           section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: its content fills 47% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: framed, 712px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: ends at y 679, above the fold (1024)
+  hero-fold        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: shows on the first screen from y 743
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 657 tall; h1 32px/1.2, 1 lines, 311x38 at 24,218; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Início/Soft y    57  h   657  content 561
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y   714  h   525  content 397
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1239  h   525  content 397
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  1764  h   261  content 133
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  2025  h   775  content 647
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  2800  h   529  content 401
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  3328  h   495  content 358
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  3823  h   296  content 168
+  section section.az-momento-linha.az-faixa-escura section.az-momento- y  4119  h   234  content 107
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: 657px tall; one screen under the nav is 787px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: framed, 29px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Problema que resolveTexto provis" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 525px tall; one screen under the nav is 787px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 525px, 0.67 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 137px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Descrição completaTexto provisór" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: 525px tall; one screen under the nav is 787px
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: 525px, 0.67 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Des: framed, 72px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Para quem éPlaceholder — público" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 261px tall; one screen under the nav is 787px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 261px, 0.33 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 166px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Principais funcionalidades01Func" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: 775px tall; one screen under the nav is 787px
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: 775px, 0.98 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour-ground section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Pri: framed, 12px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "BenefíciosPlaceholder — benefíci"'s ground shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 529px tall; one screen under the nav is 787px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 529px, 0.67 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 125px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "ImagensConteúdo provisórioCaptur" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: 495px tall; one screen under the nav is 787px
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: 495px, 0.63 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: framed, 44px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Informações comerciaisAssinatura" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 296px tall; one screen under the nav is 787px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 296px, 0.38 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 44px of section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipe" shows
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 257px of the footer shows
+  screen-short     section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 234px tall; one screen under the nav is 787px
+  screen-height    section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 234px, 0.30 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  sparse           section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: its content fills 46% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: framed, 553px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: ends at y 714, above the fold (844)
+  hero-fold        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: shows on the first screen from y 778
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 744 tall; h1 32px/1.2, 2 lines, 272x77 at 24,239; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Início/Soft y    57  h   744  content 648
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y   801  h   621  content 493
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  1422  h   621  content 493
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  2042  h   285  content 157
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  2327  h   804  content 676
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  3131  h   601  content 473
+  section section.py-respiro.bg-superficie section.py-respiro.bg-super y  3732  h   472  content 335
+  section section.py-respiro.bg-superficie-elevada section.py-respiro. y  4203  h   296  content 168
+  section section.az-momento-linha.az-faixa-escura section.az-momento- y  4499  h   234  content 107
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 285px tall; one screen under the nav is 583px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 285px, 0.49 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 137px of section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Principais funcionalidades01Func" shows
+  screen-short     section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: 472px tall; one screen under the nav is 583px
+  screen-height    section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: 472px, 0.81 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie section.py-respiro.bg-superficie "Ima: framed, 29px of section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superficie-elevada "Informações comerciaisAssinatura" shows
+  screen-short     section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 296px tall; one screen under the nav is 583px
+  screen-height    section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: 296px, 0.51 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 44px of section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-faixa-escura "Próximo passoFalar com a equipe" shows
+  neighbour        section.py-respiro.bg-superficie-elevada section.py-respiro.bg-superfi: framed, 53px of the footer shows
+  screen-short     section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 234px tall; one screen under the nav is 583px
+  screen-height    section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: 234px, 0.40 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+  sparse           section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: its content fills 46% of its screen; merge it or give it its visual (0.55 is the aim)
+  neighbour        section.az-momento-linha.az-faixa-escura section.az-momento-linha.az-f: framed, 349px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Início/Softwares/Aloc: ends at y 801, past the fold (640): 1.28 screens tall

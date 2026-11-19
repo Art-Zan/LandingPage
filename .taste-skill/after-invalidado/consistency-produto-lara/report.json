@@ -1,0 +1,2330 @@
+{
+ "page": "http://localhost:3001/produtos/sistema-lara",
+ "url": "http://localhost:3001/produtos/sistema-lara",
+ "at": "2026-11-10T22:17:04.673Z",
+ "out": "C:\\Users\\user\\OneDrive\\Documents\\ArtZan\\LandingPage\\.taste-skill\\after\\consistency-produto-lara",
+ "widths": [
+  {
+   "width": 1440,
+   "height": 900,
+   "screens": 12,
+   "held": 0,
+   "errors": [
+    "effect-kind: could not read http://localhost:3001/_next/static/chunks/4bd1b696-cf72ae8a39fa05aa.js (HTTP 400)",
+    "effect-kind: could not read http://localhost:3001/_next/static/chunks/964-9e7fd12428968086.js (HTTP 400)",
+    "effect-kind: could not read http://localhost:3001/_next/static/chunks/main-app-50f326052c390d09.js (HTTP 400)"
+   ],
+   "findings": [
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/webpack-4abfd6a89dae30f0.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/4bd1b696-cf72ae8a39fa05aa.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/964-9e7fd12428968086.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/main-app-50f326052c390d09.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/519-89293711801e90a2.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/app/(site)/layout-a7236e52ed5b46c3.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/63-ee5c2e64d2164209.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/app/(site)/produtos/%5Bslug%5D/page-e8e39b3369a35677.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script http://localhost:3001/_next/static/chunks/874-88e24f0e286df0b2.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "placeholder",
+     "sev": "FAIL",
+     "sel": "section.py-respiro.hero > div.az-moldura.wrap > div.grid.grid-cols-1 > div.flex.flex-col",
+     "text": "Software Sistema Lara Conteúdo provisórioRegistr",
+     "msg": "\"Placeholder\" is a placeholder left on the page (and 13 more like it: \"Placeholder — resumo do \", \"Texto provisório sobre g\", \"Texto provisório sobre g\", \"Placeholder — público-al\", ...)",
+     "stop": 1,
+     "crop": "1440-06-placeholder.jpg",
+     "fix": "write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "runs 208px off the right side of the screen",
+     "stop": 5,
+     "crop": "1440-18-off-viewport.jpg",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the page is 1648px wide on a 1440px screen and scrolls sideways",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "no-visual",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "Principais funcionalidades",
+     "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+     "stop": 4,
+     "crop": "1440-10-no-visual.jpg",
+     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 1,
+     "crop": "1440-07-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "Próximo passo",
+     "msg": "the last section before the footer ends with no button",
+     "stop": 9,
+     "crop": "1440-22-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "copy-headline",
+     "sev": "FAIL",
+     "sel": "h1#titulo-produto",
+     "text": "Sistema Lara",
+     "msg": "\"Sistema Lara\" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags); only the line under it does",
+     "stop": 0,
+     "crop": "1440-01-copy-headline.jpg",
+     "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words"
+    },
+    {
+     "check": "copy-headings",
+     "sev": "FAIL",
+     "sel": "h2#titulo-problema",
+     "text": "Problema que resolve",
+     "msg": "\"Problema que resolve\" names no product, part, place or section (7 headings like it; at most one brand line per page) (and 6 more like it: \"Descrição completa\", \"Principais funcionalidad\", \"Benefícios\", \"Imagens\", ...)",
+     "stop": 3,
+     "crop": "1440-08-copy-headings.jpg",
+     "fix": "name the thing in every heading: the product, a part, the place or a section noun"
+    },
+    {
+     "check": "off-grid",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela",
+     "text": "Tema de cores",
+     "stop": 11,
+     "msg": "left edge at 26px, 18px off the page margin at 8px (29 elements, like h2.text-apoio.font-rotulo)",
+     "crop": "1440-24-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "effect-kind",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "",
+     "msg": "1 [data-moment] mark that never runs: line-carries-colour on main#conteudo-principal > section.az-momento-linha.az-faixa-escura (assets/moments/line-carries-colour/moment.js was never loaded); a moment is judged as one only when it runs",
+     "fix": "load assets/moments/moments.js (system.js does it for a page with [data-moment]) and keep the dealt id, or take the data-moment mark off the section",
+     "stop": null
+    },
+    {
+     "check": "empty-area",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "Principais funcionalidades",
+     "msg": "68% of the section is empty: 69% beside content that covers under half the container, in its 365px of rows (WARN over 35%, FAIL over 50%)",
+     "stop": 4,
+     "crop": "1440-11-empty-area.jpg",
+     "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
+    },
+    {
+     "check": "empty-area",
+     "sev": "FAIL",
+     "sel": "footer.closing.az-faixa-escura",
+     "text": "Empresa",
+     "msg": "68% of the section is empty: 69% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)",
+     "stop": 11,
+     "crop": "1440-25-empty-area.jpg",
+     "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "",
+     "msg": "section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground",
+     "stop": 3,
+     "crop": "1440-09-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "1440-12-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "1440-13-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo",
+     "text": "Placeholder — público-alvo do produto sistema-la",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "1440-14-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — funcionalidade 3 de sistema-lara: ",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "1440-15-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — benefício 3 de sistema-lara: conte",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground",
+     "stop": 5,
+     "crop": "1440-19-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase",
+     "text": "Conteúdo provisório",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground",
+     "stop": 6,
+     "crop": "1440-20-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground",
+     "stop": 8,
+     "crop": "1440-21-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground",
+     "stop": 10,
+     "crop": "1440-23-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "copy-buttons",
+     "sev": "WARN",
+     "sel": "header.nav.sticky > div.az-moldura.wrap > div.flex.items-center > button.az-botao.inline-flex",
+     "text": "Abrir menu",
+     "msg": "\"Abrir menu\" does not start with a verb (book, buy, try, start, get, see...)",
+     "stop": 0,
+     "crop": "1440-02-copy-buttons.jpg",
+     "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")"
+    },
+    {
+     "check": "copy-actions",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the main action \"Falar com a equipe\" does not read word for word the same in the nav or hero and the closing section",
+     "stop": null,
+     "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo",
+     "text": "Funcionalidade 1",
+     "msg": "the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other",
+     "stop": 4,
+     "crop": "1440-16-heading-scale.jpg",
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "off-grid",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap",
+     "text": "AutomáticoClaroEscuro",
+     "stop": 11,
+     "msg": "left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))",
+     "crop": "1440-26-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-credit",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "",
+     "stop": 5,
+     "msg": "2 library sources (placehold): the page credits placehold, image; confirm each shows the client's own product, place or people",
+     "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it"
+    },
+    {
+     "check": "nav-family",
+     "sev": "WARN",
+     "sel": "header.nav.sticky",
+     "text": "",
+     "stop": 0,
+     "msg": "the nav's links and actions use 2 type families (Times New Roman, Arial)",
+     "crop": "1440-03-nav-family.jpg",
+     "fix": "keep one nav on every screen: the same bar, fill, links and type"
+    },
+    {
+     "check": "nav-labels",
+     "sev": "WARN",
+     "sel": "header.nav.sticky > a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "msg": "\"Pular para o conteúdo\" opens a section headed \"Sistema Lara\"",
+     "stop": 0,
+     "crop": "1440-04-nav-labels.jpg",
+     "fix": "name each nav link after the heading of the section it opens"
+    },
+    {
+     "check": "copy-length",
+     "sev": "WARN",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)",
+     "text": "Descrição completa",
+     "msg": "1 section over 90 words a screen outside the UI mocks (\"Descrição completa\" 115); 27 words a screen across the page (343 words in 12.8 screens): a tech page says it in about 80 or fewer",
+     "fix": "cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences",
+     "stop": 4,
+     "crop": "1440-17-copy-length.jpg"
+    },
+    {
+     "check": "hover",
+     "sev": "WARN",
+     "sel": "header.nav.sticky > a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "msg": "the nav link (\"Pular para o conteúd\"), filled button (\"Abrir menu\") look the same hovered as at rest, while the text link answers",
+     "stop": 0,
+     "crop": "1440-05-hover.jpg",
+     "fix": "give buttons and links a small answer to the pointer (the motion layer: a fill change, a drawn underline, an arrow that moves)"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1440px: 4 colours in its 1424x1424px, 81.4% one colour (63% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 12,
+     "crop": "1440-27-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1440px: 2 colours in its 1424x1157px, 68.7% one colour (77% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 13,
+     "crop": "1440-28-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1440px: 5 colours in its 1424x1424px, 81.2% one colour (63% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 14,
+     "crop": "1440-29-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1440px: 4 colours in its 1424x1424px, 81.4% one colour (63% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 15,
+     "crop": "1440-30-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "effect-kind",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has effects but no prefers-reduced-motion branch in its scripts or styles: reduced motion must show the finished still",
+     "fix": "under prefers-reduced-motion: reduce, show each effect's finished still and stop its motion",
+     "stop": null
+    },
+    {
+     "check": "effect-kind",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has effects but no phone, touch or max-width branch in its scripts: a phone needs the still or a light version",
+     "fix": "give phones (max-width or pointer: coarse) the still or a lighter version of each effect",
+     "stop": null
+    },
+    {
+     "check": "skip-link",
+     "sev": "WARN",
+     "sel": "header.nav.sticky > a.az-pular-para-conteudo",
+     "text": "Pular para o conteúdo",
+     "msg": "the first Tab stop is \"Pular para o conteúdo\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+     "stop": null,
+     "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>"
+    },
+    {
+     "check": "share-meta",
+     "sev": "WARN",
+     "sel": "head",
+     "text": "",
+     "msg": "the head lacks theme-color: a shared link shows no picture or title of its own",
+     "stop": null,
+     "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "Início/Softwares/Sistema LaraSoftwareSis",
+     "msg": "the hero ends at 3078px on a 900px screen, 2178px below the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "1440-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)",
+     "text": "Para quem éPlaceholder — público-alvo do",
+     "msg": "the section is 65px tall (0.1 screens), 835px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "1440-rhythm-03-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)",
+     "text": "Problema que resolveTexto provisório sob",
+     "msg": "the section is 101px tall (0.1 screens), 799px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "1440-rhythm-04-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)",
+     "text": "Descrição completaTexto provisório sobre",
+     "msg": "the section is 119px tall (0.1 screens), 781px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 6 more like it: \"BenefíciosPlaceholder — \", \"Principais funcionalidad\", \"ARTZANEmpresaArtZanDado \") (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "1440-rhythm-05-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)",
+     "text": "Problema que resolveTexto provisório sob",
+     "msg": "the section starts at 3098px, 398px below the screen grid (3 x 900px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "1440-rhythm-06-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)",
+     "text": "Descrição completaTexto provisório sobre",
+     "msg": "the section starts at 3219px, 381px above the screen grid (4 x 900px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "1440-rhythm-07-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(7)",
+     "text": "ImagensConteúdo provisórioCaptura de tel",
+     "msg": "the section starts at 3980px, 380px below the screen grid (4 x 900px): sections start on whole screens (and 7 more like it: \"Próximo passoFalar com a\", \"Informações comerciaisAs\", \"Para quem éPlaceholder —\") (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "1440-rhythm-08-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)",
+     "text": "Problema que resolveTexto provisório sob",
+     "msg": "the section's content does not fit it: its lowest content ends 100px below its top, past 29px (the section less 72px of bottom padding) (SR-2)",
+     "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+     "rule": "SR-2 T-fit",
+     "crop": "1440-rhythm-09-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)",
+     "text": "Descrição completaTexto provisório sobre",
+     "msg": "the section's content does not fit it: its lowest content ends 118px below its top, past 47px (the section less 72px of bottom padding) (and 7 more like it: \"Para quem éPlaceholder —\", \"Principais funcionalidad\", \"BenefíciosPlaceholder — \") (SR-2)",
+     "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+     "rule": "SR-2 T-fit",
+     "crop": "1440-rhythm-10-section-height.jpg"
+    },
+    {
+     "check": "section-air",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)",
+     "text": "",
+     "msg": "21px of air between the content of these two sections: 128-480px (64-600px WARN) (every gap out of the band at 1440px, top to bottom: 21px after \"Problema que resolve\", 21px after \"Descrição completaTe\", 21px after \"Para quem éPlacehold\", 21px after \"Principais funcional\", 21px after \"BenefíciosPlaceholde\", 21px after \"ImagensConteúdo prov\", 21px after \"Informações comercia\") (SR-3)",
+     "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+     "rule": "SR-3 T-gap",
+     "crop": "1440-rhythm-11-section-air.jpg"
+    },
+    {
+     "check": "section-air",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3) / main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)",
+     "text": "",
+     "msg": "21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+     "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+     "rule": "SR-3 T-gap",
+     "crop": "1440-rhythm-12-section-air.jpg"
+    },
+    {
+     "check": "section-air",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "",
+     "msg": "21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+     "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+     "rule": "SR-3 T-gap",
+     "crop": "1440-rhythm-13-section-air.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "h2#titulo-beneficios-produto",
+     "text": "Benefícios",
+     "msg": "the screen at scroll 3442px (the top of section 5) shows 362px of section 7 and the heading of section 6 whole and the content of 3 sections, over 24px each beside section 5: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "1440-rhythm-14-one-section.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(8)",
+     "text": "Informações comerciaisAssinatura recorre",
+     "msg": "the screen at scroll 6300px (stride 7) shows 330px of section 8 and the content of 2 sections, over 24px each beside section 9: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "1440-rhythm-15-one-section.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "Próximo passoFalar com a equipe",
+     "msg": "the screen at scroll 7818px (the top of section 10) shows 325px of section 9 and the content of 2 sections, over 24px each beside section 10: a screen shows one section (another may peek 8px, 24px WARN) (and 6 more like it: scroll 4500px, scroll 3358px, scroll 3600px) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "1440-rhythm-16-one-section.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo",
+     "text": "Portfólio",
+     "msg": "the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "1440-rhythm-17-one-heading.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "h2#titulo-descricao-completa",
+     "text": "Descrição completa",
+     "msg": "headings of two sections show whole on one screen at 30 of 157 scroll positions (19.1%; at scroll 2350, 2400, 2450, 2500px), here with \"Problema que resolve\": at most 3% on a desktop (SR-5)",
+     "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+     "rule": "SR-5 T2",
+     "crop": "1440-rhythm-18-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "header.nav.sticky",
+     "text": "Pular para o conteúdoARTZANSoftwaresSobr",
+     "msg": "the nav's content runs 8px from the left and 8px from the right: the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "1440-rhythm-19-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "Início/Softwares/Sistema LaraSoftwareSis",
+     "msg": "the content of section 1 runs 8px from the left and 8px from the right: the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (and 10 more like it: \"Problema que resolveText\", \"Descrição completaTexto \", \"Para quem éPlaceholder —\") (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "1440-rhythm-20-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap",
+     "text": "Início/Softwares/Sistema LaraSoftwareSis",
+     "msg": "the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "1440-rhythm-21-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "\"Imagem provisória do domínio ges\" runs 48-1648px, outside the container lines of section 7 at 8-1432px: full width is for background layers and grounds only (SR-6)",
+     "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+     "rule": "SR-6 T2-containment",
+     "crop": "1440-rhythm-22-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1)",
+     "text": "Início",
+     "msg": "20 text blocks start on a left line at x 48, 40px from the container's left: text starts on the container's left, or on one split line (x 611, 732, 853) (also \"/Softwares\", \"/Sistema Lara\", \"01Funcionalidade 1Placeholder — \") (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "1440-rhythm-23-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela",
+     "text": "Tema de cores",
+     "msg": "2 text blocks start on a left line at x 29, 21px from the container's left: text starts on the container's left, or on one split line (x 611, 732, 853) (also \"Automático\") (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "1440-rhythm-24-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "the page scrolls sideways (1648px wide on a 1440px screen): \"Imagem provisória do domínio ges\" ends at 1648px (SR-6)",
+     "fix": "take the sideways scroll away: nothing wider than the screen (overflow-x: clip on the part that spills)",
+     "rule": "SR-6 T5-overflow",
+     "crop": "1440-rhythm-25-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "a <img> over half the container wide runs 48-1648px, not on the container's lines at 8-1432px (SR-6)",
+     "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+     "rule": "SR-6 T6-right-edges",
+     "crop": "1440-rhythm-26-container-edges.jpg"
+    },
+    {
+     "check": "row-lines",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "\"Imagem provisória do domínio ges\" ends at 1648px, past the container's right line at 1432px (SR-7)",
+     "fix": "end it at the container's right line",
+     "rule": "SR-7 T-right",
+     "crop": "1440-rhythm-27-row-lines.jpg"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "screens": 11,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "runs 624px off the right side of the screen",
+     "stop": 5,
+     "crop": "1024-12-off-viewport.jpg",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the page is 1648px wide on a 1024px screen and scrolls sideways",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "no-visual",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "Principais funcionalidades",
+     "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+     "stop": 4,
+     "crop": "1024-06-no-visual.jpg",
+     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 1,
+     "crop": "1024-02-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "Próximo passo",
+     "msg": "the last section before the footer ends with no button",
+     "stop": 9,
+     "crop": "1024-16-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "off-grid",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela",
+     "text": "Tema de cores",
+     "stop": 10,
+     "msg": "left edge at 26px, 18px off the page margin at 8px (29 elements, like h2.text-apoio.font-rotulo)",
+     "crop": "1024-17-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-upscale",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "image: 1024x640 shown at 1600x1000, blown up 1.56x",
+     "stop": 5,
+     "crop": "1024-13-photo-upscale.jpg",
+     "fix": "use a source at least as wide as the picture is shown (twice that for sharp screens)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "",
+     "msg": "section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground",
+     "stop": 3,
+     "crop": "1024-03-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground",
+     "stop": 3,
+     "crop": "1024-04-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground",
+     "stop": 3,
+     "crop": "1024-05-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo",
+     "text": "Placeholder — público-alvo do produto sistema-la",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "1024-07-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — funcionalidade 3 de sistema-lara: ",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "1024-08-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — benefício 3 de sistema-lara: conte",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "1024-09-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase",
+     "text": "Conteúdo provisório",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground",
+     "stop": 6,
+     "crop": "1024-14-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground",
+     "stop": 8,
+     "crop": "1024-15-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground",
+     "stop": 10,
+     "crop": "1024-18-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo",
+     "text": "Funcionalidade 1",
+     "msg": "the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other",
+     "stop": 4,
+     "crop": "1024-10-heading-scale.jpg",
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "off-grid",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap",
+     "text": "AutomáticoClaroEscuro",
+     "stop": 10,
+     "msg": "left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))",
+     "crop": "1024-19-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-credit",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "",
+     "stop": 5,
+     "msg": "1 library source (placehold): image; confirm each shows the client's own product, place or people",
+     "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it"
+    },
+    {
+     "check": "nav-family",
+     "sev": "WARN",
+     "sel": "header.nav.sticky",
+     "text": "",
+     "stop": 0,
+     "msg": "the nav's links and actions use 2 type families (Times New Roman, Arial)",
+     "crop": "1024-01-nav-family.jpg",
+     "fix": "keep one nav on every screen: the same bar, fill, links and type"
+    },
+    {
+     "check": "one-screen",
+     "sev": "WARN",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "Principais funcionalidades",
+     "msg": "1 section is shorter than the screen, so the next one's heading or picture shows with it: \"Principais funcionalidades\" is 365px of the 768px under the nav, and \"Benefícios\" shows below it",
+     "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+     "stop": 4,
+     "crop": "1024-11-one-screen.jpg"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1024px: 5 colours in its 1008x1008px, 82% one colour (75% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 11,
+     "crop": "1024-21-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1024px: 2 colours in its 1008x819px, 61.6% one colour (93% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 12,
+     "crop": "1024-22-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1024px: 5 colours in its 1008x1008px, 82.1% one colour (75% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 13,
+     "crop": "1024-23-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 1024px: 5 colours in its 1008x1008px, 82% one colour (75% of it on screen) (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 14,
+     "crop": "1024-24-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "empty-area",
+     "sev": "WARN",
+     "sel": "footer.closing.az-faixa-escura",
+     "text": "Empresa",
+     "msg": "38% of the section is empty: 39% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)",
+     "stop": 10,
+     "crop": "1024-20-empty-area.jpg",
+     "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "screens": 8,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "runs 880px off the right side of the screen",
+     "stop": 3,
+     "crop": "768-11-off-viewport.jpg",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the page is 1648px wide on a 768px screen and scrolls sideways",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "no-visual",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "Principais funcionalidades",
+     "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+     "stop": 2,
+     "crop": "768-04-no-visual.jpg",
+     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 1,
+     "crop": "768-03-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "Próximo passo",
+     "msg": "the last section before the footer ends with no button",
+     "stop": 5,
+     "crop": "768-15-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "off-grid",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela",
+     "text": "Tema de cores",
+     "stop": 6,
+     "msg": "left edge at 26px, 18px off the page margin at 8px (29 elements, like h2.text-apoio.font-rotulo)",
+     "crop": "768-17-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-upscale",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "image: 768x480 shown at 1600x1000, blown up 2.08x",
+     "stop": 3,
+     "crop": "768-12-photo-upscale.jpg",
+     "fix": "use a source at least as wide as the picture is shown (twice that for sharp screens)"
+    },
+    {
+     "check": "menu-toggle",
+     "sev": "FAIL",
+     "sel": "header.nav.sticky > div.az-moldura.wrap:nth-of-type(1) > div.flex.items-center > button.az-botao.inline-flex",
+     "text": "Abrir menu",
+     "msg": "the menu button keeps aria-expanded=\"false\" after a click: its state never changes (system.js flips it on .nav__toggle)",
+     "stop": 0,
+     "crop": "768-01-menu-toggle.jpg",
+     "fix": "use the starter's button: <button class=\"nav__toggle\" type=\"button\" aria-expanded=\"false\" aria-label=\"Menu\">; system.js flips it"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "",
+     "msg": "section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground",
+     "stop": 2,
+     "crop": "768-05-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground",
+     "stop": 2,
+     "crop": "768-06-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground",
+     "stop": 2,
+     "crop": "768-07-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo",
+     "text": "Placeholder — público-alvo do produto sistema-la",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground",
+     "stop": 2,
+     "crop": "768-08-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — funcionalidade 3 de sistema-lara: ",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground",
+     "stop": 2,
+     "crop": "768-09-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — benefício 3 de sistema-lara: conte",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground",
+     "stop": 3,
+     "crop": "768-13-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.font-rotulo.uppercase",
+     "text": "Conteúdo provisório",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground",
+     "stop": 4,
+     "crop": "768-14-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground",
+     "stop": 5,
+     "crop": "768-16-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground",
+     "stop": 6,
+     "crop": "768-18-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo",
+     "text": "Funcionalidade 1",
+     "msg": "the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other",
+     "stop": 2,
+     "crop": "768-10-heading-scale.jpg",
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "off-grid",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap",
+     "text": "AutomáticoClaroEscuro",
+     "stop": 6,
+     "msg": "left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))",
+     "crop": "768-19-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-credit",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "",
+     "stop": 3,
+     "msg": "1 library source (placehold): image; confirm each shows the client's own product, place or people",
+     "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it"
+    },
+    {
+     "check": "nav-family",
+     "sev": "WARN",
+     "sel": "header.nav.sticky",
+     "text": "",
+     "stop": 0,
+     "msg": "the nav's links and actions use 2 type families (Times New Roman, Arial)",
+     "crop": "768-02-nav-family.jpg",
+     "fix": "keep one nav on every screen: the same bar, fill, links and type"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.az-entrada-apoio.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 768px: 4 colours in its 752x752px, 86% one colour (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 8,
+     "crop": "768-21-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 768px: 2 colours in its 752x611px, 61.5% one colour (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 9,
+     "crop": "768-22-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 768px: 3 colours in its 752x752px, 86% one colour (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 10,
+     "crop": "768-23-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "empty-area",
+     "sev": "WARN",
+     "sel": "footer.closing.az-faixa-escura",
+     "text": "Empresa",
+     "msg": "36% of the section is empty: 37% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)",
+     "stop": 6,
+     "crop": "768-20-empty-area.jpg",
+     "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "Início/Softwares/Sistema LaraSoftwareSis",
+     "msg": "the hero ends at 1860px on a 1024px screen, 836px below the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "768-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)",
+     "text": "Para quem éPlaceholder — público-alvo do",
+     "msg": "the section is 65px tall (0.1 screens), 959px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "768-rhythm-03-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)",
+     "text": "BenefíciosPlaceholder — benefício 1 de s",
+     "msg": "the section is 133px tall (0.1 screens), 891px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "768-rhythm-04-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)",
+     "text": "Problema que resolveTexto provisório sob",
+     "msg": "the section is 137px tall (0.1 screens), 887px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (and 6 more like it: \"Descrição completaTexto \", \"Principais funcionalidad\", \"ARTZANEmpresaArtZanDado \") (SR-2)",
+     "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+     "rule": "SR-2 T-height",
+     "crop": "768-rhythm-05-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "footer.closing.az-faixa-escura",
+     "text": "ARTZANEmpresaArtZanDado pendenteRazão so",
+     "msg": "the section starts at 5705px, 439px above the screen grid (6 x 1024px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "768-rhythm-06-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(6)",
+     "text": "BenefíciosPlaceholder — benefício 1 de s",
+     "msg": "the section starts at 2718px, 354px above the screen grid (3 x 1024px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "768-rhythm-07-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "Principais funcionalidades01Funcionalida",
+     "msg": "the section starts at 2332px, 284px below the screen grid (2 x 1024px): sections start on whole screens (and 7 more like it: \"Próximo passoFalar com a\", \"Início/Softwares/Sistema\", \"ImagensConteúdo provisór\") (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "768-rhythm-08-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)",
+     "text": "Problema que resolveTexto provisório sob",
+     "msg": "the section's content does not fit it: its lowest content ends 136px below its top, past 65px (the section less 72px of bottom padding) (SR-2)",
+     "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+     "rule": "SR-2 T-fit",
+     "crop": "768-rhythm-09-section-height.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)",
+     "text": "Descrição completaTexto provisório sobre",
+     "msg": "the section's content does not fit it: its lowest content ends 190px below its top, past 119px (the section less 72px of bottom padding) (and 7 more like it: \"Para quem éPlaceholder —\", \"Principais funcionalidad\", \"BenefíciosPlaceholder — \") (SR-2)",
+     "fix": "fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups",
+     "rule": "SR-2 T-fit",
+     "crop": "768-rhythm-10-section-height.jpg"
+    },
+    {
+     "check": "section-air",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3)",
+     "text": "",
+     "msg": "21px of air between the content of these two sections: 128-480px (64-600px WARN) (every gap out of the band at 768px, top to bottom: 21px after \"Problema que resolve\", 21px after \"Descrição completaTe\", 21px after \"Para quem éPlacehold\", 21px after \"Principais funcional\", 21px after \"BenefíciosPlaceholde\", 21px after \"ImagensConteúdo prov\", 21px after \"Informações comercia\") (SR-3)",
+     "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+     "rule": "SR-3 T-gap",
+     "crop": "768-rhythm-11-section-air.jpg"
+    },
+    {
+     "check": "section-air",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(3) / main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4)",
+     "text": "",
+     "msg": "21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+     "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+     "rule": "SR-3 T-gap",
+     "crop": "768-rhythm-12-section-air.jpg"
+    },
+    {
+     "check": "section-air",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(4) / main#conteudo-principal > section.py-respiro.bg-superficie:nth-of-type(5)",
+     "text": "",
+     "msg": "21px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+     "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+     "rule": "SR-3 T-gap",
+     "crop": "768-rhythm-13-section-air.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "Próximo passoFalar com a equipe",
+     "msg": "the screen at scroll 5240px (the top of section 10) shows 449px of section 9 and the content of 2 sections, over 24px each beside section 10: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "768-rhythm-14-one-section.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > div.grid.gap-10 > div.flex.flex-col > h2.text-apoio.font-rotulo",
+     "text": "Empresa",
+     "msg": "the screen at scroll 5120px (stride 5) shows 439px of section 10 and the heading of section 10 whole and the content of 2 sections, over 24px each beside section 9: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "768-rhythm-15-one-section.jpg"
+    },
+    {
+     "check": "one-section",
+     "sev": "FAIL",
+     "sel": "h2#titulo-publico-alvo",
+     "text": "Para quem é",
+     "msg": "the screen at scroll 2248px (the top of section 4) shows 365px of section 5 and the heading of section 4 whole and the content of 4 sections, over 24px each beside section 7: a screen shows one section (another may peek 8px, 24px WARN) (and 10 more like it: scroll 2332px, scroll 4096px, scroll 2048px) (SR-4)",
+     "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+     "rule": "SR-4 T-views",
+     "crop": "768-rhythm-16-one-section.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo",
+     "text": "Portfólio",
+     "msg": "the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "768-rhythm-17-one-heading.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "h2#titulo-descricao-completa",
+     "text": "Descrição completa",
+     "msg": "headings of two sections show whole on one screen at 39 of 105 scroll positions (37.1%; at scroll 1050, 1100, 1150, 1200px), here with \"Problema que resolve\": at most 3% on a desktop (SR-5)",
+     "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+     "rule": "SR-5 T2",
+     "crop": "768-rhythm-18-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "header.nav.sticky",
+     "text": "Pular para o conteúdoARTZANSoftwaresSobr",
+     "msg": "the nav's content runs 8px from the left and 8px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "768-rhythm-19-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "Início/Softwares/Sistema LaraSoftwareSis",
+     "msg": "the content of section 1 runs 8px from the left and 8px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (and 10 more like it: \"Problema que resolveText\", \"Descrição completaTexto \", \"Para quem éPlaceholder —\") (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "768-rhythm-20-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap",
+     "text": "Início/Softwares/Sistema LaraSoftwareSis",
+     "msg": "the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "768-rhythm-21-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "\"Imagem provisória do domínio ges\" runs 48-1648px, outside the container lines of section 7 at 8-760px: full width is for background layers and grounds only (SR-6)",
+     "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+     "rule": "SR-6 T2-containment",
+     "crop": "768-rhythm-22-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1)",
+     "text": "Início",
+     "msg": "20 text blocks start on a left line at x 48, 40px from the container's left: text starts on the container's left, or on one split line (x 331, 396, 461) (also \"/Softwares\", \"/Sistema Lara\", \"01Funcionalidade 1Placeholder — \") (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "768-rhythm-23-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela",
+     "text": "Tema de cores",
+     "msg": "2 text blocks start on a left line at x 29, 21px from the container's left: text starts on the container's left, or on one split line (x 331, 396, 461) (also \"Automático\") (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "768-rhythm-24-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "the page scrolls sideways (1648px wide on a 768px screen): \"Imagem provisória do domínio ges\" ends at 1648px (SR-6)",
+     "fix": "take the sideways scroll away: nothing wider than the screen (overflow-x: clip on the part that spills)",
+     "rule": "SR-6 T5-overflow",
+     "crop": "768-rhythm-25-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "a <img> over half the container wide runs 48-1648px, not on the container's lines at 8-760px (SR-6)",
+     "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+     "rule": "SR-6 T6-right-edges",
+     "crop": "768-rhythm-26-container-edges.jpg"
+    },
+    {
+     "check": "row-lines",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "Imagem provisória do domínio gestão gera",
+     "msg": "\"Imagem provisória do domínio ges\" ends at 1648px, past the container's right line at 760px (SR-7)",
+     "fix": "end it at the container's right line",
+     "rule": "SR-7 T-right",
+     "crop": "768-rhythm-27-row-lines.jpg"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "screens": 2,
+   "held": 0,
+   "errors": [
+    "rhythm: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)"
+   ],
+   "findings": [
+    {
+     "check": "hero-fill",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)",
+     "text": "Problema que resolve",
+     "msg": "the next section shows on the first screen: it starts at 1231px on a 3376px screen (the hero ends at 1211px)",
+     "stop": 0,
+     "crop": "390-01-hero-fill.jpg",
+     "fix": "let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "runs 1258px off the right side of the screen",
+     "stop": 1,
+     "crop": "390-13-off-viewport.jpg",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the page is 1648px wide on a 390px screen and scrolls sideways",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex",
+     "text": "Softwares",
+     "msg": "a 64x17px tap target (and 1 more like it on this screen): 1px from the next one (\"Sobre\"), so a thumb lands on the wrong one",
+     "stop": 0,
+     "crop": "390-02-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1) > a.az-link-nav.az-link-nav--rente",
+     "text": "Início",
+     "msg": "a 37x17px tap target (and 1 more like it on this screen): 1px from the next one (\"Softwares\"), so a thumb lands on the wrong one",
+     "stop": 0,
+     "crop": "390-03-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente",
+     "text": "Sobre",
+     "msg": "a 37x17px tap target (and 2 more like it on this screen): 1px from the next one (\"Política de privacidade\"), so a thumb lands on the wrong one",
+     "stop": 1,
+     "crop": "390-14-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 0,
+     "crop": "390-04-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "Próximo passo",
+     "msg": "the last section before the footer ends with no button",
+     "stop": 1,
+     "crop": "390-15-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "off-grid",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela",
+     "text": "Tema de cores",
+     "stop": 1,
+     "msg": "left edge at 26px, 18px off the page margin at 8px (29 elements, like h2.text-apoio.font-rotulo)",
+     "crop": "390-16-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-upscale",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "image: 389x243 shown at 1600x1000, blown up 4.12x",
+     "stop": 1,
+     "crop": "390-17-photo-upscale.jpg",
+     "fix": "use a source at least as wide as the picture is shown (twice that for sharp screens)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "",
+     "msg": "section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground",
+     "stop": 0,
+     "crop": "390-05-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "390-06-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "390-07-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo",
+     "text": "Placeholder — público-alvo do produto sistema-la",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "390-08-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — funcionalidade 3 de sistema-lara: ",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "390-09-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — benefício 3 de sistema-lara: conte",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "390-10-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.normal-case",
+     "text": "Captura de tela real ainda não existe (Q-005).",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground",
+     "stop": 1,
+     "crop": "390-18-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground",
+     "stop": 1,
+     "crop": "390-19-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground",
+     "stop": 1,
+     "crop": "390-20-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "tap-size",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente",
+     "text": "Softwares",
+     "msg": "a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs",
+     "stop": 1,
+     "crop": "390-21-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo",
+     "text": "Funcionalidade 1",
+     "msg": "the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other",
+     "stop": 0,
+     "crop": "390-11-heading-scale.jpg",
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "off-grid",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap",
+     "text": "AutomáticoClaroEscuro",
+     "stop": 1,
+     "msg": "left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))",
+     "crop": "390-22-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-credit",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "",
+     "stop": 1,
+     "msg": "1 library source (placehold): image; confirm each shows the client's own product, place or people",
+     "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it"
+    },
+    {
+     "check": "nav-family",
+     "sev": "WARN",
+     "sel": "header.nav.sticky",
+     "text": "",
+     "stop": 0,
+     "msg": "the nav's links and actions use 2 type families (Times New Roman, Arial)",
+     "crop": "390-12-nav-family.jpg",
+     "fix": "keep one nav on every screen: the same bar, fill, links and type"
+    },
+    {
+     "check": "visual-empty",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "drawing (svg)",
+     "msg": "the drawing (svg) is nearly empty at 390px: 5 colours in its 374x304px, 61.1% one colour (a thin line drawing or a logo can be this plain: look at it)",
+     "stop": 2,
+     "crop": "390-23-visual-empty.jpg",
+     "fix": "make the visual draw at this width: a picture that loads, an effect that renders, or its still fallback; never an empty ground or frame"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    },
+    {
+     "check": "section-height",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    },
+    {
+     "check": "section-air",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    },
+    {
+     "check": "one-section",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    },
+    {
+     "check": "one-heading",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    },
+    {
+     "check": "container-edges",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    },
+    {
+     "check": "row-lines",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    },
+    {
+     "check": "split-pair",
+     "sev": "WARN",
+     "sel": "body",
+     "text": "",
+     "msg": "not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844)",
+     "fix": "make the page load and lay out at this width (the probe error says what stopped it), then run the check again"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 320,
+   "height": 640,
+   "screens": 3,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "hero-fill",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.bg-superficie-elevada:nth-of-type(2)",
+     "text": "Problema que resolve",
+     "msg": "the next section shows on the first screen: it starts at 1104px on a 2560px screen (the hero ends at 1084px)",
+     "stop": 0,
+     "crop": "320-01-hero-fill.jpg",
+     "fix": "let the hero fill the first screen alone (min-height: 100svh, less above it): nothing of the next section on load"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "runs 1328px off the right side of the screen",
+     "stop": 1,
+     "crop": "320-12-off-viewport.jpg",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "off-viewport",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the page is 1648px wide on a 320px screen and scrolls sideways",
+     "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+    },
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex",
+     "text": "Softwares",
+     "msg": "a 64x17px tap target (and 1 more like it on this screen): 1px from the next one (\"Sobre\"), so a thumb lands on the wrong one",
+     "stop": 0,
+     "crop": "320-02-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1) > a.az-link-nav.az-link-nav--rente",
+     "text": "Início",
+     "msg": "a 37x17px tap target (and 1 more like it on this screen): 1px from the next one (\"Softwares\"), so a thumb lands on the wrong one",
+     "stop": 0,
+     "crop": "320-03-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "tap-size",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente",
+     "text": "Sobre",
+     "msg": "a 37x17px tap target (and 2 more like it on this screen): 1px from the next one (\"Política de privacidade\"), so a thumb lands on the wrong one",
+     "stop": 2,
+     "crop": "320-19-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.py-respiro.hero",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 0,
+     "crop": "320-04-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "main#conteudo-principal > section.az-momento-linha.az-faixa-escura",
+     "text": "Próximo passo",
+     "msg": "the last section before the footer ends with no button",
+     "stop": 1,
+     "crop": "320-13-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "off-grid",
+     "sev": "FAIL",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela",
+     "text": "Tema de cores",
+     "stop": 2,
+     "msg": "left edge at 26px, 18px off the page margin at 8px (29 elements, like h2.text-apoio.font-rotulo)",
+     "crop": "320-20-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-upscale",
+     "sev": "FAIL",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "img: Imagem provisória do domínio gestão geral de",
+     "msg": "image: 320x200 shown at 1600x1000, blown up 5.00x",
+     "stop": 1,
+     "crop": "320-14-photo-upscale.jpg",
+     "fix": "use a source at least as wide as the picture is shown (twice that for sharp screens)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.grid.grid-cols-1 > div.az-entrada-figura.hidden > svg.block.h-auto",
+     "text": "",
+     "msg": "section.py-respiro.hero and section.py-respiro.bg-superficie-elevada:nth-of-type(2) run together: 24px between their content, on one ground",
+     "stop": 0,
+     "crop": "320-05-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(2) and section.py-respiro.bg-superficie:nth-of-type(3) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "320-06-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex.flex-col > div > p.leading-corpo.text-corpo",
+     "text": "Texto provisório sobre gestão geral de empresa (",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(3) and section.py-respiro.bg-superficie-elevada:nth-of-type(4) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "320-07-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) > div.az-moldura.wrap > div.flex.flex-col > p.leading-corpo.text-corpo",
+     "text": "Placeholder — público-alvo do produto sistema-la",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(4) and section.py-respiro.bg-superficie:nth-of-type(5) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "320-08-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — funcionalidade 3 de sistema-lara: ",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(5) and section.py-respiro.bg-superficie-elevada:nth-of-type(6) run together: 21px between their content, on one ground",
+     "stop": 0,
+     "crop": "320-09-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ul.flex.flex-col > li.flex.items-start:nth-of-type(3) > p.leading-corpo.text-corpo",
+     "text": "Placeholder — benefício 3 de sistema-lara: conte",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(6) and section.py-respiro.bg-superficie:nth-of-type(7) run together: 21px between their content, on one ground",
+     "stop": 1,
+     "crop": "320-15-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.flex.flex-col > span.inline-flex.flex-wrap > span.normal-case",
+     "text": "Captura de tela real ainda não existe (Q-005).",
+     "msg": "section.py-respiro.bg-superficie:nth-of-type(7) and section.py-respiro.bg-superficie-elevada:nth-of-type(8) run together: 21px between their content, on one ground",
+     "stop": 1,
+     "crop": "320-16-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full.pt-2 > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.py-respiro.bg-superficie-elevada:nth-of-type(8) and section.az-momento-linha.az-faixa-escura run together: 24px between their content, on one ground",
+     "stop": 1,
+     "crop": "320-17-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "flush",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > div.w-full > a.az-botao.btn > svg.az-seta.h-4",
+     "text": "",
+     "msg": "section.az-momento-linha.az-faixa-escura and footer.closing.az-faixa-escura run together: 20px between their content, on one ground",
+     "stop": 1,
+     "crop": "320-18-flush.jpg",
+     "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)"
+    },
+    {
+     "check": "tap-size",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente",
+     "text": "Softwares",
+     "msg": "a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs",
+     "stop": 2,
+     "crop": "320-21-tap-size.jpg",
+     "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo",
+     "text": "Funcionalidade 1",
+     "msg": "the h3s (18.7px) are only 1.28x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other",
+     "stop": 0,
+     "crop": "320-10-heading-scale.jpg",
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "off-grid",
+     "sev": "WARN",
+     "sel": "div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap",
+     "text": "AutomáticoClaroEscuro",
+     "stop": 2,
+     "msg": "left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))",
+     "crop": "320-22-off-grid.jpg",
+     "fix": "move it onto the page margin, or the column edge its section uses"
+    },
+    {
+     "check": "photo-credit",
+     "sev": "WARN",
+     "sel": "div.flex.flex-col > figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+     "text": "",
+     "stop": 1,
+     "msg": "1 library source (placehold): image; confirm each shows the client's own product, place or people",
+     "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it"
+    },
+    {
+     "check": "nav-family",
+     "sev": "WARN",
+     "sel": "header.nav.sticky",
+     "text": "",
+     "stop": 0,
+     "msg": "the nav's links and actions use 2 type families (Times New Roman, Arial)",
+     "crop": "320-11-nav-family.jpg",
+     "fix": "keep one nav on every screen: the same bar, fill, links and type"
+    }
+   ],
+   "glAsked": 0
+  }
+ ],
+ "shaders": 0,
+ "reduced": {
+  "screens": 10,
+  "notRead": 0
+ },
+ "hidden": {
+  "screens": 20
+ },
+ "notChecked": [
+  "hero-screen (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))",
+  "section-height (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))",
+  "section-air (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))",
+  "one-section (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))",
+  "one-heading (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))",
+  "container-edges (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))",
+  "row-lines (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))",
+  "split-pair (not measured at 390px: window.innerHeight is 3376, one screen is exactly 844px at 390x844 (900 at 1440x900, 844 at 390x844))"
+ ],
+ "slow": {
+  "stops": 4,
+  "late": 0
+ },
+ "sweep": {
+  "widths": [
+   1280,
+   1152,
+   896
+  ],
+  "errors": [],
+  "findings": []
+ },
+ "narrow": {
+  "width": 320,
+  "height": 640,
+  "errors": [],
+  "findings": [
+   {
+    "check": "tap-size",
+    "sev": "FAIL",
+    "sel": "nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex",
+    "text": "Softwares",
+    "msg": "a 64x17px tap target (and 1 more like it on this screen): 1px from the next one (\"Sobre\"), so a thumb lands on the wrong one",
+    "crop": "narrow-320-01-tap-size.jpg",
+    "width": 320,
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+   },
+   {
+    "check": "tap-size",
+    "sev": "FAIL",
+    "sel": "nav > ol.flex.flex-wrap > li.inline-flex.items-center:nth-of-type(1) > a.az-link-nav.az-link-nav--rente",
+    "text": "Início",
+    "msg": "a 37x17px tap target (and 1 more like it on this screen): 1px from the next one (\"Softwares\"), so a thumb lands on the wrong one",
+    "crop": "narrow-320-02-tap-size.jpg",
+    "width": 320,
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+   },
+   {
+    "check": "tap-size",
+    "sev": "WARN",
+    "sel": "div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente",
+    "text": "Softwares",
+    "msg": "a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs",
+    "width": 320,
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+   },
+   {
+    "check": "tap-size",
+    "sev": "FAIL",
+    "sel": "div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente",
+    "text": "Sobre",
+    "msg": "a 37x17px tap target (and 2 more like it on this screen): 1px from the next one (\"Política de privacidade\"), so a thumb lands on the wrong one",
+    "width": 320,
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box"
+   },
+   {
+    "check": "off-viewport",
+    "sev": "FAIL",
+    "sel": "figure.m-0.w-full > div.az-moldura-captura.aspect-captura > img",
+    "text": "Imagem provisória do domínio gestão geral de emp",
+    "msg": "at 320px wide it runs 1328px past the screen's right edge (the page is 1648px wide and scrolls sideways)",
+    "crop": "narrow-320-05-off-viewport.jpg",
+    "width": 320,
+    "fix": "keep it inside the screen at this width: let it shrink, wrap or stack"
+   }
+  ]
+ },
+ "counts": {
+  "FAIL": 112,
+  "WARN": 100
+ },
+ "checks": {
+  "assets": "FAIL",
+  "shader-lint": "PASS",
+  "gl-fallback": "PASS",
+  "empty-visual": "PASS",
+  "hero-fill": "FAIL",
+  "flush": "WARN",
+  "placeholder": "FAIL",
+  "sample-label": "PASS",
+  "caption": "PASS",
+  "credit-wall": "PASS",
+  "nav": "PASS",
+  "nav-covers": "PASS",
+  "spill": "PASS",
+  "off-viewport": "FAIL",
+  "fold-card": "PASS",
+  "hover-spill": "PASS",
+  "overlap-text": "PASS",
+  "collide": "PASS",
+  "tap-size": "FAIL",
+  "row-gap": "PASS",
+  "cut-text": "PASS",
+  "fold-cut": "PASS",
+  "marquee": "PASS",
+  "scroll-linked": "PASS",
+  "scroll-reveal": "PASS",
+  "pinned": "PASS",
+  "loop-pause": "PASS",
+  "reduced-motion": "PASS",
+  "hidden-content": "PASS",
+  "webgl": "PASS",
+  "no-visual": "FAIL",
+  "text-only": "PASS",
+  "card-visual": "PASS",
+  "hidden-visual": "PASS",
+  "card-family": "PASS",
+  "card-layout": "PASS",
+  "nesting": "PASS",
+  "effect-repeat": "PASS",
+  "ui-fit": "PASS",
+  "ui-centre": "PASS",
+  "dark-ground": "PASS",
+  "button-styles": "PASS",
+  "button-shape": "PASS",
+  "same-action": "PASS",
+  "button-picture": "PASS",
+  "cta": "FAIL",
+  "pricing-tiers": "PASS",
+  "copy-headline": "FAIL",
+  "copy-fact": "PASS",
+  "copy-headings": "FAIL",
+  "copy-buttons": "WARN",
+  "copy-actions": "WARN",
+  "heading-scale": "WARN",
+  "stagger": "PASS",
+  "top-stagger": "PASS",
+  "off-grid": "FAIL",
+  "col-edge": "PASS",
+  "right-edge": "PASS",
+  "centre-axis": "PASS",
+  "tilt": "PASS",
+  "contrast": "PASS",
+  "text-contrast": "PASS",
+  "body-size": "PASS",
+  "busy-ground": "PASS",
+  "section-gaps": "PASS",
+  "proximity": "PASS",
+  "hole": "PASS",
+  "links": "PASS",
+  "forms": "PASS",
+  "photo-upscale": "FAIL",
+  "photo-set": "PASS",
+  "photo-credit": "WARN",
+  "nav-family": "WARN",
+  "nav-labels": "WARN",
+  "link-styles": "PASS",
+  "heading-align": "PASS",
+  "label-centre": "PASS",
+  "fake-button": "PASS",
+  "stranded-action": "PASS",
+  "orphan": "PASS",
+  "unit-break": "PASS",
+  "tab-wrap": "PASS",
+  "effects-fit": "PASS",
+  "fade-cut": "PASS",
+  "photo-weight": "PASS",
+  "copy-length": "WARN",
+  "nav-current": "PASS",
+  "progress-bar": "PASS",
+  "photo-repeat": "PASS",
+  "button-contrast": "PASS",
+  "photo-print": "PASS",
+  "grounds": "PASS",
+  "split-align": "PASS",
+  "fact-agree": "PASS",
+  "fold-action": "PASS",
+  "action-count": "PASS",
+  "one-screen": "WARN",
+  "hover": "WARN",
+  "hover-move": "PASS",
+  "product-shown": "PASS",
+  "same-object": "PASS",
+  "font-load": "PASS",
+  "visual-caption": "PASS",
+  "visual-empty": "WARN",
+  "effect-kind": "FAIL",
+  "hero-enter": "PASS",
+  "moment-none": "PASS",
+  "street-number": "PASS",
+  "postcode": "PASS",
+  "coordinates": "PASS",
+  "company-number": "PASS",
+  "phone-number": "PASS",
+  "hero-screen": "FAIL",
+  "section-height": "FAIL",
+  "section-air": "FAIL",
+  "one-section": "FAIL",
+  "one-heading": "FAIL",
+  "container-edges": "FAIL",
+  "row-lines": "FAIL",
+  "split-pair": "WARN",
+  "motion-layer": "PASS",
+  "count-text": "PASS",
+  "loop-cycle": "PASS",
+  "section-tile": "PASS",
+  "empty-area": "FAIL",
+  "a11y-name": "PASS",
+  "img-alt": "PASS",
+  "field-label": "PASS",
+  "heading-order": "PASS",
+  "tabindex": "PASS",
+  "focus-ring": "PASS",
+  "focus-visible": "PASS",
+  "focus-hidden": "PASS",
+  "skip-link": "WARN",
+  "menu-toggle": "FAIL",
+  "lang": "PASS",
+  "page-meta": "PASS",
+  "share-meta": "WARN",
+  "action-repeat": "PASS",
+  "map-link": "PASS",
+  "open-now": "PASS",
+  "assumed": "PASS",
+  "run-on": "PASS",
+  "form-fields": "PASS",
+  "form-send": "PASS"
+ }
+}

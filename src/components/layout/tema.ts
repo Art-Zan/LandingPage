@@ -2,7 +2,9 @@
  * Preferência de tema — contrato compartilhado entre o script de primeiro
  * pintar (layout raiz) e o controle de troca (`ControleDeTema`).
  * Visual: 11.13 (os dois temas existem; o mecanismo é decisão de implementação)
- * Acessibilidade: 13.10 (nenhuma animação na troca), 13.3 (nada depende só de cor)
+ * Acessibilidade: 13.10 (o script de primeiro pintar nunca anima; a troca
+ *   pelo controle esmaece só por ponteiro e sem movimento reduzido — Onda 5),
+ *   13.3 (nada depende só de cor)
  * Dono: Onda 3a
  *
  * REGRA, EM UMA FRASE: sem preferência declarada, vale a do sistema

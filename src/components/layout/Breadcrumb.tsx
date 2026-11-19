@@ -48,22 +48,32 @@ export type PropsDoBreadcrumb = {
 export const Breadcrumb = ({ itens, className }: PropsDoBreadcrumb) => {
   if (itens.length === 0) return null
 
+  // Restyle: cada item é um único <li> (antes o separador abria um <li>
+  // dentro de outro, marcação inválida); links com alvo de 44 px (13.9) e o
+  // traço desenhado na passagem; separador angular decorativo.
   return (
     <nav aria-label="Trilha" className={className}>
-      <ol className="flex flex-wrap items-center gap-2 text-apoio leading-corpo text-texto-secundario">
+      <ol className="flex flex-wrap items-center gap-x-2 text-apoio leading-corpo text-texto-secundario">
         {itens.map((item, indice) => {
           const ehUltimo = indice === itens.length - 1
           return (
-            <li key={`separador-${indice}`} className="contents">
-              {indice > 0 ? <span aria-hidden="true">›</span> : null}
+            <li key={indice} className="inline-flex items-center gap-x-2">
+              {indice > 0 ? (
+                <span aria-hidden="true" className="text-borda">
+                  /
+                </span>
+              ) : null}
               {item.href && !ehUltimo ? (
-                <li>
-                  <Link href={item.href} className="underline">
-                    {item.rotulo}
-                  </Link>
-                </li>
+                <Link
+                  href={item.href}
+                  className="az-link-nav az-link-nav--rente inline-flex min-h-toque items-center text-texto-secundario transition-colors duration-padrao hover:text-texto-principal"
+                >
+                  {item.rotulo}
+                </Link>
               ) : (
-                <li aria-current={ehUltimo ? 'page' : undefined}>{item.rotulo}</li>
+                <span aria-current={ehUltimo ? 'page' : undefined} className="text-texto-principal">
+                  {item.rotulo}
+                </span>
               )}
             </li>
           )

@@ -1,0 +1,464 @@
+consistency  http://localhost:3001/contato
+
+1440x900  2 screens  30 FAIL  12 WARN
+  FAIL assets          (the page)
+       the script _next/static/chunks/webpack-4abfd6a89dae30f0.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/4bd1b696-cf72ae8a39fa05aa.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/964-9e7fd12428968086.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/main-app-50f326052c390d09.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/519-89293711801e90a2.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/app/(site)/contato/page-ca4848495503cbd8.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/app/(site)/layout-a7236e52ed5b46c3.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL text-only       main#conteudo-principal > section.py-respiro.hero  "Contato"
+       the closing section is only text: no picture, icon, mock or effect in it  [1440-01-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [1440-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL copy-headline   h1#titulo-contato  "Contato"
+       "Contato" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags)  [1440-03-copy-headline.jpg]
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  FAIL off-grid        form.flex.flex-col > div.flex.flex-col:nth-of-type(7) > div.flex.flex-col > div.flex.items-start  "Autorizo o uso dos meus dados para respo"
+       left edge at 28px, 20px off the page margin at 8px (27 elements, like p.text-apoio.leading-corpo); 1 more in this section off the grid too (div.flex.items-start at 28px)  [1440-04-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (27 elements, like h2.text-apoio.font-rotulo)  [1440-13-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL empty-area      main#conteudo-principal > section.py-respiro.hero  "Contato"
+       53% of the section is empty: 53% beside content that covers under half the container, in its 685px of rows (WARN over 35%, FAIL over 50%)  [1440-05-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  FAIL empty-area      footer.closing.az-faixa-escura  "Empresa"
+       68% of the section is empty: 69% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)  [1440-14-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  WARN flush           ul.flex.flex-col > li:nth-of-type(2) > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "E-mail"
+       section.py-respiro.hero and footer.closing.az-faixa-escura run together: 17px between their content, on one ground  [1440-15-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN copy-headline   h1#titulo-contato  "Contato"
+       the h1 has 1 word (2 to 8 read at a glance)  [1440-06-copy-headline.jpg]
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  WARN copy-buttons    header.nav.sticky > div.az-moldura.wrap > div.flex.items-center > button.az-botao.inline-flex  "Abrir menu"
+       "Abrir menu" does not start with a verb (book, buy, try, start, get, see...)  [1440-07-copy-buttons.jpg]
+       fix: label buttons with a verb and what the visitor gets ("Book a room", "Start free trial")
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [1440-16-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [1440-08-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  WARN nav-labels      header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       "Pular para o conteúdo" opens a section headed "Contato"  [1440-09-nav-labels.jpg]
+       fix: name each nav link after the heading of the section it opens
+  WARN copy-length     main#conteudo-principal > section.py-respiro.hero  "Contato"
+       1 section over 90 words a screen outside the UI mocks ("Contato" 124); 124 words a screen across the page (124 words in 1 screens): a tech page says it in about 80 or fewer  [1440-10-copy-length.jpg]
+       fix: cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences
+  WARN hover           header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       nothing answers the pointer: the nav link, filled button, text link look the same hovered as at rest  [1440-11-hover.jpg]
+       fix: give buttons and links a small answer to the pointer (the motion layer: a fill change, a drawn underline, an arrow that moves)
+  WARN moment-none     (the page)
+       a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)
+       fix: deal one (moments.mjs pick --page software) and mount it in its own section
+  WARN skip-link       header.nav.sticky > a.az-pular-para-conteudo  "Pular para o conteúdo"
+       the first Tab stop is "Pular para o conteúdo", not a skip link: a keyboard user tabs through the whole nav on every visit
+       fix: add the starter's skip link as the header's first child: <a class="skip-link" href="#top">Skip to content</a>
+  WARN share-meta      head
+       the head lacks theme-color: a shared link shows no picture or title of its own
+       fix: copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)
+  WARN form-fields     section.py-respiro.hero > div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco:nth-of-type(2) > form.flex.flex-col
+       the form has no status line (role="status"): sending, sent and errors are never read out  [1440-12-form-fields.jpg]
+       fix: give each field its type, autocomplete and inputmode, never block paste or disable the button before a submit, and add the status line (references/system.md, Forms)
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the hero ends at 902px on a 900px screen, 2px below the fold: it ends at the fold, 1px either way (SR-1)  [1440-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section is 551px tall (0.6 screens), 349px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)  [1440-rhythm-05-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the section starts at 217px, 217px below the screen grid (0 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-06-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section starts at 918px, 18px below the screen grid (1 x 900px): sections start on whole screens (SR-2)  [1440-rhythm-07-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section's content does not fit it: its lowest content ends 538px below its top, past 479px (the section less 72px of bottom padding) (SR-2)  [1440-rhythm-08-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL one-section     main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the screen at scroll 577px (the top of section 2) shows 325px of section 1 and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-09-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     div.flex.flex-col > div.grid.gap-10 > div.flex.flex-col > h2.text-apoio.font-rotulo  "Empresa"
+       the screen at scroll 217px (the top of section 1) shows 199px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [1440-rhythm-10-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [1440-rhythm-11-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL container-edges header.nav.sticky  "Pular para o conteúdoARTZANSoftwaresSobr"
+       the nav's content runs 8px from the left and 8px from the right: the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)  [1440-rhythm-12-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the content of section 1 runs 8px from the left and 8px from the right: the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)  [1440-rhythm-13-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the content of section 2 runs 8px from the left and 8px from the right: the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (and 1 more like it: "Pular para o conteúdoART") (SR-6)  [1440-rhythm-14-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "ArtZanContatoPreencha o formulário abaix"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [1440-rhythm-15-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > input
+       the <input> runs -9999--9990px, outside the container lines of section 1 at 8-1432px: full width is for background layers and grounds only (SR-6)  [1440-rhythm-16-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > input
+       a box runs -9999--9990px, outside the container lines of section 1 at 8-1432px: full width is for background layers and grounds only (SR-6)  [1440-rhythm-17-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges form.flex.flex-col > div.flex.flex-col:nth-of-type(9) > ul.flex.flex-col > li:nth-of-type(1)  "WhatsAppQ-091 — número de WhatsApp comer"
+       2 text blocks start on a left line at x 48, 40px from the container's left: text starts on the container's left, or on one split line (x 611, 732, 853) (also "E-mailQ-031 / Q-063 — e-mail ins") (SR-6)  [1440-rhythm-18-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       2 text blocks start on a left line at x 29, 21px from the container's left: text starts on the container's left, or on one split line (x 611, 732, 853) (also "Automático") (SR-6)  [1440-rhythm-19-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  (probe error) effect-kind: could not read http://localhost:3001/_next/static/chunks/4bd1b696-cf72ae8a39fa05aa.js (HTTP 400)
+  (probe error) effect-kind: could not read http://localhost:3001/_next/static/chunks/964-9e7fd12428968086.js (HTTP 400)
+  (probe error) effect-kind: could not read http://localhost:3001/_next/static/chunks/main-app-50f326052c390d09.js (HTTP 400)
+
+1024x768  3 screens  4 FAIL  5 WARN
+  FAIL text-only       main#conteudo-principal > section.py-respiro.hero  "Contato"
+       the closing section is only text: no picture, icon, mock or effect in it  [1024-01-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [1024-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        form.flex.flex-col > div.flex.flex-col:nth-of-type(7) > div.flex.flex-col > div.flex.items-start  "Autorizo o uso dos meus dados para respo"
+       left edge at 28px, 20px off the page margin at 8px (27 elements, like p.text-apoio.leading-corpo); 1 more in this section off the grid too (div.flex.items-start at 28px)  [1024-03-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (27 elements)  [1024-08-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN flush           ul.flex.flex-col > li:nth-of-type(2) > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "E-mail"
+       section.py-respiro.hero and footer.closing.az-faixa-escura run together: 17px between their content, on one ground  [1024-06-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN fold-cut        div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > button.az-botao.btn  "Enviar solicitação"
+       the hero's button "Enviar solicitação" is cut by the bottom of the first screen (14px of its 21px below the fold)  [1024-04-fold-cut.jpg]
+       fix: size the hero so the heading ends above the fold, or starts below it
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements)  [1024-09-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [1024-05-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  WARN empty-area      footer.closing.az-faixa-escura  "Empresa"
+       38% of the section is empty: 39% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)  [1024-07-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+
+768x1024  2 screens  23 FAIL  4 WARN
+  FAIL text-only       main#conteudo-principal > section.py-respiro.hero  "Contato"
+       the closing section is only text: no picture, icon, mock or effect in it  [768-01-text-only.jpg]
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [768-02-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        form.flex.flex-col > div.flex.flex-col:nth-of-type(7) > div.flex.flex-col > div.flex.items-start  "Autorizo o uso dos meus dados para respo"
+       left edge at 28px, 20px off the page margin at 8px (27 elements, like p.text-apoio.leading-corpo); 1 more in this section off the grid too (div.flex.items-start at 28px)  [768-03-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (27 elements, like h2.text-apoio.font-rotulo)  [768-07-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  FAIL menu-toggle     header.nav.sticky > div.az-moldura.wrap:nth-of-type(1) > div.flex.items-center > button.az-botao.inline-flex  "Abrir menu"
+       the menu button keeps aria-expanded="false" after a click: its state never changes (system.js flips it on .nav__toggle)  [768-04-menu-toggle.jpg]
+       fix: use the starter's button: <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">; system.js flips it
+  WARN flush           ul.flex.flex-col > li:nth-of-type(2) > span.inline-flex.flex-wrap > span.font-rotulo.uppercase  "E-mail"
+       section.py-respiro.hero and footer.closing.az-faixa-escura run together: 17px between their content, on one ground  [768-05-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [768-08-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [768-06-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  WARN empty-area      footer.closing.az-faixa-escura  "Empresa"
+       36% of the section is empty: 37% beside content that covers under half the container, in its 551px of rows (WARN over 35%, FAIL over 50%)  [768-09-empty-area.jpg]
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the hero ends at 902px on a 1024px screen, 122px above the fold: it ends at the fold, 1px either way (SR-1)  [768-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL hero-screen     footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       106px of the next section shows on the first screen (from 918px on a 1024px screen): nothing below the hero shows at load (SR-1)  [768-rhythm-02-hero-screen.jpg]
+       fix: end the hero at the fold so nothing of the next section shows at load (hero height: 100svh)
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section is 551px tall (0.5 screens), 473px short of one screen (1024px): every section after the hero is one screen or two, 2px either way (SR-2)  [768-rhythm-03-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the section starts at 217px, 217px below the screen grid (0 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-04-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section starts at 918px, 106px above the screen grid (1 x 1024px): sections start on whole screens (SR-2)  [768-rhythm-05-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section's content does not fit it: its lowest content ends 538px below its top, past 479px (the section less 72px of bottom padding) (SR-2)  [768-rhythm-06-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL one-section     main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the screen at scroll 453px (the top of section 2) shows 449px of section 1 and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-07-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     div.flex.flex-col > div.grid.gap-10 > div.flex.flex-col > h2.text-apoio.font-rotulo  "Empresa"
+       the screen at scroll 217px (the top of section 1) shows 323px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-08-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section     div.flex.flex-col > div.grid.gap-10 > div.flex.flex-col > h2.text-apoio.font-rotulo  "Empresa"
+       the screen at scroll 0px (stride 0) shows 106px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [768-rhythm-09-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [768-rhythm-10-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL container-edges header.nav.sticky  "Pular para o conteúdoARTZANSoftwaresSobr"
+       the nav's content runs 8px from the left and 8px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-11-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the content of section 1 runs 8px from the left and 8px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (SR-6)  [768-rhythm-12-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the content of section 2 runs 8px from the left and 8px from the right: the margin is 64-120px at 768px (one container, equal margins, 2px either way) (and 1 more like it: "Pular para o conteúdoART") (SR-6)  [768-rhythm-13-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "ArtZanContatoPreencha o formulário abaix"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [768-rhythm-14-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > input
+       the <input> runs -9999--9990px, outside the container lines of section 1 at 8-760px: full width is for background layers and grounds only (SR-6)  [768-rhythm-15-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > input
+       a box runs -9999--9990px, outside the container lines of section 1 at 8-760px: full width is for background layers and grounds only (SR-6)  [768-rhythm-16-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges form.flex.flex-col > div.flex.flex-col:nth-of-type(9) > ul.flex.flex-col > li:nth-of-type(1)  "WhatsAppQ-091 — número de WhatsApp comer"
+       2 text blocks start on a left line at x 48, 40px from the container's left: text starts on the container's left, or on one split line (x 331, 396, 461) (also "E-mailQ-031 / Q-063 — e-mail ins") (SR-6)  [768-rhythm-17-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       2 text blocks start on a left line at x 29, 21px from the container's left: text starts on the container's left, or on one split line (x 331, 396, 461) (also "Automático") (SR-6)  [768-rhythm-18-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+
+390x844  3 screens  22 FAIL  8 WARN
+  FAIL tap-size        nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): 1px from the next one ("Sobre"), so a thumb lands on the wrong one  [390-01-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(2) > input.w-full.min-h-12
+       a 177x21px tap target (and 1 more like it on this screen): 0px from the next one (""), so a thumb lands on the wrong one  [390-02-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(4) > select.w-full.min-h-12  "Selecione um assunto Quero contratar ou "
+       a 257x19px tap target (and 1 more like it on this screen): 0px from the next one ("Ainda não sei Iago Nina "), so a thumb lands on the wrong one  [390-03-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Sobre"
+       a 37x17px tap target (and 1 more like it on this screen): 1px from the next one ("Política de privacidade"), so a thumb lands on the wrong one  [390-10-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.hero  "Contato"
+       no picture, effect or mock in this section; a feature section needs a visual  [390-04-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [390-05-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (30 elements)  [390-14-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN flush           ul.flex.flex-col > li:nth-of-type(2) > span.inline-flex.flex-wrap > span.normal-case  "Q-031 / Q-063 — e-mail institucional no "
+       section.py-respiro.hero and footer.closing.az-faixa-escura run together: 17px between their content, on one ground  [390-11-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN tap-size        div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(1) > input.w-full.min-h-12
+       a 177x21px tap target: under the 44px a phone needs  [390-06-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        div.flex.flex-col:nth-of-type(7) > div.flex.flex-col > div.flex.items-start > input.mt-1.h-6
+       a 359x35px tap target: under the 44px a phone needs  [390-07-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > button.az-botao.btn  "Enviar solicitação"
+       a 120x21px tap target: under the 44px a phone needs  [390-12-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs  [390-13-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN fold-cut        form.flex.flex-col > div.flex.flex-col:nth-of-type(8) > div.flex.items-start > label.text-apoio.leading-corpo  "Quero receber e-mails da ArtZan sobre no"
+       a line of the hero text is sliced by the bottom of the first screen  [390-08-fold-cut.jpg]
+       fix: size the hero so the heading ends above the fold, or starts below it
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [390-15-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [390-09-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+  FAIL hero-screen     main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the hero ends at 1046px on a 844px screen, 202px below the fold: it ends at the fold, 1px either way (SR-1)  [390-rhythm-01-hero-screen.jpg]
+       fix: make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section is 587px tall (0.7 screens), 257px short of one screen (844px): every section after the hero is one screen or two, 2px either way (SR-2)  [390-rhythm-05-section-height.jpg]
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section starts at 1062px, 218px below the screen grid (1 x 844px): sections start on whole screens (SR-2)  [390-rhythm-06-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the section starts at 217px, 217px below the screen grid (0 x 844px): sections start on whole screens (SR-2)  [390-rhythm-07-section-height.jpg]
+       fix: make every section above it exactly one or two screens tall, so this one starts on a whole screen
+  FAIL section-height  footer.closing.az-faixa-escura  "ARTZANEmpresaArtZanDado pendenteRazão so"
+       the section's content does not fit it: its lowest content ends 574px below its top, past 539px (the section less 48px of bottom padding) (SR-2)  [390-rhythm-08-section-height.jpg]
+       fix: fit the content above the section's bottom padding (--padb), or make it two screens (.g2) in two groups
+  FAIL one-section     main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the screen at scroll 813px (the top of section 2) shows 233px of section 1 and the content of 2 sections, over 24px each beside section 2: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)  [390-rhythm-09-one-section.jpg]
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading     div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo  "Portfólio"
+       the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)  [390-rhythm-10-one-heading.jpg]
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL container-edges header.nav.sticky  "Pular para o conteúdoARTZANSoftwaresSobr"
+       the nav's content runs 8px from the left and 8px from the right: the margin is 16-24px at 390px (one container, equal margins, 2px either way) (SR-6)  [390-rhythm-11-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero  "ArtZanContatoPreencha o formulário abaix"
+       the content of section 1 runs 8px from the left and 8px from the right: the margin is 16-24px at 390px (one container, equal margins, 2px either way) (and 2 more like it: "ARTZANEmpresaArtZanDado ", "Pular para o conteúdoART") (SR-6)  [390-rhythm-12-container-edges.jpg]
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges main#conteudo-principal > section.py-respiro.hero > div.az-moldura.wrap  "ArtZanContatoPreencha o formulário abaix"
+       the hero's .wrap holds 2 children, 0 of them .hero-text: one .hero-text and at most one strip (SR-6)  [390-rhythm-13-container-edges.jpg]
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > input
+       the <input> runs -9999--9990px, outside the container lines of section 1 at 8-382px: full width is for background layers and grounds only (SR-6)  [390-rhythm-14-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > input
+       a box runs -9999--9990px, outside the container lines of section 1 at 8-382px: full width is for background layers and grounds only (SR-6)  [390-rhythm-15-container-edges.jpg]
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges form.flex.flex-col > div.flex.flex-col:nth-of-type(9) > ul.flex.flex-col > li:nth-of-type(1)  "WhatsAppQ-091 — número de WhatsApp comer"
+       2 text blocks start on a left line at x 48, 40px from the container's left: text starts on the container's left, or on one split line (x 174, 207, 240) (also "E-mailQ-031 / Q-063 — e-mail ins") (SR-6)  [390-rhythm-16-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       4 text blocks start on a left line at x 28, 20px from the container's left: text starts on the container's left, or on one split line (x 174, 207, 240) (also "Autorizo o uso dos meus dados pa", "Quero receber e-mails da ArtZan ", "Automático") (SR-6)  [390-rhythm-17-container-edges.jpg]
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(4) > select.w-full.min-h-12  "Selecione um assuntoQuero contratar ou p"
+       a box over half the container wide runs 8-265px, not on the container's lines at 8-382px (SR-6)  [390-rhythm-18-container-edges.jpg]
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+
+320x640  4 screens  6 FAIL  8 WARN
+  FAIL tap-size        nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): 1px from the next one ("Sobre"), so a thumb lands on the wrong one  [320-01-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(2) > input.w-full.min-h-12
+       a 177x21px tap target (and 1 more like it on this screen): 0px from the next one (""), so a thumb lands on the wrong one  [320-02-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Sobre"
+       a 37x17px tap target (and 1 more like it on this screen): 1px from the next one ("Política de privacidade"), so a thumb lands on the wrong one  [320-10-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL no-visual       main#conteudo-principal > section.py-respiro.hero  "Contato"
+       no picture, effect or mock in this section; a feature section needs a visual  [320-06-no-visual.jpg]
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL cta             main#conteudo-principal > section.py-respiro.hero
+       the hero has no button (the nav's does not count)  [320-07-cta.jpg]
+       fix: add the action: a button in the hero, one on every priced item, one in the closing section
+  FAIL off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > legend.az-apenas-leitor-de-tela  "Tema de cores"
+       left edge at 26px, 18px off the page margin at 8px (31 elements)  [320-13-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN flush           ul.flex.flex-col > li:nth-of-type(2) > span.inline-flex.flex-wrap > span.normal-case  "Q-031 / Q-063 — e-mail institucional no "
+       section.py-respiro.hero and footer.closing.az-faixa-escura run together: 17px between their content, on one ground  [320-11-flush.jpg]
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  WARN tap-size        div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(1) > input.w-full.min-h-12
+       a 177x21px tap target: under the 44px a phone needs  [320-03-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(4) > select.w-full.min-h-12  "Selecione um assunto Quero contratar ou "
+       a 257x19px tap target (and 1 more like it on this screen): under the 44px a phone needs  [320-04-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        div.flex.flex-col:nth-of-type(7) > div.flex.flex-col > div.flex.items-start > input.mt-1.h-6
+       a 265x35px tap target: under the 44px a phone needs  [320-08-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > button.az-botao.btn  "Enviar solicitação"
+       a 120x21px tap target: under the 44px a phone needs  [320-09-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs  [320-12-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN off-grid        div.az-moldura.wrap > div.flex:nth-of-type(2) > fieldset > div.inline-flex.flex-wrap  "AutomáticoClaroEscuro"
+       left edge at 45px, 3px off a common edge of its section at 48px (7 elements, like li:nth-of-type(3))  [320-14-off-grid.jpg]
+       fix: move it onto the page margin, or the column edge its section uses
+  WARN nav-family      header.nav.sticky
+       the nav's links and actions use 2 type families (Times New Roman, Arial)  [320-05-nav-family.jpg]
+       fix: keep one nav on every screen: the same bar, fill, links and type
+
+first screen at 1280, 1152, 896  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  4 FAIL
+  FAIL tap-size        [320] nav.hidden > ul.flex.items-center > li:nth-of-type(1) > a.az-link-nav.inline-flex  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): 1px from the next one ("Sobre"), so a thumb lands on the wrong one  [narrow-320-01-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        [320] div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(1) > input.w-full.min-h-12
+       a 177x21px tap target: under the 44px a phone needs  [narrow-320-02-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        [320] div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(2) > input.w-full.min-h-12
+       a 177x21px tap target (and 1 more like it on this screen): 0px from the next one (""), so a thumb lands on the wrong one  [narrow-320-03-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        [320] div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > div.flex.flex-col:nth-of-type(4) > select.w-full.min-h-12  "Selecione um assunto Quero contratar ou "
+       a 257x19px tap target (and 1 more like it on this screen): under the 44px a phone needs  [narrow-320-04-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        [320] div.flex.flex-col:nth-of-type(7) > div.flex.flex-col > div.flex.items-start > input.mt-1.h-6
+       a 265x35px tap target: under the 44px a phone needs  [narrow-320-05-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        [320] div.az-moldura.wrap > div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > button.az-botao.btn  "Enviar solicitação"
+       a 120x21px tap target: under the 44px a phone needs  [narrow-320-06-tap-size.jpg]
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  WARN tap-size        [320] div.flex.flex-col:nth-of-type(1) > ul.flex.flex-col > li > a.az-link-nav.az-link-nav--rente  "Softwares"
+       a 64x17px tap target (and 1 more like it on this screen): under the 44px a phone needs
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL tap-size        [320] div.flex.flex-col:nth-of-type(3) > ul.flex.flex-col > li:nth-of-type(1) > a.az-link-nav.az-link-nav--rente  "Sobre"
+       a 37x17px tap target (and 2 more like it on this screen): 1px from the next one ("Política de privacidade"), so a thumb lands on the wrong one
+       fix: make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box
+  FAIL off-viewport    [320] div.az-entrada-apoio.rounded-bloco > form.flex.flex-col > input
+       at 320px wide it runs 9999px past the screen's left edge (cut there: the page clips what runs past it)
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+
+checks
+  FAIL assets                 PASS shader-lint            PASS gl-fallback            
+  PASS empty-visual           PASS hero-fill              WARN flush                  
+  PASS placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            PASS nav                    PASS nav-covers             
+  PASS spill                  FAIL off-viewport           PASS fold-card              
+  PASS hover-spill            PASS overlap-text           PASS collide                
+  FAIL tap-size               PASS row-gap                PASS cut-text               
+  WARN fold-cut               PASS marquee                PASS scroll-linked          
+  PASS scroll-reveal          PASS pinned                 PASS loop-pause             
+  PASS reduced-motion         PASS hidden-content         PASS webgl                  
+  FAIL no-visual              FAIL text-only              PASS card-visual            
+  PASS hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           PASS same-action            PASS button-picture         
+  FAIL cta                    PASS pricing-tiers          FAIL copy-headline          
+  PASS copy-fact              PASS copy-headings          WARN copy-buttons           
+  PASS copy-actions           PASS heading-scale          PASS stagger                
+  PASS top-stagger            FAIL off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               PASS text-contrast          PASS body-size              
+  PASS busy-ground            PASS section-gaps           PASS proximity              
+  PASS hole                   PASS links                  PASS forms                  
+  PASS photo-upscale          PASS photo-set              PASS photo-credit           
+  WARN nav-family             WARN nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  PASS stranded-action        PASS orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           WARN copy-length            PASS nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             PASS fold-action            PASS action-count           
+  PASS one-screen             WARN hover                  PASS hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  PASS visual-caption         PASS visual-empty           PASS effect-kind            
+  PASS hero-enter             WARN moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           FAIL hero-screen            FAIL section-height         
+  PASS section-air            FAIL one-section            FAIL one-heading            
+  FAIL container-edges        PASS row-lines              PASS split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  PASS section-tile           FAIL empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               PASS focus-ring             PASS focus-visible          
+  PASS focus-hidden           WARN skip-link              FAIL menu-toggle            
+  PASS lang                   PASS page-meta              WARN share-meta             
+  PASS action-repeat          PASS map-link               PASS open-now               
+  PASS assumed                PASS run-on                 WARN form-fields            
+  PASS form-send              
+
+total  89 FAIL  42 WARN  (crops and report.json in C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.taste-skill\after\consistency-contato)

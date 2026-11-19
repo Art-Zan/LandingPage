@@ -33,9 +33,11 @@ export type VarianteDeBotao = 'primaria' | 'secundaria' | 'discreta'
 
 /** Comum às três variantes. Alvo de toque de 44 px (13.9) e foco pelo contorno global (13.2). */
 const BASE = juntarClasses(
-  'inline-flex items-center justify-center gap-entre-alvos',
+  // Restyle: camada de passagem e pressão (globals.css, .az-botao).
+  'az-botao btn inline-flex items-center justify-center gap-entre-alvos',
   'min-h-toque min-w-toque px-card',
-  'text-rotulo font-rotulo leading-corpo no-underline',
+  // Rebrand (2026-11-13): rótulo de placar — condensada, caixa alta, espaçada.
+  'font-titulo text-rotulo font-h1 uppercase tracking-caixa-alta leading-corpo no-underline',
   'rounded-controle border',
   'transition-colors duration-padrao',
   'cursor-pointer disabled:cursor-default',
@@ -71,12 +73,15 @@ const POR_VARIANTE: Record<VarianteDeBotao, string> = {
  * 8,16:1 no escuro. E nunca é o único indicador: o elemento também é inerte
  * para o teclado e anunciado como desabilitado pela tecnologia assistiva.
  */
-const DESABILITADO = 'disabled:bg-superficie-elevada disabled:text-texto-secundario disabled:border-borda'
+const DESABILITADO =
+  'disabled:bg-superficie-elevada disabled:text-texto-secundario disabled:border-borda'
 
 type PropsCompartilhadas = {
   variante?: VarianteDeBotao
   /** Ocupa a largura do contêiner — útil em tela pequena, onde o alvo cheio erra menos (PR-017). */
   larguraTotal?: boolean
+  /** Restyle: seta desenhada ao fim do rótulo, que anda 3 px na passagem. Decorativa. */
+  comSeta?: boolean
   children: ReactNode
   className?: string
 }
@@ -122,23 +127,56 @@ const IndicadorDeCarregamento = () => (
   </svg>
 )
 
-export const Botao = (props: PropsDoBotao) => {
-  const { variante = 'secundaria', larguraTotal = false, children, className } = props
+/** Restyle — seta só com segmentos retos (11.11). Decorativa (13.4). */
+export const Seta = ({ className }: { className?: string }) => (
+  <svg
+    className={juntarClasses('az-seta h-4 w-4', className)}
+    viewBox="0 0 16 16"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="square"
+    strokeLinejoin="miter"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M2 8h11M9 4l4 4-4 4" />
+  </svg>
+)
 
-  const classes = juntarClasses(
-    BASE,
-    POR_VARIANTE[variante],
-    larguraTotal && 'w-full',
+export const Botao = (props: PropsDoBotao) => {
+  const {
+    variante = 'secundaria',
+    larguraTotal = false,
+    comSeta = false,
+    children,
     className,
+  } = props
+  const conteudo = comSeta ? (
+    <>
+      {children}
+      <Seta />
+    </>
+  ) : (
+    children
   )
+
+  const classes = juntarClasses(BASE, POR_VARIANTE[variante], larguraTotal && 'w-full', className)
 
   // `href` é o discriminante da união: presente ⇒ link, ausente ⇒ botão.
   if (props.href !== undefined) {
-    const { href, variante: _variante, larguraTotal: _larguraTotal, children: _children, className: _className, ...resto } =
-      props
+    const {
+      href,
+      variante: _variante,
+      larguraTotal: _larguraTotal,
+      comSeta: _comSeta,
+      children: _children,
+      className: _className,
+      ...resto
+    } = props
     return (
       <a href={href} className={classes} {...resto}>
-        {children}
+        {conteudo}
       </a>
     )
   }
@@ -146,6 +184,7 @@ export const Botao = (props: PropsDoBotao) => {
   const {
     variante: _v,
     larguraTotal: _l,
+    comSeta: _s,
     children: _c,
     className: _cn,
     href: _h,
@@ -167,7 +206,7 @@ export const Botao = (props: PropsDoBotao) => {
       {...resto}
     >
       {carregando ? <IndicadorDeCarregamento /> : null}
-      {children}
+      {conteudo}
       {carregando && rotuloDeCarregamento ? (
         <span className="az-apenas-leitor-de-tela" role="status">
           {rotuloDeCarregamento}

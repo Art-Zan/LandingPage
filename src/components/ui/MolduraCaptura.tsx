@@ -48,7 +48,9 @@ export const MolduraCaptura = ({ children, legenda, className }: PropsDaMolduraC
   <figure className={juntarClasses('m-0', className)}>
     <div
       className={juntarClasses(
-        'aspect-captura overflow-hidden',
+        // Restyle: `az-moldura-captura` dá à imagem o zoom de 1,03 dentro do
+        // quadro quando o card que a contém recebe o ponteiro (globals.css).
+        'az-moldura-captura aspect-captura overflow-hidden',
         'rounded-bloco border border-borda bg-superficie-elevada',
         // A imagem preenche a moldura sem alterar a proporção do quadro.
         '[&>*]:h-full [&>*]:w-full [&>*]:object-cover',

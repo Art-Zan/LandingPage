@@ -1,0 +1,11 @@
+{
+ "page": null,
+ "url": "http://localhost:3001/",
+ "root": null,
+ "kind": "software",
+ "category": "softwares de gestão e esportivos para clubes, parques e pequenas e médias empresas",
+ "primary": "Falar com a equipe",
+ "rounds": 3,
+ "start": "2026-11-10T20:50:52.052Z",
+ "by": "gate.mjs --start"
+}

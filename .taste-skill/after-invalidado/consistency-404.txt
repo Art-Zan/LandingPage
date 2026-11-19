@@ -1,0 +1,191 @@
+consistency  http://localhost:3001/rota-que-nao-existe
+
+1440x900  1 screens  16 FAIL  4 WARN
+  FAIL assets          (the page)
+       the frame rota-que-nao-existe did not load (404)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/webpack-4abfd6a89dae30f0.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/4bd1b696-cf72ae8a39fa05aa.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/964-9e7fd12428968086.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL assets          (the page)
+       the script _next/static/chunks/main-app-50f326052c390d09.js did not load (400)
+       fix: fix the path, or remove the reference
+  FAIL copy-headline   (the page)
+       the page has no visible h1
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  FAIL copy-fact       (the page)
+       the first screen holds no number, price, date, place, platform or genre
+       fix: put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim
+  FAIL lang            html
+       <html> has no lang: a screen reader guesses the language and hyphenation is off
+       fix: set <html lang> to the language the page is written in, from the brief ("de" for a German page)
+  WARN heading-scale   (the page)
+       the page has no visible h1
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  WARN page-meta       head  "Página não encontrada"
+       no <meta name="description">: a search result and a shared link show a scrap of the page instead
+       fix: write a <title> "Name: what it is for whom or where" and a one-sentence description in other words (starter.html)
+  WARN share-meta      head
+       the head lacks og:description, theme-color: a shared link shows no picture or title of its own
+       fix: copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)
+  FAIL hero-screen     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-1)
+       fix: make the hero exactly one screen (height: 100svh) with its content between the nav and 24px above the fold
+  FAIL section-height  body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-2)
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL section-air     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-3)
+       fix: keep 128-480px of air between sections (--padt, --padb), fill each section to 55% or merge it into the one above, and drop divider rules
+  FAIL one-section     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-4)
+       fix: make each section exactly one or two screens so a screen shows one section; every block of <main> a <section>, no bands inside one
+  FAIL one-heading     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1, so headings sit a screen apart
+  FAIL container-edges body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-6)
+       fix: put everything on one .wrap: the same margin left and right (64-120px, 16-24px on a phone), text on its left line or the one split line
+  FAIL row-lines       body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-7)
+       fix: start a row's first item on the container's left line and end its last on the right line, all one height, nothing scrolling sideways
+  FAIL split-pair      body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-8)
+       fix: top-align every split, text left and visual right, the right column on one shared line, edge to edge on the container
+  WARN effect-kind     (the page)
+       partly measured: the effect files and the WebGL and mount counts (HTTP 404)
+       fix: run the check again on a quieter machine; if it keeps failing, the probe error line says what stopped it
+  (probe error) effect-kind: HTTP 404
+  (probe error) section-tile: no top-level sections (no main > *, no body > section)
+
+1024x768  1 screens  0 FAIL  1 WARN
+  WARN heading-scale   (the page)
+       the page has no visible h1
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+
+768x1024  1 screens  8 FAIL  1 WARN
+  WARN heading-scale   (the page)
+       the page has no visible h1
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  FAIL hero-screen     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-1)
+       fix: make the hero exactly one screen (height: 100svh) with its content between the nav and 24px above the fold
+  FAIL section-height  body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-2)
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL section-air     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-3)
+       fix: keep 128-480px of air between sections (--padt, --padb), fill each section to 55% or merge it into the one above, and drop divider rules
+  FAIL one-section     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-4)
+       fix: make each section exactly one or two screens so a screen shows one section; every block of <main> a <section>, no bands inside one
+  FAIL one-heading     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1, so headings sit a screen apart
+  FAIL container-edges body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-6)
+       fix: put everything on one .wrap: the same margin left and right (64-120px, 16-24px on a phone), text on its left line or the one split line
+  FAIL row-lines       body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-7)
+       fix: start a row's first item on the container's left line and end its last on the right line, all one height, nothing scrolling sideways
+  FAIL split-pair      body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-8)
+       fix: top-align every split, text left and visual right, the right column on one shared line, edge to edge on the container
+
+390x844  1 screens  8 FAIL  1 WARN
+  WARN heading-scale   (the page)
+       the page has no visible h1
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+  FAIL hero-screen     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-1)
+       fix: make the hero exactly one screen (height: 100svh) with its content between the nav and 24px above the fold
+  FAIL section-height  body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-2)
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL section-air     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-3)
+       fix: keep 128-480px of air between sections (--padt, --padb), fill each section to 55% or merge it into the one above, and drop divider rules
+  FAIL one-section     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-4)
+       fix: make each section exactly one or two screens so a screen shows one section; every block of <main> a <section>, no bands inside one
+  FAIL one-heading     body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1, so headings sit a screen apart
+  FAIL container-edges body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-6)
+       fix: put everything on one .wrap: the same margin left and right (64-120px, 16-24px on a phone), text on its left line or the one split line
+  FAIL row-lines       body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-7)
+       fix: start a row's first item on the container's left line and end its last on the right line, all one height, nothing scrolling sideways
+  FAIL split-pair      body
+       no sections found: nothing in <main>, or at the top of the page, to measure (SR-8)
+       fix: top-align every split, text left and visual right, the right column on one shared line, edge to edge on the container
+  (probe error) section-tile: no top-level sections (no main > *, no body > section)
+
+320x640  1 screens  0 FAIL  1 WARN
+  WARN heading-scale   (the page)
+       the page has no visible h1
+       fix: size headings by level: the h1 largest, one size per level, each level below the one above
+
+first screen at 1280, 1152, 896  0 FAIL  0 WARN
+
+the page at 320x640, walked for what runs past the screen's edge  0 FAIL
+
+checks
+  FAIL assets                 PASS shader-lint            PASS gl-fallback            
+  PASS empty-visual           PASS hero-fill              PASS flush                  
+  PASS placeholder            PASS sample-label           PASS caption                
+  PASS credit-wall            PASS nav                    PASS nav-covers             
+  PASS spill                  PASS off-viewport           PASS fold-card              
+  PASS hover-spill            PASS overlap-text           PASS collide                
+  PASS tap-size               PASS row-gap                PASS cut-text               
+  PASS fold-cut               PASS marquee                PASS scroll-linked          
+  PASS scroll-reveal          PASS pinned                 PASS loop-pause             
+  PASS reduced-motion         PASS hidden-content         PASS webgl                  
+  PASS no-visual              PASS text-only              PASS card-visual            
+  PASS hidden-visual          PASS card-family            PASS card-layout            
+  PASS nesting                PASS effect-repeat          PASS ui-fit                 
+  PASS ui-centre              PASS dark-ground            PASS button-styles          
+  PASS button-shape           PASS same-action            PASS button-picture         
+  PASS cta                    PASS pricing-tiers          FAIL copy-headline          
+  FAIL copy-fact              PASS copy-headings          PASS copy-buttons           
+  PASS copy-actions           WARN heading-scale          PASS stagger                
+  PASS top-stagger            PASS off-grid               PASS col-edge               
+  PASS right-edge             PASS centre-axis            PASS tilt                   
+  PASS contrast               PASS text-contrast          PASS body-size              
+  PASS busy-ground            PASS section-gaps           PASS proximity              
+  PASS hole                   PASS links                  PASS forms                  
+  PASS photo-upscale          PASS photo-set              PASS photo-credit           
+  PASS nav-family             PASS nav-labels             PASS link-styles            
+  PASS heading-align          PASS label-centre           PASS fake-button            
+  PASS stranded-action        PASS orphan                 PASS unit-break             
+  PASS tab-wrap               PASS effects-fit            PASS fade-cut               
+  PASS photo-weight           PASS copy-length            PASS nav-current            
+  PASS progress-bar           PASS photo-repeat           PASS button-contrast        
+  PASS photo-print            PASS grounds                PASS split-align            
+  PASS fact-agree             PASS fold-action            PASS action-count           
+  PASS one-screen             PASS hover                  PASS hover-move             
+  PASS product-shown          PASS same-object            PASS font-load              
+  PASS visual-caption         PASS visual-empty           WARN effect-kind            
+  PASS hero-enter             PASS moment-none            PASS street-number          
+  PASS postcode               PASS coordinates            PASS company-number         
+  PASS phone-number           FAIL hero-screen            FAIL section-height         
+  FAIL section-air            FAIL one-section            FAIL one-heading            
+  FAIL container-edges        FAIL row-lines              FAIL split-pair             
+  PASS motion-layer           PASS count-text             PASS loop-cycle             
+  PASS section-tile           PASS empty-area             PASS a11y-name              
+  PASS img-alt                PASS field-label            PASS heading-order          
+  PASS tabindex               PASS focus-ring             PASS focus-visible          
+  PASS focus-hidden           PASS skip-link              PASS menu-toggle            
+  FAIL lang                   WARN page-meta              WARN share-meta             
+  PASS action-repeat          PASS map-link               PASS open-now               
+  PASS assumed                PASS run-on                 PASS form-fields            
+  PASS form-send              
+
+total  32 FAIL  8 WARN  (crops and report.json in C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.taste-skill\after\consistency-404)

@@ -1,0 +1,25 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 1520 tall; h1 40px/1.2, 1 lines, 151x48 at 80,214; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "ArtZanConta y    73  h  1520  content 1279
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "ArtZanContatoPreencha: ends at y 1593, past the fold (900): 1.84 screens tall
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 1634 tall; h1 40px/1.2, 1 lines, 151x48 at 48,214; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "ArtZanConta y    73  h  1634  content 1393
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "ArtZanContatoPreencha: ends at y 1707, past the fold (768): 2.35 screens tall
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 1648 tall; h1 40px/1.2, 1 lines, 151x48 at 48,182; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "ArtZanConta y    73  h  1648  content 1495
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "ArtZanContatoPreencha: ends at y 1721, past the fold (1024): 1.73 screens tall
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 1818 tall; h1 32px/1.2, 1 lines, 121x38 at 24,166; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "ArtZanConta y    57  h  1818  content 1673
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "ArtZanContatoPreencha: ends at y 1875, past the fold (844): 2.31 screens tall
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 1929 tall; h1 32px/1.2, 1 lines, 121x38 at 24,166; lead -; buttons 1 x 44; visual -
+  section section.py-respiro.hero section.py-respiro.hero "ArtZanConta y    57  h  1929  content 1784
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "ArtZanContatoPreencha: ends at y 1986, past the fold (640): 3.31 screens tall

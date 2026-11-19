@@ -1,0 +1,708 @@
+{
+ "page": "http://localhost:3001/sobre",
+ "url": "http://localhost:3001/sobre",
+ "at": "2026-11-10T22:02:17.069Z",
+ "out": "C:\\Users\\user\\OneDrive\\Documents\\ArtZan\\LandingPage\\.taste-skill\\after\\consistency-sobre",
+ "widths": [
+  {
+   "width": 1440,
+   "height": 900,
+   "screens": 2,
+   "held": 0,
+   "errors": [
+    "effect-kind: could not read http://localhost:3001/_next/static/chunks/519-89293711801e90a2.js (HTTP 400)",
+    "effect-kind: could not read http://localhost:3001/_next/static/chunks/app/(site)/layout-a7236e52ed5b46c3.js (HTTP 400)",
+    "section-tile: no top-level sections (no main > *, no body > section)"
+   ],
+   "findings": [
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script _next/static/chunks/app/(site)/layout-a7236e52ed5b46c3.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "assets",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "stop": null,
+     "msg": "the script _next/static/chunks/519-89293711801e90a2.js did not load (400)",
+     "fix": "fix the path, or remove the reference"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 0,
+     "crop": "1440-01-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "copy-headline",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has no visible h1",
+     "stop": null,
+     "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words"
+    },
+    {
+     "check": "copy-fact",
+     "sev": "FAIL",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the first screen holds no number, price, date, place, platform or genre",
+     "stop": null,
+     "fix": "put one hard fact from the brief on the first screen: a number, a price, a date, the place, the platforms it runs on or a game's genre; take it from the brief or remove the claim"
+    },
+    {
+     "check": "lang",
+     "sev": "FAIL",
+     "sel": "html",
+     "text": "",
+     "msg": "<html> has no lang: a screen reader guesses the language and hyphenation is off",
+     "stop": null,
+     "fix": "set <html lang> to the language the page is written in, from the brief (\"de\" for a German page)"
+    },
+    {
+     "check": "page-meta",
+     "sev": "FAIL",
+     "sel": "head > title",
+     "text": "",
+     "msg": "the page has no <title>: the tab, the bookmark and the search result show its address",
+     "stop": null,
+     "fix": "write a <title> \"Name: what it is for whom or where\" and a one-sentence description in other words (starter.html)"
+    },
+    {
+     "check": "copy-headings",
+     "sev": "WARN",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side exception has o",
+     "msg": "\"Application error: a client-side exception has occurred whil\" names no product, part, place or section (the one brand line a page may have)",
+     "stop": 0,
+     "crop": "1440-02-copy-headings.jpg",
+     "fix": "name the thing in every heading: the product, a part, the place or a section noun"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has no visible h1",
+     "stop": null,
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "moment-none",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+     "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+     "stop": null
+    },
+    {
+     "check": "page-meta",
+     "sev": "WARN",
+     "sel": "head",
+     "text": "",
+     "msg": "no <meta name=\"description\">: a search result and a shared link show a scrap of the page instead",
+     "stop": null,
+     "fix": "write a <title> \"Name: what it is for whom or where\" and a one-sentence description in other words (starter.html)"
+    },
+    {
+     "check": "share-meta",
+     "sev": "WARN",
+     "sel": "head",
+     "text": "",
+     "msg": "the head lacks og:title, og:description, og:image, twitter:card, an icon, theme-color: a shared link shows no picture or title of its own",
+     "stop": null,
+     "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the hero ends at 908px on a 900px screen, 8px below the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "1440-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "WARN",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the section starts at 8px, 8px below the screen grid (0 x 900px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "1440-rhythm-09-section-height.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "1440-rhythm-02-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the content of section 1 runs 324px from the left and 324px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+     "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+     "rule": "SR-6 T1-margins",
+     "crop": "1440-rhythm-03-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "1440-rhythm-04-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "1440-rhythm-05-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "1 text block starts on a left line at x 332, 8px from the container's left: text starts on the container's left, or on one split line (x 664, 732, 800) (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "1440-rhythm-06-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "the h2 starts 8px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "1440-rhythm-07-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "\"Application error: a client-side\" is set centred across 776px, over half the 792px container: text that wide is set left (SR-6)",
+     "fix": "set the text left (text-align: start)",
+     "rule": "SR-6 T4-alignment",
+     "crop": "1440-rhythm-08-container-edges.jpg"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "screens": 2,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 0,
+     "crop": "1024-01-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has no visible h1",
+     "stop": null,
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "screens": 2,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "no-visual",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side exception has o",
+     "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+     "stop": 0,
+     "crop": "768-01-no-visual.jpg",
+     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 0,
+     "crop": "768-02-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has no visible h1",
+     "stop": null,
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the hero ends at 1032px on a 1024px screen, 8px below the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "768-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "WARN",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the section starts at 8px, 8px below the screen grid (0 x 1024px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "768-rhythm-08-section-height.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "768-rhythm-02-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "768-rhythm-03-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "768-rhythm-04-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "1 text block starts on a left line at x 38, 38px from the container's left: text starts on the container's left, or on one split line (x 330, 396, 462) (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "768-rhythm-05-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "the h2 starts 38px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "768-rhythm-06-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "\"Application error: a client-side\" is set centred across 736px, over half the 768px container: text that wide is set left (SR-6)",
+     "fix": "set the text left (text-align: start)",
+     "rule": "SR-6 T4-alignment",
+     "crop": "768-rhythm-07-container-edges.jpg"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "screens": 2,
+   "held": 0,
+   "errors": [
+    "section-tile: no top-level sections (no main > *, no body > section)"
+   ],
+   "findings": [
+    {
+     "check": "no-visual",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side exception has o",
+     "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+     "stop": 0,
+     "crop": "390-01-no-visual.jpg",
+     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 0,
+     "crop": "390-02-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has no visible h1",
+     "stop": null,
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    },
+    {
+     "check": "hero-screen",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the hero ends at 852px on a 844px screen, 8px below the fold: it ends at the fold, 1px either way (SR-1)",
+     "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+     "rule": "SR-1 T1",
+     "crop": "390-rhythm-01-hero-screen.jpg"
+    },
+    {
+     "check": "section-height",
+     "sev": "WARN",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the section starts at 8px, 8px below the screen grid (0 x 844px): sections start on whole screens (SR-2)",
+     "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+     "rule": "SR-2 T-grid",
+     "crop": "390-rhythm-08-section-height.jpg"
+    },
+    {
+     "check": "one-heading",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "the hero holds an h2 (1): its heading is the h1, and an h2 opens the next section (SR-5)",
+     "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+     "rule": "SR-5 T1",
+     "crop": "390-rhythm-02-one-heading.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "a <div> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "390-rhythm-03-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side excepti",
+     "msg": "the section needs exactly one in-flow child .wrap (it has 1 in-flow child, 0 .wrap) (SR-6)",
+     "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+     "rule": "SR-6 T1-structure",
+     "crop": "390-rhythm-04-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "1 text block starts on a left line at x 29, 13px from the container's left: text starts on the container's left, or on one split line (x 175, 207, 239) (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "390-rhythm-05-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "the h2 starts 13px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+     "fix": "start the text on the container's left, or on the one split line every split shares",
+     "rule": "SR-6 T3-left-lines",
+     "crop": "390-rhythm-06-container-edges.jpg"
+    },
+    {
+     "check": "container-edges",
+     "sev": "FAIL",
+     "sel": "div > div > h2",
+     "text": "Application error: a client-side excepti",
+     "msg": "\"Application error: a client-side\" is set centred across 358px, over half the 358px container: text that wide is set left (SR-6)",
+     "fix": "set the text left (text-align: start)",
+     "rule": "SR-6 T4-alignment",
+     "crop": "390-rhythm-07-container-edges.jpg"
+    }
+   ],
+   "glAsked": 0
+  },
+  {
+   "width": 320,
+   "height": 640,
+   "screens": 2,
+   "held": 0,
+   "errors": [],
+   "findings": [
+    {
+     "check": "no-visual",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "Application error: a client-side exception has o",
+     "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+     "stop": 0,
+     "crop": "320-01-no-visual.jpg",
+     "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits"
+    },
+    {
+     "check": "cta",
+     "sev": "FAIL",
+     "sel": "div",
+     "text": "",
+     "msg": "the hero has no button (the nav's does not count)",
+     "stop": 0,
+     "crop": "320-02-cta.jpg",
+     "fix": "add the action: a button in the hero, one on every priced item, one in the closing section"
+    },
+    {
+     "check": "heading-scale",
+     "sev": "WARN",
+     "sel": "(the page)",
+     "text": "",
+     "msg": "the page has no visible h1",
+     "stop": null,
+     "fix": "size headings by level: the h1 largest, one size per level, each level below the one above"
+    }
+   ],
+   "glAsked": 0
+  }
+ ],
+ "shaders": 0,
+ "reduced": {
+  "screens": 2,
+  "notRead": 0
+ },
+ "hidden": {
+  "screens": 5
+ },
+ "slow": {
+  "stops": 2,
+  "late": 0
+ },
+ "sweep": {
+  "widths": [
+   1280,
+   1152,
+   896
+  ],
+  "errors": [],
+  "findings": []
+ },
+ "narrow": {
+  "width": 320,
+  "height": 640,
+  "errors": [],
+  "findings": []
+ },
+ "counts": {
+  "FAIL": 36,
+  "WARN": 12
+ },
+ "checks": {
+  "assets": "FAIL",
+  "shader-lint": "PASS",
+  "gl-fallback": "PASS",
+  "empty-visual": "PASS",
+  "hero-fill": "PASS",
+  "flush": "PASS",
+  "placeholder": "PASS",
+  "sample-label": "PASS",
+  "caption": "PASS",
+  "credit-wall": "PASS",
+  "nav": "PASS",
+  "nav-covers": "PASS",
+  "spill": "PASS",
+  "off-viewport": "PASS",
+  "fold-card": "PASS",
+  "hover-spill": "PASS",
+  "overlap-text": "PASS",
+  "collide": "PASS",
+  "tap-size": "PASS",
+  "row-gap": "PASS",
+  "cut-text": "PASS",
+  "fold-cut": "PASS",
+  "marquee": "PASS",
+  "scroll-linked": "PASS",
+  "scroll-reveal": "PASS",
+  "pinned": "PASS",
+  "loop-pause": "PASS",
+  "reduced-motion": "PASS",
+  "hidden-content": "PASS",
+  "webgl": "PASS",
+  "no-visual": "FAIL",
+  "text-only": "PASS",
+  "card-visual": "PASS",
+  "hidden-visual": "PASS",
+  "card-family": "PASS",
+  "card-layout": "PASS",
+  "nesting": "PASS",
+  "effect-repeat": "PASS",
+  "ui-fit": "PASS",
+  "ui-centre": "PASS",
+  "dark-ground": "PASS",
+  "button-styles": "PASS",
+  "button-shape": "PASS",
+  "same-action": "PASS",
+  "button-picture": "PASS",
+  "cta": "FAIL",
+  "pricing-tiers": "PASS",
+  "copy-headline": "FAIL",
+  "copy-fact": "FAIL",
+  "copy-headings": "WARN",
+  "copy-buttons": "PASS",
+  "copy-actions": "PASS",
+  "heading-scale": "WARN",
+  "stagger": "PASS",
+  "top-stagger": "PASS",
+  "off-grid": "PASS",
+  "col-edge": "PASS",
+  "right-edge": "PASS",
+  "centre-axis": "PASS",
+  "tilt": "PASS",
+  "contrast": "PASS",
+  "text-contrast": "PASS",
+  "body-size": "PASS",
+  "busy-ground": "PASS",
+  "section-gaps": "PASS",
+  "proximity": "PASS",
+  "hole": "PASS",
+  "links": "PASS",
+  "forms": "PASS",
+  "photo-upscale": "PASS",
+  "photo-set": "PASS",
+  "photo-credit": "PASS",
+  "nav-family": "PASS",
+  "nav-labels": "PASS",
+  "link-styles": "PASS",
+  "heading-align": "PASS",
+  "label-centre": "PASS",
+  "fake-button": "PASS",
+  "stranded-action": "PASS",
+  "orphan": "PASS",
+  "unit-break": "PASS",
+  "tab-wrap": "PASS",
+  "effects-fit": "PASS",
+  "fade-cut": "PASS",
+  "photo-weight": "PASS",
+  "copy-length": "PASS",
+  "nav-current": "PASS",
+  "progress-bar": "PASS",
+  "photo-repeat": "PASS",
+  "button-contrast": "PASS",
+  "photo-print": "PASS",
+  "grounds": "PASS",
+  "split-align": "PASS",
+  "fact-agree": "PASS",
+  "fold-action": "PASS",
+  "action-count": "PASS",
+  "one-screen": "PASS",
+  "hover": "PASS",
+  "hover-move": "PASS",
+  "product-shown": "PASS",
+  "same-object": "PASS",
+  "font-load": "PASS",
+  "visual-caption": "PASS",
+  "visual-empty": "PASS",
+  "effect-kind": "PASS",
+  "hero-enter": "PASS",
+  "moment-none": "WARN",
+  "street-number": "PASS",
+  "postcode": "PASS",
+  "coordinates": "PASS",
+  "company-number": "PASS",
+  "phone-number": "PASS",
+  "hero-screen": "FAIL",
+  "section-height": "WARN",
+  "section-air": "PASS",
+  "one-section": "PASS",
+  "one-heading": "FAIL",
+  "container-edges": "FAIL",
+  "row-lines": "PASS",
+  "split-pair": "PASS",
+  "motion-layer": "PASS",
+  "count-text": "PASS",
+  "loop-cycle": "PASS",
+  "section-tile": "PASS",
+  "empty-area": "PASS",
+  "a11y-name": "PASS",
+  "img-alt": "PASS",
+  "field-label": "PASS",
+  "heading-order": "PASS",
+  "tabindex": "PASS",
+  "focus-ring": "PASS",
+  "focus-visible": "PASS",
+  "focus-hidden": "PASS",
+  "skip-link": "PASS",
+  "menu-toggle": "PASS",
+  "lang": "FAIL",
+  "page-meta": "FAIL",
+  "share-meta": "WARN",
+  "action-repeat": "PASS",
+  "map-link": "PASS",
+  "open-now": "PASS",
+  "assumed": "PASS",
+  "run-on": "PASS",
+  "form-fields": "PASS",
+  "form-send": "PASS"
+ }
+}

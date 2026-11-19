@@ -15,7 +15,14 @@
 
 import type { Metadata } from 'next'
 
-import { Container, Secao, Texto, Titulo, MarcaDePlaceholder } from '@/components/ui'
+import {
+  Container,
+  Secao,
+  Texto,
+  TextoDeEntrada,
+  Titulo,
+  MarcaDePlaceholder,
+} from '@/components/ui'
 import { CorpoDaPaginaInstitucional } from '@/lib/renderizador-de-paginas-institucionais'
 import { ROTAS } from '@/lib/rotas'
 import { NOME_DA_MARCA } from '@/lib/rotulos'
@@ -26,7 +33,7 @@ export const dynamic = 'force-dynamic'
 const SLUG_DA_PAGINA_DE_TERMOS = 'termos'
 
 export const metadata: Metadata = {
-  title: `Termos de uso — ${NOME_DA_MARCA}`,
+  title: `Termos de uso | ${NOME_DA_MARCA}`, // 12.2: [Nome do documento] | ArtZan
   description: 'Condições de uso do site institucional da ArtZan.',
   alternates: { canonical: ROTAS.termos() },
 }
@@ -43,10 +50,12 @@ export default async function PaginaDeTermos() {
   }
 
   return (
-    <Container>
-      <Secao rotuladaPor="titulo-termos">
-        <Titulo nivel={1} id="titulo-termos">
-          Termos de uso
+    // Restyle: primeira dobra com entrada única; a coluna de leitura fica
+    // na medida de 68 caracteres (13.8).
+    <Secao rotuladaPor="titulo-termos" primeiraDobra>
+      <Container className="flex max-w-none flex-col items-start gap-6">
+        <Titulo nivel={1} id="titulo-termos" className="max-w-titulo">
+          <TextoDeEntrada>Termos de uso</TextoDeEntrada>
         </Titulo>
 
         {pagina === undefined ? (
@@ -70,11 +79,13 @@ export default async function PaginaDeTermos() {
                 detalhe="D-16 — texto ainda não validado juridicamente."
               />
             ) : null}
-            <CorpoDaPaginaInstitucional corpo={pagina.corpo} />
+            <div className="max-w-texto pt-4">
+              <CorpoDaPaginaInstitucional corpo={pagina.corpo} />
+            </div>
           </>
         )}
-      </Secao>
-    </Container>
+      </Container>
+    </Secao>
   )
 }
 

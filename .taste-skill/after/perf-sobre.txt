@@ -1,0 +1,52 @@
+
+perf /localhost:3001/sobre @ 1440px
+  PASS  host CPU load (before/after)               21/13 %        
+  PASS  total transfer                             443.7 KiB      html 37.9K  css 7.3K  js 316.9K  font 70.3K  other 11.3K
+  PASS  requests                                   18             15 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  560.1 KiB      7 files, 316.9K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        296 ms         
+  PASS  LCP (CPU, relative)                        296 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                2.1 screens    DOM 156 nodes
+
+perf /localhost:3001/sobre @ 390px
+  PASS  host CPU load (before/after)               21/13 %        
+  PASS  total transfer                             442.6 KiB      html 37.9K  css 7.3K  js 316.9K  font 70.3K  other 10.2K
+  PASS  requests                                   17             14 by load
+  PASS  images bytes                               0 KiB          0 files
+  WARN  JS parsed                                  560.1 KiB      7 files, 316.9K gz
+  PASS  CSS                                        7.3 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        84 ms          
+  PASS  LCP (CPU, relative)                        84 ms          p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  PASS  page height                                2.9 screens    DOM 156 nodes
+
+SUMMARY /localhost:3001/sobre: 2 FAIL, 2 WARN  -> FAIL

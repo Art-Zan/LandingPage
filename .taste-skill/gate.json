@@ -1,0 +1,1041 @@
+{
+ "start": "2026-11-10T20:50:52.052Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-10T21:46:01.447Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 32,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-10T21:49:54.508Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 22,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-11T00:02:57.281Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 20,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": null,
+  "url": "http://localhost:3001/",
+  "root": null,
+  "kind": "software",
+  "category": "softwares de gestão e esportivos para clubes, parques e pequenas e médias empresas",
+  "primary": "Falar com a equipe",
+  "rounds": 3,
+  "start": "2026-11-10T20:50:52.052Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "300421426d06b017:327cae35",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "300421426d06b017",
+ "page": "http://localhost:3001/",
+ "found": {
+  "fails": [
+   {
+    "check": "placeholder",
+    "where": "div.az-moldura.wrap > div.flex.flex-col:nth-of-type(2) > div > p.leading-corpo.text-corpo:nth-of-type(1) \"Este bloco de apresentação institucional\"",
+    "msg": "\"placeholder\" is a placeholder left on the page",
+    "fix": "write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "placeholder"
+    ],
+    "wheres": [
+     "div.az-moldura.wrap > div.flex.flex-col:nth-of-type(2) > div > p.leading-corpo.text-corpo:nth-of-type(1) \"Este bloco de apresentação institucional\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#apresentacao-da-empresa \"Sobre a empresa (texto provisório)\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#apresentacao-da-empresa \"Sobre a empresa (texto provisório)\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#beneficios \"Benefícios do modelo de portfólio (texto\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#beneficios \"Benefícios do modelo de portfólio (texto\""
+    ]
+   },
+   {
+    "check": "copy-headline",
+    "where": "h1#titulo-proposta-de-valor \"Conteúdo provisório — frase de posiciona\"",
+    "msg": "\"Conteúdo provisório — frase de posicionamento real ainda não\" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags); only the line under it does",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headline"
+    ],
+    "wheres": [
+     "h1#titulo-proposta-de-valor \"Conteúdo provisório — frase de posiciona\""
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\"",
+    "msg": "\"Benefícios do modelo de portfólio (texto provisório)\" names no product, part, place or section (2 headings like it; at most one brand line per page) (and 1 more like it: \"Próximo passo\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\""
+    ]
+   },
+   {
+    "check": "effect-kind",
+    "where": "section#chamada-final",
+    "msg": "1 [data-moment] mark that never runs: line-carries-colour on section#chamada-final (assets/moments/line-carries-colour/moment.js was never loaded); a moment is judged as one only when it runs",
+    "fix": "load assets/moments/moments.js (system.js does it for a page with [data-moment]) and keep the dealt id, or take the data-moment mark off the section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "effect-kind"
+    ],
+    "wheres": [
+     "section#chamada-final"
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#chamada-final \"Próximo passoFalar com a equipeVer softw\"",
+    "msg": "the scene's section is 237px tall (0.3 screens), 663px short of one screen (900px): every section after the hero is one screen or two, 2px either way; a pinned scene is (hold + 1) screens tall, so write data-big-scene-opts='{\"hold\": 1}' (two screens) and keep --h on the section (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#chamada-final \"Próximo passoFalar com a equipeVer softw\"",
+     "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+    "msg": "the section is 412px tall (0.5 screens), 488px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+     "#apresentacao-da-empresa section.py-respiro.bg-superficie-elevada \"ArtZanSobre a empresa (texto pro\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#beneficios \"Benefícios do modelo de portfólio (texto\"",
+    "msg": "the section is 449px tall (0.5 screens), 451px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 1 more like it: \"ARTZANEmpresaArtZanDado \") (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#beneficios \"Benefícios do modelo de portfólio (texto\"",
+     "#beneficios section.py-respiro.bg-superficie \"Benefícios do modelo de portfóli\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "footer.closing.az-faixa-escura \"ARTZANEmpresaArtZanDado pendenteRazão so\"",
+    "msg": "the section starts at 1999px, 199px below the screen grid (2 x 900px): sections start on whole screens (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "footer.closing.az-faixa-escura \"ARTZANEmpresaArtZanDado pendenteRazão so\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\"",
+    "msg": "the section starts at 73px, 73px below the screen grid (0 x 900px): sections start on whole screens (and 1 more like it: \"Próximo passoFalar com a\") (SR-2)",
+    "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "h2#titulo-apresentacao-da-empresa \"Sobre a empresa (texto provisório)\"",
+    "msg": "the screen at scroll 900px (stride 1) shows 340px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "h2#titulo-apresentacao-da-empresa \"Sobre a empresa (texto provisório)\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+    "msg": "the screen at scroll 73px (the top of section 1) shows 72px of section 2 beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (and 3 more like it: scroll 1313px, scroll 1800px, scroll 1857px) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section",
+     "neighbour"
+    ],
+    "wheres": [
+     "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+     "#apresentacao-da-empresa section.py-respiro.bg-superficie-elevada \"ArtZanSobre a empresa (texto pro\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\"",
+    "msg": "the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)",
+    "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\"",
+    "msg": "headings of two sections show whole on one screen at 23 of 38 scroll positions (60.5%; at scroll 600, 650, 700, 750px), here with \"Sobre a empresa (texto provisóri\": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "section#chamada-final > div.az-momento-linha__palco.pointer-events-none",
+    "msg": "a child of section 4 beside its .wrap is no valid background layer: not img, picture, video or canvas; does not span the screen from 0 to 1440px; z-index 20, not 0; covers 86% of the section height, needs 90% (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "section#chamada-final > div.az-momento-linha__palco.pointer-events-none"
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo \"Institucional e legal\"",
+    "msg": "the h2 starts 978px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo \"Institucional e legal\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.text-apoio.font-rotulo \"Contato\"",
+    "msg": "the h2 starts 652px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.text-apoio.font-rotulo \"Contato\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\"",
+    "msg": "the h2 starts 326px right of the container's left: every h1 and h2 starts on it, 2px either way (and 1 more like it: x 100) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\""
+    ]
+   },
+   {
+    "check": "no-visual",
+    "where": "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\""
+    ]
+   },
+   {
+    "check": "text-only",
+    "where": "section#chamada-final \"Próximo passo\"",
+    "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-only"
+    ],
+    "wheres": [
+     "section#chamada-final \"Próximo passo\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#beneficios section.py-respiro.bg-superficie \"Benefícios do modelo de portfóli\"",
+    "msg": "framed, 44px of #chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#beneficios section.py-respiro.bg-superficie \"Benefícios do modelo de portfóli\""
+    ]
+   },
+   {
+    "check": "sparse",
+    "where": "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\"",
+    "msg": "its content fills 19% of its screen; merge it or give it its visual (0.55 is the aim)",
+    "fix": "fill the section or make it a screen shorter",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "sparse"
+    ],
+    "wheres": [
+     "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\"",
+    "msg": "framed, 590px of the footer shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "copy-headline",
+    "where": "h1#titulo-proposta-de-valor \"Conteúdo provisório — frase de posiciona\"",
+    "msg": "the h1 has 9 words (2 to 8 read at a glance)",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "header.nav.sticky > div.az-moldura.wrap > div.flex.items-center > a.az-botao.btn \"Contato\"",
+    "msg": "\"Contato\" does not start with a verb (book, buy, try, start, get, see...) (and 1 more like it: \"Falar com a equipe\")",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "header.nav.sticky > div.az-moldura.wrap > div.flex.items-center > a.az-botao.btn \"Contato\"",
+    "msg": "2 labels for one target /contato: \"Contato\", \"Falar com a equipe\"",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#proposta-de-valor / section#apresentacao-da-empresa",
+    "msg": "273px between these sections, +42% against the median 193px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-credit",
+    "where": "(the page text)",
+    "msg": "1 library source (placehold): the page credits placehold; confirm each shows the client's own product, place or people",
+    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "stranded-action",
+    "where": "div.az-moldura.wrap > div.flex.flex-col > div.flex.w-full > a.az-botao.btn:nth-of-type(1) \"Falar com a equipe\"",
+    "msg": "stands 700px across from the nearest text of its block (\"Próximo passo\") (inside a held section or scroll scene, whose motion --quick does not check) (and 1 more like it: \"Ver softwares\")",
+    "fix": "put the button under or beside the text it belongs to",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "one-screen",
+    "where": "section#apresentacao-da-empresa \"Sobre a empresa (texto provisório)\"",
+    "msg": "2 sections are shorter than the screen, so the next one's heading or picture shows with them: \"Sobre a empresa (texto provisório)\" is 412px of the 827px under the nav, and \"Benefícios do modelo de portfó\" shows below it (\"Benefícios do modelo\")",
+    "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "empty-area",
+    "where": "footer.closing.az-faixa-escura \"EMPRESA\"",
+    "msg": "39% of the section is empty: 40% beside content that covers under half the container, in its 614px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "header.nav.sticky > a.az-pular-para-conteudo \"Pular para o conteúdo\"",
+    "msg": "the first Tab stop is \"Pular para o conteúdo\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "page-meta",
+    "where": "head \"Início\"",
+    "msg": "no <meta name=\"description\">: a search result and a shared link show a scrap of the page instead",
+    "fix": "write a <title> \"Name: what it is for whom or where\" and a one-sentence description in other words (starter.html)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks og:description, og:image, theme-color: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+    "msg": "the content fills 52.9% of the section's height (218 of 412px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "container-edges",
+    "where": "section#chamada-final > div.az-momento-linha__palco.pointer-events-none > div.az-momento-linha__capa.absolute",
+    "msg": "a box runs 16-1424px, outside the container lines of section 4 at 80-1360px: full width is for background layers and grounds only (it is in a scroll scene: told as a WARN) (SR-6)",
+    "fix": "keep it inside the container lines (.wrap): full width is for background layers and grounds only",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.flex.flex-col > ol.grid.grid-cols-1 > li.flex.flex-col:nth-of-type(1) > h3.font-titulo.leading-titulo \"Benefício 1 (a definir)\"",
+    "msg": "the h3s (20px) are only 1.20x smaller than the h2s (24px): one level a clear step (1.3x or more) below the other",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fold-cut",
+    "where": "div.az-moldura.wrap > div.hero-text.grid > div.flex.flex-col > p.leading-corpo.text-lead \"Este texto existe só para a página inici\"",
+    "msg": "a line of the hero text is sliced by the bottom of the first screen",
+    "fix": "size the hero so the heading ends above the fold, or starts below it",
+    "widths": [
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-em-dash",
+    "msg": "5 em dashes in the body (budget 2)",
+    "fix": "use a comma, a colon, parentheses or a full stop where each is natural (references/copy-tells.md)",
+    "widths": [],
+    "from": "copy",
+    "where": "(the copy)",
+    "exact": false
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 80,
+   "layout": 13
+  }
+ },
+ "open": [
+  {
+   "check": "no-visual",
+   "where": "section#apresentacao-da-empresa \"Sobre a empresa (texto provisório)\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#apresentacao-da-empresa \"Sobre a empresa (texto provisório)\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#beneficios \"Benefícios do modelo de portfólio (texto\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#beneficios \"Benefícios do modelo de portfólio (texto\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#chamada-final \"Próximo passoFalar com a equipeVer softw\"",
+   "msg": "the scene's section is 237px tall (0.3 screens), 663px short of one screen (900px): every section after the hero is one screen or two, 2px either way; a pinned scene is (hold + 1) screens tall, so write data-big-scene-opts='{\"hold\": 1}' (two screens) and keep --h on the section (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#chamada-final \"Próximo passoFalar com a equipeVer softw\"",
+    "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+   "msg": "the section is 412px tall (0.5 screens), 488px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+    "#apresentacao-da-empresa section.py-respiro.bg-superficie-elevada \"ArtZanSobre a empresa (texto pro\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#beneficios \"Benefícios do modelo de portfólio (texto\"",
+   "msg": "the section is 449px tall (0.5 screens), 451px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 1 more like it: \"ARTZANEmpresaArtZanDado \") (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#beneficios \"Benefícios do modelo de portfólio (texto\"",
+    "#beneficios section.py-respiro.bg-superficie \"Benefícios do modelo de portfóli\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "footer.closing.az-faixa-escura \"ARTZANEmpresaArtZanDado pendenteRazão so\"",
+   "msg": "the section starts at 1999px, 199px below the screen grid (2 x 900px): sections start on whole screens (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "footer.closing.az-faixa-escura \"ARTZANEmpresaArtZanDado pendenteRazão so\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\"",
+   "msg": "the section starts at 73px, 73px below the screen grid (0 x 900px): sections start on whole screens (and 1 more like it: \"Próximo passoFalar com a\") (SR-2)",
+   "fix": "make every section above it exactly one or two screens tall, so this one starts on a whole screen",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "h2#titulo-apresentacao-da-empresa \"Sobre a empresa (texto provisório)\"",
+   "msg": "the screen at scroll 900px (stride 1) shows 340px of section 2 and the heading of section 2 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "h2#titulo-apresentacao-da-empresa \"Sobre a empresa (texto provisório)\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+   "msg": "the screen at scroll 73px (the top of section 1) shows 72px of section 2 beside section 1: a screen shows one section (another may peek 8px, 24px WARN) (and 3 more like it: scroll 1313px, scroll 1800px, scroll 1857px) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section",
+    "neighbour"
+   ],
+   "wheres": [
+    "section#apresentacao-da-empresa \"ArtZanSobre a empresa (texto provisório)\"",
+    "#apresentacao-da-empresa section.py-respiro.bg-superficie-elevada \"ArtZanSobre a empresa (texto pro\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\"",
+   "msg": "the section holds 4 h2 headings: one per section, first in its .wrap (SR-5)",
+   "fix": "give each section one h2, first in its .wrap, and the hero only its h1",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\"",
+   "msg": "headings of two sections show whole on one screen at 23 of 38 scroll positions (60.5%; at scroll 600, 650, 700, 750px), here with \"Sobre a empresa (texto provisóri\": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "section#chamada-final > div.az-momento-linha__palco.pointer-events-none",
+   "msg": "a child of section 4 beside its .wrap is no valid background layer: not img, picture, video or canvas; does not span the screen from 0 to 1440px; z-index 20, not 0; covers 86% of the section height, needs 90% (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "section#chamada-final > div.az-momento-linha__palco.pointer-events-none"
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo \"Institucional e legal\"",
+   "msg": "the h2 starts 978px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(3) > h2.text-apoio.font-rotulo \"Institucional e legal\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.text-apoio.font-rotulo \"Contato\"",
+   "msg": "the h2 starts 652px right of the container's left: every h1 and h2 starts on it, 2px either way (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(2) > h2.text-apoio.font-rotulo \"Contato\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\"",
+   "msg": "the h2 starts 326px right of the container's left: every h1 and h2 starts on it, 2px either way (and 1 more like it: x 100) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.grid.gap-10 > nav.contents > div.flex.flex-col:nth-of-type(1) > h2.text-apoio.font-rotulo \"Portfólio\""
+   ]
+  },
+  {
+   "check": "no-visual",
+   "where": "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#proposta-de-valor \"Conteúdo provisório — frase de posiciona\""
+   ]
+  },
+  {
+   "check": "text-only",
+   "where": "section#chamada-final \"Próximo passo\"",
+   "msg": "the closing section is only text: no picture, icon, mock or effect in it",
+   "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-only"
+   ],
+   "wheres": [
+    "section#chamada-final \"Próximo passo\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#beneficios section.py-respiro.bg-superficie \"Benefícios do modelo de portfóli\"",
+   "msg": "framed, 44px of #chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#beneficios section.py-respiro.bg-superficie \"Benefícios do modelo de portfóli\""
+   ]
+  },
+  {
+   "check": "sparse",
+   "where": "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\"",
+   "msg": "its content fills 19% of its screen; merge it or give it its visual (0.55 is the aim)",
+   "fix": "fill the section or make it a screen shorter",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "sparse"
+   ],
+   "wheres": [
+    "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\"",
+   "msg": "framed, 590px of the footer shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#chamada-final section.az-momento-linha.az-faixa-escura \"Próximo passoFalar com a equipeV\""
+   ]
+  }
+ ],
+ "waived": [
+  {
+   "check": "placeholder",
+   "where": "div.az-moldura.wrap > div.flex.flex-col:nth-of-type(2) > div > p.leading-corpo.text-corpo:nth-of-type(1) \"Este bloco de apresentação institucional\"",
+   "msg": "\"placeholder\" is a placeholder left on the page",
+   "fix": "write the real words: take the name or figure from the brief, or remove the claim; no bracketed placeholder ships",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "placeholder"
+   ],
+   "wheres": [
+    "div.az-moldura.wrap > div.flex.flex-col:nth-of-type(2) > div > p.leading-corpo.text-corpo:nth-of-type(1) \"Este bloco de apresentação institucional\""
+   ],
+   "reason": "Texto provisório do seed (content/_PLACEHOLDER), marcado de propósito em homologação por exigência do PRD 7.3 / dev/CONVENCOES.md §7; o restyle não pode reescrever conteúdo nem inventar a frase real (RF-020 depende do cliente)."
+  },
+  {
+   "check": "copy-headline",
+   "where": "h1#titulo-proposta-de-valor \"Conteúdo provisório — frase de posiciona\"",
+   "msg": "\"Conteúdo provisório — frase de posicionamento real ainda não\" does not name what is sold (softwares de gestao e esportivos para clubes, parques e pequenas e medias empresas, softwares, gestao, from flags); only the line under it does",
+   "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headline"
+   ],
+   "wheres": [
+    "h1#titulo-proposta-de-valor \"Conteúdo provisório — frase de posiciona\""
+   ],
+   "reason": "O H1 é o registro provisório do Payload ('Conteúdo provisório — frase de posicionamento real ainda não redigida'); a frase real é insumo do cliente (RF-020, 16.6). Inventar categoria e comprador no H1 violaria dev/CONVENCOES.md §8.1."
+  },
+  {
+   "check": "copy-headings",
+   "where": "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\"",
+   "msg": "\"Benefícios do modelo de portfólio (texto provisório)\" names no product, part, place or section (2 headings like it; at most one brand line per page) (and 1 more like it: \"Próximo passo\")",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "h2#titulo-beneficios \"Benefícios do modelo de portfólio (texto\""
+   ],
+   "reason": "Título vindo do bloco de lista provisório do seed (5.4, redação pendente do cliente); conteúdo de cadastro, fora do território de apresentação."
+  },
+  {
+   "check": "effect-kind",
+   "where": "section#chamada-final",
+   "msg": "1 [data-moment] mark that never runs: line-carries-colour on section#chamada-final (assets/moments/line-carries-colour/moment.js was never loaded); a moment is judged as one only when it runs",
+   "fix": "load assets/moments/moments.js (system.js does it for a page with [data-moment]) and keep the dealt id, or take the data-moment mark off the section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "effect-kind"
+   ],
+   "wheres": [
+    "section#chamada-final"
+   ],
+   "reason": "O momento line-carries-colour foi portado para React/tokens em SecaoComLinhaDeTransicao.tsx porque a ordem do maestro proíbe carregar system.css/moments.js do kit no projeto; o checador só reconhece o moment.js do kit, então acusa 'nunca carregado' embora o momento rode (data-moment-mounted)."
+  }
+ ],
+ "warnCount": 16,
+ "at": "2026-11-11T00:02:57.282Z",
+ "openTold": true
+}

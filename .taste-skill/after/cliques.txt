@@ -1,0 +1,26 @@
+OK   links (status HTTP de todos os destinos) — 136 links, 12 destinos únicos, 0 com erro
+OK   cabeçalho: header nav a[href="/produtos"] — chegou em /produtos
+OK   cabeçalho: header nav a[href="/sobre"] — chegou em /sobre
+OK   cabeçalho: header a[href="/contato"] — chegou em /contato
+OK   cabeçalho: header a[href="/"] — chegou em /
+OK   rodapé: /produtos — chegou em /produtos
+OK   rodapé: /contato — chegou em /contato
+OK   rodapé: /sobre — chegou em /sobre
+OK   rodapé: /privacidade — chegou em /privacidade
+OK   rodapé: /termos — chegou em /termos
+OK   cartão: /produtos/scout-esportivo — chegou em /produtos/scout-esportivo
+OK   cartão: /produtos/placar-esportivo — chegou em /produtos/placar-esportivo
+OK   cartão: /produtos/sistema-lara — chegou em /produtos/sistema-lara
+OK   cartão: /produtos/alocacao-de-quadras — chegou em /produtos/alocacao-de-quadras
+OK   trilha: nav[aria-label="Trilha"] a[href="/"] — chegou em /
+OK   trilha: nav[aria-label="Trilha"] a[href="/produtos"] — chegou em /produtos
+OK   tema: escuro — data-tema=escuro
+OK   tema: claro — data-tema=claro
+OK   tema: sistema — data-tema=null
+OK   menu móvel: abre — aria-expanded=true, altura do painel 788 px, foco em "Softwares"
+OK   menu móvel: Esc fecha e devolve o foco — {"exp":"false","visivel":false,"focoNoBotao":true}
+OK   menu móvel: link navega — chegou em /sobre
+OK   menu móvel: botão fecha — hidden=true
+OK   formulário: erros por campo no envio vazio — resumo="Faltam 5 informações para enviar. Os campos com problema estão indicados abaixo.", inválidos=nome,email,assunto,mensagem,consentimentoDeTratamento, foco em nome
+OK   formulário: falha de envio preserva os dados (RNF-092) — {"caminho":"/contato","nome":"Teste de restyle","email":"teste.restyle@exemplo.dev","msg":"Mensagem de teste au","alerta":"Não foi possível enviar agora: a conexão falhou. Seus dados continuam preenchidos. Tente novamente em alguns instantes, ou fale com a gente pelo WhatsApp ou por e-mail."}
+FALHA formulário: envio válido chega a /obrigado — chegou em /contato — alerta: Tivemos um problema ao registrar sua solicitação. Nada do que você escreveu foi perdido. Tente enviar novamente, ou fale com a gente pelo WhatsApp ou por e-mail.

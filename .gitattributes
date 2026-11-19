@@ -1,0 +1,6 @@
+# Arquivos executados dentro de Linux precisam de LF, mesmo com checkout Windows.
+*.sh text eol=lf
+deploy/caddy/Caddyfile text eol=lf
+deploy/caddy/sites/* text eol=lf
+deploy/.env.production.example text eol=lf
+Dockerfile text eol=lf

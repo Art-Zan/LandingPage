@@ -1,0 +1,2 @@
+
+== .taste-skill/after/obrigado.html  (96 words)  0 FAIL, 0 WARN

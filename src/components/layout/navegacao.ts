@@ -26,7 +26,9 @@
  * dele (6.1, princípio 2).
  */
 
+import { identificacaoPublicaDoProduto } from '@/lib/identificacao-de-produto'
 import { ROTAS, type Idioma } from '@/lib/rotas'
+import type { Categoria, Produto } from '@/payload-types'
 
 export type ItemDeMenu = {
   rotulo: string
@@ -112,4 +114,55 @@ export const montarColunasDoRodape = ({
       ],
     },
   ]
+}
+
+/* =========================================================================
+ * NAV 2026-11-13 — painel de softwares do cabeçalho (skill ux-navigation).
+ *
+ * DIVERGÊNCIA DELIBERADA DE 6.2: o PRD só ativa o submenu de "Softwares"
+ * acima do gatilho de categorias de 6.6. O usuário pediu explicitamente uma
+ * navegação "mais completa"; o painel existe com quatro produtos. Registrado
+ * em Claude.md. O item continua levando ao catálogo (link "Todos os
+ * softwares" dentro do painel) — o painel acrescenta, não substitui.
+ *
+ * Nada aqui é texto de negócio fixo: título vem de
+ * identificacaoPublicaDoProduto (PR-063 — nunca o nome não aprovado),
+ * resumo e categoria vêm do cadastro.
+ * ========================================================================= */
+
+export type SoftwareDoMenu = {
+  href: string
+  titulo: string
+  resumo: string
+}
+
+export type GrupoDeSoftwares = {
+  /** Nome público da categoria; ausente quando o produto não tem categoria visível. */
+  titulo: string
+  itens: SoftwareDoMenu[]
+}
+
+const categoriaVisivelDe = (produto: Produto): Categoria | undefined =>
+  produto.categorias.find(
+    (categoria): categoria is Categoria =>
+      typeof categoria === 'object' && categoria.visivelPublicamente === true,
+  )
+
+/** Agrupa os produtos publicados por categoria visível, na ordem do cadastro. */
+export const montarGruposDeSoftwares = (
+  produtos: Produto[],
+  idioma?: Idioma,
+): GrupoDeSoftwares[] => {
+  const grupos = new Map<string, GrupoDeSoftwares>()
+  for (const produto of produtos) {
+    const titulo = categoriaVisivelDe(produto)?.nome ?? ROTULOS.softwares
+    const grupo = grupos.get(titulo) ?? { titulo, itens: [] }
+    grupo.itens.push({
+      href: ROTAS.produto(produto.slug, idioma),
+      titulo: identificacaoPublicaDoProduto(produto).titulo,
+      resumo: produto.resumoUmaLinha,
+    })
+    grupos.set(titulo, grupo)
+  }
+  return [...grupos.values()]
 }

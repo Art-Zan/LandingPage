@@ -1,0 +1,4 @@
+
+== .taste-skill/after/produtos.html  (243 words)  0 FAIL, 1 WARN
+  WARN copy-em-dash         14 em dashes in the body (budget 2)
+       fix: use a comma, a colon, parentheses or a full stop where each is natural

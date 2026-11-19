@@ -1,0 +1,56 @@
+
+perf localhost:3001/produtos/sistema-lara @ 1440px
+  PASS  host CPU load (before/after)               18/34 %        
+  PASS  total transfer                             556.5 KiB      html 51.9K  css 5.2K  js 326.5K  font 70.3K  img 74.6K  other 28K
+  PASS  requests                                   26             22 by load
+  PASS  images bytes                               74.6 KiB       1 files
+  PASS  largest image                              74.6 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1920&q=75
+  WARN  JS parsed                                  576.8 KiB      11 files, 326.5K gz
+  PASS  CSS                                        5.2 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  WARN  below-fold images not lazy                 1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1920&q=75
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        416 ms         
+  PASS  LCP (CPU, relative)                        484 ms         p.leading-corpo
+  PASS  layout shift                               0.010          at load 0.010
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  WARN  script errors                              1              Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= f
+  PASS  page height                                3.9 screens    DOM 212 nodes
+
+perf localhost:3001/produtos/sistema-lara @ 390px
+  PASS  host CPU load (before/after)               18/34 %        
+  PASS  total transfer                             555.7 KiB      html 51.9K  css 5.2K  js 326.5K  font 70.3K  img 74.6K  other 27.2K
+  PASS  requests                                   26             21 by load
+  PASS  images bytes                               74.6 KiB       1 files
+  PASS  largest image                              74.6 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1920&q=75
+  WARN  JS parsed                                  576.8 KiB      11 files, 326.5K gz
+  PASS  CSS                                        5.2 KiB        1 files
+  FAIL  font families                              4              fonteDeTitulo, fonteDeTitulo Fallback, fonteDeCorpo, fonteDeCorpo Fallback
+  PASS  font files                                 2              70.3K
+  PASS  font bytes                                 70.3 KiB       
+  PASS  images without width+height                0              
+  WARN  below-fold images not lazy                 1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1920&q=75
+  WARN  oversized images (natural > 2.2x shown)    1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-sistema-lara.webp&w=1920&q=75 1600px for 356
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        108 ms         
+  PASS  LCP (CPU, relative)                        108 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  PASS  broken requests                            0              
+  WARN  script errors                              1              Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= f
+  PASS  page height                                4.8 screens    DOM 212 nodes
+
+SUMMARY localhost:3001/produtos/sistema-lara: 2 FAIL, 7 WARN  -> FAIL

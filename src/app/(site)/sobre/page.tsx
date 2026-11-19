@@ -23,7 +23,9 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import { BlocosInstitucionais } from '@/components/catalogo/BlocosInstitucionais'
-import { Container, Secao, Titulo } from '@/components/ui'
+import { MarcaDeRegistroProvisorio } from '@/components/catalogo/MarcaDeRegistroProvisorio'
+import { ROTULOS } from '@/components/layout/navegacao'
+import { Container, Secao, TextoDeEntrada, Titulo } from '@/components/ui'
 import { obterPaginaInstitucional, SLUG_DA_PAGINA_SOBRE } from '@/lib/consultas'
 import { construirMetadados, jsonLdDePaginaSobre, serializarDadosEstruturados } from '@/lib/seo'
 import { ROTAS } from '@/lib/rotas'
@@ -61,14 +63,23 @@ export default async function PaginaSobre() {
           __html: serializarDadosEstruturados(jsonLdDePaginaSobre(urlCanonica)),
         }}
       />
-      <Secao rotuladaPor="titulo-sobre">
+      {/* Restyle — primeira dobra própria (sobretítulo, H1, marca de registro
+          provisório) e os blocos institucionais numa segunda seção, cada um
+          na divisão título/corpo da página. */}
+      <Secao rotuladaPor="titulo-sobre" primeiraDobra>
         <Container>
-          <div className="flex flex-col gap-8">
-            <Titulo nivel={1} id="titulo-sobre">
-              {pagina.titulo}
+          <div className="flex flex-col items-start gap-6">
+            <p className="az-sobretitulo">{ROTULOS.sobre}</p>
+            <Titulo nivel={1} id="titulo-sobre" className="max-w-titulo">
+              <TextoDeEntrada>{pagina.titulo}</TextoDeEntrada>
             </Titulo>
-            <BlocosInstitucionais blocos={pagina.corpo} nivelDeTituloDeBloco={2} />
+            <MarcaDeRegistroProvisorio registro={pagina} className="az-entrada-apoio" />
           </div>
+        </Container>
+      </Secao>
+      <Secao rotulo={pagina.titulo} className="pt-0 lg:pt-0">
+        <Container>
+          <BlocosInstitucionais blocos={pagina.corpo} nivelDeTituloDeBloco={2} />
         </Container>
       </Secao>
     </>

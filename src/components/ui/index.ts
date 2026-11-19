@@ -7,7 +7,7 @@
 // de propósito: ela não é primitivo e não deve ser importada por nenhuma
 // página do site.
 
-export { Botao } from './Botao'
+export { Botao, Seta } from './Botao'
 export type { PropsDoBotao, VarianteDeBotao } from './Botao'
 
 export { Campo } from './Campo'
@@ -33,3 +33,11 @@ export type { PropsDoTexto, TomDeTexto, VarianteDeTexto } from './Texto'
 
 export { Titulo } from './Titulo'
 export type { NivelDeTitulo, PesoVisualDeTitulo, PropsDoTitulo } from './Titulo'
+
+// Restyle (2026-11-10)
+export { ComposicaoAngular } from './ComposicaoAngular'
+export { SecaoComLinhaDeTransicao } from './SecaoComLinhaDeTransicao'
+export { TextoDeEntrada } from './TextoDeEntrada'
+
+// Onda 5 (2026-11-13)
+export { FundoDeCapa } from './FundoDeCapa'

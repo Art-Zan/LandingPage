@@ -1,0 +1,45 @@
+   ▲ Next.js 15.4.11
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 26.0s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/14) ...
+   Generating static pages (3/14) 
+   Generating static pages (6/14) 
+   Generating static pages (10/14) 
+ ✓ Generating static pages (14/14)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      171 B         105 kB
+├ ○ /_not-found                            991 B         101 kB
+├ ƒ /[...caminhoInexistente]               139 B         100 kB
+├ ƒ /api/contato                           139 B         100 kB
+├ ƒ /api/midia/file/[arquivo]              139 B         100 kB
+├ ○ /apple-icon.png                          0 B            0 B
+├ ƒ /contato                             4.33 kB         107 kB
+├ ○ /icon.png                                0 B            0 B
+├ ƒ /obrigado                              139 B         100 kB
+├ ○ /opengraph-image.png                     0 B            0 B
+├ ○ /parceiros                             176 B         109 kB
+├ ƒ /privacidade                           171 B         105 kB
+├ ○ /produtos                              171 B         105 kB
+├ ƒ /produtos/[slug]                       176 B         109 kB
+├ ○ /revisao/primitivos                  2.32 kB         105 kB
+├ ○ /robots.txt                            139 B         100 kB
+├ ○ /sitemap.xml                           139 B         100 kB
+├ ○ /sobre                                 171 B         105 kB
+└ ƒ /termos                                171 B         105 kB
++ First Load JS shared by all            99.8 kB
+  ├ chunks/4bd1b696-cf72ae8a39fa05aa.js  54.1 kB
+  ├ chunks/964-9e7fd12428968086.js       43.7 kB
+  └ other shared chunks (total)          1.99 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+build exit 0

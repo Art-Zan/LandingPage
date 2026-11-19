@@ -1,0 +1,706 @@
+
+> artzan-site@0.1.0 lint
+> eslint .
+
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\backgrounds\check.mjs
+  173:1   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  174:1   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  175:42  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  177:1   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\backgrounds\pick.mjs
+   85:9   error    'byId' is assigned a value but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  106:30  error    'used' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+  196:20  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  202:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  203:33  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\components\fx-map\bake.mjs
+  482:1   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  485:18  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\components\fx-map\component.js
+  255:14  error  '_' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\components\shared.js
+  141:76   error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  498:32   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  498:73   error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  501:102  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  566:92   error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  569:1    warning  Assign object to a variable before exporting as module default         import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\diagrams\diagram.js
+   782:17  error  'A' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+   842:17  error  'A' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+   956:17  error  'A' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+  1234:19  error  'id' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  1433:26  error  'e' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\ascii-shade\effect.js
+  384:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\aurora-curtains\effect.js
+  170:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\bayer-dither\effect.js
+  110:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\caustics\effect.js
+  136:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\contour-lines\effect.js
+  166:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\dot-terrain\effect.js
+  176:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\dotted-globe\effect.js
+   152:12   error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+   418:172  error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+   443:74   error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+   609:132  error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+  1001:1    warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\duotone-grade\effect.js
+  189:34  error    'kind' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  636:91  error    '_' is defined but never used                                           @typescript-eslint/no-unused-vars
+  697:1   warning  Assign object to a variable before exporting as module default          import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\edge-glow\effect.js
+  202:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\film-light-leak\effect.js
+  204:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\fluted-glass\effect.js
+  185:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\fx.js
+  536:14  error  '_' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  650:16  error  '_' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  660:38  error  React Hook "useFallback" is called in function "init" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"        react-hooks/rules-of-hooks
+  662:43  error  React Hook "useFallback" is called in function "init" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"        react-hooks/rules-of-hooks
+  675:38  error  React Hook "useFallback" is called in function "init" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"        react-hooks/rules-of-hooks
+  691:14  error  React Hook "useFallback" is called in function "init" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"        react-hooks/rules-of-hooks
+  774:69  error  React Hook "useFallback" is called in function "fit" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"         react-hooks/rules-of-hooks
+  833:23  error  React Hook "useFallback" is called in function "set" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"         react-hooks/rules-of-hooks
+  841:23  error  React Hook "useFallback" is called in function "setPalette" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"  react-hooks/rules-of-hooks
+  914:40  error  '_' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\god-rays\effect.js
+  163:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\gradient-mesh\effect.js
+  184:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\grain-gradient\effect.js
+  159:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\grid-pulse\effect.js
+  62:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\halftone-screen\effect.js
+  233:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\line-engraving\effect.js
+  239:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\orb-sphere\effect.js
+  285:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\painterly-landscape\effect.js
+  206:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\pick.js
+  172:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\prism-dispersion\effect.js
+  122:14  error    'Cb' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  175:1   warning  Assign object to a variable before exporting as module default                 import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\ridgeline\effect.js
+   77:142  error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+   95:1    warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+  137:91   error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\ruled-grounds\effect.js
+  204:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\silk-folds\effect.js
+  206:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\soft-light-bars\effect.js
+  149:15  error    'ink' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  384:1   warning  Assign object to a variable before exporting as module default                  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\effects\spotlight-cone\effect.js
+  125:43  error    'width' is defined but never used. Allowed unused args must match /^_/u   @typescript-eslint/no-unused-vars
+  125:50  error    'height' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  133:1   warning  Assign object to a variable before exporting as module default            import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\layout\check.mjs
+  187:18  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  189:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  191:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  192:17  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  193:31  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  194:27  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  195:31  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  196:43  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\layout\deal.mjs
+  100:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  115:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  119:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\layout\layout-check.js
+  199:11  error  'ch' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\layout\layout.js
+  281:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\closing-lift\moment.js
+  23:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\counter-rolls\moment.js
+  19:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\cursor-spotlight\moment.js
+  14:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\giant-type-pass\moment.js
+  20:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\headline-arrives\moment.js
+  19:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\iris-opens\moment.js
+  26:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\letters-assemble\moment.js
+  22:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\line-carries-colour\moment.js
+  23:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\lines-rise\moment.js
+  19:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\liquid-hover\moment.js
+  64:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\liquid-type\moment.js
+  18:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\marquee-row\moment.js
+  13:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\moments.js
+  109:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\photo-chapters\moment.js
+  40:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\picture-develops\moment.js
+  36:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\pinned-chapters\moment.js
+  29:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\window-parallax\moment.js
+  13:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\word-highlight\moment.js
+  17:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\moments\word-rotate\moment.js
+  13:1  warning  Unexpected default export of anonymous function  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\motion\motion.js
+  259:60  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  403:1   warning  Assign object to a variable before exporting as module default         import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\_print-core\auto.js
+  39:67  error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+  76:1   warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\_print-core\demo.js
+  22:83  error  '_' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\_print-core\lint-glsl.mjs
+  27:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  59:1  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\_print-core\print3d.js
+   279:71   error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  1220:169  error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  1283:74   error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  1532:14   error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  1632:70   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\_scenes\auto.js
+  34:76  error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+  78:1   warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\_scenes\kit.js
+  465:14  error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  624:7   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  649:14  error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  671:16  error    'err' is defined but never used                                        @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\_scenes\lint-glsl.mjs
+  28:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  52:88   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  53:101  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  81:1    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\dither-sequence\object.js
+  83:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\dot-object\object.js
+  178:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\exploded-layers\object.js
+  100:1   warning  Assign object to a variable before exporting as module default       import/no-anonymous-default-export
+  122:42  error    'k' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\photo-dither\object.js
+  108:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\photo-engraving\object.js
+  102:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\photo-halftone\object.js
+  103:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\photo-kit\demo.js
+  24:58  error  '_' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\photo-kit\photo.js
+   160:12  error    '_' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   213:12  error    '_' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   228:55  error    '_' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   675:42  error    React Hook "useFallback" is called in function "fb.onerror" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"  react-hooks/rules-of-hooks
+   678:5   warning  Expected an assignment or function call and instead saw an expression                                                                                                                                                                                @typescript-eslint/no-unused-expressions
+   691:16  error    '_' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   723:38  error    React Hook "useFallback" is called in function "init" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"        react-hooks/rules-of-hooks
+   754:38  error    React Hook "useFallback" is called in function "init" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"        react-hooks/rules-of-hooks
+   766:14  error    React Hook "useFallback" is called in function "init" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"        react-hooks/rules-of-hooks
+   804:7   error    React Hook "useFallback" is called in function "finish" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"      react-hooks/rules-of-hooks
+   999:13  error    React Hook "useFallback" is called in function "photoGL" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"     react-hooks/rules-of-hooks
+  1020:23  error    React Hook "useFallback" is called in function "set" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"         react-hooks/rules-of-hooks
+  1029:23  error    React Hook "useFallback" is called in function "setPalette" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"  react-hooks/rules-of-hooks
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\product-render\auto.js
+   44:67   error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+  117:119  error    '_' is defined but never used                                   @typescript-eslint/no-unused-vars
+  133:1    warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\product-render\build.js
+   627:27   error    'i' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  1100:57   error    '_' is defined but never used                                        @typescript-eslint/no-unused-vars
+  1191:107  error    '_' is defined but never used                                        @typescript-eslint/no-unused-vars
+  1276:81   error    '_' is defined but never used                                        @typescript-eslint/no-unused-vars
+  1387:1    warning  Assign object to a variable before exporting as module default       import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\product-render\make-posters.mjs
+   58:28  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   59:10  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   64:30  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   65:12  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   67:24  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   69:38  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  105:1   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  139:38  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  146:28  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  159:9   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  161:60  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  163:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\product-turntable\object.js
+  322:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\objects\split-reveal\object.js
+  88:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\_demo\shoot.mjs
+  104:24   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  105:17   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  105:151  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  292:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  312:7    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  331:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  332:24   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\descend-through-weather\scene.js
+  149:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\dot-becomes-the-full-stop\scene.js
+   35:13  error    'wrap' is assigned a value but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+   45:13  error    'stopCx' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  101:24  warning  Expected an assignment or function call and instead saw an expression              @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\fixed-hero-object\scene.js
+  83:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\fly-into-the-shape\scene.js
+  100:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\letter-bar-floods-the-ground\scene.js
+  98:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\letter-physics\scene.js
+  76:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\lib.js
+  139:13  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  145:35  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  153:11  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  162:11  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  187:31  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  213:13  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  213:57  error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+  291:78  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  326:89  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\object-through-giant-type\scene.js
+  103:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\parts-lock-into-the-whole\scene.js
+  108:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\powers-of-ten-pullback\scene.js
+  54:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\print.js
+  25:36  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  25:81  error    'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  38:50  error    '_' is defined but never used                                          @typescript-eslint/no-unused-vars
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\product-assembles-into-its-action\scene.js
+  122:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\scenes.js
+  79:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\scenes\shaped-window-over-fixed-world\scene.js
+  93:24  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\system.js
+  488:9  error    'name' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  604:1  warning  Assign object to a variable before exporting as module default                   import/no-anonymous-default-export
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\ui\_lab\build-index.mjs
+  40:1  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\assets\ui\ui.js
+  150:83  error    'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  295:16  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  428:88  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\consistency.mjs
+    703:95   error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    725:123  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    726:130  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    735:215  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    886:218  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    886:260  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    888:175  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    890:226  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    899:195  error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    899:655  error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    900:228  error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    906:208  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    907:278  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    929:95   error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+    947:254  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   1268:10   error    'selfTest' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   1552:79   error    'round' is assigned a value but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+   2317:30   error    'z' is defined but never used. Allowed unused args must match /^_/u                @typescript-eslint/no-unused-vars
+   2664:148  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   3215:18   error    'doc' is defined but never used. Allowed unused args must match /^_/u              @typescript-eslint/no-unused-vars
+   3215:23   error    'ref' is defined but never used. Allowed unused args must match /^_/u              @typescript-eslint/no-unused-vars
+   3215:28   error    'at' is defined but never used. Allowed unused args must match /^_/u               @typescript-eslint/no-unused-vars
+   3215:32   error    'name' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+   3215:38   error    'd' is defined but never used. Allowed unused args must match /^_/u                @typescript-eslint/no-unused-vars
+   3215:41   error    'more' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+   3403:170  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   3415:249  error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   3595:88   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   3604:120  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   4160:83   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   4171:87   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   4197:349  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   4276:21   error    'late' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+   4975:9    error    'isBar' is assigned a value but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+   5392:48   error    'vw' is defined but never used. Allowed unused args must match /^_/u               @typescript-eslint/no-unused-vars
+   5604:432  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   5937:14   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   6475:21   error    'r' is assigned a value but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   6881:98   error    'once' is assigned a value but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+   7440:57   error    'el' is defined but never used. Allowed unused args must match /^_/u               @typescript-eslint/no-unused-vars
+   7440:61   error    'act' is defined but never used. Allowed unused args must match /^_/u              @typescript-eslint/no-unused-vars
+   7477:149  error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   7603:25   error    'vh' is assigned a value but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   7677:125  warning  Expected an assignment or function call and instead saw an expression              @typescript-eslint/no-unused-expressions
+   7957:13   error    'mr' is assigned a value but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   8192:25   error    'vh' is assigned a value but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   8226:40   error    'el' is defined but never used. Allowed unused args must match /^_/u               @typescript-eslint/no-unused-vars
+   8232:116  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8247:18   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8282:87   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8337:199  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8340:76   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8349:20   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8372:74   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8500:142  error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8645:48   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8649:108  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8716:118  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8716:218  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+   8842:46   error    'ids' is defined but never used. Allowed unused args must match /^_/u              @typescript-eslint/no-unused-vars
+   8940:19   error    'k' is assigned a value but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   9106:40   error    'X' is assigned a value but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   9320:7    error    'CHECKS' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  10008:206  error    'x' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  10198:18   error    'id' is defined but never used. Allowed unused args must match /^_/u               @typescript-eslint/no-unused-vars
+  10198:22   error    'rects' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+  10198:29   error    'merge' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+  10198:36   error    'lines' is defined but never used. Allowed unused args must match /^_/u            @typescript-eslint/no-unused-vars
+  10255:16   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  10416:95   error    'j' is defined but never used. Allowed unused args must match /^_/u                @typescript-eslint/no-unused-vars
+  10420:24   error    'v' is assigned a value but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  11346:61   error    'also' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+  11456:13   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11459:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11460:22   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11461:14   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11464:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11465:33   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11466:31   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11470:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11471:44   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11472:42   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11476:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11477:45   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11478:43   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11480:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11482:44   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  11483:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\copy-lint.mjs
+  446:13   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  450:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  452:7    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  453:35   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  454:38   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  458:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  459:35   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  460:32   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  460:117  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\effects.mjs
+  144:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  145:26   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  175:22   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  175:61   error    'params' is defined but never used. Allowed unused args must match /^_/u           @typescript-eslint/no-unused-vars
+  177:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  178:25   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  180:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  191:12   error    '_' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  206:17   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  206:113  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  231:15   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  232:42   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  233:8    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  260:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  261:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  353:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  354:27   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  373:85   error    '_' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  381:42   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  401:9    warning  Expected an assignment or function call and instead saw an expression              @typescript-eslint/no-unused-expressions
+  430:39   error    '_' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  444:128  error    '_' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  447:91   error    '_' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  450:110  error    '_' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  450:144  error    '_' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  498:29   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  510:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  523:7    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  525:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  526:29   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  527:24   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  547:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  548:24   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  558:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\gate.mjs
+  443:34   warning  Expected an assignment or function call and instead saw an expression              @typescript-eslint/no-unused-expressions
+  598:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  599:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  625:55   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  625:120  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  633:13   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  634:8    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  647:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  648:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  657:36   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  664:25   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  676:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  677:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  703:43   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  724:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  725:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  755:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  804:82   error    'hard' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+  814:16   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  825:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  833:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  870:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  891:1    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\icons.mjs
+  311:39  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  405:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  406:40  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  416:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  426:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  431:27  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  435:25  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  436:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  445:30  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  449:60  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  469:26  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  471:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  472:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  473:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  474:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  475:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  476:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  477:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  478:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  479:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  480:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  481:86  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  482:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  535:76  warning  Expected an assignment or function call and instead saw an expression              @typescript-eslint/no-unused-expressions
+  555:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  607:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\moments.mjs
+  133:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  134:26   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  152:22   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  153:23   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  277:15   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  279:5    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  280:33   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  301:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  313:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  411:40   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  425:52   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  425:136  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  435:11   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  455:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  472:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  545:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  546:23   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  547:22   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  548:23   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  568:8    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\perf.mjs
+  348:5  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  352:7  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  355:3  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\photos.mjs
+   115:20  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   116:8   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   609:20  error    'prints' is defined but never used. Allowed unused args must match /^_/u           @typescript-eslint/no-unused-vars
+   609:28  error    'weak' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+   609:34  error    'set' is defined but never used. Allowed unused args must match /^_/u              @typescript-eslint/no-unused-vars
+   609:39  error    'needsSetting' is defined but never used. Allowed unused args must match /^_/u     @typescript-eslint/no-unused-vars
+   609:53  error    'lqip' is defined but never used. Allowed unused args must match /^_/u             @typescript-eslint/no-unused-vars
+   609:66  error    'why' is defined but never used. Allowed unused args must match /^_/u              @typescript-eslint/no-unused-vars
+   614:22  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   616:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   617:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   620:17  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   622:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   623:17  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   624:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   625:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   626:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   627:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   628:20  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   630:21  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   632:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   633:26  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   635:18  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   636:18  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   721:22  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   722:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   724:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   725:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   726:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   728:22  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   729:23  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   730:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   745:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   746:88  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   752:24  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   753:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   758:7   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   760:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   764:32  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   766:22  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   768:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   772:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   928:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   929:25  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   931:22  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   932:32  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   933:26  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   934:67  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   935:20  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   942:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   947:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   948:32  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   950:20  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   951:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+   952:24  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  1007:20  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  1011:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  1013:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  1014:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  1016:26  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  1017:22  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  1025:8   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\shoot.mjs
+  217:88   error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  226:120  error    'e' is defined but never used                                                      @typescript-eslint/no-unused-vars
+  473:3    warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  474:20   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+C:\Users\user\OneDrive\Documents\ArtZan\LandingPage\.agents\skills\design-taste-frontend\scripts\start.mjs
+  408:5   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  414:7   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  415:7   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  419:7   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  427:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  428:24  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  429:20  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  432:35  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  434:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  436:57  warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  462:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+  469:3   warning  Unexpected console statement. Only these console methods are allowed: warn, error  no-console
+
+✖ 488 problems (158 errors, 330 warnings)
+
+lint exit 1

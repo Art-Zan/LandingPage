@@ -35,13 +35,7 @@ import { juntarClasses } from './juntarClasses'
 export type TipoDeCampo = 'text' | 'email' | 'tel' | 'url' | 'textarea'
 
 type AtributosProibidos =
-  | 'id'
-  | 'className'
-  | 'required'
-  | 'aria-invalid'
-  | 'aria-describedby'
-  | 'placeholder'
-  | 'type'
+  'id' | 'className' | 'required' | 'aria-invalid' | 'aria-describedby' | 'placeholder' | 'type'
 
 type PropsCompartilhadas = {
   /** Identificador estável do campo. Casa rótulo, apoio, erro e resumo de erros. */
@@ -78,8 +72,11 @@ export type PropsDoCampo = PropsDeEntrada | PropsDeAreaDeTexto
 
 /** Texto do campo em 16 px — piso absoluto de 11.14: menos que isso provoca zoom em navegador móvel. */
 const CONTROLE = juntarClasses(
-  'w-full min-h-toque',
-  'px-card-compacto py-2',
+  // Restyle: campo de 48 px (acima do alvo de 44 px), borda que escurece
+  // na passagem; o foco segue o contorno global (13.2).
+  'w-full min-h-12',
+  'px-card-compacto py-3',
+  'hover:border-texto-secundario',
   'text-corpo leading-corpo text-texto-principal',
   'bg-superficie border rounded-controle',
   'transition-colors duration-padrao',

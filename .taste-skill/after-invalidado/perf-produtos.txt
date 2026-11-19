@@ -1,0 +1,56 @@
+
+perf /localhost:3001/produtos @ 1440px
+  PASS  host CPU load (before/after)               48/20 %        
+  PASS  total transfer                             574.1 KiB      html 56.5K  css 0K  js 207.3K  img 295.7K  other 14.6K
+  PASS  requests                                   30             16 by load
+  PASS  images bytes                               295.7 KiB      4 files
+  PASS  largest image                              74.8 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=1920&q=75
+  PASS  JS parsed                                  207.1 KiB      9 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  WARN  above-fold image set lazy                  1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-scout-esportivo.webp&w=1920&q=75
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        332 ms         
+  PASS  LCP (CPU, relative)                        360 ms         img
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            9              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  FAIL  horizontal overflow                        yes            scrollWidth > 1440
+  PASS  page height                                14.3 screens   DOM 226 nodes
+
+perf /localhost:3001/produtos @ 390px
+  PASS  host CPU load (before/after)               48/20 %        
+  PASS  total transfer                             572 KiB        html 56.5K  css 0K  js 207.3K  img 295.7K  other 12.5K
+  PASS  requests                                   25             17 by load
+  PASS  images bytes                               295.7 KiB      4 files
+  PASS  largest image                              74.8 KiB       _next/image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-alocacao-de-quadras.webp&w=1920&q=75
+  PASS  JS parsed                                  207.1 KiB      9 files, 207.3K gz
+  PASS  CSS                                        0 KiB          1 files
+  PASS  font families                              0              
+  PASS  font files                                 0              0K
+  PASS  images without width+height                0              
+  PASS  below-fold images not lazy                 0              
+  WARN  above-fold image set lazy                  1              image?url=%2Fapi%2Fmidia%2Ffile%2Fplaceholder-scout-esportivo.webp&w=1920&q=75
+  PASS  oversized images (natural > 2.2x shown)    0              
+  PASS  WebGL live at load                         0              
+  PASS  WebGL live at bottom                       0              
+  PASS  WebGL peak live                            0              0 contexts made in all
+  PASS  long tasks                                 0              runs 1, , max 0ms
+  PASS  blocking time                              0 ms           runs 1,  ms; at load 0ms
+  PASS  FCP (CPU, relative)                        104 ms         
+  PASS  LCP (CPU, relative)                        104 ms         p.leading-corpo
+  PASS  layout shift                               0.000          at load 0.000
+  PASS  modules loaded, never mounted              0              
+  FAIL  broken requests                            9              css/c6b961c947b4464b.css, chunks/webpack-4abfd6a89dae30f0.js, chunks/4bd1b696-cf72ae8a39fa05aa.js
+  FAIL  horizontal overflow                        yes            scrollWidth > 390
+  PASS  page height                                9.3 screens    DOM 226 nodes
+
+SUMMARY /localhost:3001/produtos: 4 FAIL, 2 WARN  -> FAIL

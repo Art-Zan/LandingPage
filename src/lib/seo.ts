@@ -123,6 +123,15 @@ export const construirMetadados = ({
 type NoDeGrafo = Record<string, unknown>
 
 /**
+ * Dados estruturados exigem URL absoluta; o canônico de página (`ROTAS.*`) e a
+ * URL de mídia do Payload chegam relativos (mesma origem). Resolve contra a
+ * mesma base de `montarUrlAbsoluta` — nunca um domínio literal. Corrigido na
+ * verificação pós-Onda 4: `url`, `image` e o último item da trilha saíam
+ * relativos no JSON-LD.
+ */
+const absoluta = (url: string): string => new URL(url, montarUrlAbsoluta(IDIOMA_PADRAO)).toString()
+
+/**
  * Organization + WebSite (12.4), uma vez por site, na inicial.
  *
  * CAMPOS AUSENTES, POR FALTA DE DADO (não por esquecimento): razão social e
@@ -175,8 +184,8 @@ export const jsonLdDeProduto = (dados: DadosDeProdutoParaJsonLd): NoDeGrafo => {
         '@type': 'SoftwareApplication',
         name: dados.titulo,
         description: dados.descricao,
-        url: dados.urlCanonica,
-        image: dados.imagem?.url,
+        url: absoluta(dados.urlCanonica),
+        image: dados.imagem ? absoluta(dados.imagem.url) : undefined,
         applicationCategory: 'BusinessApplication',
         provider: { '@type': 'Organization', name: NOME_DA_MARCA, url: urlDaInicial },
       },
@@ -185,7 +194,7 @@ export const jsonLdDeProduto = (dados: DadosDeProdutoParaJsonLd): NoDeGrafo => {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: TRILHA.inicio, item: urlDaInicial },
           { '@type': 'ListItem', position: 2, name: TRILHA.softwares, item: urlDoCatalogo },
-          { '@type': 'ListItem', position: 3, name: dados.titulo, item: dados.urlCanonica },
+          { '@type': 'ListItem', position: 3, name: dados.titulo, item: absoluta(dados.urlCanonica) },
         ],
       },
     ],
@@ -196,7 +205,7 @@ export const jsonLdDeProduto = (dados: DadosDeProdutoParaJsonLd): NoDeGrafo => {
 export const jsonLdDePaginaSobre = (urlCanonica: string): NoDeGrafo => ({
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  url: urlCanonica,
+  url: absoluta(urlCanonica),
   about: { '@type': 'Organization', name: NOME_DA_MARCA },
 })
 

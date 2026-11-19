@@ -1,0 +1,33 @@
+
+1440x900  lines x 80 and 1360, nav 73px, one screen 827px
+  hero 609 tall; h1 40px/1.2, 1 lines, 422x48 at 80,169; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Política de y    73  h   609  content 417
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Política de privacida: 609px tall; one screen under the nav is 827px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Política de privacida: framed, 218px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Política de privacida: ends at y 682, above the fold (900)
+
+1024x768  lines x 48 and 976, nav 73px, one screen 695px
+  hero 609 tall; h1 40px/1.2, 1 lines, 422x48 at 48,169; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Política de y    73  h   609  content 417
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Política de privacida: 609px tall; one screen under the nav is 695px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Política de privacida: framed, 86px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Política de privacida: ends at y 682, above the fold (768)
+
+768x1024  lines x 48 and 720, nav 73px, one screen 951px
+  hero 545 tall; h1 40px/1.2, 1 lines, 422x48 at 48,137; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Política de y    73  h   545  content 417
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Política de privacida: 545px tall; one screen under the nav is 951px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Política de privacida: framed, 406px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Política de privacida: ends at y 618, above the fold (1024)
+
+390x844  lines x 24 and 366, nav 57px, one screen 787px
+  hero 727 tall; h1 32px/1.2, 1 lines, 338x38 at 24,121; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Política de y    57  h   727  content 599
+  screen-short     section.py-respiro.hero section.py-respiro.hero "Política de privacida: 727px tall; one screen under the nav is 787px
+  neighbour        section.py-respiro.hero section.py-respiro.hero "Política de privacida: framed, 60px of the footer shows
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Política de privacida: ends at y 784, above the fold (844)
+
+320x640  lines x 24 and 296, nav 57px, one screen 583px
+  hero 907 tall; h1 32px/1.2, 2 lines, 272x77 at 24,121; lead -; buttons -; visual -
+  section section.py-respiro.hero section.py-respiro.hero "Política de y    57  h   907  content 779
+  hero-fold        section.py-respiro.hero section.py-respiro.hero "Política de privacida: ends at y 964, past the fold (640): 1.56 screens tall

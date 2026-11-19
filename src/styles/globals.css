@@ -67,8 +67,11 @@
   h6 {
     font-family: var(--az-fonte-titulo);
     line-height: var(--az-altura-linha-titulo);
-    text-transform: none;
-    letter-spacing: normal;
+    /* REBRAND (2026-11-13) — título de placar: condensado em caixa alta,
+     * como no material do MarQGol. Substitui a caixa normal de 11.14. Vale só
+     * para título (frase curta); texto corrido continua em caixa normal. */
+    text-transform: uppercase;
+    letter-spacing: var(--az-espacamento-titulo);
   }
 
   /* 13.9 — links em texto corrido mantêm altura de linha de 1,5 para não se
@@ -98,9 +101,11 @@
    * Passagem NUNCA desenha contorno; ela muda superfície ou borda. Esta
    * regra existe para que um clique de mouse não deixe o contorno de
    * teclado aceso, o que apagaria a distinção. */
-  *:focus:not(:focus-visible) {
-    outline: none;
-  }
+  /* RESTYLE (2026-11-10): a regra `*:focus:not(:focus-visible) { outline:
+   * none }` foi retirada. O contorno do site já só existe em `:focus-visible`
+   * (acima), e os navegadores atuais aplicam o contorno nativo também só em
+   * `:focus-visible` — então um clique de mouse continua sem contorno (13.2
+   * regra 8) sem que nenhuma regra apague o foco de forma geral. */
 
   /* 13.11 / RNF-011 — imagem nunca estoura o contêiner nem provoca rolagem
    * horizontal. */
@@ -165,8 +170,11 @@
    * Ao aparecer, o link não pode ficar sob cabeçalho fixo (13.2 regra 6). */
   .az-pular-para-conteudo {
     position: absolute;
-    left: var(--az-espaco-card-compacto);
-    top: var(--az-deslocamento-rolagem);
+    /* Restyle: alinhado à borda esquerda da moldura da página. */
+    left: max(var(--az-margem-pagina), calc((100vw - var(--az-largura-conteudo)) / 2));
+    /* Restyle: parte do topo da página e sai inteira para cima (antes, com o
+     * cabeçalho fixo medido, ~12 px do link ficavam visíveis sobre ele). */
+    top: 0;
     z-index: 100;
     display: inline-flex;
     align-items: center;
@@ -176,11 +184,11 @@
     color: var(--az-texto-principal);
     border: var(--az-borda-espessura) solid var(--az-borda);
     border-radius: var(--az-raio-controle);
-    transform: translateY(-200%);
+    transform: translateY(-110%);
   }
 
   .az-pular-para-conteudo:focus-visible {
-    transform: translateY(var(--az-espaco-card-compacto));
+    transform: translateY(calc(var(--az-deslocamento-rolagem) + var(--az-espaco-card-compacto)));
   }
 
   /* Texto rico vindo do cadastro (Payload). Implementa 13.8 inteiro num só
@@ -239,5 +247,870 @@
 
   .az-texto-rico a:hover {
     text-decoration-thickness: var(--az-foco-espessura);
+  }
+}
+
+/* =========================================================================
+ * RESTYLE (2026-11-10) — moldura, faixa escura, camada de micro-interação e
+ * entrada da primeira dobra.
+ * Implementa: 11.15 (flat: nenhuma sombra, nenhum gradiente — elevação por
+ *   superfície e borda), 13.9 (alvos de 44 px), 13.10 (movimento curto,
+ *   desligado sob prefers-reduced-motion; nada se move por mais de 5 s;
+ *   conteúdo legível sem a animação)
+ * Todo valor vem de tokens.css.
+ * ========================================================================= */
+
+@layer components {
+  /* Moldura única: as mesmas bordas esquerda e direita no cabeçalho, em toda
+   * seção e no rodapé. */
+  .az-moldura {
+    width: min(100% - 2 * var(--az-margem-pagina), var(--az-largura-conteudo));
+    margin-inline: auto;
+  }
+
+  /* Faixa escura: a coluna escura de 11.12 aplicada a um trecho da página.
+   * Os tokens são redefinidos em tokens.css; aqui só o fundo e a tinta. */
+  .az-faixa-escura {
+    background-color: var(--az-superficie);
+    color: var(--az-texto-principal);
+  }
+
+  /* Rótulo curto acima de título (sobretítulo). Caixa alta e +4% só em
+   * elemento curto (11.14, 13.8). A marca angular à esquerda ecoa o vértice
+   * do monograma (11.11): só segmentos retos, cor sólida da tinta. */
+  /* REBRAND — sobretítulo do MarQGol: condensada, caixa alta, bem
+   * espaçada, na cor de sinal, com um ponto cheio à esquerda. */
+  .az-sobretitulo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75em;
+    font-family: var(--az-fonte-titulo);
+    font-size: var(--az-tamanho-apoio);
+    font-weight: var(--az-peso-rotulo);
+    line-height: var(--az-altura-linha-corpo);
+    letter-spacing: var(--az-espacamento-sobretitulo);
+    text-transform: uppercase;
+    color: var(--az-sinal);
+  }
+
+  .az-sobretitulo::before {
+    content: '';
+    width: 0.625em;
+    height: 0.625em;
+    flex: none;
+    border-radius: var(--az-raio-pilula);
+    background-color: currentColor;
+  }
+
+  /* Variante sem ponto, para "01 — Seção". */
+  .az-sobretitulo--sem-ponto::before {
+    display: none;
+  }
+
+  /* Marcador avulso de item. Decorativo. */
+  .az-vertice {
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    flex: none;
+    border-radius: var(--az-raio-pilula);
+    background-color: var(--az-sinal);
+  }
+
+  /* Numeral de ordem (01, 02, 03) em lista. Algarismos de largura uniforme
+   * da família de título (11.14). Não é dado de negócio: é a posição. */
+  .az-ordinal {
+    font-family: var(--az-fonte-titulo);
+    font-size: var(--az-tamanho-h3);
+    font-weight: var(--az-peso-h1);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--az-sinal);
+  }
+
+  /* Link de texto: sublinhado fino na cor da borda em repouso; na passagem
+   * o traço assume a cor do texto e engrossa (13.3: distinguível sem cor). */
+  .az-link {
+    text-decoration-line: underline;
+    text-decoration-thickness: var(--az-borda-espessura);
+    text-decoration-color: var(--az-borda);
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--az-tempo-saida) var(--az-curva);
+  }
+
+  .az-link:hover {
+    text-decoration-color: currentColor;
+    text-decoration-thickness: var(--az-foco-espessura);
+    transition-duration: var(--az-transicao);
+  }
+
+  /* Link de navegação: repousa sem traço e desenha um traço de 1 px abaixo
+   * da palavra na passagem; a página atual tem barra fixa de 2 px. */
+  .az-link-nav {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .az-link-nav::after {
+    content: '';
+    position: absolute;
+    left: var(--az-espaco-entre-alvos);
+    right: var(--az-espaco-entre-alvos);
+    bottom: var(--az-distancia-traco-nav);
+    height: var(--az-borda-espessura);
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--az-tempo-saida) var(--az-curva);
+  }
+
+  .az-link-nav:hover::after {
+    transform: scaleX(1);
+    transition-duration: var(--az-transicao);
+  }
+
+  /* Variante rente: o traço ocupa a palavra inteira (rodapé, trilha). */
+  .az-link-nav--rente::after {
+    left: 0;
+    right: 0;
+  }
+
+  .az-link-nav[aria-current='page']::after {
+    height: var(--az-foco-espessura);
+    transform: scaleX(1);
+  }
+
+  /* Seta desenhada (só segmentos retos). Anda 3 px na passagem do card ou
+   * do botão que a contém. */
+  .az-seta {
+    flex: none;
+    transition: transform var(--az-tempo-saida) var(--az-curva);
+  }
+}
+
+/* Faixa escura no tema escuro: coincide com a superfície da página, então a
+ * separação passa a ser a borda de 1 px. */
+:root[data-tema='escuro'] .az-faixa-escura {
+  border-top: var(--az-borda-espessura) solid var(--az-borda);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema='claro']) .az-faixa-escura {
+    border-top: var(--az-borda-espessura) solid var(--az-borda);
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Camada de passagem e pressão. Só ponteiro fino; teclado mostra o foco
+ * global (13.2 regra 8: foco e passagem são tratamentos distintos). Sob
+ * movimento reduzido nada se desloca: cor e borda ainda mudam.
+ * ---------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .az-botao {
+    transition:
+      transform var(--az-tempo-saida) var(--az-curva),
+      background-color var(--az-tempo-saida) var(--az-curva),
+      border-color var(--az-tempo-saida) var(--az-curva),
+      color var(--az-tempo-saida) var(--az-curva);
+  }
+
+  .az-botao:hover:not(:disabled) {
+    transform: translateY(calc(-1 * var(--az-passo-botao)));
+    transition-duration: var(--az-transicao);
+  }
+
+  .az-botao:active:not(:disabled) {
+    transform: translateY(var(--az-passo-botao)) scale(var(--az-escala-pressao));
+    transition-duration: var(--az-tempo-pressao);
+  }
+
+  .az-card-link {
+    transition:
+      transform var(--az-tempo-saida) var(--az-curva),
+      border-color var(--az-tempo-saida) var(--az-curva);
+  }
+
+  .az-card-link:hover {
+    transform: translateY(calc(-1 * var(--az-passo-card)));
+    transition-duration: var(--az-transicao);
+  }
+
+  .az-moldura-captura > * {
+    transition: transform var(--az-tempo-imagem-saida) var(--az-curva);
+  }
+
+  .az-card-link:hover .az-moldura-captura > * {
+    transform: scale(var(--az-escala-imagem));
+    transition-duration: var(--az-tempo-imagem);
+  }
+
+  .az-botao:hover .az-seta,
+  .az-card-link:hover .az-seta {
+    transform: translateX(var(--az-passo-seta));
+    transition-duration: var(--az-transicao);
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Entrada da primeira dobra (uma vez por carga). O título sobe de dentro de
+ * uma máscara; depois apoio e ações sobem 12 px em sequência; a composição
+ * assenta de 0,98 a 1. Só existe com `html.m-enter` (posto pelo script do
+ * layout raiz): sem script, sob movimento reduzido e na impressão, a dobra
+ * aparece como escrita. Total abaixo de 1,1 s. Nada fica escondido depois.
+ * ---------------------------------------------------------------------- */
+@keyframes az-subir-da-mascara {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes az-subir-e-aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(var(--az-passo-entrada));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes az-assentar {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.m-enter .hero[data-enter] .az-entrada-mascara {
+    display: block;
+    overflow: clip;
+    /* folga para descendentes e acentos não serem cortados */
+    padding-bottom: 0.12em;
+    margin-bottom: -0.12em;
+  }
+
+  html.m-enter .hero[data-enter] .az-entrada-titulo {
+    display: block;
+    animation: az-subir-da-mascara var(--az-tempo-entrada) var(--az-curva-entrada) both;
+  }
+
+  html.m-enter .hero[data-enter] .az-entrada-apoio {
+    animation: az-subir-e-aparecer var(--az-tempo-entrada-apoio) var(--az-curva-entrada) both;
+    animation-delay: calc(var(--az-atraso-apoio) + var(--az-ordem, 0) * var(--az-intervalo-apoio));
+  }
+
+  html.m-enter .hero[data-enter] .az-entrada-figura {
+    animation: az-assentar var(--az-tempo-figura) var(--az-curva-entrada) both;
+  }
+}
+
+@media print {
+  .az-entrada-titulo,
+  .az-entrada-apoio,
+  .az-entrada-figura {
+    animation: none !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Momento "linha que traz a cor" (SecaoComLinhaDeTransicao.tsx). A capa é a
+ * superfície da página anterior, recortada a partir do pé até a linha; a
+ * linha de 1 px fica no corte. Valores de capa lidos de :root, antes de a
+ * faixa escura redefinir os tokens.
+ * ---------------------------------------------------------------------- */
+:root {
+  --az-superficie-da-pagina: var(--az-superficie);
+  --az-superficie-elevada-da-pagina: var(--az-superficie-elevada);
+}
+
+.az-capa-base {
+  background-color: var(--az-superficie-da-pagina);
+}
+
+.az-capa-elevada {
+  background-color: var(--az-superficie-elevada-da-pagina);
+}
+
+.az-momento-linha__capa {
+  clip-path: inset(0 0 var(--az-linha-abaixo, 0px) 0);
+}
+
+.az-momento-linha__linha {
+  top: var(--az-linha-corte, 100%);
+}
+
+.az-momento-linha[data-momento-aberto] > .az-momento-linha__palco {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .az-momento-linha > .az-momento-linha__palco {
+    display: none;
+  }
+}
+
+/* Folha de menu em tela cheia: desce 6 px e aparece em 200 ms ao abrir. */
+@keyframes az-folha-abrir {
+  from {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--az-passo-painel)));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.az-folha-de-menu:not([hidden]) {
+  animation: az-folha-abrir var(--az-tempo-painel) var(--az-curva) both;
+}
+
+/* =========================================================================
+ * ONDA 5 (2026-11-13) — marca, capa da inicial e movimento.
+ * Implementa: 11.13 (logotipo nunca sobre fundo escuro: sempre na placa
+ *   clara, que é o fundo original da peça), 11.16 (área de proteção),
+ *   13.10 (todo movimento desligado sob prefers-reduced-motion; conteúdo
+ *   presente e legível sem animação e sem script — regra 5; nada em laço)
+ * Decisões de movimento: skill design-motion-principles, peso de site
+ *   institucional (Jakub primário, Jhey secundário, Emil em navegação e
+ *   formulário). Só transform, opacity e filter são animados.
+ * Todo valor vem de tokens.css.
+ * ========================================================================= */
+
+@layer components {
+  /* Placa da marca: o fundo branco original do logotipo. Some na superfície
+   * clara; no escuro vira placa com a área de proteção da peça. */
+  .az-placa-da-marca {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--az-placa-respiro-monograma);
+    background-color: var(--az-fundo-da-marca);
+    border-radius: var(--az-raio-controle);
+  }
+
+  .az-placa-da-marca--logo {
+    padding: var(--az-placa-respiro-logo);
+    border-radius: var(--az-raio-bloco);
+  }
+
+  .az-monograma {
+    display: block;
+    width: var(--az-tamanho-monograma);
+    height: var(--az-tamanho-monograma);
+  }
+
+  /* Capa da inicial: imagem cheia ao fundo, véu sólido de token por cima,
+   * texto na frente. Ocupa a tela abaixo do cabeçalho fixo. */
+  .az-capa {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    min-height: calc(100svh - var(--az-altura-cabecalho));
+    view-timeline: --az-capa block;
+  }
+
+  .az-capa__fundo {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--az-capa-tom-1);
+  }
+
+  .az-capa__paralaxe,
+  .az-capa__imagem {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  .az-capa__imagem img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .az-capa__veu {
+    position: absolute;
+    inset: 0;
+    background-color: var(--az-capa-veu);
+    opacity: var(--az-capa-veu-opacidade);
+  }
+
+  /* Nome da empresa na capa: a marca em texto, como no cabeçalho e no
+   * rodapé (11.11) — caixa alta, +4%, Z no tom da marca. Não é título. */
+  .az-marca-capa {
+    font-family: var(--az-fonte-titulo);
+    font-size: var(--az-tamanho-marca-capa);
+    font-weight: var(--az-peso-h1);
+    line-height: 1;
+    letter-spacing: var(--az-espacamento-caixa-alta);
+    text-transform: uppercase;
+    color: var(--az-texto-principal);
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Capa: a imagem assenta uma vez na carga (1,06 → 1, 1,4 s, curva de
+ * entrada sem quique) e, ao rolar, desce 14% da altura enquanto a capa sai.
+ * Por que existe: dá profundidade à primeira dobra, que é vista uma vez por
+ * visita (frequência rara — movimento expressivo é bem-vindo). Por que é
+ * contido: paralaxe é gatilho vestibular (skill, accessibility.md); o
+ * deslocamento é pequeno, só acompanha a rolagem nativa (nunca a sequestra,
+ * 13.10 regra 6) e some sob movimento reduzido. Sem opacidade na imagem:
+ * ela é o candidato a LCP e não pode nascer invisível.
+ * A paralaxe é só CSS (linha do tempo de rolagem): onde o navegador não
+ * suporta, a imagem fica parada — nenhum script de rolagem.
+ * ---------------------------------------------------------------------- */
+@keyframes az-capa-assentar {
+  from {
+    transform: scale(var(--az-escala-capa));
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes az-capa-paralaxe {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--az-paralaxe-capa));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.m-enter .hero[data-enter] .az-capa__imagem {
+    animation: az-capa-assentar var(--az-tempo-capa) var(--az-curva-entrada) both;
+  }
+
+  @supports (animation-timeline: view()) {
+    .az-capa__paralaxe {
+      animation: az-capa-paralaxe linear both;
+      animation-timeline: --az-capa;
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Revelação ao rolar (src/components/layout/RevelarAoRolar.tsx).
+ * Receita de entrada da skill (motion-cookbook §1): opacidade + subida de
+ * 16 px + saída de desfoque de 4 px, 640 ms, curva de entrada. Itens de uma
+ * lista continuam subindo em cascata de 70 ms (Jhey: variável de escopo por
+ * item), sem segundo esmaecimento.
+ * O estado oculto SÓ existe com `data-revelar="pendente"`, que o componente
+ * cliente põe apenas em blocos que ainda estão ABAIXO da tela no momento em
+ * que ele monta. Sem script, sob movimento reduzido, na impressão, ou se o
+ * script falhar: o atributo nunca vira "pendente" e tudo aparece como
+ * escrito (13.10 regra 5 — também protege a indexação).
+ * Não há saída: o que já apareceu não some ao rolar de volta (a skill pede
+ * saídas mais discretas que entradas; aqui a mais discreta é nenhuma).
+ * ---------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  [data-revelar='pendente'] > *,
+  [data-revelar='visto'] > * {
+    transition:
+      opacity var(--az-tempo-revelar) var(--az-curva-entrada),
+      transform var(--az-tempo-revelar) var(--az-curva-entrada),
+      filter var(--az-tempo-revelar) var(--az-curva-entrada);
+  }
+
+  [data-revelar='pendente'] > * {
+    opacity: 0;
+    transform: translateY(var(--az-passo-revelar));
+    filter: blur(var(--az-desfoque-revelar));
+  }
+
+  [data-revelar='pendente'] [data-revelar-item],
+  [data-revelar='visto'] [data-revelar-item] {
+    transition: transform var(--az-tempo-revelar) var(--az-curva-entrada);
+    transition-delay: calc(var(--az-ordem-revelar, 0) * var(--az-intervalo-revelar));
+  }
+
+  [data-revelar='pendente'] [data-revelar-item] {
+    transform: translateY(var(--az-passo-revelar));
+  }
+}
+
+@media print {
+  [data-revelar] > *,
+  [data-revelar] [data-revelar-item] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * Troca de tema (ControleDeTema.tsx): esmaecimento cruzado de 240 ms pela
+ * View Transitions API — só opacidade, "mudança de estado com tudo visível"
+ * (motion-cookbook §2). Frequência rara. Só quando a troca vem de ponteiro:
+ * troca por teclado é instantânea (Emil: ação de teclado nunca anima).
+ * Sob movimento reduzido o componente nem inicia a transição; a regra
+ * abaixo é a segunda trava.
+ * ---------------------------------------------------------------------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--az-tempo-tema);
+  animation-timing-function: var(--az-curva);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* =========================================================================
+ * REBRAND (2026-11-13) — linguagem visual do material comercial do MarQGol
+ * adaptada ao site inteiro: título de placar, papel e faixa escura, pílulas
+ * com ponto de cor, itens numerados sob régua de 2 px, cartões escuros com
+ * faixa de cor no topo e numeral vazado gigante como fundo decorativo.
+ * Todo valor vem de tokens.css.
+ * ========================================================================= */
+
+@layer components {
+  /* Palavra realçada dentro de título ("AO VIVO"). */
+  .az-realce {
+    color: var(--az-destaque);
+  }
+
+  /* Pílula com ponto de cor (FUTSAL · BASQUETE · VÔLEI). A cor do ponto vem
+   * de --az-cor-ponto; o rótulo fica na tinta do tema. */
+  .az-pilula {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    min-height: var(--az-alvo-toque);
+    padding: 0 1.125rem;
+    border: var(--az-borda-espessura) solid var(--az-borda);
+    border-radius: var(--az-raio-pilula);
+    font-family: var(--az-fonte-titulo);
+    font-size: var(--az-tamanho-corpo);
+    font-weight: var(--az-peso-h1);
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--az-texto-principal);
+  }
+
+  .az-pilula::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    flex: none;
+    border-radius: var(--az-raio-pilula);
+    background-color: var(--az-cor-ponto, var(--az-sinal));
+  }
+
+  /* Selo "AO VIVO": pílula cheia na cor da marca. */
+  .az-selo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.875rem;
+    border-radius: var(--az-raio-controle);
+    background-color: var(--az-acao-primaria);
+    color: var(--az-sobre-acao-primaria);
+    font-family: var(--az-fonte-titulo);
+    font-size: var(--az-tamanho-apoio);
+    font-weight: var(--az-peso-h1);
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  /* Item numerado sob régua de 2 px na tinta ("01 FAIXA DE PONTO"). */
+  .az-item-regrado {
+    border-top: var(--az-traco-espessura) solid var(--az-traco);
+    padding-top: var(--az-espaco-card);
+  }
+
+  /* Cartão de contorno: branco sobre o papel, contorno de 1 px na tinta. */
+  .az-cartao-contorno {
+    border: var(--az-borda-espessura) solid var(--az-traco);
+    border-radius: var(--az-raio-bloco);
+    background-color: var(--az-superficie-elevada);
+  }
+
+  /* Cartão escuro com faixa de cor no topo (FUTSAL / BASQUETE / VÔLEI).
+   * Veste a coluna escura (az-faixa-escura no mesmo elemento). */
+  .az-cartao-faixa {
+    border-top: var(--az-faixa-cartao) solid var(--az-cor-faixa, var(--az-destaque));
+    border-radius: var(--az-raio-bloco);
+  }
+
+  /* Numeral vazado gigante (o "00" do placar). Puramente decorativo:
+   * aria-hidden no elemento, nenhum contraste exigido (WCAG 1.4.3 exclui
+   * texto decorativo). Nunca recebe conteúdo de negócio. */
+  .az-numeral-vazado {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    font-family: var(--az-fonte-titulo);
+    font-weight: var(--az-peso-h1);
+    line-height: 0.8;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: transparent;
+    font-size: var(--az-tamanho-numeral-vazado);
+    -webkit-text-stroke: var(--az-traco-espessura) var(--az-borda);
+    opacity: 0.55;
+  }
+
+  /* Rótulo de coluna de tabela e de rodapé: condensada espaçada. */
+  .az-rotulo-coluna {
+    font-family: var(--az-fonte-titulo);
+    font-size: var(--az-tamanho-apoio);
+    font-weight: var(--az-peso-rotulo);
+    letter-spacing: var(--az-espacamento-sobretitulo);
+    line-height: var(--az-altura-linha-corpo);
+    text-transform: uppercase;
+    color: var(--az-texto-secundario);
+  }
+}
+
+/* Cartão com contorno também acionável: na passagem, a faixa ou o contorno
+ * ganham a cor da marca. Só ponteiro fino. */
+@media (hover: hover) and (pointer: fine) {
+  .az-card-link.az-cartao-contorno:hover {
+    border-color: var(--az-acao-primaria);
+  }
+}
+
+/* Pulso do ponto do selo AO VIVO — dois ciclos e para (13.10: nada se move
+ * por mais de 5 s). */
+@keyframes az-pulso {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .az-selo--pulsante::before {
+    animation: az-pulso 1.2s ease-in-out 3;
+  }
+}
+
+.az-selo--pulsante::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--az-raio-pilula);
+  background-color: currentColor;
+}
+
+/* Rebrand — a faixa de cor do cartão vence a régua de 1 px que a faixa
+ * escura ganha no tema escuro (mesma especificidade, declarada depois). */
+:root .az-faixa-escura.az-cartao-faixa {
+  border-top: var(--az-faixa-cartao) solid var(--az-cor-faixa, var(--az-destaque));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :root .az-faixa-escura.az-cartao-faixa:hover {
+    border-color: var(--az-texto-secundario);
+    border-top-color: var(--az-cor-faixa, var(--az-destaque));
+  }
+}
+
+/* =========================================================================
+ * NAV 2026-11-13 — cabeçalho refeito com a skill ux-navigation.
+ * Implementa: "onde estou" (barra de 2 px na seção atual), caret do painel,
+ *   painel de softwares, barra de progresso de leitura e cabeçalho compacto
+ *   ao rolar. Só transform e opacity animam; tudo some sob movimento
+ *   reduzido (regra global de globals.css).
+ * ========================================================================= */
+
+@layer components {
+  /* Item do nav: barra de 2 px na base, na cor da marca, para a seção atual
+   * e para o painel aberto; 1 px na passagem do ponteiro. */
+  .az-nav-item {
+    position: relative;
+  }
+
+  .az-nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 6px;
+    height: var(--az-traco-espessura);
+    background-color: var(--az-destaque);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--az-tempo-saida) var(--az-curva);
+  }
+
+  .az-nav-item:hover::after {
+    transform: scaleX(0.35);
+    transition-duration: var(--az-transicao);
+  }
+
+  .az-nav-item[aria-current='page'],
+  .az-nav-item[data-atual] {
+    color: var(--az-texto-principal);
+  }
+
+  .az-nav-item[aria-current='page']::after,
+  .az-nav-item[data-atual]::after,
+  .az-nav-item[aria-expanded='true']::after {
+    transform: scaleX(1);
+  }
+
+  .az-caret {
+    transition: transform var(--az-tempo-painel) var(--az-curva);
+  }
+
+  [aria-expanded='true'] > .az-caret {
+    transform: rotate(180deg);
+  }
+
+  /* Linha do painel: fundo elevado na passagem; o número ganha a marca. */
+  .az-painel-item {
+    transition: background-color var(--az-tempo-saida) var(--az-curva);
+  }
+
+  .az-painel-item:hover,
+  .az-painel-item[aria-current='page'] {
+    background-color: var(--az-superficie-elevada);
+  }
+
+  .az-painel-item[aria-current='page'] .az-ordinal {
+    color: var(--az-destaque);
+  }
+
+  /* Cabeçalho depois de rolar: fundo um tom acima, sem sombra (11.15). */
+  .az-cabecalho {
+    transition: background-color var(--az-tempo-painel) var(--az-curva);
+  }
+
+  .az-cabecalho[data-rolado],
+  .az-cabecalho[data-painel-aberto] {
+    background-color: var(--az-superficie-elevada);
+  }
+
+  /* Barra de progresso de leitura: 2 px na base do cabeçalho, cresce com a
+   * rolagem do documento. Só onde há linha do tempo de rolagem. */
+  .az-progresso-de-leitura {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: var(--az-traco-espessura);
+    background-color: var(--az-destaque);
+    transform: scaleX(0);
+    transform-origin: left center;
+    pointer-events: none;
+  }
+}
+
+@keyframes az-progresso {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .az-progresso-de-leitura {
+    animation: az-progresso linear both;
+    animation-timeline: scroll(root block);
+  }
+}
+
+@supports not (animation-timeline: scroll()) {
+  .az-progresso-de-leitura {
+    display: none;
+  }
+}
+
+/* Painel de softwares: desce 6 px e aparece em 200 ms ao abrir. */
+.az-painel-nav:not([hidden]) {
+  animation: az-folha-abrir var(--az-tempo-painel) var(--az-curva) both;
+}
+
+.az-painel-nav:not([hidden]) li {
+  animation: az-subir-e-aparecer var(--az-tempo-entrada-apoio) var(--az-curva-entrada) both;
+}
+
+@media (max-width: 47.99rem) {
+  .az-painel-nav {
+    display: none;
+  }
+}
+
+/* =========================================================================
+ * "Z" fragmentado da capa (ZFragmentado.tsx) — 2026-11-13.
+ * Cada estilhaço: inteiro → deriva, gira, encolhe, desfoca e some → pausa
+ * desfeito → volta ao lugar. 3,2 s por estilhaço + cascata de 90 ms × 11
+ * ≈ 4,2 s por ciclo (abaixo dos 5 s de 13.10). Nunca em laço.
+ * ========================================================================= */
+
+.az-z {
+  position: relative;
+  display: inline-block;
+  color: var(--az-marca-z);
+}
+
+.az-z__estilhaco {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity, filter;
+}
+
+@keyframes az-z-desfazer {
+  0%,
+  6% {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  38% {
+    opacity: 0;
+    transform: translate(var(--az-z-dx), var(--az-z-dy)) rotate(var(--az-z-giro)) scale(0.55);
+    filter: blur(3px);
+  }
+  58% {
+    opacity: 0;
+    transform: translate(var(--az-z-dx), var(--az-z-dy)) rotate(var(--az-z-giro)) scale(0.55);
+    filter: blur(3px);
+  }
+  92%,
+  100% {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .az-z[data-ativo] .az-z__base {
+    opacity: 0;
+  }
+
+  .az-z[data-ativo] .az-z__estilhaco {
+    animation: az-z-desfazer 3.2s var(--az-curva) both;
+    animation-delay: calc(var(--az-z-ordem) * 90ms);
   }
 }

@@ -23,7 +23,14 @@
 
 import type { Metadata } from 'next'
 
-import { Container, Secao, Texto, Titulo, MarcaDePlaceholder } from '@/components/ui'
+import {
+  Container,
+  Secao,
+  Texto,
+  TextoDeEntrada,
+  Titulo,
+  MarcaDePlaceholder,
+} from '@/components/ui'
 import { CorpoDaPaginaInstitucional } from '@/lib/renderizador-de-paginas-institucionais'
 import { ROTAS } from '@/lib/rotas'
 import { NOME_DA_MARCA } from '@/lib/rotulos'
@@ -34,7 +41,7 @@ export const dynamic = 'force-dynamic'
 const SLUG_DA_PAGINA_DE_PRIVACIDADE = 'privacidade'
 
 export const metadata: Metadata = {
-  title: `Política de privacidade — ${NOME_DA_MARCA}`,
+  title: `Política de privacidade | ${NOME_DA_MARCA}`, // 12.2: [Nome do documento] | ArtZan
   description: 'Como a ArtZan trata os dados pessoais coletados pelo site.',
   alternates: { canonical: ROTAS.privacidade() },
 }
@@ -53,10 +60,12 @@ export default async function PaginaDePrivacidade() {
   }
 
   return (
-    <Container>
-      <Secao rotuladaPor="titulo-privacidade">
-        <Titulo nivel={1} id="titulo-privacidade">
-          Política de privacidade
+    // Restyle: primeira dobra com entrada única; a coluna de leitura fica
+    // na medida de 68 caracteres (13.8).
+    <Secao rotuladaPor="titulo-privacidade" primeiraDobra>
+      <Container className="flex max-w-none flex-col items-start gap-6">
+        <Titulo nivel={1} id="titulo-privacidade" className="max-w-titulo">
+          <TextoDeEntrada>Política de privacidade</TextoDeEntrada>
         </Titulo>
 
         {pagina === undefined ? (
@@ -80,11 +89,13 @@ export default async function PaginaDePrivacidade() {
                 detalhe="D-16 — texto ainda não validado juridicamente."
               />
             ) : null}
-            <CorpoDaPaginaInstitucional corpo={pagina.corpo} />
+            <div className="max-w-texto pt-4">
+              <CorpoDaPaginaInstitucional corpo={pagina.corpo} />
+            </div>
           </>
         )}
-      </Secao>
-    </Container>
+      </Container>
+    </Secao>
   )
 }
 

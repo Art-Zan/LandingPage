@@ -11,11 +11,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-    './src/app/**/*.{ts,tsx}',
-    './src/components/**/*.{ts,tsx}',
-    './src/lib/**/*.{ts,tsx}',
-  ],
+  content: ['./src/app/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}', './src/lib/**/*.{ts,tsx}'],
 
   // 11.13 — o tema escuro é uma troca de valores das mesmas variáveis.
   // A estratégia `class` permite alternância explícita além do `prefers-color-scheme`.
@@ -44,6 +40,11 @@ const config: Config = {
         erro: 'var(--az-erro)',
         // Rótulo sobre preenchimento de ação primária — par verificado em 11.12.
         'sobre-acao-primaria': 'var(--az-sobre-acao-primaria)',
+        // Restyle — letra Z do wordmark em texto, por tema (tokens.css).
+        'marca-z': 'var(--az-marca-z)',
+        // Rebrand — sinal (sobretítulo, numeral) e traço forte (régua, contorno).
+        sinal: 'var(--az-sinal)',
+        traco: 'var(--az-traco)',
       },
 
       fontFamily: {
@@ -61,6 +62,9 @@ const config: Config = {
         corpo: 'var(--az-tamanho-corpo)',
         apoio: 'var(--az-tamanho-apoio)',
         rotulo: 'var(--az-tamanho-rotulo)',
+        // Restyle — linha de apoio da primeira dobra (acima do piso de 16 px).
+        lead: 'var(--az-tamanho-destaque)',
+        'marca-rodape': 'var(--az-tamanho-marca-rodape)',
       },
 
       // Onda 2a — nomes acrescentados. Nenhum valor: todos apontam para
@@ -77,16 +81,21 @@ const config: Config = {
         // 13.8 — altura de linha mínima de 1,5 no corpo.
         corpo: 'var(--az-altura-linha-corpo)',
         titulo: 'var(--az-altura-linha-titulo)',
+        h1: 'var(--az-altura-linha-h1)',
       },
 
       letterSpacing: {
         // 11.14 — +4%, só em caixa alta e só em elemento curto.
         'caixa-alta': 'var(--az-espacamento-caixa-alta)',
+        // Restyle — aperto óptico de título (nunca abertura).
+        titulo: 'var(--az-espacamento-titulo)',
+        sobretitulo: 'var(--az-espacamento-sobretitulo)',
       },
 
       maxWidth: {
         // 13.8 — 60 a 75 caracteres no máximo em telas largas.
         texto: 'var(--az-largura-texto)',
+        titulo: 'var(--az-largura-titulo)',
         conteudo: 'var(--az-largura-conteudo)',
       },
 
@@ -107,17 +116,24 @@ const config: Config = {
       transitionDuration: {
         // 13.10 — desligada por completo sob prefers-reduced-motion.
         padrao: 'var(--az-transicao)',
+        painel: 'var(--az-tempo-painel)',
+      },
+
+      transitionTimingFunction: {
+        padrao: 'var(--az-curva)',
       },
 
       borderRadius: {
         // 11.15 — exatamente dois raios. Nenhum outro valor é permitido.
-        controle: 'var(--az-raio-controle)', // 4 px — controle pequeno
-        bloco: 'var(--az-raio-bloco)', // 8 px — card, container, imagem
+        controle: 'var(--az-raio-controle)', // 10 px — controle pequeno
+        bloco: 'var(--az-raio-bloco)', // 16 px — card, container, imagem
+        pilula: 'var(--az-raio-pilula)', // rebrand — etiqueta com ponto de cor
       },
 
       borderWidth: {
         // 11.15 — espessura única de 1 px em todo contorno.
         DEFAULT: 'var(--az-borda-espessura)',
+        traco: 'var(--az-traco-espessura)',
       },
 
       spacing: {
@@ -132,6 +148,9 @@ const config: Config = {
         'secao-meio': 'var(--az-espaco-secao-meio)',
         // 13.9 — espaçamento mínimo entre alvos acionáveis adjacentes.
         'entre-alvos': 'var(--az-espaco-entre-alvos)',
+        // Restyle — respiro vertical de seção e altura do cabeçalho fixo.
+        respiro: 'var(--az-respiro-secao)',
+        cabecalho: 'var(--az-altura-cabecalho)',
       },
 
       boxShadow: {

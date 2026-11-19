@@ -21,11 +21,19 @@ export type PropsDoContainer = {
   id?: string
 }
 
-export const Container = ({ como: Elemento = 'div', children, className, id }: PropsDoContainer) => (
+export const Container = ({
+  como: Elemento = 'div',
+  children,
+  className,
+  id,
+}: PropsDoContainer) => (
   <Elemento
     id={id}
     className={juntarClasses(
-      'mx-auto w-full max-w-conteudo px-card-compacto md:px-card',
+      // Restyle: moldura única (tokens --az-margem-pagina e --az-largura-conteudo).
+      // `wrap`: gancho de leitura das ferramentas de inspeção da skill de
+      // design (sem folha de estilo do kit carregada).
+      'az-moldura wrap',
       className,
     )}
   >
